@@ -1,0 +1,28 @@
+# Build output
+build/
+*.o
+*.a
+*.so
+
+# Executables
+*.exe
+
+# IDE/editor
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+
+# Temporary files
+*.swp
+*~
+
+.ipynb_checkpoints/
+*.ipynb
+contrib/
+logs/
+output.txt
+untitled.txt
+*.gch
+
