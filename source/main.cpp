@@ -38,11 +38,7 @@ int main(
     int argc, // Argument count
     char **argv // Cannot be `const` or CLI11 won't work.
 ) {
-
-    // JSON config = configure();
     getargs(argc, argv);
-
-    // if (_debug) cout << "Configured log file: " << logfile << endl;
     
     if (_version) // Display the program and version number, then exit.
     {
@@ -52,14 +48,6 @@ int main(
     
     if (_debug) _verbose = true;
     if (_verbose) cout << (_debug ? "Debugg" : "Runn") << "ing " << argv[0] << "." << endl;
-
-
-    // if (_debug)
-    // {
-    //     cout << "Home: " << FS.home << endl
-    //          << "Base directory: " << FS.base << endl
-    //          << "Log file: " << FS.logfile << endl;
-    // }
 
     // Get piped input
     get_piped();

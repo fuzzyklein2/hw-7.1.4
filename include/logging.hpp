@@ -9,8 +9,10 @@
 #include <string>
 
 // Local headers
-#include "constants.hpp"
+// #include "constants.hpp"
 // #include "fs.hpp"
+
+#include "types.hpp"
 
 // File system
 
@@ -26,3 +28,8 @@ void stop(const String& s);
 void debug(ostringstream& ss);
 
 void rotate_logs(const Path& directory, size_t count);
+
+struct Log {
+    Logger logptr;
+    LogLevel level;
+};

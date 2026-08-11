@@ -12,6 +12,8 @@ using namespace std;
 #include "constants.hpp"
 #include "globals.hpp"
 
+using hello7::constants;
+
 /**
  * getargs
  *
@@ -38,7 +40,7 @@ int getargs(
     app.add_flag("-d,--debug", _debug, _help[DEBUG_KEY]);
     app.add_flag("-v,--verbose", _verbose, _help[VERBOSE_KEY]);
     app.add_flag("-V,--version", _version, _help[VERSION_KEY]);
-    app.add_option("files", _args, _help[FILES_KEY]);
+    app.add_option("files", _args, _help[ARGS_KEY]);
     // Indexing _help with brackets can cause accidental insertions by mistyped keys.
     
     // Parse the command line arguments

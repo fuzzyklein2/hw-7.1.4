@@ -5,5 +5,5 @@
  * Functions that collect input from the command line.
  */
 
-int getargs(int argc, char **argv);
-void get_piped();
+extern int getargs(int argc, char **argv);
+extern void get_piped();

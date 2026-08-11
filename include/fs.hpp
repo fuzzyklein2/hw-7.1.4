@@ -22,13 +22,13 @@ struct FileSystem {
     Path working = cwd();
     Path home = getenv("HOME");
     Path base = fs::read_symlink("/proc/self/exe").parent_path().parent_path();
-    Path conf_dir = home / CONF_DIR_NAME / PROGRAM;
-    Path config = conf_dir / CONF_FILE_NAME;
-    Path user = home / (DOT + PROGRAM);
-    Path logs = home / LOG_DIR_NAME / PROGRAM;
+    Path conf_dir = home / hello7::constants::CONF_DIR_NAME / hello7::constants::PROGRAM;
+    Path config = conf_dir / hello7::constants::CONF_FILE_NAME;
+    Path user = home / (hello7::constants::DOT + hello7::constants::PROGRAM);
+    Path logs = home / hello7::constants::LOG_DIR_NAME / hello7::constants::PROGRAM;
     Path logfile = logs / log_filename();
-    Path data_dir = base / DATA_DIR_NAME;
-    Path data = data_dir / DATA_FILE_NAME;
+    Path data_dir = base / hello7::constants::DATA_DIR_NAME;
+    Path data = data_dir / hello7::constants::DATA_FILE_NAME;
 
     FileSystem(); // constructor
 };

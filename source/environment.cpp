@@ -13,6 +13,7 @@ using namespace std;
 
 void check_env(JSON& config)
 {
+    // @todo Check for all possible environment variables based on config.keys().
     const char* s = getenv("hello_LOGFILE");
     // cout << s << endl;
     if (s)

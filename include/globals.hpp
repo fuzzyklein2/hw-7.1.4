@@ -27,5 +27,23 @@ extern String _input;
 extern Logger logger;
 extern LogLevel log_level;
 
+// File system
 extern FileSystem FS;
+
+// Configuration
 extern JSON _config;
+extern JSON _data;
+
+struct Globals {
+    FileSystem FS;
+    JSON config;
+    JSON data;
+    bool debug;
+    bool verbose;
+    bool version;
+    StrList args;
+    String input;
+    Log log;
+
+    Globals(); // constructor
+};

@@ -30,3 +30,19 @@ LogLevel log_level = LogLevel::warn;
 FileSystem FS;
 JSON _config = configure(FS.config);
 JSON _data = load_data(FS.data);
+
+Globals::Globals()
+{
+    config = configure(FS.config);
+    data = load_data(FS.data);
+    getargs(argc, argv);
+    args = _args;
+    debug = _debug;
+    if (debug) verbose = true;
+    else verbose = _verbose;
+    if (verbose) cout << "`Globals` object initializing...";
+    get_piped();
+    input = _input;
+    init_logs();
+    log = logger;
+}

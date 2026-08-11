@@ -12,6 +12,8 @@ using namespace std;
 #include "logging.hpp"
 #include "types.hpp"
 
+using namespace hello7::constants;
+
 /**
  * log_filename
  * 
@@ -159,4 +161,10 @@ void rotate_logs(const Path& directory, size_t count)
         fs::remove(logs.front());
         logs.erase(logs.begin());
     }
+}
+
+Log::Log()
+{
+    init_logs();
+    logptr = logger;
 }
