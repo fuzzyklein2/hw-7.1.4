@@ -9,11 +9,11 @@
 using namespace std;
 
 // Local headers
-#include "cli.hpp"
-#include "config.hpp"
-#include "constants.hpp"
-#include "datetime.hpp"
-#include "fs.hpp"
+// #include "cli.hpp"
+// #include "config.hpp"
+// #include "constants.hpp"
+// #include "datetime.hpp"
+// #include "fs.hpp"
 #include "globals.hpp"
 #include "logging.hpp"
 
@@ -38,45 +38,47 @@ int main(
     int argc, // Argument count
     char **argv // Cannot be `const` or CLI11 won't work.
 ) {
-    getargs(argc, argv);
+    Globals G(argc, argv);
     
-    if (_version) // Display the program and version number, then exit.
-    {
-        cout << PROGRAM << SPACE << VERSION << endl;
-        return 0;
-    }
+    // getargs(argc, argv);
     
-    if (_debug) _verbose = true;
-    if (_verbose) cout << (_debug ? "Debugg" : "Runn") << "ing " << argv[0] << "." << endl;
+    // if (_version) // Display the program and version number, then exit.
+    // {
+    //     cout << PROGRAM << SPACE << VERSION << endl;
+    //     return 0;
+    // }
+    
+    // if (_debug) _verbose = true;
+    // if (_verbose) cout << (_debug ? "Debugg" : "Runn") << "ing " << argv[0] << "." << endl;
 
-    // Get piped input
-    get_piped();
+    // // Get piped input
+    // get_piped();
 
-    // Set up logs
-    init_logs();
+    // // Set up logs
+    // init_logs();
 
     debug("program initialized");
 
-    if (_debug)
+    if (G.debug)
     {
         ostringstream ss;
-        ss << "Current working directory: " << FS.working;
+        ss << "Current working directory: " << G.FS.working;
         debug(ss);
-        ss << "Home directory: " << FS.home;
+        ss << "Home directory: " << G.FS.home;
         debug(ss);
-        ss << "Base: " << FS.base;
+        ss << "Base: " << G.FS.base;
         debug(ss);
-        ss << "Configuration file: " << FS.config;
+        ss << "Configuration file: " << G.FS.config;
         debug(ss);
-        ss << "Config directory: " << FS.config.parent_path();
+        ss << "Config directory: " << G.FS.config.parent_path();
         debug(ss);
-        ss << "User directory: " << FS.user;
+        ss << "User directory: " << G.FS.user;
         debug(ss);
-        ss << "Logs: " << FS.logs;
+        ss << "Logs: " << G.FS.logs;
         debug(ss);
-        ss << "Log file: " << FS.logfile;
+        ss << "Log file: " << G.FS.logfile;
         debug(ss);
-        ss << "Data file: " << FS.data;
+        ss << "Data file: " << G.FS.data;
         debug(ss);
     }
     

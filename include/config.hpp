@@ -6,6 +6,7 @@
  */
 
 // Local headers
+#include "fs.hpp"
 #include "types.hpp"
 
 JSON configure(const Path&);

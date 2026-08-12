@@ -56,3 +56,23 @@ FileSystem::FileSystem()
     fs::create_directories(data_dir);
     ensure_file(data);
 }
+
+/**
+ * log_filename
+ * 
+ * @brief Return a string to name the log file with.
+ * 
+ * @return Current timestamp as a string.
+ */
+String log_filename()
+{
+    auto now = chrono::system_clock::now();
+    auto t = chrono::system_clock::to_time_t(now);
+
+    stringstream ss;
+    ss << put_time(localtime(&t), "%Y-%m-%d_%H-%M-%S")
+       << ".log";
+
+    return ss.str();
+}
+

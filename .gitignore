@@ -26,4 +26,6 @@ output.txt
 untitled.txt
 *.gch
 test/
+*#
+
 

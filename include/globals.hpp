@@ -15,24 +15,24 @@
 #include "types.hpp"
 
 // Execution modes
-extern bool _debug;   // Prefix input variables and options with '_'.
-extern bool _verbose;
-extern bool _version;
+// extern bool _debug;   // Prefix input variables and options with '_'.
+// extern bool _verbose;
+// extern bool _version;
 
-// Input variables
-extern StrList _args;
-extern String _input;
+// // Input variables
+// extern StrList _args;
+// extern String _input;
 
-// Global logging variables
-extern Logger logger;
-extern LogLevel log_level;
+// // Global logging variables
+// extern Logger logger;
+// extern LogLevel log_level;
 
-// File system
-extern FileSystem FS;
+// // File system
+// extern FileSystem FS;
 
-// Configuration
-extern JSON _config;
-extern JSON _data;
+// // Configuration
+// extern JSON _config;
+// extern JSON _data;
 
 struct Globals {
     FileSystem FS;
@@ -40,10 +40,14 @@ struct Globals {
     JSON data;
     bool debug;
     bool verbose;
-    bool version;
+    bool version = false;
     StrList args;
     String input;
-    Log log;
+    // Log log;
 
-    Globals(); // constructor
+    Globals(int, char**); // constructor
+    int getargs(int, char**);
+    void get_piped();
+    void init_logs();
 };
+

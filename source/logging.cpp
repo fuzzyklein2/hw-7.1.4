@@ -8,30 +8,12 @@ using namespace std;
 
 // Local headers
 #include "constants.hpp"
-#include "globals.hpp"
+// #include "fs.hpp"
+// #include "globals.hpp"
 #include "logging.hpp"
 #include "types.hpp"
 
 using namespace hello7::constants;
-
-/**
- * log_filename
- * 
- * @brief Return a string to name the log file with.
- * 
- * @return Current timestamp as a string.
- */
-String log_filename()
-{
-    auto now = chrono::system_clock::now();
-    auto t = chrono::system_clock::to_time_t(now);
-
-    stringstream ss;
-    ss << put_time(localtime(&t), "%Y-%m-%d_%H-%M-%S")
-       << ".log";
-
-    return ss.str();
-}
 
 /**
  * defaultLogFile
@@ -40,54 +22,54 @@ String log_filename()
  * 
  * @return Default logging path.
  */
-Path defaultLogFile()
-{
-    return FS.logs / (PROGRAM + ".log");
-}
+// Path defaultLogFile()
+// {
+//     return FS.logs / (PROGRAM + ".log");
+// }
 
-void init_logs()
-{
-    // clean up the logs folder
-    rotate_logs(FS.logs, _config["saved logs"]);
+// void init_logs()
+// {
+//     // clean up the logs folder
+//     rotate_logs(FS.logs, _config["saved logs"]);
 
-    // for (const auto& path : listdir(FS.logs))
-    // {
-    //     cout << path << endl;
-    // }
-    // cout << "Save the last " << _config["saved logs"] << " files." << endl;
+//     // for (const auto& path : listdir(FS.logs))
+//     // {
+//     //     cout << path << endl;
+//     // }
+//     // cout << "Save the last " << _config["saved logs"] << " files." << endl;
 
-    // create a color multi-threaded logger
+//     // create a color multi-threaded logger
     
-    auto console_sink = make_shared<spdlog::sinks::stdout_color_sink_mt>();
-    auto file_sink = make_shared<spdlog::sinks::basic_file_sink_mt>(FS.logfile);
+//     auto console_sink = make_shared<spdlog::sinks::stdout_color_sink_mt>();
+//     auto file_sink = make_shared<spdlog::sinks::basic_file_sink_mt>(FS.logfile);
 
-    // Set the console log level according to `_debug` and/or `_verbose` values.
-    // So command line arguments have to have been parsed previously to calling this.
-    if (_debug) console_sink->set_level(LogLevel::debug);
-    else if (_verbose) console_sink->set_level(LogLevel::info);
-    else console_sink->set_level(LogLevel::warn);
+//     // Set the console log level according to `_debug` and/or `_verbose` values.
+//     // So command line arguments have to have been parsed previously to calling this.
+//     if (_debug) console_sink->set_level(LogLevel::debug);
+//     else if (_verbose) console_sink->set_level(LogLevel::info);
+//     else console_sink->set_level(LogLevel::warn);
 
-    console_sink->set_pattern("[%^%l%$] %v"); // We don't need the date. Maybe the time.
-    file_sink->set_level(LogLevel::debug); // All messages of any level -> logfile.
-    file_sink->set_pattern("[%l] %v"); // We don't need the date. Maybe the time.
+//     console_sink->set_pattern("[%^%l%$] %v"); // We don't need the date. Maybe the time.
+//     file_sink->set_level(LogLevel::debug); // All messages of any level -> logfile.
+//     file_sink->set_pattern("[%l] %v"); // We don't need the date. Maybe the time.
 
-    // logger constructor expects a vector of sinks
-    vector<spdlog::sink_ptr> sinks { console_sink, file_sink };
+//     // logger constructor expects a vector of sinks
+//     vector<spdlog::sink_ptr> sinks { console_sink, file_sink };
     
-    logger = make_shared<spdlog::logger>(
-        PROGRAM,
-        sinks.begin(),
-        sinks.end()
-    );
+//     G.log.logptr = make_shared<spdlog::logger>(
+//         PROGRAM,
+//         sinks.begin(),
+//         sinks.end()
+//     );
     
-    logger->set_level(LogLevel::debug);
+//     logger->set_level(LogLevel::debug);
     
-    spdlog::register_logger(logger);
-    spdlog::set_default_logger(logger);
-    // logger->warn("This should be everywhere.");
-    // logger->info("This should only be in the file.");
-    // logger->error("Danger, Will Robinson!");
-}
+//     spdlog::register_logger(logger);
+//     spdlog::set_default_logger(logger);
+//     // logger->warn("This should be everywhere.");
+//     // logger->info("This should only be in the file.");
+//     // logger->error("Danger, Will Robinson!");
+// }
 
 /**
  * debug
@@ -96,7 +78,7 @@ void init_logs()
  */
 void debug(const String& s)
 {
-    logger->debug(DEBUG_PICT + DBL_SPACE + s);
+    spdlog::get(PROGRAM)->debug(DEBUG_PICT + DBL_SPACE + s);
 }
 
 /**
@@ -106,7 +88,7 @@ void debug(const String& s)
  */
 void info(const String& s)
 {
-    logger->info(INFO_PICT + DBL_SPACE + s);
+    spdlog::get(PROGRAM)->info(INFO_PICT + DBL_SPACE + s);
 }
 
 /**
@@ -116,7 +98,7 @@ void info(const String& s)
  */
 void warn(const String& s)
 {
-    logger->warn(WARNING_PICT + DBL_SPACE + s);
+    spdlog::get(PROGRAM)->warn(WARNING_PICT + DBL_SPACE + s);
 }
 
 /**
@@ -126,7 +108,7 @@ void warn(const String& s)
  */
 void error(const String& s)
 {
-    logger->error(ERROR_PICT + DBL_SPACE + s);
+    spdlog::get(PROGRAM)->error(ERROR_PICT + DBL_SPACE + s);
 }
 
 /**
@@ -136,7 +118,7 @@ void error(const String& s)
  */
 void stop(const String& s)
 {
-    logger->critical(CRITICAL_PICT + DBL_SPACE + s);
+    spdlog::get(PROGRAM)->critical(CRITICAL_PICT + DBL_SPACE + s);
     exit(EXIT_FAILURE);
 }
 
@@ -163,8 +145,47 @@ void rotate_logs(const Path& directory, size_t count)
     }
 }
 
-Log::Log()
-{
-    init_logs();
-    logptr = logger;
-}
+// Log::Log(const String logfile, const int saved, LogLevel ll)
+// {
+//     // clean up the logs folder
+//     rotate_logs(sys.logs, saved);
+
+//     // for (const auto& path : listdir(FS.logs))
+//     // {
+//     //     cout << path << endl;
+//     // }
+//     // cout << "Save the last " << _config["saved logs"] << " files." << endl;
+
+//     // create a color multi-threaded logger
+    
+//     auto console_sink = make_shared<spdlog::sinks::stdout_color_sink_mt>();
+//     auto file_sink = make_shared<spdlog::sinks::basic_file_sink_mt>(logfile);
+
+//     // Set the console log level according to `_debug` and/or `_verbose` values.
+//     // So command line arguments have to have been parsed previously to calling this.
+//     // if (_debug) console_sink->set_level(LogLevel::debug);
+//     // else if (_verbose) console_sink->set_level(LogLevel::info);
+//     // else console_sink->set_level(LogLevel::warn);
+//     console_sink->set_level(ll)
+
+//     console_sink->set_pattern("[%^%l%$] %v"); // We don't need the date. Maybe the time.
+//     file_sink->set_level(LogLevel::debug); // All messages of any level -> logfile.
+//     file_sink->set_pattern("[%l] %v"); // We don't need the date. Maybe the time.
+
+//     // logger constructor expects a vector of sinks
+//     vector<spdlog::sink_ptr> sinks { console_sink, file_sink };
+    
+//     logptr = make_shared<spdlog::logger>(
+//         PROGRAM,
+//         sinks.begin(),
+//         sinks.end()
+//     );
+    
+//     logptr->set_level(LogLevel::debug);
+    
+//     spdlog::register_logger(logger);
+//     spdlog::set_default_logger(logger);
+//     // logger->warn("This should be everywhere.");
+//     // logger->info("This should only be in the file.");
+//     // logger->error("Danger, Will Robinson!");
+// }

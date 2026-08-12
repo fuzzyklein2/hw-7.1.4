@@ -24,6 +24,6 @@ void check_env(JSON& config)
     }
     else
     {
-        cout << "ENVIRONMENT: hello_LOGFILE NOT FOUND!" << endl;
+        // cout << "ENVIRONMENT: hello_LOGFILE NOT FOUND!" << endl;
     }
 }

@@ -10,8 +10,8 @@ using namespace std;
 // Local headers
 #include "config.hpp"
 #include "environment.hpp"
-#include "fs.hpp"
-#include "globals.hpp"
+// #include "fs.hpp"
+// #include "globals.hpp"
 #include "types.hpp"
 
 JSON configure(const Path& p)
@@ -24,11 +24,11 @@ JSON configure(const Path& p)
         JSON config;
         cfg >> config;
     
-        if (config["debug"]) cout << config["logfile"] << endl;
-        else _debug = false;
+        // if (config["debug"]) cout << config["logfile"] << endl;
+        // else _debug = false;
 
         check_env(config);
-        cout << "Configured logfile: " << config["logfile"] << endl;
+        // cout << "Configured logfile: " << config["logfile"] << endl;
         return config;
     }
     catch(const exception& e)

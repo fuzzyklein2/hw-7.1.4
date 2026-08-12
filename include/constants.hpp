@@ -13,13 +13,14 @@ namespace hello7
     namespace constants
     {
         // String constants
+        CONST String THIS_PROC = "/proc/self/exe";
         // @todo Move `PROGRAM` and `VERSION` definitions to data/hello.json.
         // @todo Move `DESCRIPTION` to the data file.
         // @todo `WORLD` and `GREETING` are specific to this 1st project.
-        CONST String PROGRAM = "hello";
-        CONST String VERSION = "0.0.0";
+        CONST String PROGRAM = fs::read_symlink(THIS_PROC).filename();
+        // CONST String VERSION = "0.0.0";
         CONST String WORLD = "\U0001F30E"; // 🌎 Earth Globe Americas
-        CONST String DESCRIPTION = "Simple C++ CLI app framework.";
+        // CONST String DESCRIPTION = "Simple C++ CLI app framework.";
         CONST String GREETING = "Hello, ";
         
         CONST String SPACE = " ";
@@ -39,19 +40,19 @@ namespace hello7
         CONST String FAILURE_PICT = "❌";
         
         // Index strings
-        CONST String DEBUG_KEY = "DEBUG";
-        CONST String VERBOSE_KEY = "VERBOSE";
-        CONST String ARGS_KEY = "ARGS";
-        CONST String VERSION_KEY = "VERSION";
+        CONST String DEBUG_KEY = "debug";
+        CONST String VERBOSE_KEY = "verbose";
+        CONST String ARGS_KEY = "args";
+        CONST String VERSION_KEY = "version";
         
         // Help text
         // TODO: Create a `BASE/data` directory to keep these in.
-        inline StrDict _help = {
-            {DEBUG_KEY, "Debugging mode."},
-            {VERBOSE_KEY, "Extra output."},
-            {ARGS_KEY, "Files to process."},
-            {VERSION_KEY, "Display program version."}
-        };
+        // inline StrDict HELP_TEXT = {
+        //     {DEBUG_KEY, "Debugging mode."},
+        //     {VERBOSE_KEY, "Extra output."},
+        //     {ARGS_KEY, "Files to process."},
+        //     {VERSION_KEY, "Display program version."}
+        // };
         
         // File system
         CONST String CONF_DIR_NAME = ".config";
