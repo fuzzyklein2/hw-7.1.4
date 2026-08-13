@@ -1,0 +1,36 @@
+\doxysection{logging.\+hpp}
+\hypertarget{logging_8hpp_source}{}\label{logging_8hpp_source}\index{include/logging.hpp@{include/logging.hpp}}
+\mbox{\hyperlink{logging_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <filesystem>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ Local\ headers}}
+\DoxyCodeLine{00012\ \textcolor{comment}{//\ \#include\ "{}constants.hpp"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{fs_8hpp}{fs.hpp}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ \#include\ "{}types.hpp"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ File\ system}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ Path\ defaultLogFile();}
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ String\ log\_filename();}}
+\DoxyCodeLine{00020\ \textcolor{comment}{//\ void\ init\_logs();}}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{logging_8hpp_ac69b0c9a687b796675328a8ac78dc156}{debug}}(\textcolor{keyword}{const}\ String\&\ s);}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{logging_8hpp_a29c2015c6ef1926ac0395a1d24408dad}{info}}(\textcolor{keyword}{const}\ String\&\ s);}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{logging_8hpp_a3a70a5bb8f56876733ddb7756c51e0a1}{warn}}(\textcolor{keyword}{const}\ String\&\ s);}
+\DoxyCodeLine{00024\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{logging_8hpp_a41f5d653044f02fc64e06da938741a6f}{error}}(\textcolor{keyword}{const}\ String\&\ s);}
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{logging_8hpp_ac684ab1864310059f942b3474120aaae}{stop}}(\textcolor{keyword}{const}\ String\&\ s);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{logging_8hpp_ac69b0c9a687b796675328a8ac78dc156}{debug}}(ostringstream\&\ ss);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{void}\ rotate\_logs(\textcolor{keyword}{const}\ Path\&\ directory,\ \textcolor{keywordtype}{size\_t}\ count);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{comment}{//\ struct\ Log\ \{}}
+\DoxyCodeLine{00032\ \textcolor{comment}{//\ \ \ \ \ Logger\ logptr;}}
+\DoxyCodeLine{00033\ \textcolor{comment}{//\ \ \ \ \ LogLevel\ level;}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{comment}{//\ \ \ \ \ Log(const\ String\&,\ const\ int,\ const\ LogLevel\&);}}
+\DoxyCodeLine{00036\ \textcolor{comment}{//\ \};}}
+
+\end{DoxyCode}

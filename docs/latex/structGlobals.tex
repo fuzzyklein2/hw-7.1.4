@@ -1,0 +1,82 @@
+\doxysection{Globals Struct Reference}
+\hypertarget{structGlobals}{}\label{structGlobals}\index{Globals@{Globals}}
+
+
+Collaboration diagram for Globals\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{structGlobals__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structGlobals_ac49a298b3ee098f04031e7e858d5116a}\label{structGlobals_ac49a298b3ee098f04031e7e858d5116a} 
+{\bfseries Globals} (int, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*})
+\item 
+int \mbox{\hyperlink{structGlobals_a83d0d07ae262dd68285730c25b8b608c}{getargs}} (int, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*})
+\begin{DoxyCompactList}\small\item\em Parse the command line. \end{DoxyCompactList}\item 
+\Hypertarget{structGlobals_a1a6528bd70f5fd4a36401f9bc2e695d0}\label{structGlobals_a1a6528bd70f5fd4a36401f9bc2e695d0} 
+void {\bfseries get\+\_\+piped} ()
+\item 
+\Hypertarget{structGlobals_ae2feb4f0ce32fdc3595f117792e467cd}\label{structGlobals_ae2feb4f0ce32fdc3595f117792e467cd} 
+void {\bfseries init\+\_\+logs} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{structGlobals_a527f6e7d2c24a0351483be87e82d45b2}\label{structGlobals_a527f6e7d2c24a0351483be87e82d45b2} 
+\mbox{\hyperlink{structFileSystem}{File\+System}} {\bfseries FS}
+\item 
+\Hypertarget{structGlobals_a0d31dd71f0020a51740934aeb940afdc}\label{structGlobals_a0d31dd71f0020a51740934aeb940afdc} 
+JSON {\bfseries config}
+\item 
+\Hypertarget{structGlobals_aae7c8746219f95f052942ec7db569c0e}\label{structGlobals_aae7c8746219f95f052942ec7db569c0e} 
+JSON {\bfseries data}
+\item 
+\Hypertarget{structGlobals_a4e1f70e66f3e70e943ecaad441a63bea}\label{structGlobals_a4e1f70e66f3e70e943ecaad441a63bea} 
+bool {\bfseries debug}
+\item 
+\Hypertarget{structGlobals_a75677399daa94852c389901e8b1257f3}\label{structGlobals_a75677399daa94852c389901e8b1257f3} 
+bool {\bfseries verbose}
+\item 
+\Hypertarget{structGlobals_a8173b64695a84a3cb1de9260ebe5751e}\label{structGlobals_a8173b64695a84a3cb1de9260ebe5751e} 
+bool {\bfseries version} = false
+\item 
+\Hypertarget{structGlobals_a454a855b69fa9e141ff63596ab231872}\label{structGlobals_a454a855b69fa9e141ff63596ab231872} 
+Str\+List {\bfseries args}
+\item 
+\Hypertarget{structGlobals_a02f19b390ab5ddc9d269ee659fd47136}\label{structGlobals_a02f19b390ab5ddc9d269ee659fd47136} 
+String {\bfseries input}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{structGlobals_a83d0d07ae262dd68285730c25b8b608c}\label{structGlobals_a83d0d07ae262dd68285730c25b8b608c} 
+\index{Globals@{Globals}!getargs@{getargs}}
+\index{getargs@{getargs}!Globals@{Globals}}
+\doxysubsubsection{\texorpdfstring{getargs()}{getargs()}}
+{\footnotesize\ttfamily int Globals\+::getargs (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv }\end{DoxyParamCaption})}
+
+getargs
+
+Parses the command line, initializes the application, and starts the main processing loop.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Number of command line arguments. \\
+\hline
+{\em argv} & Array of command line arguments.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Exit status. 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{globals_8hpp}{globals.\+hpp}}\item 
+source/\mbox{\hyperlink{globals_8cpp}{globals.\+cpp}}\end{DoxyCompactItemize}

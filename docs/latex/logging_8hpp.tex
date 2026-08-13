@@ -1,0 +1,85 @@
+\doxysection{include/logging.hpp File Reference}
+\hypertarget{logging_8hpp}{}\label{logging_8hpp}\index{include/logging.hpp@{include/logging.hpp}}
+{\ttfamily \#include $<$filesystem$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include "{}fs.\+hpp"{}}\newline
+Include dependency graph for logging.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logging_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{logging_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{logging_8hpp_afdd6d415ccd420f2c1efc5a0d3cb4484}\label{logging_8hpp_afdd6d415ccd420f2c1efc5a0d3cb4484} 
+Path {\bfseries default\+Log\+File} ()
+\item 
+void \mbox{\hyperlink{logging_8hpp_ac69b0c9a687b796675328a8ac78dc156}{debug}} (const String \&s)
+\begin{DoxyCompactList}\small\item\em Return a default location for the log file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logging_8hpp_a29c2015c6ef1926ac0395a1d24408dad}{info}} (const String \&s)
+\begin{DoxyCompactList}\small\item\em Log a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logging_8hpp_a3a70a5bb8f56876733ddb7756c51e0a1}{warn}} (const String \&s)
+\begin{DoxyCompactList}\small\item\em Log a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logging_8hpp_a41f5d653044f02fc64e06da938741a6f}{error}} (const String \&s)
+\begin{DoxyCompactList}\small\item\em Log a string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logging_8hpp_ac684ab1864310059f942b3474120aaae}{stop}} (const String \&s)
+\begin{DoxyCompactList}\small\item\em Log a string. \end{DoxyCompactList}\item 
+\Hypertarget{logging_8hpp_a90e17d03c21fe73bc812d617f2c26e78}\label{logging_8hpp_a90e17d03c21fe73bc812d617f2c26e78} 
+void {\bfseries debug} (ostringstream \&ss)
+\item 
+\Hypertarget{logging_8hpp_aaddfe633c34518ddeb394f0b87f5dc80}\label{logging_8hpp_aaddfe633c34518ddeb394f0b87f5dc80} 
+void {\bfseries rotate\+\_\+logs} (const Path \&directory, size\+\_\+t count)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declare logging functions. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{logging_8hpp_ac69b0c9a687b796675328a8ac78dc156}\label{logging_8hpp_ac69b0c9a687b796675328a8ac78dc156} 
+\index{logging.hpp@{logging.hpp}!debug@{debug}}
+\index{debug@{debug}!logging.hpp@{logging.hpp}}
+\doxysubsubsection{\texorpdfstring{debug()}{debug()}}
+{\footnotesize\ttfamily void debug (\begin{DoxyParamCaption}\item[{const String \&}]{s }\end{DoxyParamCaption})}
+
+default\+Log\+File
+
+\begin{DoxyReturn}{Returns}
+Default logging path. debug
+\end{DoxyReturn}
+Log a string. \Hypertarget{logging_8hpp_a41f5d653044f02fc64e06da938741a6f}\label{logging_8hpp_a41f5d653044f02fc64e06da938741a6f} 
+\index{logging.hpp@{logging.hpp}!error@{error}}
+\index{error@{error}!logging.hpp@{logging.hpp}}
+\doxysubsubsection{\texorpdfstring{error()}{error()}}
+{\footnotesize\ttfamily void error (\begin{DoxyParamCaption}\item[{const String \&}]{s }\end{DoxyParamCaption})}
+
+error \Hypertarget{logging_8hpp_a29c2015c6ef1926ac0395a1d24408dad}\label{logging_8hpp_a29c2015c6ef1926ac0395a1d24408dad} 
+\index{logging.hpp@{logging.hpp}!info@{info}}
+\index{info@{info}!logging.hpp@{logging.hpp}}
+\doxysubsubsection{\texorpdfstring{info()}{info()}}
+{\footnotesize\ttfamily void info (\begin{DoxyParamCaption}\item[{const String \&}]{s }\end{DoxyParamCaption})}
+
+info \Hypertarget{logging_8hpp_ac684ab1864310059f942b3474120aaae}\label{logging_8hpp_ac684ab1864310059f942b3474120aaae} 
+\index{logging.hpp@{logging.hpp}!stop@{stop}}
+\index{stop@{stop}!logging.hpp@{logging.hpp}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily void stop (\begin{DoxyParamCaption}\item[{const String \&}]{s }\end{DoxyParamCaption})}
+
+stop \Hypertarget{logging_8hpp_a3a70a5bb8f56876733ddb7756c51e0a1}\label{logging_8hpp_a3a70a5bb8f56876733ddb7756c51e0a1} 
+\index{logging.hpp@{logging.hpp}!warn@{warn}}
+\index{warn@{warn}!logging.hpp@{logging.hpp}}
+\doxysubsubsection{\texorpdfstring{warn()}{warn()}}
+{\footnotesize\ttfamily void warn (\begin{DoxyParamCaption}\item[{const String \&}]{s }\end{DoxyParamCaption})}
+
+warn 

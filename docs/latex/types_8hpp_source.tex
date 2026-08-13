@@ -1,0 +1,30 @@
+\doxysection{types.\+hpp}
+\hypertarget{types_8hpp_source}{}\label{types_8hpp_source}\index{include/types.hpp@{include/types.hpp}}
+\mbox{\hyperlink{types_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <filesystem>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{comment}{//\ Third\ party\ headers}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <nlohmann/json.hpp>}\ \textcolor{comment}{//\ JSON\ -\/>\ struct\ conversion}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{//\ Local\ headers}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{macros_8h}{macros.h}}"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ Standard\ types}}
+\DoxyCodeLine{00020\ \textcolor{keyword}{namespace\ }fs\ =\ std::filesystem;}
+\DoxyCodeLine{00021\ \textcolor{keyword}{using\ }Path\ =\ fs::path;}
+\DoxyCodeLine{00022\ \textcolor{keyword}{using\ }String\ =\ std::string;}
+\DoxyCodeLine{00023\ \textcolor{keyword}{using\ }StrList\ =\ std::vector<String>;}
+\DoxyCodeLine{00024\ \textcolor{keyword}{using\ }StrDict\ =\ std::map<String,\ String>;}
+\DoxyCodeLine{00025\ \textcolor{keyword}{using\ }PathList\ =\ std::vector<Path>;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ Package\ types}}
+\DoxyCodeLine{00028\ \textcolor{keyword}{using\ }JSON\ =\ nlohmann::json;}
+\DoxyCodeLine{00029\ \textcolor{keyword}{using\ }Logger\ =\ std::shared\_ptr<spdlog::logger>;}
+\DoxyCodeLine{00030\ \textcolor{keyword}{using\ }LogLevel\ =\ spdlog::level::level\_enum;}
+
+\end{DoxyCode}
