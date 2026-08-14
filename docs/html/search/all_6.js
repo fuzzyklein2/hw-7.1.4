@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['log_5ffilename_0',['log_filename',['../fs_8hpp.html#a784c26a7c414624ba3f94ac69da4a39f',1,'fs.cpp']]],
-  ['logging_2ecpp_1',['logging.cpp',['../logging_8cpp.html',1,'']]],
-  ['logging_2ehpp_2',['logging.hpp',['../logging_8hpp.html',1,'']]]
+  ['info_0',['info',['../logging_8cpp.html#a29c2015c6ef1926ac0395a1d24408dad',1,'info(const String &amp;s):&#160;logging.cpp'],['../logging_8hpp.html#a29c2015c6ef1926ac0395a1d24408dad',1,'info(const String &amp;s):&#160;logging.cpp']]]
 ];
