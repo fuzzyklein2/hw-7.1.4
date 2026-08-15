@@ -16,23 +16,6 @@ using namespace std;
 
 using namespace hello7::constants;
 
-// // Execution modes
-// bool _debug = true;   // Prefix input variables and options with '_'.
-// bool _verbose = false;
-// bool _version = false;
-
-// // Input variables
-// StrList _args;
-// string _input;
-
-// // Global logging variables
-// Logger logger;
-// LogLevel log_level = LogLevel::warn;
-
-// FileSystem FS;
-// JSON _config = configure(FS.config);
-// JSON _data = load_data(FS.data);
-
 Globals::Globals(int argc, char **argv)
 {
     // cout << "Initializing Globals" << endl;
@@ -50,25 +33,11 @@ Globals::Globals(int argc, char **argv)
         exit(0);
     }
     if (debug) verbose = true;
-    if (verbose) cout << "`Globals` object initializing...";
+    if (verbose) cout << "`Globals` object initializing..." << endl;
     get_piped();
     init_logs();
-    // log = logger;
 }
 
-/**
- * getargs
- *
- * @brief Parse the command line.
- *
- * Parses the command line, initializes the application, and starts
- * the main processing loop.
- *
- * @param argc Number of command line arguments.
- * @param argv Array of command line arguments.
- *
- * @return Exit status.
- */
 int Globals::getargs(
     int argc,   // Argument count
     char **argv // Cannot be `const` or CLI11 won't work.
@@ -84,7 +53,7 @@ int Globals::getargs(
     app.add_flag("-v,--verbose", verbose, data["help"][VERBOSE_KEY]);
     app.add_flag("-V,--version", version, data["help"][VERSION_KEY]);
     app.add_option("files", args, data["help"][ARGS_KEY]);
-    // Indexing _help with brackets can cause accidental insertions by mistyped keys.
+    // ⚠️ Indexing _help with brackets can cause accidental insertions by mistyped keys.
     
     // Parse the command line arguments
     CLI11_PARSE(app, argc, argv);
@@ -115,23 +84,12 @@ void Globals::init_logs()
     // clean up the logs folder
     rotate_logs(FS.logs, config["saved logs"]);
 
-    // for (const auto& path : listdir(FS.logs))
-    // {
-    //     cout << path << endl;
-    // }
-    // cout << "Save the last " << _config["saved logs"] << " files." << endl;
-
-    // create a color multi-threaded logger
-    
+    // Allocate sinks
     auto console_sink = make_shared<spdlog::sinks::stdout_color_sink_mt>();
     auto file_sink = make_shared<spdlog::sinks::basic_file_sink_mt>(FS.logfile);
 
     // Set the console log level according to `_debug` and/or `_verbose` values.
     // So command line arguments have to have been parsed previously to calling this.
-    // if (_debug) console_sink->set_level(LogLevel::debug);
-    // else if (_verbose) console_sink->set_level(LogLevel::info);
-    // else console_sink->set_level(LogLevel::warn);
-    // console_sink->set_level(ll)
 
     if (debug) console_sink->set_level(LogLevel::debug);
     else if (verbose) console_sink->set_level(LogLevel::info);
@@ -157,4 +115,12 @@ void Globals::init_logs()
     // logger->warn("This should be everywhere.");
     // logger->info("This should only be in the file.");
     // logger->error("Danger, Will Robinson!");
+}
+
+/**
+ * Output the value of all members.
+ */
+void Globals::dump()
+{
+    FS.dump();
 }

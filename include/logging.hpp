@@ -9,28 +9,61 @@
 #include <string>
 
 // Local headers
-// #include "constants.hpp"
 #include "fs.hpp"
-// #include "types.hpp"
 
 // File system
 
+/**
+ * @brief Return a default location for the log file.
+ * 
+ * @return Default logging path.
+ */
 Path defaultLogFile();
-// String log_filename();
-// void init_logs();
-void debug(const String& s);
-void info(const String& s);
-void warn(const String& s);
-void error(const String& s);
-void stop(const String& s);
 
+/**
+ * @brief Log a string.
+ * @param s The string to log.
+ */
+void debug(const String& s);
+
+/**
+ * @brief Log a string.
+ *
+ * @param ss A `stringstream`.
+ * @return `void`, but `ss` is reset.
+ */
 void debug(ostringstream& ss);
 
+/**
+ * @brief Log a string.
+ * @param s The string to log.
+ */
+void info(const String& s);
+
+/**
+ * @brief Log a string.
+ * @param s The string to log.
+ */
+void warn(const String& s);
+
+/**
+ * @brief Log a string.
+ * @param s The string to log.
+ */
+void error(const String& s);
+
+/**
+ * @brief Log a string.
+ * @param s The string to log.
+ */
+void stop(const String& s);
+
+/**
+ * @brief Ensure that only the `count` most recent logs remain in the `logs` directory.
+ *
+ * @param directory Current logs folder.
+ * @param count Number of logs to keep
+ *
+ * \todo Should return a result code or something relevant maybe.
+ */
 void rotate_logs(const Path& directory, size_t count);
-
-// struct Log {
-//     Logger logptr;
-//     LogLevel level;
-
-//     Log(const String&, const int, const LogLevel&);
-// };

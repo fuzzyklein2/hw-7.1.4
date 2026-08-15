@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['types_2ehpp_0',['types.hpp',['../types_8hpp.html',1,'']]]
+  ['rotate_5flogs_0',['rotate_logs',['../logging_8cpp.html#aaddfe633c34518ddeb394f0b87f5dc80',1,'rotate_logs(const Path &amp;directory, size_t count):&#160;logging.cpp'],['../logging_8hpp.html#aaddfe633c34518ddeb394f0b87f5dc80',1,'rotate_logs(const Path &amp;directory, size_t count):&#160;logging.cpp']]]
 ];

@@ -77,12 +77,17 @@ $(function() {
   <div class="headertitle"><div class="title">Globals Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Stores all the global variables necessary to run the program.  
+</p>
+
+<p><code>#include &lt;<a class="el" href="globals_8hpp_source.html">globals.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for Globals:</div>
 <div class="dyncontent">
 <div class="center"><img src="structGlobals__coll__graph.png" border="0" usemap="#aGlobals_coll__map" alt="Collaboration graph"/></div>
 <map name="aGlobals_coll__map" id="aGlobals_coll__map">
-<area shape="rect" title=" " alt="" coords="16,93,83,119"/>
+<area shape="rect" title="Stores all the global variables necessary to run the program." alt="" coords="16,93,83,119"/>
 <area shape="rect" href="structFileSystem.html" title=" " alt="" coords="5,5,93,31"/>
 <area shape="poly" title=" " alt="" coords="52,45,52,93,47,93,47,45"/>
 </map>
@@ -90,18 +95,12 @@ Collaboration diagram for Globals:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac49a298b3ee098f04031e7e858d5116a" id="r_ac49a298b3ee098f04031e7e858d5116a"><td class="memItemLeft" align="right" valign="top"><a id="ac49a298b3ee098f04031e7e858d5116a" name="ac49a298b3ee098f04031e7e858d5116a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Globals</b> (int, char **)</td></tr>
+<tr class="memitem:ac49a298b3ee098f04031e7e858d5116a" id="r_ac49a298b3ee098f04031e7e858d5116a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGlobals.html#ac49a298b3ee098f04031e7e858d5116a">Globals</a> (int, char **)</td></tr>
+<tr class="memdesc:ac49a298b3ee098f04031e7e858d5116a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize global variables.  <br /></td></tr>
 <tr class="separator:ac49a298b3ee098f04031e7e858d5116a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83d0d07ae262dd68285730c25b8b608c" id="r_a83d0d07ae262dd68285730c25b8b608c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGlobals.html#a83d0d07ae262dd68285730c25b8b608c">getargs</a> (int, char **)</td></tr>
-<tr class="memdesc:a83d0d07ae262dd68285730c25b8b608c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse the command line.  <br /></td></tr>
-<tr class="separator:a83d0d07ae262dd68285730c25b8b608c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1a6528bd70f5fd4a36401f9bc2e695d0" id="r_a1a6528bd70f5fd4a36401f9bc2e695d0"><td class="memItemLeft" align="right" valign="top"><a id="a1a6528bd70f5fd4a36401f9bc2e695d0" name="a1a6528bd70f5fd4a36401f9bc2e695d0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>get_piped</b> ()</td></tr>
-<tr class="separator:a1a6528bd70f5fd4a36401f9bc2e695d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2feb4f0ce32fdc3595f117792e467cd" id="r_ae2feb4f0ce32fdc3595f117792e467cd"><td class="memItemLeft" align="right" valign="top"><a id="ae2feb4f0ce32fdc3595f117792e467cd" name="ae2feb4f0ce32fdc3595f117792e467cd"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>init_logs</b> ()</td></tr>
-<tr class="separator:ae2feb4f0ce32fdc3595f117792e467cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe3b7e6ecf3775109e836df963364e08" id="r_afe3b7e6ecf3775109e836df963364e08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGlobals.html#afe3b7e6ecf3775109e836df963364e08">dump</a> ()</td></tr>
+<tr class="memdesc:afe3b7e6ecf3775109e836df963364e08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output the values of all the globals.  <br /></td></tr>
+<tr class="separator:afe3b7e6ecf3775109e836df963364e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -130,15 +129,15 @@ StrList&#160;</td><td class="memItemRight" valign="bottom"><b>args</b></td></tr>
 String&#160;</td><td class="memItemRight" valign="bottom"><b>input</b></td></tr>
 <tr class="separator:a02f19b390ab5ddc9d269ee659fd47136"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a id="a83d0d07ae262dd68285730c25b8b608c" name="a83d0d07ae262dd68285730c25b8b608c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a83d0d07ae262dd68285730c25b8b608c">&#9670;&#160;</a></span>getargs()</h2>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ac49a298b3ee098f04031e7e858d5116a" name="ac49a298b3ee098f04031e7e858d5116a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac49a298b3ee098f04031e7e858d5116a">&#9670;&#160;</a></span>Globals()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int Globals::getargs </td>
+          <td class="memname">Globals::Globals </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>argc</em>, </td>
@@ -156,16 +155,32 @@ String&#160;</td><td class="memItemRight" valign="bottom"><b>input</b></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>getargs</p>
-<p>Parses the command line, initializes the application, and starts the main processing loop.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">argc</td><td>Number of command line arguments. </td></tr>
-    <tr><td class="paramname">argv</td><td>Array of command line arguments.</td></tr>
+    <tr><td class="paramname">argc</td><td>Number of command line arguments passed to <code><a class="el" href="main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Entry point of the program.">main()</a></code>. </td></tr>
+    <tr><td class="paramname">argv</td><td>Array of args as <code>C</code> strings. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Exit status. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="afe3b7e6ecf3775109e836df963364e08" name="afe3b7e6ecf3775109e836df963364e08"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe3b7e6ecf3775109e836df963364e08">&#9670;&#160;</a></span>dump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Globals::dump </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Output the value of all members. </p>
 
 </div>
 </div>

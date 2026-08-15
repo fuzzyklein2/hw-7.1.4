@@ -1,14 +1,15 @@
 /**
- * @file globals.cpp
+ * @file fs.cpp
  *
  * Define and initialize global variables.
  */
 
+// System headers
 #include "sysinc.hpp"
 using namespace std;
 
 // Local headers
-#include "fs.hpp"
+#include "logging.hpp"
 
 Path cwd()
 {
@@ -25,12 +26,6 @@ PathList listdir(const Path& path)
     return result;
 }
 
-/**
- * getHome
- *
- * @brief Return the user's home directory.
- * @return path to `~`.
- */
 Path getHome()
 {
     const char* home = getenv("HOME");
@@ -57,13 +52,6 @@ FileSystem::FileSystem()
     ensure_file(data);
 }
 
-/**
- * log_filename
- * 
- * @brief Return a string to name the log file with.
- * 
- * @return Current timestamp as a string.
- */
 String log_filename()
 {
     auto now = chrono::system_clock::now();
@@ -76,3 +64,29 @@ String log_filename()
     return ss.str();
 }
 
+void FileSystem::dump()
+{
+    debug(format(R"(FILE SYSTEM
+
+        Current working directory: {}
+        User's home directory:     {}
+        Base directory:            {}
+        Configuration directory:   {}
+        Configuration file:        {}
+        User data:                 {}
+        Logs:                      {}
+        Log file:                  {}
+        Data directory:            {}
+        Data file:                 {}
+    )", working.string(),
+        home.string(),
+        base.string(),
+        conf_dir.string(),
+        config.string(),
+        user.string(),
+        logs.string(),
+        logfile.string(),
+        data_dir.string(),
+        data.string()
+    ));
+}

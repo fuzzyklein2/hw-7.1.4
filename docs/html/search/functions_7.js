@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['stop_0',['stop',['../logging_8cpp.html#ac684ab1864310059f942b3474120aaae',1,'stop(const String &amp;s):&#160;logging.cpp'],['../logging_8hpp.html#ac684ab1864310059f942b3474120aaae',1,'stop(const String &amp;s):&#160;logging.cpp']]]
+  ['now_5fstring_0',['now_string',['../datetime_8cpp.html#a7235d375889750badea7719e65aded5e',1,'now_string():&#160;datetime.cpp'],['../datetime_8hpp.html#a7235d375889750badea7719e65aded5e',1,'now_string():&#160;datetime.cpp']]]
 ];

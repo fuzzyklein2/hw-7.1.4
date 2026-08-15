@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['warn_0',['warn',['../logging_8cpp.html#a3a70a5bb8f56876733ddb7756c51e0a1',1,'warn(const String &amp;s):&#160;logging.cpp'],['../logging_8hpp.html#a3a70a5bb8f56876733ddb7756c51e0a1',1,'warn(const String &amp;s):&#160;logging.cpp']]]
+  ['rotate_5flogs_0',['rotate_logs',['../logging_8cpp.html#aaddfe633c34518ddeb394f0b87f5dc80',1,'rotate_logs(const Path &amp;directory, size_t count):&#160;logging.cpp'],['../logging_8hpp.html#aaddfe633c34518ddeb394f0b87f5dc80',1,'rotate_logs(const Path &amp;directory, size_t count):&#160;logging.cpp']]]
 ];

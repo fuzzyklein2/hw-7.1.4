@@ -11,13 +11,6 @@ using namespace std;
 // Local headers
 #include "datetime.hpp"
 
-/**
- * now_string
- * 
- * @brief Get the current timestamp and return it.
- * 
- * @return Current timestamp as a string.
- */
 String now_string()
 {
     auto now = chrono::system_clock::now();

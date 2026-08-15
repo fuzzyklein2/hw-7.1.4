@@ -13,23 +13,26 @@ namespace hello7
     namespace constants
     {
         // String constants
+        /// Easy way to find the current process.
         CONST String THIS_PROC = "/proc/self/exe";
-        // @todo Move `PROGRAM` and `VERSION` definitions to data/hello.json.
-        // @todo Move `DESCRIPTION` to the data file.
-        // @todo `WORLD` and `GREETING` are specific to this 1st project.
+        /// Name of the currently running program.
         CONST String PROGRAM = fs::read_symlink(THIS_PROC).filename();
         // CONST String VERSION = "0.0.0";
-        CONST String WORLD = "\U0001F30E"; // 🌎 Earth Globe Americas
-        // CONST String DESCRIPTION = "Simple C++ CLI app framework.";
-        CONST String GREETING = "Hello, ";
         
+        /// Ensure Unicode.
+        /// \todo `WORLD` and `GREETING` are specific to this 1st project.
+        CONST String WORLD = "\U0001F30E"; // 🌎 Earth Globe Americas
+
+        CONST String GREETING = "Hello, ";
+
+        /// Basic strings. May possibly avoid a few typos.
         CONST String SPACE = " ";
         CONST String EMPTY = "";
         CONST String DBL_SPACE = "  ";
         CONST String DOT = ".";
         CONST String CHECK = "✓ ";
         
-        // Unicode emojis
+        /// Unicode emojis just to be cute.
         CONST String LOG_PICT = "📜";
         CONST String CRITICAL_PICT = "🛑";
         CONST String ERROR_PICT = "❗";
@@ -39,29 +42,22 @@ namespace hello7
         CONST String CHECK_PICT = "✅";
         CONST String FAILURE_PICT = "❌";
         
-        // Index strings
+        /// Index strings for the help text in `data/data.json`.
         CONST String DEBUG_KEY = "debug";
         CONST String VERBOSE_KEY = "verbose";
         CONST String ARGS_KEY = "args";
         CONST String VERSION_KEY = "version";
-        
-        // Help text
-        // TODO: Create a `BASE/data` directory to keep these in.
-        // inline StrDict HELP_TEXT = {
-        //     {DEBUG_KEY, "Debugging mode."},
-        //     {VERBOSE_KEY, "Extra output."},
-        //     {ARGS_KEY, "Files to process."},
-        //     {VERSION_KEY, "Display program version."}
-        // };
-        
-        // File system
+                
+        /// File system filenames.
         CONST String CONF_DIR_NAME = ".config";
         CONST String CONF_FILE_NAME = "config.json";
         CONST String LOG_DIR_NAME = ".log";
         CONST String DATA_DIR_NAME = "data";
-        CONST String DATA_FILE_NAME = "hello.json";
+        CONST String DATA_FILE_NAME = "data.json";
         
         // Environment variables
         
     } // namespace constants
 } // namespace hello7
+
+namespace hw7 = hello7::constants;

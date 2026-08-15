@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['info_0',['info',['../logging_8cpp.html#a29c2015c6ef1926ac0395a1d24408dad',1,'info(const String &amp;s):&#160;logging.cpp'],['../logging_8hpp.html#a29c2015c6ef1926ac0395a1d24408dad',1,'info(const String &amp;s):&#160;logging.cpp']]]
+  ['gethome_0',['gethome',['../fs_8cpp.html#a3bd8d432d28c14e88726400936241576',1,'getHome():&#160;fs.cpp'],['../fs_8hpp.html#a3bd8d432d28c14e88726400936241576',1,'getHome():&#160;fs.cpp']]],
+  ['globals_1',['Globals',['../structGlobals.html#ac49a298b3ee098f04031e7e858d5116a',1,'Globals']]]
 ];
