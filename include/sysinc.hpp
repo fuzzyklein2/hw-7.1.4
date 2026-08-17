@@ -14,6 +14,7 @@
 #include <fstream>    // file streams
 #include <iomanip>    // ?
 #include <iostream>   // cin & cout
+#include <memory>     // ?
 #include <regex>      // regular expressions
 #include <sstream>    // string streams
 #include <stdexcept>  // exception handling

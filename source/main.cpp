@@ -9,8 +9,7 @@
 using namespace std;
 
 // Local headers
-#include "globals.hpp"
-#include "logging.hpp"
+#include "program.hpp"
 
 /**
  * main
@@ -29,10 +28,7 @@ int main(
     int argc, // Argument count
     char **argv // Cannot be `const` or CLI11 won't work.
 ) {
-    Globals G(argc, argv);
-
-    debug(format("{} initialized", hw7::PROGRAM));
-    G.dump();
+    Program p = Program(argc, argv);
     
-    return 0;
+    return p.run();
 }

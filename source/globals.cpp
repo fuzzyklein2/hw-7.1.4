@@ -33,7 +33,7 @@ Globals::Globals(int argc, char **argv)
         exit(0);
     }
     if (_debug) verbose = true;
-    if (verbose) cout << "`Globals` object initializing..." << endl;
+    // if (verbose) cout << "`Globals` object initializing..." << endl;
     get_piped();
     init_logs();
 }

@@ -3,15 +3,17 @@
  *
  * Functions for the `str` class.
  */
-
+#include "sysinc.hpp"
 #include "str.hpp"
+
+using namespace std;
 
 using namespace std;
 using namespace hw7;
 
 str str::lower()
 {
-    gchar* p = g_utf8_strup(c_str, length);
+    gchar* p = g_utf8_strdown(c_str(), length());
     str result(p);
     g_free(p);
     return result;
@@ -19,7 +21,7 @@ str str::lower()
 
 str str::upper()
 {
-    gchar* p = g_utf8_strdown(c_str, length);
+    gchar* p = g_utf8_strup(c_str(), length());
     str result(p);
     g_free(p);
     return result;
@@ -37,18 +39,18 @@ StrList str::split(const str& sep)
         sep.c_str(),
         G_REGEX_DEFAULT,
         G_REGEX_MATCH_DEFAULT,
-        &error
+        &err
     );
 
     if (!regex)
     {
         // Handle error however your str class/project does errors.
-        if (error)
-            g_error_free(error);
+        if (err)
+            g_error_free(err);
         return {};
     }
 
-    gchar** substrings = g_regex_split(regex, c_str, 0);
+    gchar** substrings = g_regex_split(regex, c_str(), G_REGEX_MATCH_DEFAULT);
 
     StrList result;
 
@@ -71,7 +73,7 @@ str str::join(const StrList& L)
 
     strings.push_back(nullptr);
 
-    gchar* p = g_strjoinv(c_str, strings.data());
+    gchar* p = g_strjoinv(c_str(), strings.data());
 
     for (gchar* s : strings)
         g_free(s);
@@ -84,6 +86,6 @@ str str::join(const StrList& L)
 
 str str::replace(const str& pattern, const str& replacement)
 {
-    if (target.empty()) return *this;
+    if (pattern.empty()) return *this;
     return regex_replace(*this, regex(pattern), replacement);
 }

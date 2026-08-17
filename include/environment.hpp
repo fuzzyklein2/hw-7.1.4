@@ -8,9 +8,7 @@
 // C Standard Library headers
 #include <cstdlib>
 
-// 3rd Party Headers
 #include "fs.hpp"
-#include "str.hpp"
 
 /**
  * @brief Check for environment variables that override `config.json`.

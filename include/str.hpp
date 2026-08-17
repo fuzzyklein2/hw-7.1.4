@@ -6,7 +6,9 @@
  * @todo Utility functions
  */
 
-#include "types.h"
+#include <string>
+
+#include "types.hpp"
 
 namespace hw7
 {
@@ -35,6 +37,11 @@ namespace hw7
         str(const String& s) : String(s) {}
 
         /*
+         * string view constructor.
+         */
+        str(const std::string_view& s) : String(s) {}
+
+        /*
          * @return Lower case version of `this`.
          */
         str lower();
@@ -53,14 +60,14 @@ namespace hw7
          * @param sep `str` to be used as a separator to split the `str`.
          * @return `StrList` of `substr`s separated by contiguous whitespace.
          */
-        StrList split(str sep);
+        StrList split(const str&);
 
         /*
          * Join a list of strings using `this`.
          * @param sep `str` to be used as a separator to split the `str`.
          * @return `StrList` of `substr`s separated by contiguous whitespace.
          */            
-        str join(StrList);
+        str join(const StrList&);
 
         /**
          * Replace a substring of `this` with a different string.
