@@ -3,6 +3,10 @@
  * @file logging.hpp
  *
  * Declare logging functions.
+ *
+ * @todo Add `--logfile` option and make it relevant.
+ * @todo Only delete files that have a date as their filename, so named logs are more persistent.
+ *       Include an overall limit on the number of named logfiles.
  */
 
 #include <filesystem>

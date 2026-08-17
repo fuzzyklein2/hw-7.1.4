@@ -14,7 +14,13 @@ class Program : Globals
 public:
 
     /**
-     * Default constructor.
+     * Constructor.
+     * @param argc Number of CLI arguments.
+     * @param argv C array of arguments as C strings.
+     *
+     * Arguments are just passed on to `CLI11`.
+     *
+     * @return Error code to (possibly) be returned by `main`
      */
     Program(int argc, char **argv) : Globals(argc, argv) {}
 

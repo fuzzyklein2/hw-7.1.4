@@ -12,7 +12,7 @@
 
 // Local headers
 #include "fs.hpp"
-#include "types.hpp"
+// #include "types.hpp"
 
 /**
  *  @brief Stores all the global variables necessary to run the program.
