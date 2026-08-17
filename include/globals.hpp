@@ -21,7 +21,7 @@ struct Globals {
     FileSystem FS;
     JSON config;
     JSON data;
-    bool debug;
+    bool _debug;
     bool verbose;
     bool version = false;
     StrList args;

@@ -7,7 +7,6 @@
 
 // Local headers
 #include "fs.hpp"
-#include "types.hpp"
 
 JSON configure(const Path&);
 JSON load_data(const Path& p);

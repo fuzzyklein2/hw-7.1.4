@@ -14,7 +14,7 @@ using namespace std;
 #include "globals.hpp"
 #include "logging.hpp"
 
-using namespace hello7::constants;
+using namespace hw7;
 
 Globals::Globals(int argc, char **argv)
 {
@@ -23,8 +23,8 @@ Globals::Globals(int argc, char **argv)
     // cout << "Data file: " << FS.data << endl;
     config = configure(FS.config);
     data = load_data(FS.data);
-    debug = config["debug"];
-    verbose = debug;
+    _debug = config["debug"];
+    verbose = _debug;
     getargs(argc, argv);
     // cout << "Version switch: " << version << endl;
     if (version)
@@ -32,7 +32,7 @@ Globals::Globals(int argc, char **argv)
         cout << PROGRAM << SPACE << data["version"] << endl;
         exit(0);
     }
-    if (debug) verbose = true;
+    if (_debug) verbose = true;
     if (verbose) cout << "`Globals` object initializing..." << endl;
     get_piped();
     init_logs();
@@ -49,7 +49,7 @@ int Globals::getargs(
     argv = app.ensure_utf8(argv);
 
     // Add options and arguments
-    app.add_flag("-d,--debug", debug, data["help"][DEBUG_KEY]);
+    app.add_flag("-d,--debug", _debug, data["help"][DEBUG_KEY]);
     app.add_flag("-v,--verbose", verbose, data["help"][VERBOSE_KEY]);
     app.add_flag("-V,--version", version, data["help"][VERSION_KEY]);
     app.add_option("files", args, data["help"][ARGS_KEY]);
@@ -91,7 +91,7 @@ void Globals::init_logs()
     // Set the console log level according to `_debug` and/or `_verbose` values.
     // So command line arguments have to have been parsed previously to calling this.
 
-    if (debug) console_sink->set_level(LogLevel::debug);
+    if (_debug) console_sink->set_level(LogLevel::debug);
     else if (verbose) console_sink->set_level(LogLevel::info);
     else console_sink->set_level(LogLevel::warn);
 
@@ -123,4 +123,28 @@ void Globals::init_logs()
 void Globals::dump()
 {
     FS.dump();
+    ostringstream ss;
+    ss << "DATA" << endl << endl << data.dump(4) << endl;
+    debug(ss);
+    ss << "CONFIGURATION" << endl << endl << config.dump(4) << endl;
+    debug(ss);
+    ss << "ENVIRONMENT VARIABLES" << endl << endl;
+    debug(ss);
+    ss << "GLOBAL VARIABLES"
+       << format(R"(
+    _debug:  {}
+    verbose: {}
+    version: {}
+    
+    Arguments:
+
+)", _debug, verbose, version);
+    
+    for (const auto& arg : args) ss << "        " << arg << endl;
+    
+    ss << endl << format(R"(Piped Input:
+
+{}
+          )", input);
+    debug(ss);
 }

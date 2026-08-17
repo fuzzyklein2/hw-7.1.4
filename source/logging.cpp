@@ -11,8 +11,6 @@ using namespace std;
 #include "logging.hpp"
 // #include "types.hpp"
 
-using namespace hello7::constants;
-
 void debug(const String& s)
 {
     spdlog::get(PROGRAM)->debug(DEBUG_PICT + DBL_SPACE + s);

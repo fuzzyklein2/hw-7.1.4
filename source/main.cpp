@@ -33,29 +33,6 @@ int main(
 
     debug(format("{} initialized", hw7::PROGRAM));
     G.dump();
-
-    // if (G.debug)
-    // {
-    //     ostringstream ss;
-    //     ss << "Current working directory: " << G.FS.working;
-    //     debug(ss);
-    //     ss << "Home directory: " << G.FS.home;
-    //     debug(ss);
-    //     ss << "Base: " << G.FS.base;
-    //     debug(ss);
-    //     ss << "Configuration file: " << G.FS.config;
-    //     debug(ss);
-    //     ss << "Config directory: " << G.FS.config.parent_path();
-    //     debug(ss);
-    //     ss << "User directory: " << G.FS.user;
-    //     debug(ss);
-    //     ss << "Logs: " << G.FS.logs;
-    //     debug(ss);
-    //     ss << "Log file: " << G.FS.logfile;
-    //     debug(ss);
-    //     ss << "Data file: " << G.FS.data;
-    //     debug(ss);
-    // }
     
     return 0;
 }

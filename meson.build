@@ -6,7 +6,7 @@ project(
   default_options : ['cpp_std=c++23']
 )
 
-# gtkmm_dep = dependency('gtkmm-4.0')
+gtkmm_dep = dependency('gtkmm-4.0')
 fmt_dep = dependency('fmt')
 spdlog_dep = dependency('spdlog')
 
@@ -14,7 +14,7 @@ spdlog_dep = dependency('spdlog')
 inc = include_directories('include', 'contrib')
 
 # --- AUTOGEN_SRC_START ---
-src = [
+src_files = [
   'source/config.cpp',
   'source/datetime.cpp',
   'source/environment.cpp',
@@ -22,18 +22,19 @@ src = [
   'source/globals.cpp',
   'source/logging.cpp',
   'source/main.cpp',
+  'source/str.cpp',
 ]
 # --- AUTOGEN_SRC_END ---
 
 # Define executable
 executable(
   'hello',
-  src,
+  src_files,
   include_directories: inc,
-#  dependencies : gtkmm_dep
   dependencies : [
     fmt_dep,
     spdlog_dep,
+    gtkmm_dep
   ],
 )
 
