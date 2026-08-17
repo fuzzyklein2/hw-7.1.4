@@ -25,6 +25,17 @@
 #                             # Appears to happen in pydoc as well.
 #     from ._metadata import *
 
+print("Initializing glob4meson...")
+
+import json
+from pathlib import Path
+from pprint import pprint as pp
+print(f"Current working directory: {Path.cwd()}")
+DATA_FILE = Path("data/data.json")
+with DATA_FILE.open() as f:
+    DATA = json.load(f)
+pp(DATA)
+
 __doc__ = f"""Generate a list of source files and insert them into `meson.build`.
 
 
@@ -35,11 +46,11 @@ Stay tuned for updates.
 
 ## Version
 
-{VERSION}
+{DATA["version"]}
 
 ## Author
 
-{AUTHOR}
+{DATA["author"]}
 
 ## Date
 

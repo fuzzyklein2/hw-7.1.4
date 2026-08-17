@@ -28,6 +28,5 @@ untitled.txt
 test/
 *#
 
-# Python files
-__pycache__/
-
+docs/html/*
+bin/

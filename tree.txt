@@ -1,0 +1,662 @@
+.
+├── bin
+├── data
+│   └── data.json
+├── docs
+│   └── html
+│       ├── annotated.html
+│       ├── bc_sd.png
+│       ├── bc_s.png
+│       ├── bug.html
+│       ├── classes.html
+│       ├── classhw7_1_1str__coll__graph.map
+│       ├── classhw7_1_1str__coll__graph.md5
+│       ├── classhw7_1_1str__coll__graph.png
+│       ├── classhw7_1_1str.html
+│       ├── classhw7_1_1str__inherit__graph.map
+│       ├── classhw7_1_1str__inherit__graph.md5
+│       ├── classhw7_1_1str__inherit__graph.png
+│       ├── classhw7_1_1str-members.html
+│       ├── classProgram__coll__graph.map
+│       ├── classProgram__coll__graph.md5
+│       ├── classProgram__coll__graph.png
+│       ├── classProgram.html
+│       ├── classProgram__inherit__graph.map
+│       ├── classProgram__inherit__graph.md5
+│       ├── classProgram__inherit__graph.png
+│       ├── classProgram-members.html
+│       ├── closed.png
+│       ├── config_8cpp.html
+│       ├── config_8cpp__incl.map
+│       ├── config_8cpp__incl.md5
+│       ├── config_8cpp__incl.png
+│       ├── config_8hpp__dep__incl.map
+│       ├── config_8hpp__dep__incl.md5
+│       ├── config_8hpp__dep__incl.png
+│       ├── config_8hpp.html
+│       ├── config_8hpp__incl.map
+│       ├── config_8hpp__incl.md5
+│       ├── config_8hpp__incl.png
+│       ├── config_8hpp_source.html
+│       ├── constants_8hpp__dep__incl.map
+│       ├── constants_8hpp__dep__incl.md5
+│       ├── constants_8hpp__dep__incl.png
+│       ├── constants_8hpp.html
+│       ├── constants_8hpp__incl.map
+│       ├── constants_8hpp__incl.md5
+│       ├── constants_8hpp__incl.png
+│       ├── constants_8hpp_source.html
+│       ├── datetime_8cpp.html
+│       ├── datetime_8cpp__incl.map
+│       ├── datetime_8cpp__incl.md5
+│       ├── datetime_8cpp__incl.png
+│       ├── datetime_8hpp__dep__incl.map
+│       ├── datetime_8hpp__dep__incl.md5
+│       ├── datetime_8hpp__dep__incl.png
+│       ├── datetime_8hpp.html
+│       ├── datetime_8hpp__incl.map
+│       ├── datetime_8hpp__incl.md5
+│       ├── datetime_8hpp__incl.png
+│       ├── datetime_8hpp_source.html
+│       ├── dir_000001_000000.html
+│       ├── dir_b2f33c71d4aa5e7af42a1ca61ff5af1b_dep.map
+│       ├── dir_b2f33c71d4aa5e7af42a1ca61ff5af1b_dep.md5
+│       ├── dir_b2f33c71d4aa5e7af42a1ca61ff5af1b_dep.png
+│       ├── dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html
+│       ├── dir_d44c64559bbebec7f509842c48db8b23.html
+│       ├── docd.svg
+│       ├── doc.svg
+│       ├── doxygen.css
+│       ├── doxygen.svg
+│       ├── dynsections.js
+│       ├── environment_8cpp.html
+│       ├── environment_8cpp__incl.map
+│       ├── environment_8cpp__incl.md5
+│       ├── environment_8cpp__incl.png
+│       ├── environment_8hpp__dep__incl.map
+│       ├── environment_8hpp__dep__incl.md5
+│       ├── environment_8hpp__dep__incl.png
+│       ├── environment_8hpp.html
+│       ├── environment_8hpp__incl.map
+│       ├── environment_8hpp__incl.md5
+│       ├── environment_8hpp__incl.png
+│       ├── environment_8hpp_source.html
+│       ├── files.html
+│       ├── folderclosedd.svg
+│       ├── folderclosed.svg
+│       ├── folderopend.svg
+│       ├── folderopen.svg
+│       ├── fs_8cpp.html
+│       ├── fs_8cpp__incl.map
+│       ├── fs_8cpp__incl.md5
+│       ├── fs_8cpp__incl.png
+│       ├── fs_8hpp__dep__incl.map
+│       ├── fs_8hpp__dep__incl.md5
+│       ├── fs_8hpp__dep__incl.png
+│       ├── fs_8hpp.html
+│       ├── fs_8hpp__incl.map
+│       ├── fs_8hpp__incl.md5
+│       ├── fs_8hpp__incl.png
+│       ├── fs_8hpp_source.html
+│       ├── functions_func.html
+│       ├── functions.html
+│       ├── globals_8cpp.html
+│       ├── globals_8cpp__incl.map
+│       ├── globals_8cpp__incl.md5
+│       ├── globals_8cpp__incl.png
+│       ├── globals_8hpp__dep__incl.map
+│       ├── globals_8hpp__dep__incl.md5
+│       ├── globals_8hpp__dep__incl.png
+│       ├── globals_8hpp.html
+│       ├── globals_8hpp__incl.map
+│       ├── globals_8hpp__incl.md5
+│       ├── globals_8hpp__incl.png
+│       ├── globals_8hpp_source.html
+│       ├── globals_func.html
+│       ├── globals.html
+│       ├── graph_legend.html
+│       ├── graph_legend.md5
+│       ├── graph_legend.png
+│       ├── hierarchy.html
+│       ├── index.html
+│       ├── inherit_graph_0.map
+│       ├── inherit_graph_0.md5
+│       ├── inherit_graph_0.png
+│       ├── inherit_graph_1.map
+│       ├── inherit_graph_1.md5
+│       ├── inherit_graph_1.png
+│       ├── inherit_graph_2.map
+│       ├── inherit_graph_2.md5
+│       ├── inherit_graph_2.png
+│       ├── inherits.html
+│       ├── jquery.js
+│       ├── logging_8cpp.html
+│       ├── logging_8cpp__incl.map
+│       ├── logging_8cpp__incl.md5
+│       ├── logging_8cpp__incl.png
+│       ├── logging_8hpp__dep__incl.map
+│       ├── logging_8hpp__dep__incl.md5
+│       ├── logging_8hpp__dep__incl.png
+│       ├── logging_8hpp.html
+│       ├── logging_8hpp__incl.map
+│       ├── logging_8hpp__incl.md5
+│       ├── logging_8hpp__incl.png
+│       ├── logging_8hpp_source.html
+│       ├── macros_8h__dep__incl.map
+│       ├── macros_8h__dep__incl.md5
+│       ├── macros_8h__dep__incl.png
+│       ├── macros_8h.html
+│       ├── macros_8h_source.html
+│       ├── main_8cpp.html
+│       ├── main_8cpp__incl.map
+│       ├── main_8cpp__incl.md5
+│       ├── main_8cpp__incl.png
+│       ├── menudata.js
+│       ├── menu.js
+│       ├── minusd.svg
+│       ├── minus.svg
+│       ├── nav_fd.png
+│       ├── nav_f.png
+│       ├── nav_g.png
+│       ├── nav_hd.png
+│       ├── nav_h.png
+│       ├── open.png
+│       ├── pages.html
+│       ├── plusd.svg
+│       ├── plus.svg
+│       ├── program_8hpp__dep__incl.map
+│       ├── program_8hpp__dep__incl.md5
+│       ├── program_8hpp__dep__incl.png
+│       ├── program_8hpp.html
+│       ├── program_8hpp__incl.map
+│       ├── program_8hpp__incl.md5
+│       ├── program_8hpp__incl.png
+│       ├── program_8hpp_source.html
+│       ├── search
+│       │   ├── all_0.js
+│       │   ├── all_10.js
+│       │   ├── all_11.js
+│       │   ├── all_12.js
+│       │   ├── all_1.js
+│       │   ├── all_2.js
+│       │   ├── all_3.js
+│       │   ├── all_4.js
+│       │   ├── all_5.js
+│       │   ├── all_6.js
+│       │   ├── all_7.js
+│       │   ├── all_8.js
+│       │   ├── all_9.js
+│       │   ├── all_a.js
+│       │   ├── all_b.js
+│       │   ├── all_c.js
+│       │   ├── all_d.js
+│       │   ├── all_e.js
+│       │   ├── all_f.js
+│       │   ├── classes_0.js
+│       │   ├── classes_1.js
+│       │   ├── classes_2.js
+│       │   ├── classes_3.js
+│       │   ├── close.svg
+│       │   ├── files_0.js
+│       │   ├── files_1.js
+│       │   ├── files_2.js
+│       │   ├── files_3.js
+│       │   ├── files_4.js
+│       │   ├── files_5.js
+│       │   ├── files_6.js
+│       │   ├── files_7.js
+│       │   ├── files_8.js
+│       │   ├── files_9.js
+│       │   ├── functions_0.js
+│       │   ├── functions_1.js
+│       │   ├── functions_2.js
+│       │   ├── functions_3.js
+│       │   ├── functions_4.js
+│       │   ├── functions_5.js
+│       │   ├── functions_6.js
+│       │   ├── functions_7.js
+│       │   ├── functions_8.js
+│       │   ├── functions_9.js
+│       │   ├── functions_a.js
+│       │   ├── functions_b.js
+│       │   ├── functions_c.js
+│       │   ├── functions_d.js
+│       │   ├── functions_e.js
+│       │   ├── mag_d.svg
+│       │   ├── mag_seld.svg
+│       │   ├── mag_sel.svg
+│       │   ├── mag.svg
+│       │   ├── pages_0.js
+│       │   ├── pages_1.js
+│       │   ├── pages_2.js
+│       │   ├── pages_3.js
+│       │   ├── pages_4.js
+│       │   ├── search.css
+│       │   ├── searchdata.js
+│       │   ├── search.js
+│       │   ├── variables_0.js
+│       │   ├── variables_1.js
+│       │   ├── variables_2.js
+│       │   ├── variables_3.js
+│       │   ├── variables_4.js
+│       │   ├── variables_5.js
+│       │   └── variables_6.js
+│       ├── splitbard.png
+│       ├── splitbar.png
+│       ├── str_8cpp.html
+│       ├── str_8cpp__incl.map
+│       ├── str_8cpp__incl.md5
+│       ├── str_8cpp__incl.png
+│       ├── str_8hpp__dep__incl.map
+│       ├── str_8hpp__dep__incl.md5
+│       ├── str_8hpp__dep__incl.png
+│       ├── str_8hpp.html
+│       ├── str_8hpp__incl.map
+│       ├── str_8hpp__incl.md5
+│       ├── str_8hpp__incl.png
+│       ├── str_8hpp_source.html
+│       ├── structFileSystem.html
+│       ├── structFileSystem-members.html
+│       ├── structGlobals__coll__graph.map
+│       ├── structGlobals__coll__graph.md5
+│       ├── structGlobals__coll__graph.png
+│       ├── structGlobals.html
+│       ├── structGlobals__inherit__graph.map
+│       ├── structGlobals__inherit__graph.md5
+│       ├── structGlobals__inherit__graph.png
+│       ├── structGlobals-members.html
+│       ├── sync_off.png
+│       ├── sync_on.png
+│       ├── sysinc_8hpp__dep__incl.map
+│       ├── sysinc_8hpp__dep__incl.md5
+│       ├── sysinc_8hpp__dep__incl.png
+│       ├── sysinc_8hpp.html
+│       ├── sysinc_8hpp__incl.map
+│       ├── sysinc_8hpp__incl.md5
+│       ├── sysinc_8hpp__incl.png
+│       ├── sysinc_8hpp_source.html
+│       ├── tab_ad.png
+│       ├── tab_a.png
+│       ├── tab_bd.png
+│       ├── tab_b.png
+│       ├── tab_hd.png
+│       ├── tab_h.png
+│       ├── tabs.css
+│       ├── tab_sd.png
+│       ├── tab_s.png
+│       ├── todo.html
+│       ├── types_8hpp__dep__incl.map
+│       ├── types_8hpp__dep__incl.md5
+│       ├── types_8hpp__dep__incl.png
+│       ├── types_8hpp.html
+│       ├── types_8hpp__incl.map
+│       ├── types_8hpp__incl.md5
+│       ├── types_8hpp__incl.png
+│       └── types_8hpp_source.html
+├── Doxyfile
+├── example
+├── include
+│   ├── config.hpp
+│   ├── constants.hpp
+│   ├── datetime.hpp
+│   ├── environment.hpp
+│   ├── filter.hpp
+│   ├── fs.hpp
+│   ├── globals.hpp
+│   ├── logging.hpp
+│   ├── macros.h
+│   ├── program.hpp
+│   ├── str.hpp
+│   ├── sysinc.hpp
+│   └── types.hpp
+├── LICENSE
+├── meson.build
+├── README.md
+├── source
+│   ├── config.cpp
+│   ├── datetime.cpp
+│   ├── environment.cpp
+│   ├── fs.cpp
+│   ├── globals.cpp
+│   ├── logging.cpp
+│   ├── main.cpp
+│   └── str.cpp
+├── tools
+│   └── glob4meson
+│       ├── glob4meson.py
+│       └── __init__.py
+└── tree.txt
+
+11 directories, 317 files
+.
+├── bin
+├── data
+│   └── data.json
+├── docs
+│   └── html
+│       ├── annotated.html
+│       ├── bc_sd.png
+│       ├── bc_s.png
+│       ├── bug.html
+│       ├── classes.html
+│       ├── classhw7_1_1str__coll__graph.map
+│       ├── classhw7_1_1str__coll__graph.md5
+│       ├── classhw7_1_1str__coll__graph.png
+│       ├── classhw7_1_1str.html
+│       ├── classhw7_1_1str__inherit__graph.map
+│       ├── classhw7_1_1str__inherit__graph.md5
+│       ├── classhw7_1_1str__inherit__graph.png
+│       ├── classhw7_1_1str-members.html
+│       ├── classProgram__coll__graph.map
+│       ├── classProgram__coll__graph.md5
+│       ├── classProgram__coll__graph.png
+│       ├── classProgram.html
+│       ├── classProgram__inherit__graph.map
+│       ├── classProgram__inherit__graph.md5
+│       ├── classProgram__inherit__graph.png
+│       ├── classProgram-members.html
+│       ├── closed.png
+│       ├── config_8cpp.html
+│       ├── config_8cpp__incl.map
+│       ├── config_8cpp__incl.md5
+│       ├── config_8cpp__incl.png
+│       ├── config_8hpp__dep__incl.map
+│       ├── config_8hpp__dep__incl.md5
+│       ├── config_8hpp__dep__incl.png
+│       ├── config_8hpp.html
+│       ├── config_8hpp__incl.map
+│       ├── config_8hpp__incl.md5
+│       ├── config_8hpp__incl.png
+│       ├── config_8hpp_source.html
+│       ├── constants_8hpp__dep__incl.map
+│       ├── constants_8hpp__dep__incl.md5
+│       ├── constants_8hpp__dep__incl.png
+│       ├── constants_8hpp.html
+│       ├── constants_8hpp__incl.map
+│       ├── constants_8hpp__incl.md5
+│       ├── constants_8hpp__incl.png
+│       ├── constants_8hpp_source.html
+│       ├── datetime_8cpp.html
+│       ├── datetime_8cpp__incl.map
+│       ├── datetime_8cpp__incl.md5
+│       ├── datetime_8cpp__incl.png
+│       ├── datetime_8hpp__dep__incl.map
+│       ├── datetime_8hpp__dep__incl.md5
+│       ├── datetime_8hpp__dep__incl.png
+│       ├── datetime_8hpp.html
+│       ├── datetime_8hpp__incl.map
+│       ├── datetime_8hpp__incl.md5
+│       ├── datetime_8hpp__incl.png
+│       ├── datetime_8hpp_source.html
+│       ├── dir_000001_000000.html
+│       ├── dir_b2f33c71d4aa5e7af42a1ca61ff5af1b_dep.map
+│       ├── dir_b2f33c71d4aa5e7af42a1ca61ff5af1b_dep.md5
+│       ├── dir_b2f33c71d4aa5e7af42a1ca61ff5af1b_dep.png
+│       ├── dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html
+│       ├── dir_d44c64559bbebec7f509842c48db8b23.html
+│       ├── docd.svg
+│       ├── doc.svg
+│       ├── doxygen.css
+│       ├── doxygen.svg
+│       ├── dynsections.js
+│       ├── environment_8cpp.html
+│       ├── environment_8cpp__incl.map
+│       ├── environment_8cpp__incl.md5
+│       ├── environment_8cpp__incl.png
+│       ├── environment_8hpp__dep__incl.map
+│       ├── environment_8hpp__dep__incl.md5
+│       ├── environment_8hpp__dep__incl.png
+│       ├── environment_8hpp.html
+│       ├── environment_8hpp__incl.map
+│       ├── environment_8hpp__incl.md5
+│       ├── environment_8hpp__incl.png
+│       ├── environment_8hpp_source.html
+│       ├── files.html
+│       ├── folderclosedd.svg
+│       ├── folderclosed.svg
+│       ├── folderopend.svg
+│       ├── folderopen.svg
+│       ├── fs_8cpp.html
+│       ├── fs_8cpp__incl.map
+│       ├── fs_8cpp__incl.md5
+│       ├── fs_8cpp__incl.png
+│       ├── fs_8hpp__dep__incl.map
+│       ├── fs_8hpp__dep__incl.md5
+│       ├── fs_8hpp__dep__incl.png
+│       ├── fs_8hpp.html
+│       ├── fs_8hpp__incl.map
+│       ├── fs_8hpp__incl.md5
+│       ├── fs_8hpp__incl.png
+│       ├── fs_8hpp_source.html
+│       ├── functions_func.html
+│       ├── functions.html
+│       ├── globals_8cpp.html
+│       ├── globals_8cpp__incl.map
+│       ├── globals_8cpp__incl.md5
+│       ├── globals_8cpp__incl.png
+│       ├── globals_8hpp__dep__incl.map
+│       ├── globals_8hpp__dep__incl.md5
+│       ├── globals_8hpp__dep__incl.png
+│       ├── globals_8hpp.html
+│       ├── globals_8hpp__incl.map
+│       ├── globals_8hpp__incl.md5
+│       ├── globals_8hpp__incl.png
+│       ├── globals_8hpp_source.html
+│       ├── globals_func.html
+│       ├── globals.html
+│       ├── graph_legend.html
+│       ├── graph_legend.md5
+│       ├── graph_legend.png
+│       ├── hierarchy.html
+│       ├── index.html
+│       ├── inherit_graph_0.map
+│       ├── inherit_graph_0.md5
+│       ├── inherit_graph_0.png
+│       ├── inherit_graph_1.map
+│       ├── inherit_graph_1.md5
+│       ├── inherit_graph_1.png
+│       ├── inherit_graph_2.map
+│       ├── inherit_graph_2.md5
+│       ├── inherit_graph_2.png
+│       ├── inherits.html
+│       ├── jquery.js
+│       ├── logging_8cpp.html
+│       ├── logging_8cpp__incl.map
+│       ├── logging_8cpp__incl.md5
+│       ├── logging_8cpp__incl.png
+│       ├── logging_8hpp__dep__incl.map
+│       ├── logging_8hpp__dep__incl.md5
+│       ├── logging_8hpp__dep__incl.png
+│       ├── logging_8hpp.html
+│       ├── logging_8hpp__incl.map
+│       ├── logging_8hpp__incl.md5
+│       ├── logging_8hpp__incl.png
+│       ├── logging_8hpp_source.html
+│       ├── macros_8h__dep__incl.map
+│       ├── macros_8h__dep__incl.md5
+│       ├── macros_8h__dep__incl.png
+│       ├── macros_8h.html
+│       ├── macros_8h_source.html
+│       ├── main_8cpp.html
+│       ├── main_8cpp__incl.map
+│       ├── main_8cpp__incl.md5
+│       ├── main_8cpp__incl.png
+│       ├── menudata.js
+│       ├── menu.js
+│       ├── minusd.svg
+│       ├── minus.svg
+│       ├── nav_fd.png
+│       ├── nav_f.png
+│       ├── nav_g.png
+│       ├── nav_hd.png
+│       ├── nav_h.png
+│       ├── open.png
+│       ├── pages.html
+│       ├── plusd.svg
+│       ├── plus.svg
+│       ├── program_8hpp__dep__incl.map
+│       ├── program_8hpp__dep__incl.md5
+│       ├── program_8hpp__dep__incl.png
+│       ├── program_8hpp.html
+│       ├── program_8hpp__incl.map
+│       ├── program_8hpp__incl.md5
+│       ├── program_8hpp__incl.png
+│       ├── program_8hpp_source.html
+│       ├── search
+│       │   ├── all_0.js
+│       │   ├── all_10.js
+│       │   ├── all_11.js
+│       │   ├── all_12.js
+│       │   ├── all_1.js
+│       │   ├── all_2.js
+│       │   ├── all_3.js
+│       │   ├── all_4.js
+│       │   ├── all_5.js
+│       │   ├── all_6.js
+│       │   ├── all_7.js
+│       │   ├── all_8.js
+│       │   ├── all_9.js
+│       │   ├── all_a.js
+│       │   ├── all_b.js
+│       │   ├── all_c.js
+│       │   ├── all_d.js
+│       │   ├── all_e.js
+│       │   ├── all_f.js
+│       │   ├── classes_0.js
+│       │   ├── classes_1.js
+│       │   ├── classes_2.js
+│       │   ├── classes_3.js
+│       │   ├── close.svg
+│       │   ├── files_0.js
+│       │   ├── files_1.js
+│       │   ├── files_2.js
+│       │   ├── files_3.js
+│       │   ├── files_4.js
+│       │   ├── files_5.js
+│       │   ├── files_6.js
+│       │   ├── files_7.js
+│       │   ├── files_8.js
+│       │   ├── files_9.js
+│       │   ├── functions_0.js
+│       │   ├── functions_1.js
+│       │   ├── functions_2.js
+│       │   ├── functions_3.js
+│       │   ├── functions_4.js
+│       │   ├── functions_5.js
+│       │   ├── functions_6.js
+│       │   ├── functions_7.js
+│       │   ├── functions_8.js
+│       │   ├── functions_9.js
+│       │   ├── functions_a.js
+│       │   ├── functions_b.js
+│       │   ├── functions_c.js
+│       │   ├── functions_d.js
+│       │   ├── functions_e.js
+│       │   ├── mag_d.svg
+│       │   ├── mag_seld.svg
+│       │   ├── mag_sel.svg
+│       │   ├── mag.svg
+│       │   ├── pages_0.js
+│       │   ├── pages_1.js
+│       │   ├── pages_2.js
+│       │   ├── pages_3.js
+│       │   ├── pages_4.js
+│       │   ├── search.css
+│       │   ├── searchdata.js
+│       │   ├── search.js
+│       │   ├── variables_0.js
+│       │   ├── variables_1.js
+│       │   ├── variables_2.js
+│       │   ├── variables_3.js
+│       │   ├── variables_4.js
+│       │   ├── variables_5.js
+│       │   └── variables_6.js
+│       ├── splitbard.png
+│       ├── splitbar.png
+│       ├── str_8cpp.html
+│       ├── str_8cpp__incl.map
+│       ├── str_8cpp__incl.md5
+│       ├── str_8cpp__incl.png
+│       ├── str_8hpp__dep__incl.map
+│       ├── str_8hpp__dep__incl.md5
+│       ├── str_8hpp__dep__incl.png
+│       ├── str_8hpp.html
+│       ├── str_8hpp__incl.map
+│       ├── str_8hpp__incl.md5
+│       ├── str_8hpp__incl.png
+│       ├── str_8hpp_source.html
+│       ├── structFileSystem.html
+│       ├── structFileSystem-members.html
+│       ├── structGlobals__coll__graph.map
+│       ├── structGlobals__coll__graph.md5
+│       ├── structGlobals__coll__graph.png
+│       ├── structGlobals.html
+│       ├── structGlobals__inherit__graph.map
+│       ├── structGlobals__inherit__graph.md5
+│       ├── structGlobals__inherit__graph.png
+│       ├── structGlobals-members.html
+│       ├── sync_off.png
+│       ├── sync_on.png
+│       ├── sysinc_8hpp__dep__incl.map
+│       ├── sysinc_8hpp__dep__incl.md5
+│       ├── sysinc_8hpp__dep__incl.png
+│       ├── sysinc_8hpp.html
+│       ├── sysinc_8hpp__incl.map
+│       ├── sysinc_8hpp__incl.md5
+│       ├── sysinc_8hpp__incl.png
+│       ├── sysinc_8hpp_source.html
+│       ├── tab_ad.png
+│       ├── tab_a.png
+│       ├── tab_bd.png
+│       ├── tab_b.png
+│       ├── tab_hd.png
+│       ├── tab_h.png
+│       ├── tabs.css
+│       ├── tab_sd.png
+│       ├── tab_s.png
+│       ├── todo.html
+│       ├── types_8hpp__dep__incl.map
+│       ├── types_8hpp__dep__incl.md5
+│       ├── types_8hpp__dep__incl.png
+│       ├── types_8hpp.html
+│       ├── types_8hpp__incl.map
+│       ├── types_8hpp__incl.md5
+│       ├── types_8hpp__incl.png
+│       └── types_8hpp_source.html
+├── Doxyfile
+├── example
+├── include
+│   ├── config.hpp
+│   ├── constants.hpp
+│   ├── datetime.hpp
+│   ├── environment.hpp
+│   ├── filter.hpp
+│   ├── fs.hpp
+│   ├── globals.hpp
+│   ├── logging.hpp
+│   ├── macros.h
+│   ├── program.hpp
+│   ├── str.hpp
+│   ├── sysinc.hpp
+│   └── types.hpp
+├── LICENSE
+├── meson.build
+├── README.md
+├── source
+│   ├── config.cpp
+│   ├── datetime.cpp
+│   ├── environment.cpp
+│   ├── fs.cpp
+│   ├── globals.cpp
+│   ├── logging.cpp
+│   ├── main.cpp
+│   └── str.cpp
+├── tools
+│   ├── glob4meson
+│   │   ├── glob4meson.py
+│   │   ├── __init__.py
+│   │   └── __main__.py
+│   └── __init__.py
+└── tree.txt
+
+11 directories, 319 files
