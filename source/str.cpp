@@ -89,3 +89,19 @@ str str::replace(const str& pattern, const str& replacement)
     if (pattern.empty()) return *this;
     return regex_replace(*this, regex(pattern), replacement);
 }
+
+StrList str::partition(const str& pattern)
+{
+        // auto pos = var.find(EQUAL);
+        // if (pos == std::string_view::npos)
+        //     continue;
+
+        // str name  = var.substr(PREFIX_LENGTH, pos - PREFIX_LENGTH);
+        // str value = var.substr(pos + 1);
+
+    auto position = find(pattern);
+    if (position == string_view::npos) return { pattern };
+    auto first = substr(0, position);
+    auto second = substr(position + pattern.length());
+    return { first, second };
+}

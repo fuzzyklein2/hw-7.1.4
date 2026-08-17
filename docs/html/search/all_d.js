@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['space_0',['SPACE',['../constants_8hpp.html#ac343dfe1f8e1e4281cc538f54b8299c2',1,'hw7']]],
-  ['stop_1',['stop',['../logging_8cpp.html#ac684ab1864310059f942b3474120aaae',1,'stop(const String &amp;s):&#160;logging.cpp'],['../logging_8hpp.html#ac684ab1864310059f942b3474120aaae',1,'stop(const String &amp;s):&#160;logging.cpp']]],
-  ['str_2',['str',['../classhw7_1_1str.html',1,'hw7']]],
-  ['str_2ecpp_3',['str.cpp',['../str_8cpp.html',1,'']]],
-  ['str_2ehpp_4',['str.hpp',['../str_8hpp.html',1,'']]],
-  ['synopsis_5',['Synopsis',['../index.html#autotoc_md1',1,'']]],
-  ['sysinc_2ehpp_6',['sysinc.hpp',['../sysinc_8hpp.html',1,'']]]
+  ['replace_0',['replace',['../classhw7_1_1str.html#a01e721bb4f05b9b7d257f370ccffeba3',1,'hw7::str']]],
+  ['rotate_5flogs_1',['rotate_logs',['../logging_8cpp.html#aaddfe633c34518ddeb394f0b87f5dc80',1,'rotate_logs(const Path &amp;directory, size_t count):&#160;logging.cpp'],['../logging_8hpp.html#aaddfe633c34518ddeb394f0b87f5dc80',1,'rotate_logs(const Path &amp;directory, size_t count):&#160;logging.cpp']]],
+  ['run_2',['run',['../classProgram.html#a5eb45ecf20893fc33c1e7a3bf173e80c',1,'Program']]]
 ];

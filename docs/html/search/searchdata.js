@@ -1,9 +1,9 @@
 var indexSectionsWithContent =
 {
-  0: "bcdefghilmnprstw🌎",
+  0: "bcdefghijlmnprstuw🌎",
   1: "fgps",
   2: "cdefglmpst",
-  3: "cdefgilmnrsw",
+  3: "cdefgijlmnprsuw",
   4: "cdlpstw",
   5: "bhlt🌎"
 };

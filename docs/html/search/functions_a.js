@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['stop_0',['stop',['../logging_8cpp.html#ac684ab1864310059f942b3474120aaae',1,'stop(const String &amp;s):&#160;logging.cpp'],['../logging_8hpp.html#ac684ab1864310059f942b3474120aaae',1,'stop(const String &amp;s):&#160;logging.cpp']]]
+  ['partition_0',['partition',['../classhw7_1_1str.html#a7b54b4a326071138c233921302a741ab',1,'hw7::str']]],
+  ['program_1',['Program',['../classProgram.html#a228e413b8ca6de023145f31045f49e6e',1,'Program']]]
 ];

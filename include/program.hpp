@@ -13,7 +13,7 @@ class Program : Globals
 {
 public:
 
-    /*
+    /**
      * Default constructor.
      */
     Program(int argc, char **argv) : Globals(argc, argv) {}
