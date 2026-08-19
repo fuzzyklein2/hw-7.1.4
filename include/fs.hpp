@@ -14,7 +14,7 @@
 // Functions
 Path cwd();
 PathList listdir(const Path& path);
-
+String magic_type(const Path& p);
 /**
  * @brief Return the user's home directory.
  * @return path to `~`.

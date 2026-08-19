@@ -51,3 +51,8 @@ def glob4meson():
         f.writelines(new_lines)
     
     print(f"meson.build updated with {len(src_files)} source files.")
+
+if __name__ == "__main__":
+    print(f"Running {__file__}")
+    glob4meson()
+    

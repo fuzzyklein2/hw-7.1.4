@@ -9,6 +9,7 @@ project(
 gtkmm_dep = dependency('gtkmm-4.0')
 fmt_dep = dependency('fmt')
 spdlog_dep = dependency('spdlog')
+magic_dep = dependency('libmagic')
 
 # Include directory for headers
 inc = include_directories('include', 'contrib')
@@ -18,6 +19,7 @@ src_files = [
   'source/config.cpp',
   'source/datetime.cpp',
   'source/environment.cpp',
+  'source/filter.cpp',
   'source/fs.cpp',
   'source/globals.cpp',
   'source/logging.cpp',
@@ -34,7 +36,8 @@ executable(
   dependencies : [
     fmt_dep,
     spdlog_dep,
-    gtkmm_dep
+    gtkmm_dep,
+    magic_dep
   ],
 )
 

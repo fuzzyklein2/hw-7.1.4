@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['replace_0',['replace',['../classhw7_1_1str.html#a01e721bb4f05b9b7d257f370ccffeba3',1,'hw7::str']]],
-  ['rotate_5flogs_1',['rotate_logs',['../logging_8cpp.html#aaddfe633c34518ddeb394f0b87f5dc80',1,'rotate_logs(const Path &amp;directory, size_t count):&#160;logging.cpp'],['../logging_8hpp.html#aaddfe633c34518ddeb394f0b87f5dc80',1,'rotate_logs(const Path &amp;directory, size_t count):&#160;logging.cpp']]],
-  ['run_2',['run',['../classFilter.html#a188157ef980c45abc1799fe416822841',1,'Filter::run()'],['../classProgram.html#a5eb45ecf20893fc33c1e7a3bf173e80c',1,'Program::run()']]]
+  ['partition_0',['partition',['../classhw7_1_1str.html#a7b54b4a326071138c233921302a741ab',1,'hw7::str']]],
+  ['process_1',['process',['../classFilter.html#a50e420a1d7385aea26cd6dd0946c7eed',1,'Filter::process()'],['../classFilter.html#a67554512a4ed6cda0222305fc98a49f1',1,'Filter::process(const Path &amp;)']]],
+  ['program_2',['program',['../classProgram.html',1,'Program'],['../classProgram.html#a228e413b8ca6de023145f31045f49e6e',1,'Program::Program()'],['../constants_8hpp.html#a361ce472bc5c01506a7b5257603d9a2e',1,'hw7::PROGRAM']]],
+  ['program_2ehpp_3',['program.hpp',['../program_8hpp.html',1,'']]]
 ];

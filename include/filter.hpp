@@ -5,24 +5,47 @@
  * Class `filter` processes command line arguments as file paths.
  */
 
-// #include <string>
-#include "program.hpp"
 #include "types.hpp"
 
-class Filter : public Program
+class Filter
 {
 public:
+
+    // /**
+    //  * Program constructor.
+    //  * @see Program for explanation of parameters.
+    //  */
+    // Filter(int argc, char **argv) : Program(argc, argv) {}
 
     /**
      * Program constructor.
      * @see Program for explanation of parameters.
      */
-    Filter(int argc, char **argv) : Program(argc, argv) {}
+    Filter(const StrList& S)
+    {
+        for(const auto& s : S)
+        {
+            paths.push_back(s);
+        }
+    }
 
     /**
-     * Run the program.
-     * @return Error code.
+     * Process the list of paths.
+     * @return ErrCode.
      */
-    virtual unsigned int run();
+    inline ErrCode process()
+    {
+        for (const auto& p : paths) process(p);
+        return 0;
+    }
+
+    /**
+     * Process a file.
+     * @return ErrCode.
+     */
+    virtual ErrCode process(const Path&);
+
+protected:
+    PathList paths; /// List of files to be filtered.
 
 };

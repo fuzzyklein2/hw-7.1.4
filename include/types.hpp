@@ -28,3 +28,6 @@ using PathList = std::vector<Path>;
 using JSON = nlohmann::json;
 using Logger = std::shared_ptr<spdlog::logger>;
 using LogLevel = spdlog::level::level_enum;
+
+using Number = unsigned int;
+using ErrCode = Number;

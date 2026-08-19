@@ -91,5 +91,5 @@ The intended usage. Call just before building objects or executables.
 
 CWD = Path.cwd()
 
-from .glob4meson import glob4meson
+from .glob4meson.glob4meson import glob4meson as g4m
 

@@ -92,7 +92,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// Functions</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>Path cwd();</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>PathList listdir(<span class="keyword">const</span> Path&amp; path);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>String magic_type(<span class="keyword">const</span> Path&amp; p);</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>Path <a class="code hl_function" href="fs_8hpp.html#a3bd8d432d28c14e88726400936241576">getHome</a>(); <span class="comment">// Find the user&#39;s home directory and return it as a `path` object.</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">void</span> ensure_file(<span class="keyword">const</span> Path&amp; p); <span class="comment">// Create the file at p if it doesn&#39;t exist.</span></div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
@@ -118,11 +118,11 @@ $(document).ready(function() { init_codefold(0); });
 </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
 <div class="ttc" id="aconstants_8hpp_html"><div class="ttname"><a href="constants_8hpp.html">constants.hpp</a></div></div>
-<div class="ttc" id="afs_8hpp_html_a3bd8d432d28c14e88726400936241576"><div class="ttname"><a href="fs_8hpp.html#a3bd8d432d28c14e88726400936241576">getHome</a></div><div class="ttdeci">Path getHome()</div><div class="ttdoc">Return the user's home directory.</div><div class="ttdef"><b>Definition</b> fs.cpp:29</div></div>
-<div class="ttc" id="afs_8hpp_html_a784c26a7c414624ba3f94ac69da4a39f"><div class="ttname"><a href="fs_8hpp.html#a784c26a7c414624ba3f94ac69da4a39f">log_filename</a></div><div class="ttdeci">String log_filename()</div><div class="ttdoc">Return a string to name the log file with.</div><div class="ttdef"><b>Definition</b> fs.cpp:55</div></div>
+<div class="ttc" id="afs_8hpp_html_a3bd8d432d28c14e88726400936241576"><div class="ttname"><a href="fs_8hpp.html#a3bd8d432d28c14e88726400936241576">getHome</a></div><div class="ttdeci">Path getHome()</div><div class="ttdoc">Return the user's home directory.</div><div class="ttdef"><b>Definition</b> fs.cpp:51</div></div>
+<div class="ttc" id="afs_8hpp_html_a784c26a7c414624ba3f94ac69da4a39f"><div class="ttname"><a href="fs_8hpp.html#a784c26a7c414624ba3f94ac69da4a39f">log_filename</a></div><div class="ttdeci">String log_filename()</div><div class="ttdoc">Return a string to name the log file with.</div><div class="ttdef"><b>Definition</b> fs.cpp:77</div></div>
 <div class="ttc" id="astructFileSystem_html"><div class="ttname"><a href="structFileSystem.html">FileSystem</a></div><div class="ttdef"><b>Definition</b> fs.hpp:32</div></div>
-<div class="ttc" id="astructFileSystem_html_ab57f92f8bd2e0aadb5dcc9c9eacc8706"><div class="ttname"><a href="structFileSystem.html#ab57f92f8bd2e0aadb5dcc9c9eacc8706">FileSystem::FileSystem</a></div><div class="ttdeci">FileSystem()</div><div class="ttdef"><b>Definition</b> fs.cpp:43</div></div>
-<div class="ttc" id="astructFileSystem_html_ad1d3628ddd3468ec688316d7f1266a63"><div class="ttname"><a href="structFileSystem.html#ad1d3628ddd3468ec688316d7f1266a63">FileSystem::dump</a></div><div class="ttdeci">void dump()</div><div class="ttdef"><b>Definition</b> fs.cpp:67</div></div>
+<div class="ttc" id="astructFileSystem_html_ab57f92f8bd2e0aadb5dcc9c9eacc8706"><div class="ttname"><a href="structFileSystem.html#ab57f92f8bd2e0aadb5dcc9c9eacc8706">FileSystem::FileSystem</a></div><div class="ttdeci">FileSystem()</div><div class="ttdef"><b>Definition</b> fs.cpp:65</div></div>
+<div class="ttc" id="astructFileSystem_html_ad1d3628ddd3468ec688316d7f1266a63"><div class="ttname"><a href="structFileSystem.html#ad1d3628ddd3468ec688316d7f1266a63">FileSystem::dump</a></div><div class="ttdeci">void dump()</div><div class="ttdef"><b>Definition</b> fs.cpp:89</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

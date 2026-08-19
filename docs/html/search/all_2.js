@@ -1,10 +1,12 @@
 var searchData=
 [
-  ['datetime_2ecpp_0',['datetime.cpp',['../datetime_8cpp.html',1,'']]],
-  ['datetime_2ehpp_1',['datetime.hpp',['../datetime_8hpp.html',1,'']]],
-  ['debug_2',['debug',['../logging_8cpp.html#ac69b0c9a687b796675328a8ac78dc156',1,'debug(const String &amp;s):&#160;logging.cpp'],['../logging_8cpp.html#a90e17d03c21fe73bc812d617f2c26e78',1,'debug(ostringstream &amp;ss):&#160;logging.cpp'],['../logging_8hpp.html#ac69b0c9a687b796675328a8ac78dc156',1,'debug(const String &amp;s):&#160;logging.cpp'],['../logging_8hpp.html#a90e17d03c21fe73bc812d617f2c26e78',1,'debug(ostringstream &amp;ss):&#160;logging.cpp']]],
-  ['debug_5fkey_3',['DEBUG_KEY',['../constants_8hpp.html#a5b8d03d7c92bb15330454138d9d58660',1,'hw7']]],
-  ['defaultlogfile_4',['defaultLogFile',['../logging_8hpp.html#afdd6d415ccd420f2c1efc5a0d3cb4484',1,'logging.hpp']]],
-  ['description_5',['Description',['../index.html#autotoc_md2',1,'']]],
-  ['dump_6',['dump',['../structFileSystem.html#ad1d3628ddd3468ec688316d7f1266a63',1,'FileSystem::dump()'],['../structGlobals.html#afe3b7e6ecf3775109e836df963364e08',1,'Globals::dump()']]]
+  ['cgi_0',['CGI',['..//home/fuzzy/projects/C++ 2026/hello-world/source/fs.cpp#autotoc_md11',1,'']]],
+  ['check_5fenv_1',['check_env',['../environment_8cpp.html#a5245e8f5ba68a1e121a7af8979da63ce',1,'check_env(JSON &amp;config):&#160;environment.cpp'],['../environment_8hpp.html#a07df3fe81a2dd5dbcd63391ac7838f10',1,'check_env(JSON &amp;):&#160;environment.cpp']]],
+  ['code_2',['Source Code',['..//home/fuzzy/projects/C++ 2026/hello-world/source/fs.cpp#autotoc_md4',1,'']]],
+  ['conf_5fdir_5fname_3',['CONF_DIR_NAME',['../constants_8hpp.html#ab468f65cc4d3ce5450aa13d125e5ffba',1,'hw7']]],
+  ['config_2ecpp_4',['config.cpp',['../config_8cpp.html',1,'']]],
+  ['config_2ehpp_5',['config.hpp',['../config_8hpp.html',1,'']]],
+  ['configuration_6',['Configuration',['..//home/fuzzy/projects/C++ 2026/hello-world/source/fs.cpp#autotoc_md6',1,'']]],
+  ['constants_2ehpp_7',['constants.hpp',['../constants_8hpp.html',1,'']]],
+  ['csv_8',['CSV',['..//home/fuzzy/projects/C++ 2026/hello-world/source/fs.cpp#autotoc_md7',1,'']]]
 ];

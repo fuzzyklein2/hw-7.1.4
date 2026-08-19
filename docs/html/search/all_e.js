@@ -1,11 +1,6 @@
 var searchData=
 [
-  ['space_0',['SPACE',['../constants_8hpp.html#ac343dfe1f8e1e4281cc538f54b8299c2',1,'hw7']]],
-  ['split_1',['split',['../classhw7_1_1str.html#ac641d75a423cd02d479cb87d7f95fa75',1,'hw7::str::split()'],['../classhw7_1_1str.html#a5abf6df6c4a1eaee83f76703be2fbad4',1,'hw7::str::split(const str &amp;)']]],
-  ['stop_2',['stop',['../logging_8cpp.html#ac684ab1864310059f942b3474120aaae',1,'stop(const String &amp;s):&#160;logging.cpp'],['../logging_8hpp.html#ac684ab1864310059f942b3474120aaae',1,'stop(const String &amp;s):&#160;logging.cpp']]],
-  ['str_3',['str',['../classhw7_1_1str.html',1,'hw7::str'],['../classhw7_1_1str.html#a8f4ecb794c387792c833c4bc59974e30',1,'hw7::str::str()=default'],['../classhw7_1_1str.html#a6e0e9c1bd5771db844e0fd210c185048',1,'hw7::str::str(const char *s)'],['../classhw7_1_1str.html#a45afa0b010b14db8ac118fdac779916f',1,'hw7::str::str(const String &amp;s)'],['../classhw7_1_1str.html#ae8c095ea731c92f6f4ead5615a72d435',1,'hw7::str::str(const std::string_view &amp;s)']]],
-  ['str_2ecpp_4',['str.cpp',['../str_8cpp.html',1,'']]],
-  ['str_2ehpp_5',['str.hpp',['../str_8hpp.html',1,'']]],
-  ['synopsis_6',['Synopsis',['../index.html#autotoc_md1',1,'']]],
-  ['sysinc_2ehpp_7',['sysinc.hpp',['../sysinc_8hpp.html',1,'']]]
+  ['replace_0',['replace',['../classhw7_1_1str.html#a01e721bb4f05b9b7d257f370ccffeba3',1,'hw7::str']]],
+  ['rotate_5flogs_1',['rotate_logs',['../logging_8cpp.html#aaddfe633c34518ddeb394f0b87f5dc80',1,'rotate_logs(const Path &amp;directory, size_t count):&#160;logging.cpp'],['../logging_8hpp.html#aaddfe633c34518ddeb394f0b87f5dc80',1,'rotate_logs(const Path &amp;directory, size_t count):&#160;logging.cpp']]],
+  ['run_2',['run',['../classProgram.html#a5eb45ecf20893fc33c1e7a3bf173e80c',1,'Program']]]
 ];

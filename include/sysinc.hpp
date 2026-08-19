@@ -7,6 +7,9 @@
 // C Standard Library headers
 #include <cstdlib>
 
+// C package headers
+#include <magic.h>
+
 // STL headers
 #include <algorithm>
 #include <chrono>     // datetime module

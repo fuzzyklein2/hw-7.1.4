@@ -13,8 +13,9 @@ namespace hw7
     // String constants
     /// Easy way to find the current process.
     CONST String THIS_PROC = "/proc/self/exe";
+    CONST Path THIS_PATH = fs::read_symlink(THIS_PROC);
     /// Name of the currently running program.
-    CONST String PROGRAM = fs::read_symlink(THIS_PROC).filename();
+    CONST String PROGRAM = THIS_PATH.filename();
     // CONST String VERSION = "0.0.0";
     
     /// Ensure Unicode.

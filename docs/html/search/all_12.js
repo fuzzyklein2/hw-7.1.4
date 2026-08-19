@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['🌎_0',['Hello, 🌎!',['../index.html',1,'']]]
+  ['video_0',['Video',['..//home/fuzzy/projects/C++ 2026/hello-world/source/fs.cpp#autotoc_md17',1,'']]]
 ];

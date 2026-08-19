@@ -1,7 +1,7 @@
 /**
  * @file fs.cpp
  *
- * Define and initialize global variables.
+ * File functions and the `FileSystem` class.
  */
 
 // System headers
@@ -24,6 +24,28 @@ PathList listdir(const Path& path)
         result.push_back(entry.path());
     sort(result.begin(), result.end());
     return result;
+}
+
+String magic_type(const Path& p)
+{
+    magic_t cookie = magic_open(MAGIC_MIME_TYPE);
+    if (!cookie) throw runtime_error("magic_open() failed");
+    if (magic_load(cookie, nullptr) != 0)
+    {
+        String err = magic_error(cookie);
+        magic_close(cookie);
+        throw runtime_error(err);
+    }
+    const auto result = magic_file(cookie, p.c_str());
+    if (!result)
+    {
+        String error = magic_error(cookie);
+        magic_close(cookie);
+        throw runtime_error(error);
+    }
+    String type(result);
+    magic_close(cookie);
+    return type;
 }
 
 Path getHome()
@@ -90,3 +112,93 @@ void FileSystem::dump()
         data.string()
     ));
 }
+
+/**
+ * ## File Types
+ * 
+ * ### Directory
+ * 
+ * ### Text
+ * 
+ *     * `.txt`
+ * 
+ * #### Headers
+ * 
+ *     * `.h`
+ *     * `.hpp`
+ * 
+ * #### Source Code
+ * 
+ *     * `.c`
+ *     * `.cpp`
+ *     * `.js`
+ *     * `.py`
+ *     * `.sh`
+ * 
+ * #### HTML
+ * 
+ *     * `.htm`
+ *     * `.html`
+ * 
+ * #### Configuration
+ * 
+ *     * `.cfg`
+ * 
+ * #### CSV
+ * 
+ *     * `.csv`
+ * 
+ * #### Data
+ * 
+ *     * `.json`
+ * 
+ * #### Logs
+ * 
+ *     * `.log`
+ * 
+ * #### Stylesheets
+ * 
+ *     * `.css`
+ * 
+ * #### CGI
+ * 
+ *     * `.cgi`
+ * 
+ * ### Binary
+ * 
+ * #### Executables
+ * 
+ * #### Archives
+ * 
+ *     * `.deb`
+ *     * `.pkl`
+ *     * `.tar.gz`
+ *     * `.zip`
+ * 
+ * #### Graphics
+ * 
+ *     * `.gif`
+ *     * `.jpeg`
+ *     * `.png`
+ * 
+ * #### Audio
+ * 
+ *     * `.flac`
+ *     * `.mp3`
+ * 
+ * #### Video
+ * 
+ *     * `.mp4`
+ * 
+ * ### Databases
+ * 
+ *     * `.db`
+ * 
+ * ### FIFO
+ * 
+ * ### Links
+ * 
+ * #### Hard
+ * #### Symbolic
+ * 
+ */

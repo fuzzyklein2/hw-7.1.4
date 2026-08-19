@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['gethome_0',['gethome',['../fs_8cpp.html#a3bd8d432d28c14e88726400936241576',1,'getHome():&#160;fs.cpp'],['../fs_8hpp.html#a3bd8d432d28c14e88726400936241576',1,'getHome():&#160;fs.cpp']]],
-  ['globals_1',['globals',['../structGlobals.html',1,'Globals'],['../structGlobals.html#ac49a298b3ee098f04031e7e858d5116a',1,'Globals::Globals()']]],
-  ['globals_2ecpp_2',['globals.cpp',['../globals_8cpp.html',1,'']]],
-  ['globals_2ehpp_3',['globals.hpp',['../globals_8hpp.html',1,'']]]
+  ['fifo_0',['FIFO',['..//home/fuzzy/projects/C++ 2026/hello-world/source/fs.cpp#autotoc_md19',1,'']]],
+  ['file_20types_1',['File Types',['..//home/fuzzy/projects/C++ 2026/hello-world/source/fs.cpp#autotoc_md0',1,'']]],
+  ['filesystem_2',['filesystem',['../structFileSystem.html',1,'FileSystem'],['../structFileSystem.html#ab57f92f8bd2e0aadb5dcc9c9eacc8706',1,'FileSystem::FileSystem()']]],
+  ['filter_3',['filter',['../classFilter.html',1,'Filter'],['../classFilter.html#a1fe9eb7c222f1a45786052de95f4c49a',1,'Filter::Filter()']]],
+  ['filter_2ecpp_4',['filter.cpp',['../filter_8cpp.html',1,'']]],
+  ['filter_2ehpp_5',['filter.hpp',['../filter_8hpp.html',1,'']]],
+  ['fs_2ecpp_6',['fs.cpp',['../fs_8cpp.html',1,'']]],
+  ['fs_2ehpp_7',['fs.hpp',['../fs_8hpp.html',1,'']]]
 ];

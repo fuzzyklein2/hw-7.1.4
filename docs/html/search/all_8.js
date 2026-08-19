@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['join_0',['join',['../classhw7_1_1str.html#aeb021ed093fb3c1747b7a42eff3bca7c',1,'hw7::str']]]
+  ['info_0',['info',['../logging_8cpp.html#a29c2015c6ef1926ac0395a1d24408dad',1,'info(const String &amp;s):&#160;logging.cpp'],['../logging_8hpp.html#a29c2015c6ef1926ac0395a1d24408dad',1,'info(const String &amp;s):&#160;logging.cpp']]]
 ];

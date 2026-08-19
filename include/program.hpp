@@ -7,6 +7,7 @@
 
 #include <iostream>   // cin & cout
 
+#include "filter.hpp"
 #include "globals.hpp"
 
 class Program : Globals
@@ -31,6 +32,10 @@ public:
     {
         dump();
         std::cout << hw7::GREETING << input << endl;
+
+        Filter f(args);
+        f.process();
+        
         return 0;
     }
 
