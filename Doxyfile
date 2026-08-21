@@ -166,7 +166,19 @@ FILE_PATTERNS          = *.c \
 RECURSIVE              = YES
 EXCLUDE                =
 EXCLUDE_SYMLINKS       = NO
-EXCLUDE_PATTERNS       =
+EXCLUDE_PATTERNS       = include/config.hpp \
+                         include/constants.hpp \
+                         include/datetime.hpp \
+                         include/environment.hpp \
+                         include/filter.hpp \
+                         include/fs.hpp \
+                         include/globals.hpp \
+                         include/logging.hpp \
+                         include/macros.h \
+                         include/program.hpp \
+                         include/str.hpp \
+                         include/types.hpp
+                         
 EXCLUDE_SYMBOLS        =
 EXAMPLE_PATH           =
 EXAMPLE_PATTERNS       = *
