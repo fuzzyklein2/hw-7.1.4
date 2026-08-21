@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['filesystem_0',['filesystem',['../structFileSystem.html#ab57f92f8bd2e0aadb5dcc9c9eacc8706',1,'FileSystem::FileSystem()'],['../structFileSystem.html#ab57f92f8bd2e0aadb5dcc9c9eacc8706',1,'FileSystem::FileSystem()']]],
-  ['filter_1',['filter',['../classFilter.html#a1fe9eb7c222f1a45786052de95f4c49a',1,'Filter::Filter(const StrList &amp;S)'],['../classFilter.html#a1fe9eb7c222f1a45786052de95f4c49a',1,'Filter::Filter(const StrList &amp;S)']]]
+  ['gethome_0',['getHome',['../hw7_8hpp.html#a3bd8d432d28c14e88726400936241576',1,'hw7.hpp']]],
+  ['globals_1',['Globals',['../structGlobals.html#ac49a298b3ee098f04031e7e858d5116a',1,'Globals']]]
 ];

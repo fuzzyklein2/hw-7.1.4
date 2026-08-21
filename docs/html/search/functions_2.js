@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['error_0',['error',['../logging_8cpp.html#a41f5d653044f02fc64e06da938741a6f',1,'error(const String &amp;s):&#160;logging.cpp'],['../hw7_8hpp.html#a41f5d653044f02fc64e06da938741a6f',1,'error(const String &amp;s):&#160;logging.cpp'],['../logging_8hpp.html#a41f5d653044f02fc64e06da938741a6f',1,'error(const String &amp;s):&#160;logging.cpp']]]
+  ['filesystem_0',['FileSystem',['../structFileSystem.html#ab57f92f8bd2e0aadb5dcc9c9eacc8706',1,'FileSystem']]],
+  ['filter_1',['Filter',['../classFilter.html#a1fe9eb7c222f1a45786052de95f4c49a',1,'Filter']]]
 ];

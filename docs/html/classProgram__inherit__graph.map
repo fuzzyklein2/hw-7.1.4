@@ -1,6 +1,7 @@
 <map id="Program" name="Program">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,79,76,104"/>
-<area shape="rect" id="Node000002" href="$structGlobals.html" title="Stores all the global variables necessary to run the program." alt="" coords="7,5,74,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="35,44,36,78,31,79,29,45"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="52,45,50,79,45,78,47,44"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="7,79,77,104"/>
+<area shape="rect" id="Node000003" href="$classPeroxide.html" title=" " alt="" coords="5,152,79,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="45,118,45,152,39,152,39,118"/>
+<area shape="rect" id="Node000002" href="$structGlobals.html" title="Stores all the global variables necessary to run the program." alt="" coords="9,5,75,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="45,44,45,79,39,79,39,44"/>
 </map>

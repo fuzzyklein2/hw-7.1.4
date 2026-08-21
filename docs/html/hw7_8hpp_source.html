@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>hello7: include/hw7.hpp Source File</title>
+<title>hello7: hw7/hw7.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -75,7 +75,7 @@ $(document).ready(function() { init_codefold(0); });
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_1fe911e3f9b19ad89cdcdc1970608ef2.html">hw7</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -132,16 +132,16 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="keyword">namespace </span>hw7</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>{</div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="comment">// String constants</span></div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    CONST String <a class="code hl_variable" href="constants_8hpp.html#af8e29c40fdda95171bd318b0ebe70f8b">THIS_PROC</a> = <span class="stringliteral">&quot;/proc/self/exe&quot;</span>;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="hw7_8hpp.html#af8e29c40fdda95171bd318b0ebe70f8b">   57</a></span>    CONST String <a class="code hl_variable" href="hw7_8hpp.html#af8e29c40fdda95171bd318b0ebe70f8b">THIS_PROC</a> = <span class="stringliteral">&quot;/proc/self/exe&quot;</span>;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    CONST Path THIS_PATH = fs::read_symlink(THIS_PROC);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    CONST String <a class="code hl_variable" href="constants_8hpp.html#a361ce472bc5c01506a7b5257603d9a2e">PROGRAM</a> = THIS_PATH.filename();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="hw7_8hpp.html#a361ce472bc5c01506a7b5257603d9a2e">   60</a></span>    CONST String <a class="code hl_variable" href="hw7_8hpp.html#a361ce472bc5c01506a7b5257603d9a2e">PROGRAM</a> = THIS_PATH.filename();</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">// CONST String VERSION = &quot;0.0.0&quot;;</span></div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    </div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    CONST String <a class="code hl_variable" href="constants_8hpp.html#a1033246aaa7fb5c4b0727df536f2a128">WORLD</a> = <span class="stringliteral">&quot;\U0001F30E&quot;</span>; <span class="comment">// 🌎 Earth Globe Americas</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="hw7_8hpp.html#a1033246aaa7fb5c4b0727df536f2a128">   65</a></span>    CONST String <a class="code hl_variable" href="hw7_8hpp.html#a1033246aaa7fb5c4b0727df536f2a128">WORLD</a> = <span class="stringliteral">&quot;\U0001F30E&quot;</span>; <span class="comment">// 🌎 Earth Globe Americas</span></div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    CONST String GREETING = <span class="stringliteral">&quot;Hello, &quot;</span>;</div>
 <div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    CONST String <a class="code hl_variable" href="constants_8hpp.html#ac343dfe1f8e1e4281cc538f54b8299c2">SPACE</a> = <span class="stringliteral">&quot; &quot;</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="hw7_8hpp.html#ac343dfe1f8e1e4281cc538f54b8299c2">   70</a></span>    CONST String <a class="code hl_variable" href="hw7_8hpp.html#ac343dfe1f8e1e4281cc538f54b8299c2">SPACE</a> = <span class="stringliteral">&quot; &quot;</span>;</div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    CONST String EMPTY = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    CONST String DBL_SPACE = <span class="stringliteral">&quot;  &quot;</span>;</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    CONST String DOT = <span class="stringliteral">&quot;.&quot;</span>;</div>
@@ -154,7 +154,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    CONST String QUOTE = <span class="stringliteral">&quot;\&#39;&quot;</span>;</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    CONST String DBL_QUOTE = <span class="stringliteral">&quot;\&quot;&quot;</span>;</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    CONST String <a class="code hl_variable" href="constants_8hpp.html#af174bbe388888ca8ce38092971b66ad2">LOG_PICT</a> = <span class="stringliteral">&quot;📜&quot;</span>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno"><a class="line" href="hw7_8hpp.html#af174bbe388888ca8ce38092971b66ad2">   84</a></span>    CONST String <a class="code hl_variable" href="hw7_8hpp.html#af174bbe388888ca8ce38092971b66ad2">LOG_PICT</a> = <span class="stringliteral">&quot;📜&quot;</span>;</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    CONST String CRITICAL_PICT = <span class="stringliteral">&quot;🛑&quot;</span>;</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    CONST String ERROR_PICT = <span class="stringliteral">&quot;❗&quot;</span>;</div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    CONST String WARNING_PICT = <span class="stringliteral">&quot;⚠️&quot;</span>;</div>
@@ -163,16 +163,16 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    CONST String CHECK_PICT = <span class="stringliteral">&quot;✅&quot;</span>;</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    CONST String FAILURE_PICT = <span class="stringliteral">&quot;❌&quot;</span>;</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    </div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    CONST String <a class="code hl_variable" href="constants_8hpp.html#a5b8d03d7c92bb15330454138d9d58660">DEBUG_KEY</a> = <span class="stringliteral">&quot;debug&quot;</span>;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno"><a class="line" href="hw7_8hpp.html#a5b8d03d7c92bb15330454138d9d58660">   94</a></span>    CONST String <a class="code hl_variable" href="hw7_8hpp.html#a5b8d03d7c92bb15330454138d9d58660">DEBUG_KEY</a> = <span class="stringliteral">&quot;debug&quot;</span>;</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    CONST String VERBOSE_KEY = <span class="stringliteral">&quot;verbose&quot;</span>;</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    CONST String ARGS_KEY = <span class="stringliteral">&quot;args&quot;</span>;</div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    CONST String VERSION_KEY = <span class="stringliteral">&quot;version&quot;</span>;</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    CONST String <a class="code hl_variable" href="constants_8hpp.html#ab468f65cc4d3ce5450aa13d125e5ffba">CONF_DIR_NAME</a> = <span class="stringliteral">&quot;.config&quot;</span>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="hw7_8hpp.html#ab468f65cc4d3ce5450aa13d125e5ffba">  100</a></span>    CONST String <a class="code hl_variable" href="hw7_8hpp.html#ab468f65cc4d3ce5450aa13d125e5ffba">CONF_DIR_NAME</a> = <span class="stringliteral">&quot;.config&quot;</span>;</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    CONST String CONF_FILE_NAME = <span class="stringliteral">&quot;config.json&quot;</span>;</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>    CONST String LOG_DIR_NAME = <span class="stringliteral">&quot;.log&quot;</span>;</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    CONST String DATA_DIR_NAME = <span class="stringliteral">&quot;data&quot;</span>;</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    CONST String DATA_FILE_NAME = <a class="code hl_variable" href="constants_8hpp.html#a361ce472bc5c01506a7b5257603d9a2e">PROGRAM</a> + <span class="stringliteral">&quot;.json&quot;</span>;</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    CONST String DATA_FILE_NAME = <a class="code hl_variable" href="hw7_8hpp.html#a361ce472bc5c01506a7b5257603d9a2e">PROGRAM</a> + <span class="stringliteral">&quot;.json&quot;</span>;</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    </div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="comment">// Environment variables</span></div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    </div>
@@ -180,10 +180,11 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="comment">// Dates and times</span></div>
 <div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>String <a class="code hl_function" href="hw7_8hpp.html#a7235d375889750badea7719e65aded5e">now_string</a>();</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="hw7_8hpp.html#a7235d375889750badea7719e65aded5e">  119</a></span>String <a class="code hl_function" href="hw7_8hpp.html#a7235d375889750badea7719e65aded5e">now_string</a>();</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span> </div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span><span class="comment">// `Filter` class</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span><span class="keyword">class </span><a class="code hl_class" href="classFilter.html">Filter</a></div>
+<div class="foldopen" id="foldopen00122" data-start="{" data-end="};">
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno"><a class="line" href="classFilter.html">  122</a></span><span class="keyword">class </span><a class="code hl_class" href="classFilter.html">Filter</a></div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>{</div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span><span class="keyword">public</span>:</div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
@@ -217,6 +218,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>    PathList paths; </div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span> </div>
 <div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>};</div>
+</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span> </div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span><span class="comment">// `str` class</span></div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span><span class="keyword">namespace </span>hw7</div>
@@ -234,19 +236,19 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span> </div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno"><a class="line" href="classhw7_1_1str.html#ae8c095ea731c92f6f4ead5615a72d435">  195</a></span>        <a class="code hl_function" href="classhw7_1_1str.html#ae8c095ea731c92f6f4ead5615a72d435">str</a>(<span class="keyword">const</span> std::string_view&amp; s) : String(s) {}</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span> </div>
-<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        <a class="code hl_class" href="classhw7_1_1str.html">str</a> <a class="code hl_function" href="classhw7_1_1str.html#a59914007fbba95f437dafc30d6ce56d5">lower</a>();</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="classhw7_1_1str.html#aefb1835497d3826361686dc4a43d17a3">  200</a></span>        <a class="code hl_class" href="classhw7_1_1str.html">str</a> <a class="code hl_function" href="classhw7_1_1str.html#aefb1835497d3826361686dc4a43d17a3">lower</a>();</div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
-<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>        <a class="code hl_class" href="classhw7_1_1str.html">str</a> <a class="code hl_function" href="classhw7_1_1str.html#a849fda2b2dbaa1121c9614e82a3ee0fd">upper</a>();</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno"><a class="line" href="classhw7_1_1str.html#a92d756ef01d02a23752c11a45a64943d">  205</a></span>        <a class="code hl_class" href="classhw7_1_1str.html">str</a> <a class="code hl_function" href="classhw7_1_1str.html#a92d756ef01d02a23752c11a45a64943d">upper</a>();</div>
 <div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span> </div>
-<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        StrList <a class="code hl_function" href="classhw7_1_1str.html#ac641d75a423cd02d479cb87d7f95fa75">split</a>();</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno"><a class="line" href="classhw7_1_1str.html#a00195a29f0f8a571fe254c98aa9a0f6c">  210</a></span>        StrList <a class="code hl_function" href="classhw7_1_1str.html#a00195a29f0f8a571fe254c98aa9a0f6c">split</a>();</div>
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
-<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        StrList <a class="code hl_function" href="classhw7_1_1str.html#ac641d75a423cd02d479cb87d7f95fa75">split</a>(<span class="keyword">const</span> <a class="code hl_class" href="classhw7_1_1str.html">str</a>&amp;);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="classhw7_1_1str.html#a6ae1ee043636c2206d83dbdf13aaf1bf">  216</a></span>        StrList <a class="code hl_function" href="classhw7_1_1str.html#a6ae1ee043636c2206d83dbdf13aaf1bf">split</a>(<span class="keyword">const</span> <a class="code hl_class" href="classhw7_1_1str.html">str</a>&amp;);</div>
 <div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span> </div>
-<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <a class="code hl_class" href="classhw7_1_1str.html">str</a> <a class="code hl_function" href="classhw7_1_1str.html#aeb021ed093fb3c1747b7a42eff3bca7c">join</a>(<span class="keyword">const</span> StrList&amp;);</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="classhw7_1_1str.html#ad693e430bb9980d738cc699c7133c6c7">  223</a></span>        <a class="code hl_class" href="classhw7_1_1str.html">str</a> <a class="code hl_function" href="classhw7_1_1str.html#ad693e430bb9980d738cc699c7133c6c7">join</a>(<span class="keyword">const</span> StrList&amp;);</div>
 <div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
-<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        <a class="code hl_class" href="classhw7_1_1str.html">str</a> <a class="code hl_function" href="classhw7_1_1str.html#a01e721bb4f05b9b7d257f370ccffeba3">replace</a>(<span class="keyword">const</span> <a class="code hl_class" href="classhw7_1_1str.html">str</a>&amp; pattern, <span class="keyword">const</span> <a class="code hl_class" href="classhw7_1_1str.html">str</a>&amp; replacement);</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno"><a class="line" href="classhw7_1_1str.html#ab0407968526fe0fc9202cb1f85925fdd">  231</a></span>        <a class="code hl_class" href="classhw7_1_1str.html">str</a> <a class="code hl_function" href="classhw7_1_1str.html#ab0407968526fe0fc9202cb1f85925fdd">replace</a>(<span class="keyword">const</span> <a class="code hl_class" href="classhw7_1_1str.html">str</a>&amp; pattern, <span class="keyword">const</span> <a class="code hl_class" href="classhw7_1_1str.html">str</a>&amp; replacement);</div>
 <div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span> </div>
-<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>        StrList <a class="code hl_function" href="classhw7_1_1str.html#a7b54b4a326071138c233921302a741ab">partition</a>(<span class="keyword">const</span> <a class="code hl_class" href="classhw7_1_1str.html">str</a>&amp; pattern);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno"><a class="line" href="classhw7_1_1str.html#ace9d51768ba919d9f1288664210c930c">  238</a></span>        StrList <a class="code hl_function" href="classhw7_1_1str.html#ace9d51768ba919d9f1288664210c930c">partition</a>(<span class="keyword">const</span> <a class="code hl_class" href="classhw7_1_1str.html">str</a>&amp; pattern);</div>
 <div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span> </div>
 <div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>    }; <span class="comment">//str</span></div>
 </div>
@@ -258,19 +260,20 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>Path cwd();</div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>PathList listdir(<span class="keyword">const</span> Path&amp; path);</div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>String magic_type(<span class="keyword">const</span> Path&amp; p);</div>
-<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>Path <a class="code hl_function" href="hw7_8hpp.html#a3bd8d432d28c14e88726400936241576">getHome</a>(); <span class="comment">// Find the user&#39;s home directory and return it as a `path` object.</span></div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno"><a class="line" href="hw7_8hpp.html#a3bd8d432d28c14e88726400936241576">  253</a></span>Path <a class="code hl_function" href="hw7_8hpp.html#a3bd8d432d28c14e88726400936241576">getHome</a>(); <span class="comment">// Find the user&#39;s home directory and return it as a `path` object.</span></div>
 <div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span><span class="keywordtype">void</span> ensure_file(<span class="keyword">const</span> Path&amp; p); <span class="comment">// Create the file at p if it doesn&#39;t exist.</span></div>
 <div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
-<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>String <a class="code hl_function" href="hw7_8hpp.html#a784c26a7c414624ba3f94ac69da4a39f">log_filename</a>();</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno"><a class="line" href="hw7_8hpp.html#a784c26a7c414624ba3f94ac69da4a39f">  261</a></span>String <a class="code hl_function" href="hw7_8hpp.html#a784c26a7c414624ba3f94ac69da4a39f">log_filename</a>();</div>
 <div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
-<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span><span class="keyword">struct </span><a class="code hl_struct" href="structFileSystem.html">FileSystem</a> {</div>
+<div class="foldopen" id="foldopen00263" data-start="{" data-end="};">
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno"><a class="line" href="structFileSystem.html">  263</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structFileSystem.html">FileSystem</a> {</div>
 <div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>    Path working = cwd();</div>
 <div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    Path home = getenv(<span class="stringliteral">&quot;HOME&quot;</span>);</div>
 <div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>    Path base = fs::read_symlink(hw7::THIS_PROC).parent_path().parent_path();</div>
-<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    Path conf_dir = home / <a class="code hl_variable" href="constants_8hpp.html#ab468f65cc4d3ce5450aa13d125e5ffba">hw7::CONF_DIR_NAME</a> / <a class="code hl_variable" href="constants_8hpp.html#a361ce472bc5c01506a7b5257603d9a2e">hw7::PROGRAM</a>;</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    Path conf_dir = home / hw7::CONF_DIR_NAME / hw7::PROGRAM;</div>
 <div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span>    Path config = conf_dir / hw7::CONF_FILE_NAME;</div>
-<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    Path user = home / (hw7::DOT + <a class="code hl_variable" href="constants_8hpp.html#a361ce472bc5c01506a7b5257603d9a2e">hw7::PROGRAM</a>);</div>
-<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    Path logs = home / hw7::LOG_DIR_NAME / <a class="code hl_variable" href="constants_8hpp.html#a361ce472bc5c01506a7b5257603d9a2e">hw7::PROGRAM</a>;</div>
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno">  269</span>    Path user = home / (hw7::DOT + hw7::PROGRAM);</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>    Path logs = home / hw7::LOG_DIR_NAME / hw7::PROGRAM;</div>
 <div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>    Path logfile = logs / <a class="code hl_function" href="hw7_8hpp.html#a784c26a7c414624ba3f94ac69da4a39f">log_filename</a>();</div>
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>    Path data_dir = base / hw7::DATA_DIR_NAME;</div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    Path data = data_dir / hw7::DATA_FILE_NAME;</div>
@@ -279,6 +282,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span> </div>
 <div class="line"><a id="l00283" name="l00283"></a><span class="lineno"><a class="line" href="structFileSystem.html#ad1d3628ddd3468ec688316d7f1266a63">  283</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="structFileSystem.html#ad1d3628ddd3468ec688316d7f1266a63">dump</a>();</div>
 <div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>};</div>
+</div>
 <div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span> </div>
 <div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span><span class="comment">// Configuration</span></div>
 <div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span> </div>
@@ -287,27 +291,28 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span> </div>
 <div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span><span class="comment">// Environment</span></div>
 <div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
-<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span><span class="keywordtype">void</span> <a class="code hl_function" href="hw7_8hpp.html#a07df3fe81a2dd5dbcd63391ac7838f10">check_env</a>(JSON&amp;);</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span><span class="keywordtype">void</span> check_env(JSON&amp;);</div>
 <div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span> </div>
 <div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span><span class="comment">// Logging</span></div>
 <div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span> </div>
 <div class="line"><a id="l00302" name="l00302"></a><span class="lineno"><a class="line" href="hw7_8hpp.html#afdd6d415ccd420f2c1efc5a0d3cb4484">  302</a></span>Path <a class="code hl_function" href="hw7_8hpp.html#afdd6d415ccd420f2c1efc5a0d3cb4484">defaultLogFile</a>();</div>
 <div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span> </div>
-<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span><span class="keywordtype">void</span> <a class="code hl_function" href="hw7_8hpp.html#ac69b0c9a687b796675328a8ac78dc156">debug</a>(<span class="keyword">const</span> String&amp; s);</div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno"><a class="line" href="hw7_8hpp.html#ac69b0c9a687b796675328a8ac78dc156">  308</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="hw7_8hpp.html#ac69b0c9a687b796675328a8ac78dc156">debug</a>(<span class="keyword">const</span> String&amp; s);</div>
 <div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span> </div>
 <div class="line"><a id="l00316" name="l00316"></a><span class="lineno"><a class="line" href="hw7_8hpp.html#a51067e2b46bf21364e943d3b723baa1f">  316</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="hw7_8hpp.html#ac69b0c9a687b796675328a8ac78dc156">debug</a>(std::ostringstream&amp; ss);</div>
 <div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span> </div>
-<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span><span class="keywordtype">void</span> <a class="code hl_function" href="hw7_8hpp.html#a29c2015c6ef1926ac0395a1d24408dad">info</a>(<span class="keyword">const</span> String&amp; s);</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno"><a class="line" href="hw7_8hpp.html#a29c2015c6ef1926ac0395a1d24408dad">  322</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="hw7_8hpp.html#a29c2015c6ef1926ac0395a1d24408dad">info</a>(<span class="keyword">const</span> String&amp; s);</div>
 <div class="line"><a id="l00323" name="l00323"></a><span class="lineno">  323</span> </div>
-<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span><span class="keywordtype">void</span> <a class="code hl_function" href="hw7_8hpp.html#a3a70a5bb8f56876733ddb7756c51e0a1">warn</a>(<span class="keyword">const</span> String&amp; s);</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno"><a class="line" href="hw7_8hpp.html#a3a70a5bb8f56876733ddb7756c51e0a1">  328</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="hw7_8hpp.html#a3a70a5bb8f56876733ddb7756c51e0a1">warn</a>(<span class="keyword">const</span> String&amp; s);</div>
 <div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span> </div>
-<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span><span class="keywordtype">void</span> <a class="code hl_function" href="hw7_8hpp.html#a41f5d653044f02fc64e06da938741a6f">error</a>(<span class="keyword">const</span> String&amp; s);</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno"><a class="line" href="hw7_8hpp.html#a41f5d653044f02fc64e06da938741a6f">  334</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="hw7_8hpp.html#a41f5d653044f02fc64e06da938741a6f">error</a>(<span class="keyword">const</span> String&amp; s);</div>
 <div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span> </div>
-<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span><span class="keywordtype">void</span> <a class="code hl_function" href="hw7_8hpp.html#ac684ab1864310059f942b3474120aaae">stop</a>(<span class="keyword">const</span> String&amp; s);</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno"><a class="line" href="hw7_8hpp.html#ac684ab1864310059f942b3474120aaae">  340</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="hw7_8hpp.html#ac684ab1864310059f942b3474120aaae">stop</a>(<span class="keyword">const</span> String&amp; s);</div>
 <div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
-<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span><span class="keywordtype">void</span> <a class="code hl_function" href="hw7_8hpp.html#aaddfe633c34518ddeb394f0b87f5dc80">rotate_logs</a>(<span class="keyword">const</span> Path&amp; directory, <span class="keywordtype">size_t</span> count);</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno"><a class="line" href="hw7_8hpp.html#aaddfe633c34518ddeb394f0b87f5dc80">  350</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="hw7_8hpp.html#aaddfe633c34518ddeb394f0b87f5dc80">rotate_logs</a>(<span class="keyword">const</span> Path&amp; directory, <span class="keywordtype">size_t</span> count);</div>
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span> </div>
-<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span><span class="keyword">struct </span><a class="code hl_struct" href="structGlobals.html">Globals</a> {</div>
+<div class="foldopen" id="foldopen00355" data-start="{" data-end="};">
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno"><a class="line" href="structGlobals.html">  355</a></span><span class="keyword">struct </span><a class="code hl_struct" href="structGlobals.html">Globals</a> {</div>
 <div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>    <a class="code hl_struct" href="structFileSystem.html">FileSystem</a> FS;</div>
 <div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>    JSON config;</div>
 <div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>    JSON data;</div>
@@ -330,6 +335,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span> </div>
 <div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>    <span class="keywordtype">void</span> init_logs();</div>
 <div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>};</div>
+</div>
 <div class="line"><a id="l00406" name="l00406"></a><span class="lineno">  406</span> </div>
 <div class="foldopen" id="foldopen00407" data-start="{" data-end="};">
 <div class="line"><a id="l00407" name="l00407"></a><span class="lineno"><a class="line" href="classProgram.html">  407</a></span><span class="keyword">class </span><a class="code hl_class" href="classProgram.html">Program</a> : <a class="code hl_struct" href="structGlobals.html">Globals</a></div>
@@ -353,7 +359,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00435" name="l00435"></a><span class="lineno">  435</span> </div>
 <div class="line"><a id="l00436" name="l00436"></a><span class="lineno">  436</span>}; <span class="comment">// Program</span></div>
 </div>
-<div class="ttc" id="aclassFilter_html"><div class="ttname"><a href="classFilter.html">Filter</a></div><div class="ttdef"><b>Definition</b> filter.hpp:11</div></div>
+<div class="ttc" id="aclassFilter_html"><div class="ttname"><a href="classFilter.html">Filter</a></div><div class="ttdef"><b>Definition</b> hw7.hpp:123</div></div>
 <div class="ttc" id="aclassFilter_html_a1fe9eb7c222f1a45786052de95f4c49a"><div class="ttname"><a href="classFilter.html#a1fe9eb7c222f1a45786052de95f4c49a">Filter::Filter</a></div><div class="ttdeci">Filter(const StrList &amp;S)</div><div class="ttdef"><b>Definition</b> hw7.hpp:136</div></div>
 <div class="ttc" id="aclassFilter_html_a34d6d107b95f665de59a84975ecfcf83"><div class="ttname"><a href="classFilter.html#a34d6d107b95f665de59a84975ecfcf83">Filter::process</a></div><div class="ttdeci">virtual ErrCode process(const Path &amp;)</div></div>
 <div class="ttc" id="aclassFilter_html_a50e420a1d7385aea26cd6dd0946c7eed"><div class="ttname"><a href="classFilter.html#a50e420a1d7385aea26cd6dd0946c7eed">Filter::process</a></div><div class="ttdeci">ErrCode process()</div><div class="ttdef"><b>Definition</b> hw7.hpp:148</div></div>
@@ -361,38 +367,38 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="aclassProgram_html_a228e413b8ca6de023145f31045f49e6e"><div class="ttname"><a href="classProgram.html#a228e413b8ca6de023145f31045f49e6e">Program::Program</a></div><div class="ttdeci">Program(int argc, char **argv)</div><div class="ttdef"><b>Definition</b> hw7.hpp:420</div></div>
 <div class="ttc" id="aclassProgram_html_a3eee7c246bfb4ee0130f80923c7ee565"><div class="ttname"><a href="classProgram.html#a3eee7c246bfb4ee0130f80923c7ee565">Program::run</a></div><div class="ttdeci">virtual ErrCode run()</div><div class="ttdef"><b>Definition</b> hw7.hpp:425</div></div>
 <div class="ttc" id="aclasshw7_1_1str_html"><div class="ttname"><a href="classhw7_1_1str.html">hw7::str</a></div><div class="ttdef"><b>Definition</b> hw7.hpp:174</div></div>
-<div class="ttc" id="aclasshw7_1_1str_html_a01e721bb4f05b9b7d257f370ccffeba3"><div class="ttname"><a href="classhw7_1_1str.html#a01e721bb4f05b9b7d257f370ccffeba3">hw7::str::replace</a></div><div class="ttdeci">str replace(const str &amp;pattern, const str &amp;replacement)</div><div class="ttdef"><b>Definition</b> str.cpp:87</div></div>
+<div class="ttc" id="aclasshw7_1_1str_html_a00195a29f0f8a571fe254c98aa9a0f6c"><div class="ttname"><a href="classhw7_1_1str.html#a00195a29f0f8a571fe254c98aa9a0f6c">hw7::str::split</a></div><div class="ttdeci">StrList split()</div></div>
 <div class="ttc" id="aclasshw7_1_1str_html_a45afa0b010b14db8ac118fdac779916f"><div class="ttname"><a href="classhw7_1_1str.html#a45afa0b010b14db8ac118fdac779916f">hw7::str::str</a></div><div class="ttdeci">str(const String &amp;s)</div><div class="ttdef"><b>Definition</b> hw7.hpp:190</div></div>
-<div class="ttc" id="aclasshw7_1_1str_html_a59914007fbba95f437dafc30d6ce56d5"><div class="ttname"><a href="classhw7_1_1str.html#a59914007fbba95f437dafc30d6ce56d5">hw7::str::lower</a></div><div class="ttdeci">str lower()</div><div class="ttdef"><b>Definition</b> str.cpp:14</div></div>
+<div class="ttc" id="aclasshw7_1_1str_html_a6ae1ee043636c2206d83dbdf13aaf1bf"><div class="ttname"><a href="classhw7_1_1str.html#a6ae1ee043636c2206d83dbdf13aaf1bf">hw7::str::split</a></div><div class="ttdeci">StrList split(const str &amp;)</div></div>
 <div class="ttc" id="aclasshw7_1_1str_html_a6e0e9c1bd5771db844e0fd210c185048"><div class="ttname"><a href="classhw7_1_1str.html#a6e0e9c1bd5771db844e0fd210c185048">hw7::str::str</a></div><div class="ttdeci">str(const char *s)</div><div class="ttdef"><b>Definition</b> hw7.hpp:185</div></div>
-<div class="ttc" id="aclasshw7_1_1str_html_a7b54b4a326071138c233921302a741ab"><div class="ttname"><a href="classhw7_1_1str.html#a7b54b4a326071138c233921302a741ab">hw7::str::partition</a></div><div class="ttdeci">StrList partition(const str &amp;pattern)</div><div class="ttdef"><b>Definition</b> str.cpp:93</div></div>
-<div class="ttc" id="aclasshw7_1_1str_html_a849fda2b2dbaa1121c9614e82a3ee0fd"><div class="ttname"><a href="classhw7_1_1str.html#a849fda2b2dbaa1121c9614e82a3ee0fd">hw7::str::upper</a></div><div class="ttdeci">str upper()</div><div class="ttdef"><b>Definition</b> str.cpp:22</div></div>
 <div class="ttc" id="aclasshw7_1_1str_html_a8f4ecb794c387792c833c4bc59974e30"><div class="ttname"><a href="classhw7_1_1str.html#a8f4ecb794c387792c833c4bc59974e30">hw7::str::str</a></div><div class="ttdeci">str()=default</div></div>
-<div class="ttc" id="aclasshw7_1_1str_html_ac641d75a423cd02d479cb87d7f95fa75"><div class="ttname"><a href="classhw7_1_1str.html#ac641d75a423cd02d479cb87d7f95fa75">hw7::str::split</a></div><div class="ttdeci">StrList split()</div><div class="ttdef"><b>Definition</b> str.cpp:30</div></div>
+<div class="ttc" id="aclasshw7_1_1str_html_a92d756ef01d02a23752c11a45a64943d"><div class="ttname"><a href="classhw7_1_1str.html#a92d756ef01d02a23752c11a45a64943d">hw7::str::upper</a></div><div class="ttdeci">str upper()</div></div>
+<div class="ttc" id="aclasshw7_1_1str_html_ab0407968526fe0fc9202cb1f85925fdd"><div class="ttname"><a href="classhw7_1_1str.html#ab0407968526fe0fc9202cb1f85925fdd">hw7::str::replace</a></div><div class="ttdeci">str replace(const str &amp;pattern, const str &amp;replacement)</div></div>
+<div class="ttc" id="aclasshw7_1_1str_html_ace9d51768ba919d9f1288664210c930c"><div class="ttname"><a href="classhw7_1_1str.html#ace9d51768ba919d9f1288664210c930c">hw7::str::partition</a></div><div class="ttdeci">StrList partition(const str &amp;pattern)</div></div>
+<div class="ttc" id="aclasshw7_1_1str_html_ad693e430bb9980d738cc699c7133c6c7"><div class="ttname"><a href="classhw7_1_1str.html#ad693e430bb9980d738cc699c7133c6c7">hw7::str::join</a></div><div class="ttdeci">str join(const StrList &amp;)</div></div>
 <div class="ttc" id="aclasshw7_1_1str_html_ae8c095ea731c92f6f4ead5615a72d435"><div class="ttname"><a href="classhw7_1_1str.html#ae8c095ea731c92f6f4ead5615a72d435">hw7::str::str</a></div><div class="ttdeci">str(const std::string_view &amp;s)</div><div class="ttdef"><b>Definition</b> hw7.hpp:195</div></div>
-<div class="ttc" id="aclasshw7_1_1str_html_aeb021ed093fb3c1747b7a42eff3bca7c"><div class="ttname"><a href="classhw7_1_1str.html#aeb021ed093fb3c1747b7a42eff3bca7c">hw7::str::join</a></div><div class="ttdeci">str join(const StrList &amp;)</div><div class="ttdef"><b>Definition</b> str.cpp:66</div></div>
-<div class="ttc" id="aconstants_8hpp_html_a1033246aaa7fb5c4b0727df536f2a128"><div class="ttname"><a href="constants_8hpp.html#a1033246aaa7fb5c4b0727df536f2a128">hw7::WORLD</a></div><div class="ttdeci">CONST String WORLD</div><div class="ttdef"><b>Definition</b> constants.hpp:23</div></div>
-<div class="ttc" id="aconstants_8hpp_html_a361ce472bc5c01506a7b5257603d9a2e"><div class="ttname"><a href="constants_8hpp.html#a361ce472bc5c01506a7b5257603d9a2e">hw7::PROGRAM</a></div><div class="ttdeci">CONST String PROGRAM</div><div class="ttdoc">Name of the currently running program.</div><div class="ttdef"><b>Definition</b> constants.hpp:18</div></div>
-<div class="ttc" id="aconstants_8hpp_html_a5b8d03d7c92bb15330454138d9d58660"><div class="ttname"><a href="constants_8hpp.html#a5b8d03d7c92bb15330454138d9d58660">hw7::DEBUG_KEY</a></div><div class="ttdeci">CONST String DEBUG_KEY</div><div class="ttdoc">Index strings for the help text in data/data.json.</div><div class="ttdef"><b>Definition</b> constants.hpp:52</div></div>
-<div class="ttc" id="aconstants_8hpp_html_ab468f65cc4d3ce5450aa13d125e5ffba"><div class="ttname"><a href="constants_8hpp.html#ab468f65cc4d3ce5450aa13d125e5ffba">hw7::CONF_DIR_NAME</a></div><div class="ttdeci">CONST String CONF_DIR_NAME</div><div class="ttdoc">File system filenames.</div><div class="ttdef"><b>Definition</b> constants.hpp:58</div></div>
-<div class="ttc" id="aconstants_8hpp_html_ac343dfe1f8e1e4281cc538f54b8299c2"><div class="ttname"><a href="constants_8hpp.html#ac343dfe1f8e1e4281cc538f54b8299c2">hw7::SPACE</a></div><div class="ttdeci">CONST String SPACE</div><div class="ttdoc">Basic strings. May possibly avoid a few typos.</div><div class="ttdef"><b>Definition</b> constants.hpp:28</div></div>
-<div class="ttc" id="aconstants_8hpp_html_af174bbe388888ca8ce38092971b66ad2"><div class="ttname"><a href="constants_8hpp.html#af174bbe388888ca8ce38092971b66ad2">hw7::LOG_PICT</a></div><div class="ttdeci">CONST String LOG_PICT</div><div class="ttdoc">Unicode emojis just to be cute.</div><div class="ttdef"><b>Definition</b> constants.hpp:42</div></div>
-<div class="ttc" id="aconstants_8hpp_html_af8e29c40fdda95171bd318b0ebe70f8b"><div class="ttname"><a href="constants_8hpp.html#af8e29c40fdda95171bd318b0ebe70f8b">hw7::THIS_PROC</a></div><div class="ttdeci">CONST String THIS_PROC</div><div class="ttdoc">Easy way to find the current process.</div><div class="ttdef"><b>Definition</b> constants.hpp:15</div></div>
-<div class="ttc" id="ahw7_8hpp_html_a07df3fe81a2dd5dbcd63391ac7838f10"><div class="ttname"><a href="hw7_8hpp.html#a07df3fe81a2dd5dbcd63391ac7838f10">check_env</a></div><div class="ttdeci">void check_env(JSON &amp;)</div><div class="ttdoc">Check for environment variables that override config.json.</div><div class="ttdef"><b>Definition</b> environment.cpp:16</div></div>
-<div class="ttc" id="ahw7_8hpp_html_a29c2015c6ef1926ac0395a1d24408dad"><div class="ttname"><a href="hw7_8hpp.html#a29c2015c6ef1926ac0395a1d24408dad">info</a></div><div class="ttdeci">void info(const String &amp;s)</div><div class="ttdoc">Log a string.</div><div class="ttdef"><b>Definition</b> logging.cpp:21</div></div>
-<div class="ttc" id="ahw7_8hpp_html_a3a70a5bb8f56876733ddb7756c51e0a1"><div class="ttname"><a href="hw7_8hpp.html#a3a70a5bb8f56876733ddb7756c51e0a1">warn</a></div><div class="ttdeci">void warn(const String &amp;s)</div><div class="ttdoc">Log a string.</div><div class="ttdef"><b>Definition</b> logging.cpp:26</div></div>
-<div class="ttc" id="ahw7_8hpp_html_a3bd8d432d28c14e88726400936241576"><div class="ttname"><a href="hw7_8hpp.html#a3bd8d432d28c14e88726400936241576">getHome</a></div><div class="ttdeci">Path getHome()</div><div class="ttdoc">Return the user's home directory.</div><div class="ttdef"><b>Definition</b> fs.cpp:51</div></div>
-<div class="ttc" id="ahw7_8hpp_html_a41f5d653044f02fc64e06da938741a6f"><div class="ttname"><a href="hw7_8hpp.html#a41f5d653044f02fc64e06da938741a6f">error</a></div><div class="ttdeci">void error(const String &amp;s)</div><div class="ttdoc">Log a string.</div><div class="ttdef"><b>Definition</b> logging.cpp:31</div></div>
-<div class="ttc" id="ahw7_8hpp_html_a7235d375889750badea7719e65aded5e"><div class="ttname"><a href="hw7_8hpp.html#a7235d375889750badea7719e65aded5e">now_string</a></div><div class="ttdeci">String now_string()</div><div class="ttdoc">Get the current timestamp and return it.</div><div class="ttdef"><b>Definition</b> datetime.cpp:14</div></div>
-<div class="ttc" id="ahw7_8hpp_html_a784c26a7c414624ba3f94ac69da4a39f"><div class="ttname"><a href="hw7_8hpp.html#a784c26a7c414624ba3f94ac69da4a39f">log_filename</a></div><div class="ttdeci">String log_filename()</div><div class="ttdoc">Return a string to name the log file with.</div><div class="ttdef"><b>Definition</b> fs.cpp:77</div></div>
-<div class="ttc" id="ahw7_8hpp_html_aaddfe633c34518ddeb394f0b87f5dc80"><div class="ttname"><a href="hw7_8hpp.html#aaddfe633c34518ddeb394f0b87f5dc80">rotate_logs</a></div><div class="ttdeci">void rotate_logs(const Path &amp;directory, size_t count)</div><div class="ttdoc">Ensure that only the count most recent logs remain in the logs directory.</div><div class="ttdef"><b>Definition</b> logging.cpp:49</div></div>
-<div class="ttc" id="ahw7_8hpp_html_ac684ab1864310059f942b3474120aaae"><div class="ttname"><a href="hw7_8hpp.html#ac684ab1864310059f942b3474120aaae">stop</a></div><div class="ttdeci">void stop(const String &amp;s)</div><div class="ttdoc">Log a string.</div><div class="ttdef"><b>Definition</b> logging.cpp:36</div></div>
-<div class="ttc" id="ahw7_8hpp_html_ac69b0c9a687b796675328a8ac78dc156"><div class="ttname"><a href="hw7_8hpp.html#ac69b0c9a687b796675328a8ac78dc156">debug</a></div><div class="ttdeci">void debug(const String &amp;s)</div><div class="ttdoc">Log a string.</div><div class="ttdef"><b>Definition</b> logging.cpp:16</div></div>
+<div class="ttc" id="aclasshw7_1_1str_html_aefb1835497d3826361686dc4a43d17a3"><div class="ttname"><a href="classhw7_1_1str.html#aefb1835497d3826361686dc4a43d17a3">hw7::str::lower</a></div><div class="ttdeci">str lower()</div></div>
+<div class="ttc" id="ahw7_8hpp_html_a1033246aaa7fb5c4b0727df536f2a128"><div class="ttname"><a href="hw7_8hpp.html#a1033246aaa7fb5c4b0727df536f2a128">hw7::WORLD</a></div><div class="ttdeci">CONST String WORLD</div><div class="ttdef"><b>Definition</b> hw7.hpp:65</div></div>
+<div class="ttc" id="ahw7_8hpp_html_a29c2015c6ef1926ac0395a1d24408dad"><div class="ttname"><a href="hw7_8hpp.html#a29c2015c6ef1926ac0395a1d24408dad">info</a></div><div class="ttdeci">void info(const String &amp;s)</div><div class="ttdoc">Log a string.</div></div>
+<div class="ttc" id="ahw7_8hpp_html_a361ce472bc5c01506a7b5257603d9a2e"><div class="ttname"><a href="hw7_8hpp.html#a361ce472bc5c01506a7b5257603d9a2e">hw7::PROGRAM</a></div><div class="ttdeci">CONST String PROGRAM</div><div class="ttdoc">Name of the currently running program.</div><div class="ttdef"><b>Definition</b> hw7.hpp:60</div></div>
+<div class="ttc" id="ahw7_8hpp_html_a3a70a5bb8f56876733ddb7756c51e0a1"><div class="ttname"><a href="hw7_8hpp.html#a3a70a5bb8f56876733ddb7756c51e0a1">warn</a></div><div class="ttdeci">void warn(const String &amp;s)</div><div class="ttdoc">Log a string.</div></div>
+<div class="ttc" id="ahw7_8hpp_html_a3bd8d432d28c14e88726400936241576"><div class="ttname"><a href="hw7_8hpp.html#a3bd8d432d28c14e88726400936241576">getHome</a></div><div class="ttdeci">Path getHome()</div><div class="ttdoc">Return the user's home directory.</div></div>
+<div class="ttc" id="ahw7_8hpp_html_a41f5d653044f02fc64e06da938741a6f"><div class="ttname"><a href="hw7_8hpp.html#a41f5d653044f02fc64e06da938741a6f">error</a></div><div class="ttdeci">void error(const String &amp;s)</div><div class="ttdoc">Log a string.</div></div>
+<div class="ttc" id="ahw7_8hpp_html_a5b8d03d7c92bb15330454138d9d58660"><div class="ttname"><a href="hw7_8hpp.html#a5b8d03d7c92bb15330454138d9d58660">hw7::DEBUG_KEY</a></div><div class="ttdeci">CONST String DEBUG_KEY</div><div class="ttdoc">Index strings for the help text in data/data.json.</div><div class="ttdef"><b>Definition</b> hw7.hpp:94</div></div>
+<div class="ttc" id="ahw7_8hpp_html_a7235d375889750badea7719e65aded5e"><div class="ttname"><a href="hw7_8hpp.html#a7235d375889750badea7719e65aded5e">now_string</a></div><div class="ttdeci">String now_string()</div><div class="ttdoc">Get the current timestamp and return it.</div></div>
+<div class="ttc" id="ahw7_8hpp_html_a784c26a7c414624ba3f94ac69da4a39f"><div class="ttname"><a href="hw7_8hpp.html#a784c26a7c414624ba3f94ac69da4a39f">log_filename</a></div><div class="ttdeci">String log_filename()</div><div class="ttdoc">Return a string to name the log file with.</div></div>
+<div class="ttc" id="ahw7_8hpp_html_aaddfe633c34518ddeb394f0b87f5dc80"><div class="ttname"><a href="hw7_8hpp.html#aaddfe633c34518ddeb394f0b87f5dc80">rotate_logs</a></div><div class="ttdeci">void rotate_logs(const Path &amp;directory, size_t count)</div><div class="ttdoc">Ensure that only the count most recent logs remain in the logs directory.</div></div>
+<div class="ttc" id="ahw7_8hpp_html_ab468f65cc4d3ce5450aa13d125e5ffba"><div class="ttname"><a href="hw7_8hpp.html#ab468f65cc4d3ce5450aa13d125e5ffba">hw7::CONF_DIR_NAME</a></div><div class="ttdeci">CONST String CONF_DIR_NAME</div><div class="ttdoc">File system filenames.</div><div class="ttdef"><b>Definition</b> hw7.hpp:100</div></div>
+<div class="ttc" id="ahw7_8hpp_html_ac343dfe1f8e1e4281cc538f54b8299c2"><div class="ttname"><a href="hw7_8hpp.html#ac343dfe1f8e1e4281cc538f54b8299c2">hw7::SPACE</a></div><div class="ttdeci">CONST String SPACE</div><div class="ttdoc">Basic strings. May possibly avoid a few typos.</div><div class="ttdef"><b>Definition</b> hw7.hpp:70</div></div>
+<div class="ttc" id="ahw7_8hpp_html_ac684ab1864310059f942b3474120aaae"><div class="ttname"><a href="hw7_8hpp.html#ac684ab1864310059f942b3474120aaae">stop</a></div><div class="ttdeci">void stop(const String &amp;s)</div><div class="ttdoc">Log a string.</div></div>
+<div class="ttc" id="ahw7_8hpp_html_ac69b0c9a687b796675328a8ac78dc156"><div class="ttname"><a href="hw7_8hpp.html#ac69b0c9a687b796675328a8ac78dc156">debug</a></div><div class="ttdeci">void debug(const String &amp;s)</div><div class="ttdoc">Log a string.</div></div>
+<div class="ttc" id="ahw7_8hpp_html_af174bbe388888ca8ce38092971b66ad2"><div class="ttname"><a href="hw7_8hpp.html#af174bbe388888ca8ce38092971b66ad2">hw7::LOG_PICT</a></div><div class="ttdeci">CONST String LOG_PICT</div><div class="ttdoc">Unicode emojis just to be cute.</div><div class="ttdef"><b>Definition</b> hw7.hpp:84</div></div>
+<div class="ttc" id="ahw7_8hpp_html_af8e29c40fdda95171bd318b0ebe70f8b"><div class="ttname"><a href="hw7_8hpp.html#af8e29c40fdda95171bd318b0ebe70f8b">hw7::THIS_PROC</a></div><div class="ttdeci">CONST String THIS_PROC</div><div class="ttdoc">Easy way to find the current process.</div><div class="ttdef"><b>Definition</b> hw7.hpp:57</div></div>
 <div class="ttc" id="ahw7_8hpp_html_afdd6d415ccd420f2c1efc5a0d3cb4484"><div class="ttname"><a href="hw7_8hpp.html#afdd6d415ccd420f2c1efc5a0d3cb4484">defaultLogFile</a></div><div class="ttdeci">Path defaultLogFile()</div></div>
-<div class="ttc" id="astructFileSystem_html"><div class="ttname"><a href="structFileSystem.html">FileSystem</a></div><div class="ttdef"><b>Definition</b> fs.hpp:32</div></div>
+<div class="ttc" id="astructFileSystem_html"><div class="ttname"><a href="structFileSystem.html">FileSystem</a></div><div class="ttdef"><b>Definition</b> hw7.hpp:263</div></div>
 <div class="ttc" id="astructFileSystem_html_ab57f92f8bd2e0aadb5dcc9c9eacc8706"><div class="ttname"><a href="structFileSystem.html#ab57f92f8bd2e0aadb5dcc9c9eacc8706">FileSystem::FileSystem</a></div><div class="ttdeci">FileSystem()</div></div>
 <div class="ttc" id="astructFileSystem_html_ad1d3628ddd3468ec688316d7f1266a63"><div class="ttname"><a href="structFileSystem.html#ad1d3628ddd3468ec688316d7f1266a63">FileSystem::dump</a></div><div class="ttdeci">void dump()</div></div>
-<div class="ttc" id="astructGlobals_html"><div class="ttname"><a href="structGlobals.html">Globals</a></div><div class="ttdoc">Stores all the global variables necessary to run the program.</div><div class="ttdef"><b>Definition</b> globals.hpp:20</div></div>
+<div class="ttc" id="astructGlobals_html"><div class="ttname"><a href="structGlobals.html">Globals</a></div><div class="ttdoc">Stores all the global variables necessary to run the program.</div><div class="ttdef"><b>Definition</b> hw7.hpp:355</div></div>
 <div class="ttc" id="astructGlobals_html_ac49a298b3ee098f04031e7e858d5116a"><div class="ttname"><a href="structGlobals.html#ac49a298b3ee098f04031e7e858d5116a">Globals::Globals</a></div><div class="ttdeci">Globals(int, char **)</div><div class="ttdoc">Initialize global variables.</div></div>
 <div class="ttc" id="astructGlobals_html_afe3b7e6ecf3775109e836df963364e08"><div class="ttname"><a href="structGlobals.html#afe3b7e6ecf3775109e836df963364e08">Globals::dump</a></div><div class="ttdeci">void dump()</div><div class="ttdoc">Output the values of all the globals.</div></div>
 </div><!-- fragment --></div><!-- contents -->

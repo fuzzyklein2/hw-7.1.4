@@ -1,7 +1,10 @@
 var searchData=
 [
-  ['partition_0',['partition',['../classhw7_1_1str.html#a7b54b4a326071138c233921302a741ab',1,'hw7::str::partition(const str &amp;pattern)'],['../classhw7_1_1str.html#ace9d51768ba919d9f1288664210c930c',1,'hw7::str::partition(const str &amp;pattern)']]],
-  ['process_1',['process',['../classFilter.html#a50e420a1d7385aea26cd6dd0946c7eed',1,'Filter::process()'],['../classFilter.html#a67554512a4ed6cda0222305fc98a49f1',1,'Filter::process(const Path &amp;)'],['../classFilter.html#a50e420a1d7385aea26cd6dd0946c7eed',1,'Filter::process()'],['../classFilter.html#a34d6d107b95f665de59a84975ecfcf83',1,'Filter::process(const Path &amp;)']]],
-  ['program_2',['program',['../classProgram.html',1,'Program'],['../classProgram.html#a228e413b8ca6de023145f31045f49e6e',1,'Program::Program(int argc, char **argv)'],['../classProgram.html#a228e413b8ca6de023145f31045f49e6e',1,'Program::Program(int argc, char **argv)'],['../constants_8hpp.html#a361ce472bc5c01506a7b5257603d9a2e',1,'hw7::PROGRAM']]],
-  ['program_2ehpp_3',['program.hpp',['../program_8hpp.html',1,'']]]
+  ['songlist_0',['SongList',['../classSongList.html',1,'']]],
+  ['space_1',['SPACE',['../hw7_8hpp.html#ac343dfe1f8e1e4281cc538f54b8299c2',1,'hw7']]],
+  ['split_2',['split',['../classhw7_1_1str.html#a00195a29f0f8a571fe254c98aa9a0f6c',1,'hw7::str::split()'],['../classhw7_1_1str.html#a6ae1ee043636c2206d83dbdf13aaf1bf',1,'hw7::str::split(const str &amp;)']]],
+  ['stop_3',['stop',['../hw7_8hpp.html#ac684ab1864310059f942b3474120aaae',1,'hw7.hpp']]],
+  ['str_4',['str',['../classhw7_1_1str.html',1,'hw7::str'],['../classhw7_1_1str.html#a8f4ecb794c387792c833c4bc59974e30',1,'hw7::str::str()=default'],['../classhw7_1_1str.html#a6e0e9c1bd5771db844e0fd210c185048',1,'hw7::str::str(const char *s)'],['../classhw7_1_1str.html#a45afa0b010b14db8ac118fdac779916f',1,'hw7::str::str(const String &amp;s)'],['../classhw7_1_1str.html#ae8c095ea731c92f6f4ead5615a72d435',1,'hw7::str::str(const std::string_view &amp;s)']]],
+  ['synopsis_5',['Synopsis',['../index.html#autotoc_md1',1,'']]],
+  ['sysinc_2ehpp_6',['sysinc.hpp',['../sysinc_8hpp.html',1,'']]]
 ];

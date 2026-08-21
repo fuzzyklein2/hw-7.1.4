@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['join_0',['join',['../classhw7_1_1str.html#aeb021ed093fb3c1747b7a42eff3bca7c',1,'hw7::str::join(const StrList &amp;)'],['../classhw7_1_1str.html#ad693e430bb9980d738cc699c7133c6c7',1,'hw7::str::join(const StrList &amp;)']]]
+  ['log_5ffilename_0',['log_filename',['../hw7_8hpp.html#a784c26a7c414624ba3f94ac69da4a39f',1,'hw7.hpp']]],
+  ['lower_1',['lower',['../classhw7_1_1str.html#aefb1835497d3826361686dc4a43d17a3',1,'hw7::str']]]
 ];

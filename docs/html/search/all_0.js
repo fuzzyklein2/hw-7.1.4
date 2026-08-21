@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['archives_0',['Archives',['..//home/fuzzy/projects/C++ 2026/hello-world/source/fs.cpp#autotoc_md14',1,'']]],
-  ['audio_1',['Audio',['..//home/fuzzy/projects/C++ 2026/hello-world/source/fs.cpp#autotoc_md16',1,'']]]
+  ['conf_5fdir_5fname_0',['CONF_DIR_NAME',['../hw7_8hpp.html#ab468f65cc4d3ce5450aa13d125e5ffba',1,'hw7']]]
 ];

@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['info_0',['info',['../logging_8cpp.html#a29c2015c6ef1926ac0395a1d24408dad',1,'info(const String &amp;s):&#160;logging.cpp'],['../hw7_8hpp.html#a29c2015c6ef1926ac0395a1d24408dad',1,'info(const String &amp;s):&#160;logging.cpp'],['../logging_8hpp.html#a29c2015c6ef1926ac0395a1d24408dad',1,'info(const String &amp;s):&#160;logging.cpp']]]
+  ['list_0',['Todo List',['../todo.html',1,'']]],
+  ['log_5ffilename_1',['log_filename',['../hw7_8hpp.html#a784c26a7c414624ba3f94ac69da4a39f',1,'hw7.hpp']]],
+  ['log_5fpict_2',['LOG_PICT',['../hw7_8hpp.html#af174bbe388888ca8ce38092971b66ad2',1,'hw7']]],
+  ['lower_3',['lower',['../classhw7_1_1str.html#aefb1835497d3826361686dc4a43d17a3',1,'hw7::str']]]
 ];

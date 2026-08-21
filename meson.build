@@ -13,6 +13,7 @@ magic_dep = dependency('libmagic')
 
 # Include directory for headers
 inc = include_directories('include', 'contrib')
+apps_inc = include_directories('hw7', 'contrib')
 
 # --- AUTOGEN_SRC_START ---
 src_files = [
@@ -27,19 +28,6 @@ src_files = [
   'source/str.cpp',
 ]
 # --- AUTOGEN_SRC_END ---
-
-# Define executable
-# executable(
-#   'hello',
-#   src_files,
-#   include_directories: inc,
-#   dependencies : [
-#     fmt_dep,
-#     spdlog_dep,
-#     gtkmm_dep,
-#     magic_dep
-#   ],
-# )
 
 lib_sources = files(
   'source/config.cpp',
@@ -85,7 +73,7 @@ executable(
 executable(
   'peroxide',
   'apps/peroxide.cpp',
-  include_directories: inc,
+  include_directories: apps_inc,
   dependencies: hw7_deps,
   link_with: libhw7,
 )

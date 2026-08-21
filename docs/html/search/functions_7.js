@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['log_5ffilename_0',['log_filename',['../fs_8cpp.html#a784c26a7c414624ba3f94ac69da4a39f',1,'log_filename():&#160;fs.cpp'],['../fs_8hpp.html#a784c26a7c414624ba3f94ac69da4a39f',1,'log_filename():&#160;fs.cpp'],['../hw7_8hpp.html#a784c26a7c414624ba3f94ac69da4a39f',1,'log_filename():&#160;fs.cpp']]],
-  ['lower_1',['lower',['../classhw7_1_1str.html#a59914007fbba95f437dafc30d6ce56d5',1,'hw7::str::lower()'],['../classhw7_1_1str.html#aefb1835497d3826361686dc4a43d17a3',1,'hw7::str::lower()']]]
+  ['main_0',['main',['../peroxide_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'peroxide.cpp']]]
 ];
