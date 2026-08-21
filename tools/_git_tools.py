@@ -78,44 +78,6 @@ def get_github_username():
 
     return None
 
-
-# def get_github_username():
-#     # 1. Try GitHub CLI (most accurate)
-#     try:
-#         result = subprocess.run(
-#             ["gh", "api", "user", "--jq", ".login"],
-#             text=True, capture_output=True, check=True
-#         )
-#         user = result.stdout.strip()
-#         if user:
-#             return user
-#     except Exception:
-#         pass
-
-#     # 2. Try from Git remote URL
-#     try:
-#         url = subprocess.run(
-#             ["git", "remote", "get-url", "origin"],
-#             text=True, capture_output=True, check=True
-#         ).stdout.strip()
-#         if "github.com" in url:
-#             m = re.search(r"github\.com[:/](?P<user>[^/]+)/", url)
-#             if m:
-#                 return m.group("user")
-#     except Exception:
-#         pass
-
-#     # 3. Try from git config github.user
-#     try:
-#         user = subprocess.run(
-#             ["git", "config", "github.user"],
-#             text=True, capture_output=True, check=True
-#         ).stdout.strip()
-#         if user:
-#             return user
-#     except Exception:
-#         pass
-
     # 4. Try environment variables
     for var in ("GITHUB_USER", "GH_USERNAME"):
         if os.getenv(var):

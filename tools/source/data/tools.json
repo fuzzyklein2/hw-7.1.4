@@ -1,0 +1,16 @@
+{
+    "project" : "hw7",
+    "package" : "tools",
+    "version" : "0.0.0",
+    "description" : "Helper development tools for notebooks.",
+    "author" : "Russell Alan Klein",
+    "copyright" : "2026",
+    "license" : "MIT",
+    "help" : {
+        "debug" : "Debugging mode.",
+        "verbose" : "Extra output.",
+        "version" : "Display program version.",
+        "args" : "Files to process."
+    }
+    
+}
