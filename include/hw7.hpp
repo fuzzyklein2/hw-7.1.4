@@ -295,7 +295,7 @@ void check_env(JSON&);
 // Logging
 
 /**
- * @brief Return a default location for the log file.
+ * Return a default location for the log file.
  * 
  * @return Default logging path.
  */
