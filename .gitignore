@@ -19,15 +19,19 @@ build/
 *~
 
 .ipynb_checkpoints/
-*.ipynb
+# *.ipynb
 contrib/
 logs/
+# *.txt
 output.txt
 untitled.txt
+tree.txt
 *.gch
 test/
 *#
 
 # Python files
 __pycache__/
+*.egg-info
+
 

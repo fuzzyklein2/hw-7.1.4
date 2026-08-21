@@ -1,6 +1,1 @@
-CLI11
-JSON
-fmt
-gtkmm-4.0
-glib
-meson
+

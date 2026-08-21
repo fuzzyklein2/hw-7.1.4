@@ -59,7 +59,7 @@ namespace hw7
     CONST String CONF_FILE_NAME = "config.json";
     CONST String LOG_DIR_NAME = ".log";
     CONST String DATA_DIR_NAME = "data";
-    CONST String DATA_FILE_NAME = "data.json";
+    CONST String DATA_FILE_NAME = PROGRAM + ".json";
     
     // Environment variables
     

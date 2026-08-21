@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hw7-tools"
+version = "0.1.0"
+description = "Python tools for the hw7 project"
+requires-python = ">=3.13"
+
+[tool.setuptools]
+py-modules = [
+    "nbtools",
+    "picts",
+    "_git_tools",
+    "_last_saved_date",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["glob4meson*"]

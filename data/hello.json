@@ -1,0 +1,15 @@
+{
+    "program" : "hello",
+    "version" : "0.0.0",
+    "description" : "Simple C++ CLI app framework.",
+    "author" : "Russell Alan Klein",
+    "copyright" : "2026",
+    "license" : "MIT",
+    "help" : {
+        "debug" : "Debugging mode.",
+        "verbose" : "Extra output.",
+        "version" : "Display program version.",
+        "args" : "Files to process."
+    }
+    
+}

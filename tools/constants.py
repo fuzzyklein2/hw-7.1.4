@@ -1,0 +1,6 @@
+NEWLINE = '\n'
+HYPHEN = '-'
+SPACE = ' '
+EMPTY_STR = ''
+PERIOD = '.'
+PARENT = '../'

@@ -29,15 +29,103 @@ src_files = [
 # --- AUTOGEN_SRC_END ---
 
 # Define executable
-executable(
-  'hello',
-  src_files,
-  include_directories: inc,
-  dependencies : [
-    fmt_dep,
-    spdlog_dep,
-    gtkmm_dep,
-    magic_dep
-  ],
+# executable(
+#   'hello',
+#   src_files,
+#   include_directories: inc,
+#   dependencies : [
+#     fmt_dep,
+#     spdlog_dep,
+#     gtkmm_dep,
+#     magic_dep
+#   ],
+# )
+
+lib_sources = files(
+  'source/config.cpp',
+  'source/datetime.cpp',
+  'source/environment.cpp',
+  'source/filter.cpp',
+  'source/fs.cpp',
+  'source/globals.cpp',
+  'source/logging.cpp',
+  'source/str.cpp',
 )
 
+hw7_deps = [
+  fmt_dep,
+  spdlog_dep,
+  gtkmm_dep,
+  magic_dep,
+]
+
+libhw7 = static_library(
+  'hw7',
+  lib_sources,
+  include_directories: inc,
+  dependencies: hw7_deps,
+)
+
+executable(
+  'hello',
+  'apps/hello.cpp',
+  include_directories: inc,
+  dependencies: hw7_deps,
+  link_with: libhw7,
+)
+
+executable(
+  'goodbye',
+  'apps/goodbye.cpp',
+  include_directories: inc,
+  dependencies: hw7_deps,
+  link_with: libhw7,
+)
+
+executable(
+  'peroxide',
+  'apps/peroxide.cpp',
+  include_directories: inc,
+  dependencies: hw7_deps,
+  link_with: libhw7,
+)
+
+# libhw7 = static_library(
+#   'hw7',
+#   lib_sources,
+#   include_directories: inc,
+#   dependencies: [
+#     fmt_dep,
+#     spdlog_dep,
+#     gtkmm_dep,
+#     magic_dep,
+#   ],
+# )
+
+# executable(
+#   'hello',
+#   'apps/hello.cpp',
+#   include_directories: inc,
+#   dependencies: [
+#     fmt_dep,
+#     spdlog_dep,
+#     gtkmm_dep,
+#     magic_dep,
+#   ],
+
+#   link_with: libhw7,
+# )
+
+# executable(
+#   'goodbye',
+#   'apps/goodbye.cpp',
+#   include_directories: inc,
+#   dependencies: [
+#     fmt_dep,
+#     spdlog_dep,
+#     gtkmm_dep,
+#     magic_dep,
+#   ],
+
+#   link_with: libhw7,
+# )

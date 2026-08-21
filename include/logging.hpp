@@ -15,8 +15,6 @@
 // Local headers
 #include "fs.hpp"
 
-// File system
-
 /**
  * @brief Return a default location for the log file.
  * 

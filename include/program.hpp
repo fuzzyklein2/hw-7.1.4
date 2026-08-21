@@ -28,7 +28,7 @@ public:
     /**
      * Run the program.
      */
-    inline virtual unsigned int run()
+    inline virtual ErrCode run()
     {
         dump();
         std::cout << hw7::GREETING << input << endl;

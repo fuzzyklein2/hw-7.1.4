@@ -3,8 +3,8 @@ var indexSectionsWithContent =
   0: "abcdefghijlmnprstuvw🌎",
   1: "fgps",
   2: "t",
-  3: "cdefglmpst",
-  4: "cdefgijlmnprsuw",
+  3: "cdefghlmpst",
+  4: "cdefgijlnprsuw",
   5: "cdlpstw",
   6: "bhlt🌎"
 };

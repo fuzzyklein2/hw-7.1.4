@@ -33,7 +33,7 @@ JSON configure(const Path& p)
     }
     catch(const exception& e)
     {
-        cerr << "Error loading " << p << endl;
+        cerr << "Error loading configuration file: " << p << endl;
         exit(EXIT_FAILURE);
 
         return false;
@@ -53,7 +53,7 @@ JSON load_data(const Path& p)
     }
     catch(const exception& e)
     {
-        cerr << "Error loading " << p << endl;
+        cerr << "Error loading data file: " << p << endl;
         exit(EXIT_FAILURE);
 
         return false;

@@ -89,23 +89,21 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// Local headers</span></div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="fs_8hpp.html">fs.hpp</a>&quot;</span></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// File system</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="logging_8hpp.html#afdd6d415ccd420f2c1efc5a0d3cb4484">   25</a></span>Path <a class="code hl_function" href="logging_8hpp.html#afdd6d415ccd420f2c1efc5a0d3cb4484">defaultLogFile</a>();</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="keywordtype">void</span> <a class="code hl_function" href="logging_8hpp.html#ac69b0c9a687b796675328a8ac78dc156">debug</a>(<span class="keyword">const</span> String&amp; s);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="keywordtype">void</span> <a class="code hl_function" href="logging_8hpp.html#ac69b0c9a687b796675328a8ac78dc156">debug</a>(ostringstream&amp; ss);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span> <a class="code hl_function" href="logging_8hpp.html#a29c2015c6ef1926ac0395a1d24408dad">info</a>(<span class="keyword">const</span> String&amp; s);</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="keywordtype">void</span> <a class="code hl_function" href="logging_8hpp.html#a3a70a5bb8f56876733ddb7756c51e0a1">warn</a>(<span class="keyword">const</span> String&amp; s);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span><span class="keywordtype">void</span> <a class="code hl_function" href="logging_8hpp.html#a41f5d653044f02fc64e06da938741a6f">error</a>(<span class="keyword">const</span> String&amp; s);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="keywordtype">void</span> <a class="code hl_function" href="logging_8hpp.html#ac684ab1864310059f942b3474120aaae">stop</a>(<span class="keyword">const</span> String&amp; s);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keywordtype">void</span> <a class="code hl_function" href="logging_8hpp.html#aaddfe633c34518ddeb394f0b87f5dc80">rotate_logs</a>(<span class="keyword">const</span> Path&amp; directory, <span class="keywordtype">size_t</span> count);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="logging_8hpp.html#afdd6d415ccd420f2c1efc5a0d3cb4484">   23</a></span>Path <a class="code hl_function" href="logging_8hpp.html#afdd6d415ccd420f2c1efc5a0d3cb4484">defaultLogFile</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keywordtype">void</span> <a class="code hl_function" href="logging_8hpp.html#ac69b0c9a687b796675328a8ac78dc156">debug</a>(<span class="keyword">const</span> String&amp; s);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keywordtype">void</span> <a class="code hl_function" href="logging_8hpp.html#ac69b0c9a687b796675328a8ac78dc156">debug</a>(ostringstream&amp; ss);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="keywordtype">void</span> <a class="code hl_function" href="logging_8hpp.html#a29c2015c6ef1926ac0395a1d24408dad">info</a>(<span class="keyword">const</span> String&amp; s);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="keywordtype">void</span> <a class="code hl_function" href="logging_8hpp.html#a3a70a5bb8f56876733ddb7756c51e0a1">warn</a>(<span class="keyword">const</span> String&amp; s);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keywordtype">void</span> <a class="code hl_function" href="logging_8hpp.html#a41f5d653044f02fc64e06da938741a6f">error</a>(<span class="keyword">const</span> String&amp; s);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keywordtype">void</span> <a class="code hl_function" href="logging_8hpp.html#ac684ab1864310059f942b3474120aaae">stop</a>(<span class="keyword">const</span> String&amp; s);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="keywordtype">void</span> <a class="code hl_function" href="logging_8hpp.html#aaddfe633c34518ddeb394f0b87f5dc80">rotate_logs</a>(<span class="keyword">const</span> Path&amp; directory, <span class="keywordtype">size_t</span> count);</div>
 <div class="ttc" id="afs_8hpp_html"><div class="ttname"><a href="fs_8hpp.html">fs.hpp</a></div></div>
 <div class="ttc" id="alogging_8hpp_html_a29c2015c6ef1926ac0395a1d24408dad"><div class="ttname"><a href="logging_8hpp.html#a29c2015c6ef1926ac0395a1d24408dad">info</a></div><div class="ttdeci">void info(const String &amp;s)</div><div class="ttdoc">Log a string.</div><div class="ttdef"><b>Definition</b> logging.cpp:21</div></div>
 <div class="ttc" id="alogging_8hpp_html_a3a70a5bb8f56876733ddb7756c51e0a1"><div class="ttname"><a href="logging_8hpp.html#a3a70a5bb8f56876733ddb7756c51e0a1">warn</a></div><div class="ttdeci">void warn(const String &amp;s)</div><div class="ttdoc">Log a string.</div><div class="ttdef"><b>Definition</b> logging.cpp:26</div></div>
