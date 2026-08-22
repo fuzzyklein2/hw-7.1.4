@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['replace_0',['replace',['../classhw7_1_1str.html#ab0407968526fe0fc9202cb1f85925fdd',1,'hw7::str']]],
-  ['rotate_5flogs_1',['rotate_logs',['../hw7_8hpp.html#aaddfe633c34518ddeb394f0b87f5dc80',1,'hw7.hpp']]],
-  ['run_2',['run',['../classProgram.html#a3eee7c246bfb4ee0130f80923c7ee565',1,'Program::run()'],['../classPeroxide.html#a24c24f6701de95b7428348f29d155a72',1,'Peroxide::run()']]]
+  ['magic_5ftype_0',['magic_type',['../hw7_8hpp.html#a26aa7acca79797ebd216b994c5079672',1,'hw7.hpp']]],
+  ['main_1',['main',['../goodbye_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;goodbye.cpp'],['../hello_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;hello.cpp'],['../peroxide_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;peroxide.cpp']]],
+  ['music_5fpict_2',['MUSIC_PICT',['../namespacetools_1_1picts.html#ab0eb6ef498651e57b46301d12e2765c0',1,'tools::picts']]]
 ];

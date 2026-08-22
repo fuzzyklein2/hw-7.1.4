@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['upper_0',['upper',['../classhw7_1_1str.html#a92d756ef01d02a23752c11a45a64943d',1,'hw7::str']]]
+  ['now_5fstring_0',['now_string',['../hw7_8hpp.html#a7235d375889750badea7719e65aded5e',1,'hw7.hpp']]]
 ];

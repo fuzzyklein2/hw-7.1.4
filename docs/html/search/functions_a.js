@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['replace_0',['replace',['../classhw7_1_1str.html#ab0407968526fe0fc9202cb1f85925fdd',1,'hw7::str']]],
-  ['rotate_5flogs_1',['rotate_logs',['../hw7_8hpp.html#aaddfe633c34518ddeb394f0b87f5dc80',1,'hw7.hpp']]],
-  ['run_2',['run',['../classProgram.html#a3eee7c246bfb4ee0130f80923c7ee565',1,'Program::run()'],['../classPeroxide.html#a24c24f6701de95b7428348f29d155a72',1,'Peroxide::run()']]]
+  ['last_5fsaved_5fdatetime_0',['last_saved_datetime',['../namespacetools_1_1__last__saved__date.html#ab6c90e6586959bf475905a52f8b4d6e3',1,'tools::_last_saved_date']]],
+  ['listdir_1',['listdir',['../hw7_8hpp.html#a874dffd87acf53a3f5229a7f26d4f70b',1,'hw7.hpp']]],
+  ['load_5fdata_2',['load_data',['../hw7_8hpp.html#a153dcb90cc5fc5d94dd25910c14bfcb1',1,'hw7.hpp']]],
+  ['log_5ffilename_3',['log_filename',['../hw7_8hpp.html#a784c26a7c414624ba3f94ac69da4a39f',1,'hw7.hpp']]],
+  ['lower_4',['lower',['../classhw7_1_1str.html#aefb1835497d3826361686dc4a43d17a3',1,'hw7::str']]],
+  ['lsd_5',['lsd',['../namespacetools_1_1nbtools.html#aa78ea210d9358e0bfb3c256346c1d037',1,'tools::nbtools']]]
 ];

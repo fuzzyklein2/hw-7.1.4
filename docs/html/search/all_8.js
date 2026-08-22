@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['list_0',['Todo List',['../todo.html',1,'']]],
-  ['log_5ffilename_1',['log_filename',['../hw7_8hpp.html#a784c26a7c414624ba3f94ac69da4a39f',1,'hw7.hpp']]],
-  ['log_5fpict_2',['LOG_PICT',['../hw7_8hpp.html#af174bbe388888ca8ce38092971b66ad2',1,'hw7']]],
-  ['lower_3',['lower',['../classhw7_1_1str.html#aefb1835497d3826361686dc4a43d17a3',1,'hw7::str']]]
+  ['hello_20🌎_0',['Hello, 🌎!',['../index.html',1,'']]],
+  ['hello_2ecpp_1',['hello.cpp',['../hello_8cpp.html',1,'']]],
+  ['hidden_2',['hidden',['../namespacetools_1_1nbtools.html#a787367b9119c992b8cb31995f6c68eac',1,'tools::nbtools']]],
+  ['home_3',['home',['../structFileSystem.html#a4c69a44aa1820d9a8302fce2e004c74b',1,'FileSystem']]],
+  ['hourglass_5fpict_4',['HOURGLASS_PICT',['../namespacetools_1_1picts.html#ac482a51cef511dfb33490052a94fdf80',1,'tools::picts']]],
+  ['hw7_5',['hw7',['../namespacehw7.html',1,'']]],
+  ['hw7_2ehpp_6',['hw7.hpp',['../hw7_8hpp.html',1,'']]],
+  ['hyphen_7',['HYPHEN',['../namespacetools_1_1constants.html#a783914f231b5c80ee19a74f5fef0e472',1,'tools::constants']]]
 ];
