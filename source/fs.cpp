@@ -26,6 +26,14 @@ PathList listdir(const Path& path)
     return result;
 }
 
+String read_file(const Path& p)
+{
+    ifstream f(p);
+    ostringstream oss;
+    oss << f.rdbuf();
+    return oss.str();
+}
+
 String magic_type(const Path& p)
 {
     magic_t cookie = magic_open(MAGIC_MIME_TYPE);

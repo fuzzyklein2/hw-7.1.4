@@ -2,9 +2,9 @@ var searchData=
 [
   ['saturn_5fpict_0',['SATURN_PICT',['../namespacetools_1_1picts.html#a170d41740597ca468f92818931b0cf2e',1,'tools::picts']]],
   ['script_5fpict_1',['SCRIPT_PICT',['../namespacetools_1_1picts.html#af67b98361bdc44c06a14cceb32dfc99c',1,'tools::picts']]],
-  ['songlist_2',['SongList',['../classSongList.html',1,'']]],
+  ['songlist_2',['songlist',['../classSongList.html',1,'SongList'],['../classSongList.html#a33e19a1d5a8e183b347470033d768730',1,'SongList::SongList()=default'],['../classSongList.html#a9fda687d46a13c07455ba896a395a77c',1,'SongList::SongList(const StrList &amp;S)'],['../classSongList.html#a6e6a0b5ab286371ac7768215542babee',1,'SongList::SongList(const str &amp;s)']]],
   ['space_3',['space',['../namespacetools_1_1constants.html#a31ba0b38484a1178409cfdcd5ea2ead2',1,'tools.constants.SPACE'],['../namespacehw7.html#ac343dfe1f8e1e4281cc538f54b8299c2',1,'hw7::SPACE']]],
-  ['split_4',['split',['../classhw7_1_1str.html#a00195a29f0f8a571fe254c98aa9a0f6c',1,'hw7::str::split()'],['../classhw7_1_1str.html#a6ae1ee043636c2206d83dbdf13aaf1bf',1,'hw7::str::split(const str &amp;)']]],
+  ['split_4',['split',['../classhw7_1_1str.html#a241dd0f7d2387d8e04a48ab83ea3584c',1,'hw7::str::split() const'],['../classhw7_1_1str.html#aefb4f2bb6e791c5435e8013b5ae3a8fe',1,'hw7::str::split(const str &amp;) const']]],
   ['static_5',['STATIC',['../hw7_8hpp.html#a10b2d890d871e1489bb02b7e70d9bdfb',1,'hw7.hpp']]],
   ['stop_6',['stop',['../hw7_8hpp.html#ac684ab1864310059f942b3474120aaae',1,'hw7.hpp']]],
   ['stop_5fpict_7',['STOP_PICT',['../namespacetools_1_1picts.html#ac3b1e725ac00281f4698adb3532b5c34',1,'tools::picts']]],

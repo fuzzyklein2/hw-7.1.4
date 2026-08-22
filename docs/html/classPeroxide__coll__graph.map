@@ -1,9 +1,13 @@
 <map id="Peroxide" name="Peroxide">
-<area shape="rect" id="Node000001" title=" " alt="" coords="13,243,86,268"/>
-<area shape="rect" id="Node000002" href="$classProgram.html" title=" " alt="" coords="14,168,85,193"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="52,208,52,242,47,242,47,208"/>
-<area shape="rect" id="Node000003" href="$structGlobals.html" title="Stores all the global variables necessary to run the program." alt="" coords="16,93,83,119"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="52,133,52,168,47,168,47,133"/>
-<area shape="rect" id="Node000004" href="$structFileSystem.html" title=" " alt="" coords="5,5,93,31"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="52,45,52,93,47,93,47,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="51,317,125,343"/>
+<area shape="rect" id="Node000002" href="$classProgram.html" title=" " alt="" coords="53,243,123,268"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,282,91,317,85,317,85,282"/>
+<area shape="rect" id="Node000003" href="$structGlobals.html" title="Stores all the global variables necessary to run the program." alt="" coords="55,168,121,193"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="91,208,91,242,85,242,85,208"/>
+<area shape="rect" id="Node000004" href="$structFileSystem.html" title=" " alt="" coords="5,80,93,105"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="63,117,85,166,80,169,58,119"/>
+<area shape="rect" id="Node000005" href="$classhw7_1_1str.html" title=" " alt="" coords="117,80,187,105"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="137,118,99,169,95,166,133,115"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="124,5,180,31"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="155,45,155,80,149,80,149,45"/>
 </map>

@@ -12,12 +12,14 @@
 
 // Local headers
 #include "fs.hpp"
+#include "str.hpp"
 // #include "types.hpp"
 
 /**
  *  @brief Stores all the global variables necessary to run the program.
  */
 struct Globals {
+public:
     FileSystem FS;
     JSON config;
     JSON data;
@@ -25,9 +27,8 @@ struct Globals {
     bool verbose;
     bool version = false;
     StrList args;
-    String input;
+    hw7::str input;
 
-    public:
     /**
      * @brief Initialize global variables.
      *

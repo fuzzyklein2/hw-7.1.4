@@ -1,5 +1,6 @@
 var searchData=
 [
   ['filesystem_0',['FileSystem',['../structFileSystem.html#ab57f92f8bd2e0aadb5dcc9c9eacc8706',1,'FileSystem']]],
-  ['filter_1',['Filter',['../classFilter.html#a1fe9eb7c222f1a45786052de95f4c49a',1,'Filter']]]
+  ['filter_1',['Filter',['../classFilter.html#ac86aa655572fc8a0cd6b5dedfccc2b40',1,'Filter']]],
+  ['format_2',['format',['../structstd_1_1formatter_3_01hw7_1_1str_01_4.html#a5924fd3f3f9ccaf819091d3f91ca60f8',1,'std::formatter&lt; hw7::str &gt;']]]
 ];

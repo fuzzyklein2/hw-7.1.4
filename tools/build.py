@@ -12,6 +12,9 @@ from pathlib import Path
 import shutil
 import subprocess
 
+# Packages
+import nbformat
+
 # Local modules
 from .constants import *
 from .picts import *
@@ -82,6 +85,21 @@ def test(target:str)->int:
         print(f"{CHECK_PICT}Testing complete.")
 
         return 0
+
+def clear():
+    """ Clear the outputs of all Jupyter notebook code cells. """
+    # print("Running `clear()`...")
+    for path in Path("lab").glob("*.ipynb"):
+        notebook = nbformat.read(path, as_version=4)
+        # print(f"Clearing {path}")
+
+        for cell in notebook.cells:
+            if cell.cell_type == "code":
+                cell.outputs = []
+                cell.execution_count = None
+
+        nbformat.write(notebook, path)
+        print(f"{CHECK_PICT}Jupyter output cleared.")
     
 def docs()->int:
     """ Generate the project documentation. """

@@ -11,7 +11,8 @@ using namespace std;
 #include "filter.hpp"
 #include "fs.hpp"
 
-ErrCode Filter::process(const Path& p)
+template <>
+ErrCode Filter<Path>::process(const Path& p)
 {
     cout << p << "is a " << magic_type(p) << " file." << endl;
     

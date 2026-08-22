@@ -13,13 +13,17 @@ using namespace std;
 // #include "program.hpp"
 
 #include "hw7.hpp"
+using namespace hw7;
 
 /**
  * Subclass `Filter`.
  */
-class SongList : StrList
+class SongList : Filter<String>
 {
-    SongList (const StrList& S) : StrList(S) {} 
+public:
+    SongList() = default;
+    SongList (const StrList& S) : Filter<String>(S) {}
+    SongList (const str& s) : Filter<String>(s.split()) {}
 };
 
 /**
@@ -36,6 +40,29 @@ public:
 ErrCode Peroxide::run()
 {
     debug("Running peroxide");
+    debug("Arguments:");
+    ostringstream oss;
+    for (const auto& s : args)
+    {
+        oss << s;
+    }
+    oss << endl;
+    debug(oss);
+    oss << "Session folder: " << config["session folder"];
+    info(oss.str());
+
+    // If there is input, it should be the song list itself.
+    if (!input.empty()) {}
+
+    auto SONG_LISTS_DIR = Path(config["session folder"]) / "lists";
+    
+    auto SONG_LIST_FILE = "20260802.txt";
+
+    
+    str s = read_file(Path(config["session folder"]) / "lists" / SONG_LIST_FILE);
+
+    info(s);
+    
     return EXIT_SUCCESS;
 }
 

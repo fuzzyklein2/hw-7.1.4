@@ -14,6 +14,7 @@
 // Functions
 Path cwd();
 PathList listdir(const Path& path);
+String read_file(const Path& p);
 String magic_type(const Path& p);
 /**
  * @brief Return the user's home directory.

@@ -10,7 +10,7 @@
 #include "filter.hpp"
 #include "globals.hpp"
 
-class Program : Globals
+class Program : public Globals
 {
 public:
 
@@ -33,7 +33,7 @@ public:
         dump();
         std::cout << hw7::GREETING << input << endl;
 
-        Filter f(args);
+        Filter<Path> f(args);
         f.process();
         
         return 0;

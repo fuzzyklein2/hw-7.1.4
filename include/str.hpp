@@ -54,13 +54,13 @@ namespace hw7
         /**
          * @return `StrList` of `substr`s separated by contiguous whitespace.
          */
-        StrList split();
+        StrList split() const;
 
         /**
          * @param sep `str` to be used as a separator to split the `str`.
          * @return `StrList` of `substr`s separated by contiguous whitespace.
          */
-        StrList split(const str&);
+        StrList split(const str&) const;
 
         /**
          * Join a list of strings using `this`.
@@ -87,3 +87,15 @@ namespace hw7
 
     }; //str
 } // hw7
+
+template<>
+struct std::formatter<hw7::str> : std::formatter<std::string>
+{
+    auto format(const hw7::str& s, auto& ctx) const
+    {
+        return std::formatter<std::string>::format(
+            static_cast<std::string>(s),
+            ctx
+        );
+    }
+};

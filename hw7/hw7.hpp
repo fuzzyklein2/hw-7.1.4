@@ -119,25 +119,20 @@ namespace hw7
 String now_string();
 
 // `Filter` class
+template <typename T>
 class Filter
 {
 public:
 
-    // /**
-    //  * Program constructor.
-    //  * @see Program for explanation of parameters.
-    //  */
-    // Filter(int argc, char **argv) : Program(argc, argv) {}
-
     /**
-     * Program constructor.
-     * @see Program for explanation of parameters.
+     * StrList constructor.
+     * @param S A list of strings.
      */
     Filter(const StrList& S)
     {
         for(const auto& s : S)
         {
-            paths.push_back(s);
+            elements.push_back(s);
         }
     }
 
@@ -147,7 +142,7 @@ public:
      */
     inline ErrCode process()
     {
-        for (const auto& p : paths) process(p);
+        for (const auto& p : elements) process(p);
         return 0;
     }
 
@@ -155,10 +150,10 @@ public:
      * Process a file.
      * @return ErrCode.
      */
-    virtual ErrCode process(const Path&);
+    virtual ErrCode process(const T&);
 
 protected:
-    PathList paths; /// List of files to be filtered.
+    std::vector<T> elements; /// List of files to be filtered.
 
 };
 
@@ -207,13 +202,13 @@ namespace hw7
         /**
          * @return `StrList` of `substr`s separated by contiguous whitespace.
          */
-        StrList split();
+        StrList split() const;
 
         /**
          * @param sep `str` to be used as a separator to split the `str`.
          * @return `StrList` of `substr`s separated by contiguous whitespace.
          */
-        StrList split(const str&);
+        StrList split(const str&) const;
 
         /**
          * Join a list of strings using `this`.
@@ -240,11 +235,24 @@ namespace hw7
     }; //str
 } // hw7
 
+template<>
+struct std::formatter<hw7::str> : std::formatter<std::string>
+{
+    auto format(const hw7::str& s, auto& ctx) const
+    {
+        return std::formatter<std::string>::format(
+            static_cast<std::string>(s),
+            ctx
+        );
+    }
+};
+
 // File System
 
 // Functions
 Path cwd();
 PathList listdir(const Path& path);
+String read_file(const Path& p);
 String magic_type(const Path& p);
 /**
  * @brief Return the user's home directory.
@@ -353,6 +361,7 @@ void rotate_logs(const Path& directory, size_t count);
  *  @brief Stores all the global variables necessary to run the program.
  */
 struct Globals {
+public: // It might be reasonable to make these protected instead.
     FileSystem FS;
     JSON config;
     JSON data;
@@ -360,9 +369,8 @@ struct Globals {
     bool verbose;
     bool version = false;
     StrList args;
-    String input;
+    hw7::str input;
 
-    public:
     /**
      * @brief Initialize global variables.
      *
@@ -404,7 +412,7 @@ struct Globals {
     void init_logs();
 };
 
-class Program : Globals
+class Program : public Globals
 {
 public:
 
@@ -427,7 +435,7 @@ public:
         dump();
         std::cout << hw7::GREETING << input << std::endl;
 
-        Filter f(args);
+        Filter<Path> f(args);
         f.process();
         
         return 0;

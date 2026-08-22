@@ -5,27 +5,24 @@
  * Class `filter` processes command line arguments as file paths.
  */
 
+#include <vector>
+
 #include "types.hpp"
 
+template <typename T>
 class Filter
 {
 public:
 
-    // /**
-    //  * Program constructor.
-    //  * @see Program for explanation of parameters.
-    //  */
-    // Filter(int argc, char **argv) : Program(argc, argv) {}
-
     /**
-     * Program constructor.
-     * @see Program for explanation of parameters.
+     * StrList constructor.
+     * @param S A list of strings.
      */
     Filter(const StrList& S)
     {
         for(const auto& s : S)
         {
-            paths.push_back(s);
+            elements.push_back(s);
         }
     }
 
@@ -35,7 +32,7 @@ public:
      */
     inline ErrCode process()
     {
-        for (const auto& p : paths) process(p);
+        for (const auto& p : elements) process(p);
         return 0;
     }
 
@@ -43,9 +40,9 @@ public:
      * Process a file.
      * @return ErrCode.
      */
-    virtual ErrCode process(const Path&);
+    virtual ErrCode process(const T&);
 
 protected:
-    PathList paths; /// List of files to be filtered.
+    std::vector<T> elements; /// List of files to be filtered.
 
 };

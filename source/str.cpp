@@ -27,12 +27,12 @@ str str::upper()
     return result;
 }
 
-StrList str::split()
+StrList str::split() const
 {
     return split("\\s");
 }
 
-StrList str::split(const str& sep)
+StrList str::split(const str& sep) const
 {
     GError* err = nullptr;
     GRegex* regex = g_regex_new(
