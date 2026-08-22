@@ -6,5 +6,6 @@ var searchData=
   ['display_5fdoc_3',['display_doc',['../namespacetools_1_1nbtools.html#a49a50acf4281eb3d4ae4c04ba2097431',1,'tools::nbtools']]],
   ['display_5fsource_4',['display_source',['../namespacetools_1_1nbtools.html#ada52a52cd5928ca13b2aafd69d0c440a',1,'tools::nbtools']]],
   ['docs_5',['docs',['../namespacetools_1_1build.html#aa455fb110eacd67d07b8246bdb6089f5',1,'tools::build']]],
-  ['dump_6',['dump',['../structFileSystem.html#ad1d3628ddd3468ec688316d7f1266a63',1,'FileSystem::dump()'],['../structGlobals.html#afe3b7e6ecf3775109e836df963364e08',1,'Globals::dump()']]]
+  ['doxify_6',['doxify',['../namespacetools_1_1nbtools.html#a1b17bf984cd521999601ec2285e01b5b',1,'tools::nbtools']]],
+  ['dump_7',['dump',['../structFileSystem.html#ad1d3628ddd3468ec688316d7f1266a63',1,'FileSystem::dump()'],['../structGlobals.html#afe3b7e6ecf3775109e836df963364e08',1,'Globals::dump()']]]
 ];

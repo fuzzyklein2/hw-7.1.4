@@ -21,8 +21,6 @@
 #define STATIC inline static
 #define CONSTEXPR inline constexpr
 
-// Types
-
 // Third party headers
 #include "CLI11.hpp"         // Command line argument parser
 #include <nlohmann/json.hpp> // JSON -> struct conversion
@@ -32,6 +30,7 @@
 #include "spdlog/sinks/basic_file_sink.h" // Log file(s)
 
 
+// Types
 // Standard types
 namespace fs = std::filesystem;
 using Path = fs::path;
@@ -45,12 +44,13 @@ using JSON = nlohmann::json;
 using Logger = std::shared_ptr<spdlog::logger>;
 using LogLevel = spdlog::level::level_enum;
 
+// Local types
 using Number = unsigned int;
 using ErrCode = Number;
 
 // Constants
 
-namespace hw7
+namespace hw7 // Experimental, but works so far.
 {
     // String constants
     /// Easy way to find the current process.
@@ -118,7 +118,9 @@ namespace hw7
  */
 String now_string();
 
-// `Filter` class
+/**
+ * Process a list of elements.
+ */
 template <typename T>
 class Filter
 {
@@ -153,7 +155,8 @@ public:
     virtual ErrCode process(const T&);
 
 protected:
-    std::vector<T> elements; /// List of files to be filtered.
+    /// List of files to be filtered.
+    std::vector<T> elements;
 
 };
 
@@ -235,6 +238,9 @@ namespace hw7
     }; //str
 } // hw7
 
+/**
+ * Interface so `format` knows what to do with a `str`.
+ */
 template<>
 struct std::formatter<hw7::str> : std::formatter<std::string>
 {
@@ -254,12 +260,19 @@ Path cwd();
 PathList listdir(const Path& path);
 String read_file(const Path& p);
 String magic_type(const Path& p);
+
 /**
  * @brief Return the user's home directory.
  * @return path to `~`.
  */
-Path getHome(); // Find the user's home directory and return it as a `path` object.
-void ensure_file(const Path& p); // Create the file at p if it doesn't exist.
+Path getHome();
+
+/**
+ * Create file `p` if it does not exist.
+ * 
+ * @param p Path to the file to check.
+ */
+void ensure_file(const Path& p);
 
 /**
  * @brief Return a string to name the log file with.

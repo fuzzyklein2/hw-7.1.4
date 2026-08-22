@@ -6,6 +6,7 @@ from pprint import pprint as pp
 import sys
 
 from IPython.display import display, Markdown
+import pyperclip
 from rich import print as rp
 from rich.columns import Columns
 from rich.console import Console
@@ -95,9 +96,16 @@ def public(obj)->list:
     """Return the (supposedly) "public" members of the given object."""
     return sorted([s for s in dir(obj) if not s.startswith('_')])
 
-# def find_proj_root(output : bool = True # Whether to output the current directory after moving there.
-#                   ):
-#     """ Move to the project root directory. """
-#     if cwd().stem == 'notebooks': cd('../')
-#     if output: pwd()
-
+def doxify(text, print_result=True):
+    # Just add comment delimiters and asterisks.
+    lines = text.split('\n')[1:]
+    result = ['/**']
+    result.extend([' * ' + s for s in lines])
+    result.pop()
+    result.append(' */')
+    result = '\n'.join(result)
+    if print_result: print(result)
+    pyperclip.copy(result + NEWLINE)
+    print("Docstring copied to clipboard")
+    return result
+    

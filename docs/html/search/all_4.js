@@ -17,5 +17,6 @@ var searchData=
   ['display_5fsource_14',['display_source',['../namespacetools_1_1nbtools.html#ada52a52cd5928ca13b2aafd69d0c440a',1,'tools::nbtools']]],
   ['docs_15',['docs',['../namespacetools_1_1build.html#aa455fb110eacd67d07b8246bdb6089f5',1,'tools::build']]],
   ['dot_16',['DOT',['../namespacehw7.html#aa0d80b6382d1f9f58d9058fcfb6bad86',1,'hw7']]],
-  ['dump_17',['dump',['../structGlobals.html#afe3b7e6ecf3775109e836df963364e08',1,'Globals::dump()'],['../structFileSystem.html#ad1d3628ddd3468ec688316d7f1266a63',1,'FileSystem::dump()']]]
+  ['doxify_17',['doxify',['../namespacetools_1_1nbtools.html#a1b17bf984cd521999601ec2285e01b5b',1,'tools::nbtools']]],
+  ['dump_18',['dump',['../structGlobals.html#afe3b7e6ecf3775109e836df963364e08',1,'Globals::dump()'],['../structFileSystem.html#ad1d3628ddd3468ec688316d7f1266a63',1,'FileSystem::dump()']]]
 ];
