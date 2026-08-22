@@ -100,6 +100,7 @@ def clear():
 
         nbformat.write(notebook, path)
         print(f"{CHECK_PICT}Jupyter output cleared.")
+        return 0
     
 def docs()->int:
     """ Generate the project documentation. """
@@ -181,6 +182,10 @@ def build(target:str, message:str)->int:
     if result:
         print(f"{STOP_PICT}Testing {TARGET} failed!")
         return result
+    result = clear()
+    if result:
+        print(f"{STOP_PICT}Error clearing jupyter output!")
+        return result        
     result = docs()
     if result:
         print(f"{STOP_PICT}doxygen error!")
