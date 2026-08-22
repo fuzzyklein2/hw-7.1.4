@@ -256,20 +256,38 @@ struct std::formatter<hw7::str> : std::formatter<std::string>
 // File System
 
 // Functions
+
+/**
+ * @return Path to the current working directory.
+ */
 Path cwd();
+
+/**
+ * @param path Path to the directory to list the contents of.
+ * @return List of paths in `path`.
+ */
 PathList listdir(const Path& path);
+
+/**
+ * @param p Path to read the contents of. Should be a text file.
+ * @return Text contents of the file.
+ * @todo Check with `magic` to make sure `p` is a text file.
+ */
 String read_file(const Path& p);
+
+/**
+ * @return String representing the file type according to `magic`.
+ */
 String magic_type(const Path& p);
 
 /**
- * @brief Return the user's home directory.
+ * Return the user's home directory.
  * @return path to `~`.
  */
 Path getHome();
 
 /**
  * Create file `p` if it does not exist.
- * 
  * @param p Path to the file to check.
  */
 void ensure_file(const Path& p);
@@ -281,6 +299,9 @@ void ensure_file(const Path& p);
  */
 String log_filename();
 
+/**
+ * Contains the path to various directories and files needed by the program.
+ */
 struct FileSystem {
     Path working = cwd();
     Path home = getenv("HOME");
@@ -306,11 +327,25 @@ struct FileSystem {
 
 // Configuration
 
+/**
+ * Load the configuration file and check environment variables for overrides.
+ * @param p Path to a JSON configuration file.
+ * @return JSON object.
+ */
 JSON configure(const Path&);
+
+/**
+ * Load the data from a JSON file.
+ * @param p Path to a JSON data file.
+ * @return JSON object.
+ */
 JSON load_data(const Path& p);
 
 // Environment
 
+/**
+ * Check for environment variables of the form `{PROGRAM}_{NAME}` that override configuration settings.
+ */
 void check_env(JSON&);
 
 // Logging
@@ -425,6 +460,9 @@ public: // It might be reasonable to make these protected instead.
     void init_logs();
 };
 
+/**
+ * Abstract class but it will run. Subclass this to write a program that does stuff.
+ */
 class Program : public Globals
 {
 public:

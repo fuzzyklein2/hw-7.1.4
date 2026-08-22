@@ -208,7 +208,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a26aa7acca79797ebd216b994c5079672" id="r_a26aa7acca79797ebd216b994c5079672"><td class="memItemLeft" align="right" valign="top"><a class="el" href="hw7_8hpp.html#a5573b97b9e5129f61d289e037d7e806c">String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hw7_8hpp.html#a26aa7acca79797ebd216b994c5079672">magic_type</a> (const <a class="el" href="hw7_8hpp.html#aa20d22486508f139f743e51d510c9b78">Path</a> &amp;p)</td></tr>
 <tr class="separator:a26aa7acca79797ebd216b994c5079672"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bd8d432d28c14e88726400936241576" id="r_a3bd8d432d28c14e88726400936241576"><td class="memItemLeft" align="right" valign="top"><a class="el" href="hw7_8hpp.html#aa20d22486508f139f743e51d510c9b78">Path</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hw7_8hpp.html#a3bd8d432d28c14e88726400936241576">getHome</a> ()</td></tr>
-<tr class="memdesc:a3bd8d432d28c14e88726400936241576"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the user's home directory.  <br /></td></tr>
 <tr class="separator:a3bd8d432d28c14e88726400936241576"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42fdae37c6c566795931adf399c2d416" id="r_a42fdae37c6c566795931adf399c2d416"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hw7_8hpp.html#a42fdae37c6c566795931adf399c2d416">ensure_file</a> (const <a class="el" href="hw7_8hpp.html#aa20d22486508f139f743e51d510c9b78">Path</a> &amp;p)</td></tr>
 <tr class="separator:a42fdae37c6c566795931adf399c2d416"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -524,6 +523,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Check for environment variables of the form <code>{PROGRAM}_{NAME}</code> that override configuration settings. </p>
 
 </div>
 </div>
@@ -542,6 +542,13 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Load the configuration file and check environment variables for overrides. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>Path to a JSON configuration file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>JSON object. </dd></dl>
 
 </div>
 </div>
@@ -559,6 +566,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>Path to the current working directory. </dd></dl>
 
 </div>
 </div>
@@ -645,8 +653,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Create file <code>p</code> if it does not exist.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Create file <code>p</code> if it does not exist. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">p</td><td>Path to the file to check. </td></tr>
   </table>
@@ -693,7 +700,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>path to <code>~</code>. </dd></dl>
+<p>Return the user's home directory. </p><dl class="section return"><dt>Returns</dt><dd>path to <code>~</code>. </dd></dl>
 
 </div>
 </div>
@@ -736,6 +743,13 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Path to the directory to list the contents of. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>List of paths in <code>path</code>. </dd></dl>
 
 </div>
 </div>
@@ -754,6 +768,13 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Load the data from a JSON file. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>Path to a JSON data file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>JSON object. </dd></dl>
 
 </div>
 </div>
@@ -790,6 +811,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>String representing the file type according to <code>magic</code>. </dd></dl>
 
 </div>
 </div>
@@ -827,6 +849,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p</td><td>Path to read the contents of. Should be a text file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Text contents of the file. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Check with <code>magic</code> to make sure <code>p</code> is a text file. </dd></dl>
 
 </div>
 </div>
@@ -862,7 +892,7 @@ Variables</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">Todo:</a></b></dt><dd>Should return a result code or something relevant maybe. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>Should return a result code or something relevant maybe. </dd></dl>
 
 </div>
 </div>
