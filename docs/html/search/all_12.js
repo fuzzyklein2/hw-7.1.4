@@ -9,9 +9,10 @@ var searchData=
   ['stop_6',['stop',['../hw7_8hpp.html#ac684ab1864310059f942b3474120aaae',1,'hw7.hpp']]],
   ['stop_5fpict_7',['STOP_PICT',['../namespacetools_1_1picts.html#ac3b1e725ac00281f4698adb3532b5c34',1,'tools::picts']]],
   ['str_8',['str',['../classhw7_1_1str.html',1,'hw7::str'],['../classhw7_1_1str.html#ae8c095ea731c92f6f4ead5615a72d435',1,'hw7::str::str(const std::string_view &amp;s)'],['../classhw7_1_1str.html#a45afa0b010b14db8ac118fdac779916f',1,'hw7::str::str(const String &amp;s)'],['../classhw7_1_1str.html#a6e0e9c1bd5771db844e0fd210c185048',1,'hw7::str::str(const char *s)'],['../classhw7_1_1str.html#a8f4ecb794c387792c833c4bc59974e30',1,'hw7::str::str()=default']]],
-  ['strdict_9',['StrDict',['../hw7_8hpp.html#a7f31132ba5e1ae7cb0912c47a729db0b',1,'hw7.hpp']]],
-  ['string_10',['String',['../hw7_8hpp.html#a5573b97b9e5129f61d289e037d7e806c',1,'hw7.hpp']]],
-  ['strlist_11',['StrList',['../hw7_8hpp.html#a3de49a1410a0c193d2b93a1c5a0850bb',1,'hw7.hpp']]],
-  ['synopsis_12',['Synopsis',['../index.html#autotoc_md1',1,'']]],
-  ['sysinc_2ehpp_13',['sysinc.hpp',['../sysinc_8hpp.html',1,'']]]
+  ['str_5flist_9',['str_list',['../classh2o2_1_1str__list.html',1,'h2o2']]],
+  ['strdict_10',['StrDict',['../hw7_8hpp.html#a7f31132ba5e1ae7cb0912c47a729db0b',1,'hw7.hpp']]],
+  ['string_11',['String',['../hw7_8hpp.html#a5573b97b9e5129f61d289e037d7e806c',1,'hw7.hpp']]],
+  ['strlist_12',['StrList',['../hw7_8hpp.html#a3de49a1410a0c193d2b93a1c5a0850bb',1,'hw7.hpp']]],
+  ['synopsis_13',['Synopsis',['../index.html#autotoc_md1',1,'']]],
+  ['sysinc_2ehpp_14',['sysinc.hpp',['../sysinc_8hpp.html',1,'']]]
 ];

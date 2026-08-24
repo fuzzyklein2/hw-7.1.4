@@ -3,16 +3,30 @@
  *
  * Define main().
  */
-
-// Put this above local headers to reduce typing
-using namespace std;
-
-// Local headers
-// #include "logging.hpp"
-// #include "program.hpp"
+#include <algorithm>
 
 #include "hw7.hpp"
+using namespace std;
 using namespace hw7;
+
+namespace h2o2
+{
+    class str_list : StrList
+    {
+        /**
+         * Default constructor.
+         */
+        str_list() = default;
+
+        /**
+         * Construct a `StrList` by splitting `text` on `endl`.
+         * 
+         * Make sure the returned value is a `str_list` and no demotion occurs.
+         */
+        str_list(const String& text) : StrList(text.split(endl)) {}
+    }
+} // h2o2
+using namespace h2o2;
 
 /**
  * Subclass `Filter`.
@@ -22,6 +36,7 @@ class SongList : Filter<String>
 public:
     SongList() = default;
     SongList (const StrList& S) : Filter<String>(S) {}
+
     SongList (const str& s) : Filter<String>(s.split()) {}
 };
 
@@ -40,6 +55,9 @@ ErrCode Peroxide::run()
 {
     debug("Running peroxide");
     debug("Arguments:");
+
+    auto SONG_LISTS_DIR = Path(config["session folder"]) / "lists";
+
     ostringstream oss;
     for (const auto& s : args)
     {
@@ -50,14 +68,28 @@ ErrCode Peroxide::run()
     oss << "Session folder: " << config["session folder"];
     info(oss.str());
 
+    str text;
     SongList songs;
 
     // If there is input, it should be the song list itself.
-    if (!input.empty()) {}
-
-    auto SONG_LISTS_DIR = Path(config["session folder"]) / "lists";
+    if (!input.empty())
+    {
+        text = input;
+        // songs = SongList{input};
+    }
+    else if (!args.empty())
+    {
+        text = read_file(Path(args[0]));
+    }
+    else
+    {
+        song_list_files = listdir(SONG_LISTS_DIR);
+        sort(song_list_files.begin(), song_list_files.end(), greater<>());
+        text = read_file(song_list_files[0]);
+        // C++ will `throw` here on errors without any help?
+    }
     
-    auto SONG_LIST_FILE = "20260802.txt";
+    // auto SONG_LIST_FILE = "20260802.txt";
 
     
     str s = read_file(Path(config["session folder"]) / "lists" / SONG_LIST_FILE);
