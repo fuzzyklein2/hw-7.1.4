@@ -94,7 +94,7 @@ def combine_headers():
         output += Path(PREFIX / (f + PERIOD + suffix(f))).read_text().partition(CONTENT_MARKER)[2]
     
     Path("hw7/hw7.hpp").write_text(output)
-
+    print(f"{CHECK_PICT}File `hw7/hw7.hpp` generated.")
     return 0
 
 # Functions
