@@ -38,6 +38,7 @@ ERROR_CODES = [
 ]
 
 def combine_headers():
+    ## @todo Move somewhere to a data or config file.
     FILES = [
         "macros",
         "types",
@@ -258,3 +259,4 @@ def build(target:str, message:str)->int:
         print(f"{STOP_PICT}Error revising repository!")
         return result
     return 0
+

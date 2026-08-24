@@ -75,7 +75,7 @@ void Globals::get_piped()
         {
             input.pop_back();
         }
-    } else input = WORLD; // Remove or replace `WORLD` here as appropriate.
+    } // else input = WORLD; // Remove or replace `WORLD` here as appropriate.
 
 }
 

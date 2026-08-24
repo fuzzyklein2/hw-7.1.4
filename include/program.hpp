@@ -33,7 +33,7 @@ public:
     inline virtual ErrCode run()
     {
         dump();
-        std::cout << hw7::GREETING << input << endl;
+        std::cout << hw7::GREETING << input << std::endl;
 
         Filter<Path> f(args);
         f.process();

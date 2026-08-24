@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['debug_0',['debug',['../hw7_8hpp.html#ac69b0c9a687b796675328a8ac78dc156',1,'debug(const String &amp;s):&#160;hw7.hpp'],['../hw7_8hpp.html#a90e17d03c21fe73bc812d617f2c26e78',1,'debug(ostringstream &amp;ss):&#160;hw7.hpp'],['../namespacetools_1_1nbtools.html#a8057f75cbdb5bf97839ea68c79e8ecf3',1,'tools.nbtools.debug()']]],
+  ['debug_0',['debug',['../hw7_8hpp.html#ac69b0c9a687b796675328a8ac78dc156',1,'debug(const String &amp;s):&#160;hw7.hpp'],['../hw7_8hpp.html#a51067e2b46bf21364e943d3b723baa1f',1,'debug(std::ostringstream &amp;ss):&#160;hw7.hpp'],['../namespacetools_1_1nbtools.html#a8057f75cbdb5bf97839ea68c79e8ecf3',1,'tools.nbtools.debug()']]],
   ['defaultlogfile_1',['defaultLogFile',['../hw7_8hpp.html#afdd6d415ccd420f2c1efc5a0d3cb4484',1,'hw7.hpp']]],
   ['detect_5flicense_5ftype_2',['detect_license_type',['../namespacetools_1_1__git__tools.html#a256b381bc2017c6b2269c42f509b2272',1,'tools::_git_tools']]],
   ['display_5fdoc_3',['display_doc',['../namespacetools_1_1nbtools.html#a49a50acf4281eb3d4ae4c04ba2097431',1,'tools::nbtools']]],

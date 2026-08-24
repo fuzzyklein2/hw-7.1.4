@@ -58,7 +58,7 @@ protected:
 template <>
 ErrCode Filter<Path>::process(const Path& p)
 {
-    cout << p << "is a " << magic_type(p) << " file." << endl;
+    std::cout << p << "is a " << magic_type(p) << " file." << std::endl;
     
     return EXIT_SUCCESS;
 }
@@ -66,7 +66,7 @@ ErrCode Filter<Path>::process(const Path& p)
 template <>
 ErrCode Filter<String>::process(const String& p)
 {
-    cout << p << endl;
+    std::cout << p << std::endl;
     
     return EXIT_SUCCESS;
 }

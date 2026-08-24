@@ -288,7 +288,7 @@ protected:
 template <>
 ErrCode Filter<Path>::process(const Path& p)
 {
-    cout << p << "is a " << magic_type(p) << " file." << endl;
+    std::cout << p << "is a " << magic_type(p) << " file." << std::endl;
     
     return EXIT_SUCCESS;
 }
@@ -296,7 +296,7 @@ ErrCode Filter<Path>::process(const Path& p)
 template <>
 ErrCode Filter<String>::process(const String& p)
 {
-    cout << p << endl;
+    std::cout << p << std::endl;
     
     return EXIT_SUCCESS;
 }
@@ -341,7 +341,7 @@ void debug(const String& s);
  * @param ss A `stringstream`.
  * @return `void`, but `ss` is reset.
  */
-void debug(ostringstream& ss);
+void debug(std::ostringstream& ss);
 
 /**
  * @brief Log a string.
@@ -456,7 +456,7 @@ public:
     inline virtual ErrCode run()
     {
         dump();
-        std::cout << hw7::GREETING << input << endl;
+        std::cout << hw7::GREETING << input << std::endl;
 
         Filter<Path> f(args);
         f.process();

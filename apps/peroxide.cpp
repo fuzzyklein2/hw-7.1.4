@@ -3,7 +3,8 @@
  *
  * Define main().
  */
-#include <algorithm>
+#include <algorithm> // sort
+#include <sstream>   // ostringstream
 
 #include "hw7.hpp"
 using namespace std;
@@ -23,8 +24,8 @@ namespace h2o2
          * 
          * Make sure the returned value is a `str_list` and no demotion occurs.
          */
-        str_list(const String& text) : StrList(text.split(endl)) {}
-    }
+        str_list(const str& text) : StrList(text.split(str("\n"))) {}
+    };
 } // h2o2
 using namespace h2o2;
 
@@ -70,31 +71,32 @@ ErrCode Peroxide::run()
 
     str text;
     SongList songs;
+    PathList song_list_files;
 
     // If there is input, it should be the song list itself.
     if (!input.empty())
     {
-        text = input;
+        text = str(input);
         // songs = SongList{input};
     }
     else if (!args.empty())
     {
-        text = read_file(Path(args[0]));
+        text = str(read_file(Path(args[0])));
     }
     else
     {
         song_list_files = listdir(SONG_LISTS_DIR);
         sort(song_list_files.begin(), song_list_files.end(), greater<>());
-        text = read_file(song_list_files[0]);
+        text = str(read_file(song_list_files[0]));
         // C++ will `throw` here on errors without any help?
     }
     
     // auto SONG_LIST_FILE = "20260802.txt";
 
     
-    str s = read_file(Path(config["session folder"]) / "lists" / SONG_LIST_FILE);
+    // str s = read_file(Path(config["session folder"]) / "lists" / SONG_LIST_FILE);
 
-    info(s);
+    info(text);
     
     return EXIT_SUCCESS;
 }

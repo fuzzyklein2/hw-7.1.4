@@ -36,7 +36,7 @@ void debug(const String& s);
  * @param ss A `stringstream`.
  * @return `void`, but `ss` is reset.
  */
-void debug(ostringstream& ss);
+void debug(std::ostringstream& ss);
 
 /**
  * @brief Log a string.
