@@ -13,6 +13,7 @@ import shutil
 import subprocess
 
 # Packages
+from grep import grep
 import nbformat
 
 # Local modules
