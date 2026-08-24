@@ -67,7 +67,7 @@ The intended usage. Call just before building objects or executables.
 
 """
 
-CWD = Path.cwd()
+BASE = Path.cwd()
 
 # from .glob4meson.glob4meson import glob4meson as g4m
 

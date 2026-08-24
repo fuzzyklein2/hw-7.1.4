@@ -3,7 +3,6 @@
  *
  * Define main().
  */
-#include "sysinc.hpp"
 
 // Put this above local headers to reduce typing
 using namespace std;

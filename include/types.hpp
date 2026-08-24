@@ -13,6 +13,11 @@
 // Third party headers
 #include <nlohmann/json.hpp> // JSON -> struct conversion
 
+// Logging module headers
+#include "spdlog/spdlog.h"   // Logging module
+#include "spdlog/sinks/stdout_color_sinks.h" // Screen output
+#include "spdlog/sinks/basic_file_sink.h" // Log file(s)
+
 // Local headers
 #include "macros.h"
 

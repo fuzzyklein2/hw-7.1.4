@@ -1,0 +1,5 @@
+{
+    "logfile" : "PROGRAM-exec.log",
+    "debug" : false,
+    "saved logs" : 5
+}

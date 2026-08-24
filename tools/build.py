@@ -56,7 +56,7 @@ def combine_headers():
     SUFFIX = "hpp"
     
     def suffix(s:str)->str:
-        """ Return `SUFFIX` unless `s` is "macro". """
+        """ Return `SUFFIX` unless `s` is "macros". """
         return SUFFIX if s != "macros" else "h"
     
     REGEX = "#include"
@@ -72,11 +72,8 @@ def combine_headers():
     # print(text)
     
     CONTENT_MARKER = "// --*-- content marker for hw7.hpp"
-    
     lines = sorted([s[9:] for s in text.split(NEWLINE) if s != EMPTY_STR])
-    
     lines = [s for s in lines if not Path(s.strip('"')).stem in FILES]
-    
     lines = set(lines)
     
     output = """/**
