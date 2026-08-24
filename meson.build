@@ -20,7 +20,7 @@ src_files = [
   'source/config.cpp',
   'source/datetime.cpp',
   'source/environment.cpp',
-  'source/filter.cpp',
+#  'source/filter.cpp',
   'source/fs.cpp',
   'source/globals.cpp',
   'source/logging.cpp',

@@ -10,6 +10,8 @@
 
 #include "fs.hpp"
 
+// --*-- content marker for hw7.hpp
+
 /**
  * @brief Check for environment variables that override `config.json`.
  *

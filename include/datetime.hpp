@@ -7,6 +7,8 @@
 
 #include "types.hpp"
 
+// --*-- content marker for hw7.hpp
+
 /**
  * now_string
  * 

@@ -13,7 +13,8 @@
 // Local headers
 #include "fs.hpp"
 #include "str.hpp"
-// #include "types.hpp"
+
+// --*-- content marker for hw7.hpp
 
 /**
  *  @brief Stores all the global variables necessary to run the program.

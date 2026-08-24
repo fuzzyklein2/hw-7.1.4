@@ -16,6 +16,8 @@
 // Local headers
 #include "macros.h"
 
+// --*-- content marker for hw7.hpp
+
 // Standard types
 namespace fs = std::filesystem;
 using Path = fs::path;

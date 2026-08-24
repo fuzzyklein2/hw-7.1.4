@@ -4,33 +4,22 @@
  * Single header for `hw7`.
  */
 
-// C headers
-#include <cstdlib>
+// # System headers
 
-// C++ headers
-#include <filesystem>
-#include <iomanip>    // ?
-#include <map>
-#include <sstream>
-#include <string>
 #include <vector>
+#include <string>
+#include <iostream>   // cin & cout
+#include <nlohmann/json.hpp> // JSON -> struct conversion
+#include <cstdlib>
+#include <map>
+#include <filesystem>
 
-// Macros
 
 #define CONST inline const
 #define STATIC inline static
 #define CONSTEXPR inline constexpr
 
-// Third party headers
-#include "CLI11.hpp"         // Command line argument parser
-#include <nlohmann/json.hpp> // JSON -> struct conversion
-// Logging module headers
-#include "spdlog/spdlog.h"   // Logging module
-#include "spdlog/sinks/stdout_color_sinks.h" // Screen output
-#include "spdlog/sinks/basic_file_sink.h" // Log file(s)
 
-
-// Types
 // Standard types
 namespace fs = std::filesystem;
 using Path = fs::path;
@@ -44,13 +33,11 @@ using JSON = nlohmann::json;
 using Logger = std::shared_ptr<spdlog::logger>;
 using LogLevel = spdlog::level::level_enum;
 
-// Local types
 using Number = unsigned int;
 using ErrCode = Number;
 
-// Constants
 
-namespace hw7 // Experimental, but works so far.
+namespace hw7
 {
     // String constants
     /// Easy way to find the current process.
@@ -107,7 +94,6 @@ namespace hw7 // Experimental, but works so far.
     
 } // namespace hw7
 
-// Dates and times
 
 /**
  * now_string
@@ -118,49 +104,7 @@ namespace hw7 // Experimental, but works so far.
  */
 String now_string();
 
-/**
- * Process a list of elements.
- */
-template <typename T>
-class Filter
-{
-public:
 
-    /**
-     * StrList constructor.
-     * @param S A list of strings.
-     */
-    Filter(const StrList& S)
-    {
-        for(const auto& s : S)
-        {
-            elements.push_back(s);
-        }
-    }
-
-    /**
-     * Process the list of paths.
-     * @return ErrCode.
-     */
-    inline ErrCode process()
-    {
-        for (const auto& p : elements) process(p);
-        return 0;
-    }
-
-    /**
-     * Process a file.
-     * @return ErrCode.
-     */
-    virtual ErrCode process(const T&);
-
-protected:
-    /// List of files to be filtered.
-    std::vector<T> elements;
-
-};
-
-// `str` class
 namespace hw7
 {
     /**
@@ -235,12 +179,10 @@ namespace hw7
          */
         StrList partition(const str& pattern);
 
+
     }; //str
 } // hw7
 
-/**
- * Interface so `format` knows what to do with a `str`.
- */
 template<>
 struct std::formatter<hw7::str> : std::formatter<std::string>
 {
@@ -253,44 +195,17 @@ struct std::formatter<hw7::str> : std::formatter<std::string>
     }
 };
 
-// File System
-
 // Functions
-
-/**
- * @return Path to the current working directory.
- */
 Path cwd();
-
-/**
- * @param path Path to the directory to list the contents of.
- * @return List of paths in `path`.
- */
 PathList listdir(const Path& path);
-
-/**
- * @param p Path to read the contents of. Should be a text file.
- * @return Text contents of the file.
- * @todo Check with `magic` to make sure `p` is a text file.
- */
 String read_file(const Path& p);
-
-/**
- * @return String representing the file type according to `magic`.
- */
 String magic_type(const Path& p);
-
 /**
- * Return the user's home directory.
+ * @brief Return the user's home directory.
  * @return path to `~`.
  */
-Path getHome();
-
-/**
- * Create file `p` if it does not exist.
- * @param p Path to the file to check.
- */
-void ensure_file(const Path& p);
+Path getHome(); // Find the user's home directory and return it as a `path` object.
+void ensure_file(const Path& p); // Create the file at p if it doesn't exist.
 
 /**
  * @brief Return a string to name the log file with.
@@ -299,9 +214,6 @@ void ensure_file(const Path& p);
  */
 String log_filename();
 
-/**
- * Contains the path to various directories and files needed by the program.
- */
 struct FileSystem {
     Path working = cwd();
     Path home = getenv("HOME");
@@ -325,33 +237,90 @@ struct FileSystem {
     void dump();
 };
 
-// Configuration
 
-/**
- * Load the configuration file and check environment variables for overrides.
- * @param p Path to a JSON configuration file.
- * @return JSON object.
- */
+
+template <typename T>
+class Filter
+{
+public:
+
+    /**
+     * Default constructor.
+     */
+    Filter() = default;
+
+    /**
+     * StrList constructor.
+     * @param S A list of strings.
+     */
+    Filter(const StrList& S)
+    {
+        for(const auto& s : S)
+        {
+            elements.push_back(s);
+        }
+    }
+
+    /**
+     * Process the list of paths.
+     * @return ErrCode.
+     */
+    inline ErrCode process()
+    {
+        for (const auto& p : elements) process(p);
+        return 0;
+    }
+
+    /**
+     * Process a file.
+     * @return ErrCode.
+     */
+    virtual ErrCode process(const T&);
+
+protected:
+    std::vector<T> elements; /// List of files to be filtered.
+
+};
+
+template <>
+ErrCode Filter<Path>::process(const Path& p)
+{
+    cout << p << "is a " << magic_type(p) << " file." << endl;
+    
+    return EXIT_SUCCESS;
+}
+
+template <>
+ErrCode Filter<String>::process(const String& p)
+{
+    cout << p << endl;
+    
+    return EXIT_SUCCESS;
+}
+
+
+
+
 JSON configure(const Path&);
-
-/**
- * Load the data from a JSON file.
- * @param p Path to a JSON data file.
- * @return JSON object.
- */
 JSON load_data(const Path& p);
 
-// Environment
 
 /**
- * Check for environment variables of the form `{PROGRAM}_{NAME}` that override configuration settings.
+ * @brief Check for environment variables that override `config.json`.
+ *
+ * Environment variables should be of the form:
+ *
+ *     `f"{PROGRAM}_{UNDERSCORE.join(upper(CONFIG_FILE_KEY))}`
+ *
+ * @param config JSON object to be modified if overridden.
+ * @todo This function needs serious debugging. 🤣
+ * @bug JSON object appears not to update properly?
+ * @warning ⚠️ This function calls `environ`, which does not exist on Windoze.
  */
 void check_env(JSON&);
 
-// Logging
-
 /**
- * Return a default location for the log file.
+ * @brief Return a default location for the log file.
  * 
  * @return Default logging path.
  */
@@ -369,7 +338,7 @@ void debug(const String& s);
  * @param ss A `stringstream`.
  * @return `void`, but `ss` is reset.
  */
-void debug(std::ostringstream& ss);
+void debug(ostringstream& ss);
 
 /**
  * @brief Log a string.
@@ -405,11 +374,12 @@ void stop(const String& s);
  */
 void rotate_logs(const Path& directory, size_t count);
 
+
 /**
  *  @brief Stores all the global variables necessary to run the program.
  */
 struct Globals {
-public: // It might be reasonable to make these protected instead.
+public:
     FileSystem FS;
     JSON config;
     JSON data;
@@ -460,9 +430,8 @@ public: // It might be reasonable to make these protected instead.
     void init_logs();
 };
 
-/**
- * Abstract class but it will run. Subclass this to write a program that does stuff.
- */
+
+
 class Program : public Globals
 {
 public:
@@ -484,7 +453,7 @@ public:
     inline virtual ErrCode run()
     {
         dump();
-        std::cout << hw7::GREETING << input << std::endl;
+        std::cout << hw7::GREETING << input << endl;
 
         Filter<Path> f(args);
         f.process();

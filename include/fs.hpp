@@ -11,6 +11,8 @@
 // Local headers
 #include "constants.hpp"
 
+// --*-- content marker for hw7.hpp
+
 // Functions
 Path cwd();
 PathList listdir(const Path& path);

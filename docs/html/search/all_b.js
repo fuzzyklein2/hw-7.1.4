@@ -4,7 +4,7 @@ var searchData=
   ['leading_5fspace_1',['LEADING_SPACE',['../namespacetools_1_1picts.html#afc26da43b17acef061d91984e28deb8e',1,'tools::picts']]],
   ['left_5fbracket_2',['LEFT_BRACKET',['../namespacehw7.html#afe9b89586bc97e2d72a693c533884d95',1,'hw7']]],
   ['link_5fpict_3',['LINK_PICT',['../namespacetools_1_1picts.html#adc584e008045c1665dcbbacca5423a2a',1,'tools::picts']]],
-  ['list_4',['Todo List',['../todo.html',1,'']]],
+  ['list_4',['list',['../bug.html',1,'Bug List'],['../todo.html',1,'Todo List']]],
   ['listdir_5',['listdir',['../hw7_8hpp.html#a874dffd87acf53a3f5229a7f26d4f70b',1,'hw7.hpp']]],
   ['load_5fdata_6',['load_data',['../hw7_8hpp.html#a153dcb90cc5fc5d94dd25910c14bfcb1',1,'hw7.hpp']]],
   ['log_5fdir_5fname_7',['LOG_DIR_NAME',['../namespacehw7.html#a9a054fce9854552afc5d9789e6d9f092',1,'hw7']]],

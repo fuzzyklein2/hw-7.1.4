@@ -7,7 +7,7 @@ var searchData=
   ['data_5ffile_5fname_4',['DATA_FILE_NAME',['../namespacehw7.html#ab6c71b350ed9c62d36bafa1179e942c4',1,'hw7']]],
   ['dbl_5fquote_5',['DBL_QUOTE',['../namespacehw7.html#a41dde8756e0350052f6e2c19674d9040',1,'hw7']]],
   ['dbl_5fspace_6',['DBL_SPACE',['../namespacehw7.html#a498617dc2c97e4ab083eb4a67a859f2b',1,'hw7']]],
-  ['debug_7',['debug',['../hw7_8hpp.html#ac69b0c9a687b796675328a8ac78dc156',1,'debug():&#160;hw7.hpp'],['../namespacetools_1_1nbtools.html#a8057f75cbdb5bf97839ea68c79e8ecf3',1,'tools.nbtools.debug()'],['../hw7_8hpp.html#a51067e2b46bf21364e943d3b723baa1f',1,'debug():&#160;hw7.hpp']]],
+  ['debug_7',['debug',['../hw7_8hpp.html#ac69b0c9a687b796675328a8ac78dc156',1,'debug():&#160;hw7.hpp'],['../namespacetools_1_1nbtools.html#a8057f75cbdb5bf97839ea68c79e8ecf3',1,'tools.nbtools.debug()'],['../hw7_8hpp.html#a90e17d03c21fe73bc812d617f2c26e78',1,'debug():&#160;hw7.hpp']]],
   ['debug_5fkey_8',['DEBUG_KEY',['../namespacehw7.html#a5b8d03d7c92bb15330454138d9d58660',1,'hw7']]],
   ['debug_5fpict_9',['debug_pict',['../namespacehw7.html#a07c716a6bbaf9920f736f3e1a8fff6d7',1,'hw7::DEBUG_PICT'],['../namespacetools_1_1picts.html#adb6a2543341577251511ccc9e6046dd2',1,'tools.picts.DEBUG_PICT']]],
   ['defaultlogfile_10',['defaultLogFile',['../hw7_8hpp.html#afdd6d415ccd420f2c1efc5a0d3cb4484',1,'hw7.hpp']]],

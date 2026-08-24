@@ -8,6 +8,8 @@
 // Local headers
 #include "types.hpp"
 
+// --*-- content marker for hw7.hpp
+
 namespace hw7
 {
     // String constants

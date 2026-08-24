@@ -51,6 +51,8 @@ ErrCode Peroxide::run()
     oss << "Session folder: " << config["session folder"];
     info(oss.str());
 
+    SongList songs;
+
     // If there is input, it should be the song list itself.
     if (!input.empty()) {}
 

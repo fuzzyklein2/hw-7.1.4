@@ -36,6 +36,67 @@ ERROR_CODES = [
     "Unknown"
 ]
 
+def combine_headers():
+    FILES = [
+        "macros",
+        "types",
+        "constants",
+        "datetime",
+        "str",
+        "fs",
+        "filter",
+        "config",
+        "environment",
+        "logging",
+        "globals",
+        "program"
+    ]
+    PREFIX = Path("include")
+    SUFFIX = "hpp"
+    
+    def suffix(s:str)->str:
+        """ Return `SUFFIX` unless `s` is "macro". """
+        return SUFFIX if s != "macros" else "h"
+    
+    REGEX = "#include"
+    g = grep(REGEX)
+    text = EMPTY_STR
+    
+    for f in FILES:
+        p = PREFIX / (f + PERIOD + suffix(f))
+        # print(f"{NEWLINE + str(p)}:{NEWLINE}")
+        result = (p).read_text() | g
+        text += NEWLINE + str(result)
+    
+    print(text)
+    
+    CONTENT_MARKER = "// --*-- content marker for hw7.hpp"
+    
+    lines = sorted([s[9:] for s in text.split(NEWLINE) if s != EMPTY_STR])
+    
+    lines = [s for s in lines if not Path(s.strip('"')).stem in FILES]
+    
+    lines = set(lines)
+    
+    output = """/**
+     * @file hw7.hpp
+     *
+     * Single header for `hw7`.
+     */
+    
+    // # System headers
+    
+    """
+    
+    for s in lines:
+        output += f'#include {s + NEWLINE}'
+    for f in FILES:
+        output += Path(PREFIX / (f + PERIOD + suffix(f))).read_text().partition(CONTENT_MARKER)[2]
+    
+    Path("hw7/hw7.hpp").write_text(output)
+
+    return 0
+
 # Functions
 def compile(target:str)->int:
     """ Build the target with meson.
@@ -174,13 +235,17 @@ def build(target:str, message:str)->int:
         @message Commit message for git.
         @return Error code.
     """
+    result = combine_headers()
+    if result:
+        print(f"{STOP_PICT}Error combining headers!")
+        return result
     result = compile(target)
     if result:
-        print(f"{STOP_PICT}Error compiling {TARGET}!")
+        print(f"{STOP_PICT}Error compiling {target}!")
         return result
     result = test(target)
     if result:
-        print(f"{STOP_PICT}Testing {TARGET} failed!")
+        print(f"{STOP_PICT}Testing {target} failed!")
         return result
     result = clear()
     if result:

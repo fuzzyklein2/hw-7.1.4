@@ -11,10 +11,10 @@ using namespace std;
 #include "filter.hpp"
 #include "fs.hpp"
 
-template <>
-ErrCode Filter<Path>::process(const Path& p)
-{
-    cout << p << "is a " << magic_type(p) << " file." << endl;
+// template <>
+// ErrCode Filter<Path>::process(const Path& p)
+// {
+//     cout << p << "is a " << magic_type(p) << " file." << endl;
     
-    return EXIT_SUCCESS;
-}
+//     return EXIT_SUCCESS;
+// }

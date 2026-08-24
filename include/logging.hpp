@@ -15,6 +15,8 @@
 // Local headers
 #include "fs.hpp"
 
+// --*-- content marker for hw7.hpp
+
 /**
  * @brief Return a default location for the log file.
  * 

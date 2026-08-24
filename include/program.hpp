@@ -10,6 +10,8 @@
 #include "filter.hpp"
 #include "globals.hpp"
 
+// --*-- content marker for hw7.hpp
+
 class Program : public Globals
 {
 public:
