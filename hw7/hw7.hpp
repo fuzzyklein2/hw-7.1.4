@@ -6,13 +6,13 @@
     
     // # System headers
     
-    #include <iostream>   // cin & cout
-#include <map>
+    #include <filesystem>
 #include <cstdlib>
-#include <string>
-#include <filesystem>
-#include <vector>
 #include <nlohmann/json.hpp> // JSON -> struct conversion
+#include <iostream>   // cin & cout
+#include <map>
+#include <string>
+#include <vector>
 
 
 #define CONST inline const

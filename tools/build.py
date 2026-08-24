@@ -69,7 +69,7 @@ def combine_headers():
         result = (p).read_text() | g
         text += NEWLINE + str(result)
     
-    print(text)
+    # print(text)
     
     CONTENT_MARKER = "// --*-- content marker for hw7.hpp"
     
