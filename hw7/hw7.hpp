@@ -1,20 +1,21 @@
+#pragma once
 /**
-     * @file hw7.hpp
-     *
-     * Single header for `hw7`.
-     */
-    
-    // # System headers
-    
-    #include "spdlog/sinks/stdout_color_sinks.h" // Screen output
+ * @file hw7.hpp
+ *
+ * Single header for `hw7`.
+ */
+
+// # System headers
+
+#include <string>
+#include <filesystem>
+#include <iostream>   // cin & cout
+#include <cstdlib>
 #include <map>
 #include <nlohmann/json.hpp> // JSON -> struct conversion
 #include <vector>
-#include <filesystem>
-#include <iostream>   // cin & cout
+#include "spdlog/sinks/stdout_color_sinks.h" // Screen output
 #include "spdlog/sinks/basic_file_sink.h" // Log file(s)
-#include <cstdlib>
-#include <string>
 #include "spdlog/spdlog.h"   // Logging module
 
 
@@ -275,10 +276,13 @@ public:
     }
 
     /**
-     * Process a file.
+     * Process an element.
      * @return ErrCode.
      */
-    virtual ErrCode process(const T&);
+    virtual inline ErrCode process(const T&)
+    {
+        return EXIT_SUCCESS;
+    }
 
 protected:
     std::vector<T> elements; /// List of files to be filtered.
@@ -286,7 +290,7 @@ protected:
 };
 
 template <>
-ErrCode Filter<Path>::process(const Path& p)
+inline ErrCode Filter<Path>::process(const Path& p)
 {
     std::cout << p << "is a " << magic_type(p) << " file." << std::endl;
     
@@ -294,7 +298,7 @@ ErrCode Filter<Path>::process(const Path& p)
 }
 
 template <>
-ErrCode Filter<String>::process(const String& p)
+inline ErrCode Filter<String>::process(const String& p)
 {
     std::cout << p << std::endl;
     

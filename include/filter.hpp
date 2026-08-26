@@ -45,10 +45,13 @@ public:
     }
 
     /**
-     * Process a file.
+     * Process an element.
      * @return ErrCode.
      */
-    virtual ErrCode process(const T&);
+    virtual inline ErrCode process(const T&)
+    {
+        return EXIT_SUCCESS;
+    }
 
 protected:
     std::vector<T> elements; /// List of files to be filtered.
@@ -56,7 +59,7 @@ protected:
 };
 
 template <>
-ErrCode Filter<Path>::process(const Path& p)
+inline ErrCode Filter<Path>::process(const Path& p)
 {
     std::cout << p << "is a " << magic_type(p) << " file." << std::endl;
     
@@ -64,7 +67,7 @@ ErrCode Filter<Path>::process(const Path& p)
 }
 
 template <>
-ErrCode Filter<String>::process(const String& p)
+inline ErrCode Filter<String>::process(const String& p)
 {
     std::cout << p << std::endl;
     

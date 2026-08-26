@@ -1,7 +1,7 @@
 /**
  * @file peroxide.cpp
  *
- * Define main().
+ * Peroxide class member functions.
  */
 
 #include <termios.h>

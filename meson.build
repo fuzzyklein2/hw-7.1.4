@@ -15,6 +15,7 @@ midi_dep = dependency('rtmidi')
 # Include directory for headers
 inc = include_directories('include', 'contrib')
 apps_inc = include_directories('hw7', 'contrib')
+peroxide_inc = include_directories('hw7', 'contrib', 'peroxide')
 
 # --- AUTOGEN_SRC_START ---
 src_files = [
@@ -43,7 +44,12 @@ lib_sources = files(
 
 # --- PEROXIDE SOURCE FILES START ---
 peroxide_src_files = [
+  'peroxide/clip.cpp',
+  'peroxide/globals.cpp',
+  'peroxide/keyboard.cpp',
+  'peroxide/midi.cpp',
   'peroxide/peroxide.cpp',
+  'peroxide/player.cpp',
 ]
 # --- PEROXIDE SOURCE FILES END ---
 
@@ -87,8 +93,8 @@ executable(
 
 executable(
   'peroxide',
-  'apps/peroxide.cpp',
-  include_directories: apps_inc,
+  peroxide_src_files,
+  include_directories: peroxide_inc,
   dependencies: h2o2_deps,
   link_with: libhw7,
 )

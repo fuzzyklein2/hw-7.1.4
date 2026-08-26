@@ -77,15 +77,16 @@ def combine_headers():
     lines = [s for s in lines if not Path(s.strip('"')).stem in FILES]
     lines = set(lines)
     
-    output = """/**
-     * @file hw7.hpp
-     *
-     * Single header for `hw7`.
-     */
-    
-    // # System headers
-    
-    """
+    output = """#pragma once
+/**
+ * @file hw7.hpp
+ *
+ * Single header for `hw7`.
+ */
+
+// # System headers
+
+"""
     
     for s in lines:
         output += f'#include {s + NEWLINE}'
