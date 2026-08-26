@@ -10,6 +10,7 @@ gtkmm_dep = dependency('gtkmm-4.0')
 fmt_dep = dependency('fmt')
 spdlog_dep = dependency('spdlog')
 magic_dep = dependency('libmagic')
+midi_dep = dependency('rtmidi')
 
 # Include directory for headers
 inc = include_directories('include', 'contrib')
@@ -40,11 +41,25 @@ lib_sources = files(
   'source/str.cpp',
 )
 
+# --- PEROXIDE SOURCE FILES START ---
+peroxide_src_files = [
+  'peroxide/peroxide.cpp',
+]
+# --- PEROXIDE SOURCE FILES END ---
+
 hw7_deps = [
   fmt_dep,
   spdlog_dep,
   gtkmm_dep,
   magic_dep,
+]
+
+h2o2_deps = [
+  fmt_dep,
+  spdlog_dep,
+  gtkmm_dep,
+  magic_dep,
+  midi_dep,
 ]
 
 libhw7 = static_library(
@@ -74,7 +89,7 @@ executable(
   'peroxide',
   'apps/peroxide.cpp',
   include_directories: apps_inc,
-  dependencies: hw7_deps,
+  dependencies: h2o2_deps,
   link_with: libhw7,
 )
 
