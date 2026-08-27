@@ -9,6 +9,11 @@
 
 using namespace std;
 
+/**
+ * Load a sound file into memory.
+ * @return `true` if all frames were read.
+ * @todo Move this function inside the `Clip` class.
+ */
 bool loadClip(string filename, Clip &clip)
 {
     ma_decoder decoder;

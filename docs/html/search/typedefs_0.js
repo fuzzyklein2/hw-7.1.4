@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['errcode_0',['ErrCode',['../hw7_8hpp.html#a72d99dccc886fa8d2111a95b79efda6e',1,'hw7.hpp']]]
+  ['boolean_0',['Boolean',['../peroxide_8cpp.html#a9c4be63f6972ad03ed996c1fb27754b9',1,'peroxide.cpp']]]
 ];

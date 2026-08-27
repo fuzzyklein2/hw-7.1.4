@@ -4,7 +4,6 @@
  *
  * Find and parse the pattern script.
  */
-#define MINIAUDIO_IMPLEMENTATION
 #include "miniaudio.h"
 
 #include "hw7.hpp"

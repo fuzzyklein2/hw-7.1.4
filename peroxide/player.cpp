@@ -13,6 +13,7 @@ using namespace std;
 using namespace hw7;
 using namespace h2o2;
 
+
 player::player(const song_list& sl) : songs(sl)
 {
     // Load all the audio clips of every song in the song_list.

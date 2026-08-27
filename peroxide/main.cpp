@@ -4,7 +4,7 @@
  * Peroxide class member functions.
  */
 
-#include "peroxide.h"
+#include "peroxide.hpp"
 
 /**
  * main

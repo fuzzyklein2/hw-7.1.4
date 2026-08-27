@@ -77,51 +77,80 @@ $(function() {
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">peroxide.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;algorithm&gt;</code><br />
+<div class="textblock"><code>#include &lt;termios.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;csignal&gt;</code><br />
+<code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
+<code>#include &quot;miniaudio.h&quot;</code><br />
+<code>#include &lt;rtmidi/RtMidi.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="hw7_8hpp_source.html">hw7.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for peroxide.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="peroxide_8cpp__incl.png" border="0" usemap="#aapps_2peroxide_8cpp" alt=""/></div>
 <map name="aapps_2peroxide_8cpp" id="aapps_2peroxide_8cpp">
-<area shape="rect" title=" " alt="" coords="363,5,491,31"/>
-<area shape="rect" title=" " alt="" coords="293,79,368,104"/>
-<area shape="poly" title=" " alt="" coords="413,33,359,72,356,68,410,29"/>
-<area shape="rect" title=" " alt="" coords="392,79,461,104"/>
-<area shape="poly" title=" " alt="" coords="429,31,429,65,424,65,424,31"/>
-<area shape="rect" href="hw7_8hpp.html" title=" " alt="" coords="486,79,557,104"/>
-<area shape="poly" title=" " alt="" coords="443,29,496,68,493,72,440,33"/>
-<area shape="rect" title=" " alt="" coords="5,159,88,185"/>
-<area shape="poly" title=" " alt="" coords="486,104,474,107,369,121,286,127,204,135,101,155,89,158,88,153,99,149,203,130,286,122,368,116,473,101,485,99"/>
-<area shape="rect" title=" " alt="" coords="112,159,243,185"/>
-<area shape="poly" title=" " alt="" coords="486,104,474,107,255,155,238,159,236,154,254,149,473,101,485,99"/>
-<area shape="rect" title=" " alt="" coords="267,159,314,185"/>
-<area shape="poly" title=" " alt="" coords="487,104,413,125,328,154,325,156,323,151,326,150,411,120,485,99"/>
-<area shape="rect" title=" " alt="" coords="339,159,411,185"/>
-<area shape="poly" title=" " alt="" coords="501,107,410,155,407,150,498,102"/>
-<area shape="rect" title=" " alt="" coords="435,159,490,185"/>
-<area shape="poly" title=" " alt="" coords="515,106,482,150,477,147,511,103"/>
-<area shape="rect" title=" " alt="" coords="515,152,645,192"/>
-<area shape="poly" title=" " alt="" coords="532,103,560,139,556,143,528,106"/>
-<area shape="rect" title=" " alt="" coords="670,152,805,192"/>
-<area shape="poly" title=" " alt="" coords="554,102,673,145,671,150,552,107"/>
-<area shape="rect" title=" " alt="" coords="829,159,889,185"/>
-<area shape="poly" title=" " alt="" coords="558,95,674,114,747,130,818,149,824,152,822,157,817,155,745,135,673,119,557,100"/>
-<area shape="rect" title=" " alt="" coords="913,159,972,185"/>
-<area shape="poly" title=" " alt="" coords="557,92,709,109,806,126,902,149,909,152,907,157,901,155,805,131,708,114,557,98"/>
-<area shape="rect" title=" " alt="" coords="997,159,1110,185"/>
-<area shape="poly" title=" " alt="" coords="557,93,741,112,862,128,985,149,1002,153,1001,158,983,155,861,134,740,117,557,98"/>
+<area shape="rect" title=" " alt="" coords="306,5,434,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,81,104"/>
+<area shape="poly" title=" " alt="" coords="316,33,96,81,94,76,315,28"/>
+<area shape="rect" title=" " alt="" coords="105,79,173,104"/>
+<area shape="poly" title=" " alt="" coords="334,33,187,78,186,73,332,28"/>
+<area shape="rect" title=" " alt="" coords="197,79,260,104"/>
+<area shape="poly" title=" " alt="" coords="348,33,265,75,263,70,346,28"/>
+<area shape="rect" title=" " alt="" coords="285,79,359,104"/>
+<area shape="poly" title=" " alt="" coords="364,33,340,69,335,66,360,30"/>
+<area shape="rect" title=" " alt="" coords="383,79,453,104"/>
+<area shape="poly" title=" " alt="" coords="380,30,405,66,400,69,376,33"/>
+<area shape="rect" title=" " alt="" coords="477,79,565,104"/>
+<area shape="poly" title=" " alt="" coords="395,28,485,70,482,75,393,33"/>
+<area shape="rect" title=" " alt="" coords="589,79,695,104"/>
+<area shape="poly" title=" " alt="" coords="414,28,586,73,584,78,413,33"/>
+<area shape="rect" href="hw7_8hpp.html" title=" " alt="" coords="720,79,791,104"/>
+<area shape="poly" title=" " alt="" coords="435,27,707,76,706,81,434,32"/>
+<area shape="rect" title=" " alt="" coords="271,159,317,185"/>
+<area shape="poly" title=" " alt="" coords="720,104,708,107,601,120,516,123,433,130,385,139,329,155,325,156,324,151,328,149,384,134,432,124,516,117,600,114,707,101,719,99"/>
+<area shape="rect" title=" " alt="" coords="341,152,476,192"/>
+<area shape="poly" title=" " alt="" coords="720,104,708,107,490,154,489,149,707,101,719,99"/>
+<area shape="rect" title=" " alt="" coords="501,159,559,185"/>
+<area shape="poly" title=" " alt="" coords="721,105,572,155,568,156,566,151,570,149,719,100"/>
+<area shape="rect" title=" " alt="" coords="584,159,644,185"/>
+<area shape="poly" title=" " alt="" coords="736,107,648,155,646,150,733,102"/>
+<area shape="rect" title=" " alt="" coords="669,159,741,185"/>
+<area shape="poly" title=" " alt="" coords="750,106,722,149,717,146,746,103"/>
+<area shape="rect" title=" " alt="" coords="765,159,847,185"/>
+<area shape="poly" title=" " alt="" coords="765,103,793,146,789,149,761,106"/>
+<area shape="rect" title=" " alt="" coords="872,159,927,185"/>
+<area shape="poly" title=" " alt="" coords="778,102,867,150,865,155,775,107"/>
+<area shape="rect" title=" " alt="" coords="951,152,1082,192"/>
+<area shape="poly" title=" " alt="" coords="792,101,942,145,940,151,790,106"/>
+<area shape="rect" title=" " alt="" coords="1106,159,1237,185"/>
+<area shape="poly" title=" " alt="" coords="792,96,925,118,1095,149,1114,154,1113,159,1093,155,924,123,791,101"/>
+<area shape="rect" title=" " alt="" coords="1261,159,1375,185"/>
+<area shape="poly" title=" " alt="" coords="791,93,987,111,1117,127,1249,149,1267,153,1266,159,1248,155,1117,133,986,116,791,98"/>
 </map>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structClip.html">Clip</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classh2o2_1_1str__list.html">h2o2::str_list</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classh2o2_1_1clip__list.html">h2o2::clip_list</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classh2o2_1_1song.html">h2o2::song</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classh2o2_1_1song__list.html">h2o2::song_list</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classh2o2_1_1player.html">h2o2::player</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSongList.html">SongList</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,15 +162,186 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespaceh2o2" id="r_namespaceh2o2"><td class="memItemLeft" align="right" valign="top">namespace &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceh2o2.html">h2o2</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:abf77f70dc931f91a9f09e7b54d8278f5" id="r_abf77f70dc931f91a9f09e7b54d8278f5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="peroxide_8cpp.html#abf77f70dc931f91a9f09e7b54d8278f5">MINIAUDIO_IMPLEMENTATION</a></td></tr>
+<tr class="separator:abf77f70dc931f91a9f09e7b54d8278f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Typedefs</h2></td></tr>
+<tr class="memitem:a9c4be63f6972ad03ed996c1fb27754b9" id="r_a9c4be63f6972ad03ed996c1fb27754b9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="peroxide_8cpp.html#a9c4be63f6972ad03ed996c1fb27754b9">Boolean</a> = atomic&lt; bool &gt;</td></tr>
+<tr class="separator:a9c4be63f6972ad03ed996c1fb27754b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8194a3feb4e66b3168bf7a27f9ad2d33" id="r_a8194a3feb4e66b3168bf7a27f9ad2d33"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="peroxide_8cpp.html#a8194a3feb4e66b3168bf7a27f9ad2d33">Index</a> = <a class="el" href="hw7_8hpp.html#a2fb6f8dc356111788443f0fd9eda05f3">Number</a></td></tr>
+<tr class="separator:a8194a3feb4e66b3168bf7a27f9ad2d33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:aa1c3f89914f9d3619fe154fdda5d8b5e" id="r_aa1c3f89914f9d3619fe154fdda5d8b5e"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceh2o2.html#aa1c3f89914f9d3619fe154fdda5d8b5e">h2o2::State</a> { <br />
+&#160;&#160;<a class="el" href="namespaceh2o2.html#aa1c3f89914f9d3619fe154fdda5d8b5ea291554596c183e837f0a6bec3767c891">h2o2::PAUSE</a>
+, <a class="el" href="namespaceh2o2.html#aa1c3f89914f9d3619fe154fdda5d8b5ea6a216efc529825c60a4a4c0bc99ad77f">h2o2::PLAY</a>
+, <a class="el" href="namespaceh2o2.html#aa1c3f89914f9d3619fe154fdda5d8b5ea1fd406685cbdee605d0a7bebed56fdb0">h2o2::FF</a>
+, <a class="el" href="namespaceh2o2.html#aa1c3f89914f9d3619fe154fdda5d8b5eaf302817a1a3baa8f5aef592bda7c0adc">h2o2::REWIND</a>
+, <br />
+&#160;&#160;<a class="el" href="namespaceh2o2.html#aa1c3f89914f9d3619fe154fdda5d8b5ea615a46af313786fc4e349f34118be111">h2o2::STOP</a>
+<br />
+ }</td></tr>
+<tr class="separator:aa1c3f89914f9d3619fe154fdda5d8b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a343ff0a92c3d9dded8bbdac0217b8dae" id="r_a343ff0a92c3d9dded8bbdac0217b8dae"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="peroxide_8cpp.html#a343ff0a92c3d9dded8bbdac0217b8dae">loadClip</a> (string filename, <a class="el" href="structClip.html">Clip</a> &amp;clip)</td></tr>
+<tr class="separator:a343ff0a92c3d9dded8bbdac0217b8dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9f1cebf27310ce2fdd9a8c65561ac9e" id="r_ad9f1cebf27310ce2fdd9a8c65561ac9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="peroxide_8cpp.html#ad9f1cebf27310ce2fdd9a8c65561ac9e">keyboard_listener</a> ()</td></tr>
+<tr class="separator:ad9f1cebf27310ce2fdd9a8c65561ac9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5ea131607b19fb2fd904c569d3191c2" id="r_ab5ea131607b19fb2fd904c569d3191c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="peroxide_8cpp.html#ab5ea131607b19fb2fd904c569d3191c2">midi_listener</a> ()</td></tr>
+<tr class="separator:ab5ea131607b19fb2fd904c569d3191c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52243767b435064af37bc02e9dd61f46" id="r_a52243767b435064af37bc02e9dd61f46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="peroxide_8cpp.html#a52243767b435064af37bc02e9dd61f46">data_callback</a> (ma_device *device, void *output, const void *input, ma_uint32 frameCount)</td></tr>
+<tr class="separator:a52243767b435064af37bc02e9dd61f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8804db44b6d4c5752e6de5593562df06" id="r_a8804db44b6d4c5752e6de5593562df06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="peroxide_8cpp.html#a8804db44b6d4c5752e6de5593562df06">signal_handler</a> (int)</td></tr>
+<tr class="separator:a8804db44b6d4c5752e6de5593562df06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627" id="r_a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="peroxide_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
 <tr class="memdesc:a3c04138a5bfe5d72780bb7e82a18e627"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entry point of the program.  <br /></td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a2bf81f4efe693b9acf0726bb58f0fb04" id="r_a2bf81f4efe693b9acf0726bb58f0fb04"><td class="memItemLeft" align="right" valign="top"><a class="el" href="peroxide_8cpp.html#a9c4be63f6972ad03ed996c1fb27754b9">Boolean</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="peroxide_8cpp.html#a2bf81f4efe693b9acf0726bb58f0fb04">pedal</a> = false</td></tr>
+<tr class="separator:a2bf81f4efe693b9acf0726bb58f0fb04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d72b8b525f550741af9332ea23775c9" id="r_a2d72b8b525f550741af9332ea23775c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="peroxide_8cpp.html#a9c4be63f6972ad03ed996c1fb27754b9">Boolean</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="peroxide_8cpp.html#a2d72b8b525f550741af9332ea23775c9">running</a> = true</td></tr>
+<tr class="separator:a2d72b8b525f550741af9332ea23775c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Define <a class="el" href="peroxide_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Entry point of the program.">main()</a>. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
+<div class="textblock"><p><a class="el" href="classPeroxide.html">Peroxide</a> class member functions. </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="abf77f70dc931f91a9f09e7b54d8278f5" name="abf77f70dc931f91a9f09e7b54d8278f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf77f70dc931f91a9f09e7b54d8278f5">&#9670;&#160;</a></span>MINIAUDIO_IMPLEMENTATION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MINIAUDIO_IMPLEMENTATION</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Typedef Documentation</h2>
+<a id="a9c4be63f6972ad03ed996c1fb27754b9" name="a9c4be63f6972ad03ed996c1fb27754b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c4be63f6972ad03ed996c1fb27754b9">&#9670;&#160;</a></span>Boolean</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="peroxide_8cpp.html#a9c4be63f6972ad03ed996c1fb27754b9">Boolean</a> =  atomic&lt;bool&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8194a3feb4e66b3168bf7a27f9ad2d33" name="a8194a3feb4e66b3168bf7a27f9ad2d33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8194a3feb4e66b3168bf7a27f9ad2d33">&#9670;&#160;</a></span>Index</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="peroxide_8cpp.html#a8194a3feb4e66b3168bf7a27f9ad2d33">Index</a> =  <a class="el" href="hw7_8hpp.html#a2fb6f8dc356111788443f0fd9eda05f3">Number</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a52243767b435064af37bc02e9dd61f46" name="a52243767b435064af37bc02e9dd61f46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52243767b435064af37bc02e9dd61f46">&#9670;&#160;</a></span>data_callback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void data_callback </td>
+          <td>(</td>
+          <td class="paramtype">ma_device *&#160;</td>
+          <td class="paramname"><em>device</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>output</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ma_uint32&#160;</td>
+          <td class="paramname"><em>frameCount</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad9f1cebf27310ce2fdd9a8c65561ac9e" name="ad9f1cebf27310ce2fdd9a8c65561ac9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9f1cebf27310ce2fdd9a8c65561ac9e">&#9670;&#160;</a></span>keyboard_listener()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void keyboard_listener </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a343ff0a92c3d9dded8bbdac0217b8dae" name="a343ff0a92c3d9dded8bbdac0217b8dae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a343ff0a92c3d9dded8bbdac0217b8dae">&#9670;&#160;</a></span>loadClip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool loadClip </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structClip.html">Clip</a> &amp;&#160;</td>
+          <td class="paramname"><em>clip</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a3c04138a5bfe5d72780bb7e82a18e627" name="a3c04138a5bfe5d72780bb7e82a18e627"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3c04138a5bfe5d72780bb7e82a18e627">&#9670;&#160;</a></span>main()</h2>
 
@@ -177,6 +377,70 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Exit status. </dd></dl>
+
+</div>
+</div>
+<a id="ab5ea131607b19fb2fd904c569d3191c2" name="ab5ea131607b19fb2fd904c569d3191c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5ea131607b19fb2fd904c569d3191c2">&#9670;&#160;</a></span>midi_listener()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void midi_listener </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8804db44b6d4c5752e6de5593562df06" name="a8804db44b6d4c5752e6de5593562df06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8804db44b6d4c5752e6de5593562df06">&#9670;&#160;</a></span>signal_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void signal_handler </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a2bf81f4efe693b9acf0726bb58f0fb04" name="a2bf81f4efe693b9acf0726bb58f0fb04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bf81f4efe693b9acf0726bb58f0fb04">&#9670;&#160;</a></span>pedal</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="peroxide_8cpp.html#a9c4be63f6972ad03ed996c1fb27754b9">Boolean</a> pedal = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2d72b8b525f550741af9332ea23775c9" name="a2d72b8b525f550741af9332ea23775c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d72b8b525f550741af9332ea23775c9">&#9670;&#160;</a></span>running</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="peroxide_8cpp.html#a9c4be63f6972ad03ed996c1fb27754b9">Boolean</a> running = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

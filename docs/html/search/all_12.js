@@ -1,18 +1,13 @@
 var searchData=
 [
-  ['saturn_5fpict_0',['SATURN_PICT',['../namespacetools_1_1picts.html#a170d41740597ca468f92818931b0cf2e',1,'tools::picts']]],
-  ['script_5fpict_1',['SCRIPT_PICT',['../namespacetools_1_1picts.html#af67b98361bdc44c06a14cceb32dfc99c',1,'tools::picts']]],
-  ['songlist_2',['songlist',['../classSongList.html',1,'SongList'],['../classSongList.html#a33e19a1d5a8e183b347470033d768730',1,'SongList::SongList()=default'],['../classSongList.html#a9fda687d46a13c07455ba896a395a77c',1,'SongList::SongList(const StrList &amp;S)'],['../classSongList.html#a6e6a0b5ab286371ac7768215542babee',1,'SongList::SongList(const str &amp;s)']]],
-  ['space_3',['space',['../namespacetools_1_1constants.html#a31ba0b38484a1178409cfdcd5ea2ead2',1,'tools.constants.SPACE'],['../namespacehw7.html#ac343dfe1f8e1e4281cc538f54b8299c2',1,'hw7::SPACE']]],
-  ['split_4',['split',['../classhw7_1_1str.html#a241dd0f7d2387d8e04a48ab83ea3584c',1,'hw7::str::split() const'],['../classhw7_1_1str.html#aefb4f2bb6e791c5435e8013b5ae3a8fe',1,'hw7::str::split(const str &amp;) const']]],
-  ['static_5',['STATIC',['../hw7_8hpp.html#a10b2d890d871e1489bb02b7e70d9bdfb',1,'hw7.hpp']]],
-  ['stop_6',['stop',['../hw7_8hpp.html#ac684ab1864310059f942b3474120aaae',1,'hw7.hpp']]],
-  ['stop_5fpict_7',['STOP_PICT',['../namespacetools_1_1picts.html#ac3b1e725ac00281f4698adb3532b5c34',1,'tools::picts']]],
-  ['str_8',['str',['../classhw7_1_1str.html',1,'hw7::str'],['../classhw7_1_1str.html#ae8c095ea731c92f6f4ead5615a72d435',1,'hw7::str::str(const std::string_view &amp;s)'],['../classhw7_1_1str.html#a45afa0b010b14db8ac118fdac779916f',1,'hw7::str::str(const String &amp;s)'],['../classhw7_1_1str.html#a6e0e9c1bd5771db844e0fd210c185048',1,'hw7::str::str(const char *s)'],['../classhw7_1_1str.html#a8f4ecb794c387792c833c4bc59974e30',1,'hw7::str::str()=default']]],
-  ['str_5flist_9',['str_list',['../classh2o2_1_1str__list.html',1,'h2o2']]],
-  ['strdict_10',['StrDict',['../hw7_8hpp.html#a7f31132ba5e1ae7cb0912c47a729db0b',1,'hw7.hpp']]],
-  ['string_11',['String',['../hw7_8hpp.html#a5573b97b9e5129f61d289e037d7e806c',1,'hw7.hpp']]],
-  ['strlist_12',['StrList',['../hw7_8hpp.html#a3de49a1410a0c193d2b93a1c5a0850bb',1,'hw7.hpp']]],
-  ['synopsis_13',['Synopsis',['../index.html#autotoc_md1',1,'']]],
-  ['sysinc_2ehpp_14',['sysinc.hpp',['../sysinc_8hpp.html',1,'']]]
+  ['read_5ffile_0',['read_file',['../hw7_8hpp.html#ad22ec7e197088257c108522bfb885c3c',1,'hw7.hpp']]],
+  ['read_5flines_1',['read_lines',['../namespacetools_1_1read__lines.html#ab4ba6f6718c2f70701dcaf13996e16dd',1,'tools::read_lines']]],
+  ['read_5flines_2epy_2',['read_lines.py',['../read__lines_8py.html',1,'']]],
+  ['readme_2emd_3',['README.md',['../README_8md.html',1,'']]],
+  ['replace_4',['replace',['../classhw7_1_1str.html#ab0407968526fe0fc9202cb1f85925fdd',1,'hw7::str']]],
+  ['rewind_5',['REWIND',['../namespaceh2o2.html#aa1c3f89914f9d3619fe154fdda5d8b5eaf302817a1a3baa8f5aef592bda7c0adc',1,'h2o2']]],
+  ['right_5fbracket_6',['RIGHT_BRACKET',['../namespacehw7.html#aef464c509dd957cf677862fd687d8498',1,'hw7']]],
+  ['rotate_5flogs_7',['rotate_logs',['../hw7_8hpp.html#aaddfe633c34518ddeb394f0b87f5dc80',1,'hw7.hpp']]],
+  ['run_8',['run',['../classProgram.html#a3eee7c246bfb4ee0130f80923c7ee565',1,'Program::run()'],['../classPeroxide.html#a24c24f6701de95b7428348f29d155a72',1,'Peroxide::run()']]],
+  ['running_9',['running',['../peroxide_8cpp.html#a2d72b8b525f550741af9332ea23775c9',1,'peroxide.cpp']]]
 ];

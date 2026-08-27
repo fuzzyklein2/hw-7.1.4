@@ -1,13 +1,17 @@
 <map id="Peroxide" name="Peroxide">
-<area shape="rect" id="Node000001" title=" " alt="" coords="51,317,125,343"/>
-<area shape="rect" id="Node000002" href="$classProgram.html" title=" " alt="" coords="53,243,123,268"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,282,91,317,85,317,85,282"/>
-<area shape="rect" id="Node000003" href="$structGlobals.html" title="Stores all the global variables necessary to run the program." alt="" coords="55,168,121,193"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="91,208,91,242,85,242,85,208"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="94,331,167,356"/>
+<area shape="rect" id="Node000002" href="$classProgram.html" title=" " alt="" coords="39,243,110,268"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,278,125,329,121,332,87,281"/>
+<area shape="rect" id="Node000003" href="$structGlobals.html" title="Stores all the global variables necessary to run the program." alt="" coords="41,168,108,193"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="77,208,77,242,72,242,72,208"/>
 <area shape="rect" id="Node000004" href="$structFileSystem.html" title=" " alt="" coords="5,80,93,105"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="63,117,85,166,80,169,58,119"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="59,118,74,167,69,168,54,119"/>
 <area shape="rect" id="Node000005" href="$classhw7_1_1str.html" title=" " alt="" coords="117,80,187,105"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="137,118,99,169,95,166,133,115"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="134,118,87,169,83,166,130,114"/>
 <area shape="rect" id="Node000006" title=" " alt="" coords="124,5,180,31"/>
 <area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="155,45,155,80,149,80,149,45"/>
+<area shape="rect" id="Node000007" href="$classh2o2_1_1song__list.html" title=" " alt="" coords="134,243,245,268"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="176,281,141,332,137,329,171,278"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="134,168,245,193"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="192,208,192,242,187,242,187,208"/>
 </map>

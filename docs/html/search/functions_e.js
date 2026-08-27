@@ -1,8 +1,12 @@
 var searchData=
 [
-  ['read_5ffile_0',['read_file',['../hw7_8hpp.html#ad22ec7e197088257c108522bfb885c3c',1,'hw7.hpp']]],
-  ['read_5flines_1',['read_lines',['../namespacetools_1_1read__lines.html#ab4ba6f6718c2f70701dcaf13996e16dd',1,'tools::read_lines']]],
-  ['replace_2',['replace',['../classhw7_1_1str.html#ab0407968526fe0fc9202cb1f85925fdd',1,'hw7::str']]],
-  ['rotate_5flogs_3',['rotate_logs',['../hw7_8hpp.html#aaddfe633c34518ddeb394f0b87f5dc80',1,'hw7.hpp']]],
-  ['run_4',['run',['../classProgram.html#a3eee7c246bfb4ee0130f80923c7ee565',1,'Program::run()'],['../classPeroxide.html#a24c24f6701de95b7428348f29d155a72',1,'Peroxide::run()']]]
+  ['partition_0',['partition',['../classhw7_1_1str.html#ace9d51768ba919d9f1288664210c930c',1,'hw7::str']]],
+  ['peroxide_1',['Peroxide',['../classPeroxide.html#a147ab66e9bfcad69dff6204f306704c0',1,'Peroxide']]],
+  ['play_2',['play',['../classh2o2_1_1player.html#ae7d17e9063dcdb94e0a6ea49d0491027',1,'h2o2::player']]],
+  ['play_5faudio_3',['play_audio',['../classPeroxide.html#a7dd8feec3f40ada2b5619f1b1b86151a',1,'Peroxide']]],
+  ['player_4',['player',['../classh2o2_1_1player.html#a74619994ed37956eb29725127fed666a',1,'h2o2::player']]],
+  ['process_5',['process',['../classFilter.html#a38ecff36a4beae099b5cd418e092a55c',1,'Filter::process()'],['../classFilter.html#a270936b2cd3ad7611a68973d8802998d',1,'Filter::process(const T &amp;)'],['../classFilter.html#a1e0cac1d9e3c94f8a5a038dd3eba5c2a',1,'Filter::process(const Path &amp;p)']]],
+  ['program_6',['Program',['../classProgram.html#a228e413b8ca6de023145f31045f49e6e',1,'Program']]],
+  ['public_7',['public',['../namespacetools_1_1nbtools.html#a6914c2f1994a773948fa9dd6fc4929db',1,'tools::nbtools']]],
+  ['pwd_8',['pwd',['../namespacetools_1_1nbtools.html#aed0b9568e3361c15db7d6a4e707b258c',1,'tools::nbtools']]]
 ];

@@ -4,6 +4,7 @@
  *
  * Global boolean switches to signal threads with.
  */
+#include "miniaudio.h"
 #include "hw7.hpp"
 #include "types.hpp"
 struct Clip

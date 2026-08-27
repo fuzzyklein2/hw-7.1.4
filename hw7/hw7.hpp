@@ -7,15 +7,15 @@
 
 // # System headers
 
-#include <string>
-#include <filesystem>
-#include <iostream>   // cin & cout
-#include <cstdlib>
 #include <map>
-#include <nlohmann/json.hpp> // JSON -> struct conversion
-#include <vector>
 #include "spdlog/sinks/stdout_color_sinks.h" // Screen output
+#include <vector>
+#include <cstdlib>
+#include <iostream>   // cin & cout
+#include <filesystem>
+#include <string>
 #include "spdlog/sinks/basic_file_sink.h" // Log file(s)
+#include <nlohmann/json.hpp> // JSON -> struct conversion
 #include "spdlog/spdlog.h"   // Logging module
 
 

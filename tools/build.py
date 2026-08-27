@@ -221,7 +221,7 @@ def commit(target:str, message:str)->int:
 
     return 0
 
-def build(target:str, message:str)->int:
+def build(target:str, message:str, testing=False)->int:
     """ Build a target object.
 
         * Compile the object.
@@ -243,10 +243,11 @@ def build(target:str, message:str)->int:
     if result:
         print(f"{STOP_PICT}Error compiling {target}!")
         return result
-    result = test(target)
-    if result:
-        print(f"{STOP_PICT}Testing {target} failed!")
-        return result
+    if testing:
+        result = test(target)
+        if result:
+            print(f"{STOP_PICT}Testing {target} failed!")
+            return result
     result = clear()
     if result:
         print(f"{STOP_PICT}Error clearing jupyter output!")

@@ -8,3 +8,4 @@
 
 Boolean pedal = false;
 Boolean running = true;
+Boolean repeat = false;

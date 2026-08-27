@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['path_0',['Path',['../hw7_8hpp.html#aa20d22486508f139f743e51d510c9b78',1,'hw7.hpp']]],
-  ['pathlist_1',['PathList',['../hw7_8hpp.html#ab734ebe21d740c9a58d0a9ae634d4a5f',1,'hw7.hpp']]]
+  ['logger_0',['Logger',['../hw7_8hpp.html#a6c711accc45e53bf0666166b9fbdf94b',1,'hw7.hpp']]],
+  ['loglevel_1',['LogLevel',['../hw7_8hpp.html#a83b7b6a6e12c7b7768e6a36ee73a74bf',1,'hw7.hpp']]]
 ];
