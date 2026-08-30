@@ -28,6 +28,5 @@ int main(
     char **argv // Cannot be `const` or CLI11 won't work.
 ) {
     auto p = Peroxide(argc, argv);
-    
     return p.run();
 }

@@ -30,7 +30,7 @@ ErrCode pattern::load()
     //     return EXIT_SUCCESS; /// Obviously there should be some error checking here.
     // }
     parent.patterns.push(*this);
-    next_clip();
+    // next_clip();
     return EXIT_SUCCESS;
 
 }
