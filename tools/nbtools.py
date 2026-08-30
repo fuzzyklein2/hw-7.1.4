@@ -1,3 +1,4 @@
+from datetime import datetime as dt
 from functools import singledispatch
 import inspect
 import os
@@ -50,7 +51,7 @@ def display_doc(func):
 @singledispatch
 def empty(arg)->bool:
     """Print an error message and depart."""
-    error(f': empty : bad argument : {arg} : Argument must be str or Path')
+    error(f': empty : bad argument : {arg} : Argument must be a `list`.')
 
 @empty.register
 def _(L:list)->bool:
@@ -130,37 +131,7 @@ def grepy(
     project_name
 ):
     """
-DEBUG = True
-PATTERN = r"Starting "
-REGEX = grep(PATTERN, words_only=True)
-FILES = lsd("peroxide", output=False)
-for f in FILES:
-    t = f.read_text()
-    m = t | REGEX
-    LINES = t.split(NEWLINE)
-    line_nos = list(m.matches.matching_lines())
-    # print(f"`lines` is a {type(m.matches.matching_lines)}.")
-    # lines = list(m.matches.matching_lines())
-
-    if line_nos:
-        n = max(map(lambda i: len(str(i)), line_nos))
-        lines = [
-            f"{str(i).rjust(n)}: {LINES[i].lstrip()}"
-            for i in line_nos
-            if not (
-                LINES[i].lstrip().startswith('/') or
-                LINES[i].lstrip().startswith('*') or
-                LINES[i].lstrip().startswith('//')
-            )
-        ]
-    
-        if lines:
-            info(f"{PATTERN} found in [yellow]{f.name}[/yellow]:")
-            # lines = [s.lstrip() for s in lines]
-            for s in lines:
-                print(s)
-
-    
+        Find `pattern` in the project source directory, presumed to be in `CWD`.
     """
     DEBUG = True
 
@@ -193,3 +164,10 @@ for f in FILES:
                     # lines = [s.lstrip() for s in lines]
                     for s in lines:
                         print(s)
+
+def now(as_str=False):
+    """
+        Return the current date and time.
+    """
+    if as_str: return str(dt.now())
+    return dt.now()

@@ -124,6 +124,8 @@ Functions</h2></td></tr>
 <tr class="separator:a1b17bf984cd521999601ec2285e01b5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f8466104727ce3522d87437da3a342f" id="r_a4f8466104727ce3522d87437da3a342f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetools_1_1nbtools.html#a4f8466104727ce3522d87437da3a342f">grepy</a> (pattern, project_name)</td></tr>
 <tr class="separator:a4f8466104727ce3522d87437da3a342f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a2522c90beb0bfe3b4c99ba7160da48" id="r_a2a2522c90beb0bfe3b4c99ba7160da48"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacetools_1_1nbtools.html#a2a2522c90beb0bfe3b4c99ba7160da48">now</a> (as_str=False)</td></tr>
+<tr class="separator:a2a2522c90beb0bfe3b4c99ba7160da48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="aea55130409f0e27bb16d1bfe2b795305" name="aea55130409f0e27bb16d1bfe2b795305"></a>
@@ -477,35 +479,8 @@ safely, avoiding duplicated headers.
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">DEBUG = True
-PATTERN = r"Starting "
-REGEX = grep(PATTERN, words_only=True)
-FILES = lsd("peroxide", output=False)
-for f in FILES:
-t = f.read_text()
-m = t | REGEX
-LINES = t.split(NEWLINE)
-line_nos = list(m.matches.matching_lines())
-# print(f"`lines` is a {type(m.matches.matching_lines)}.")
-# lines = list(m.matches.matching_lines())
-
-if line_nos:
-    n = max(map(lambda i: len(str(i)), line_nos))
-    lines = [
-        f"{str(i).rjust(n)}: {LINES[i].lstrip()}"
-        for i in line_nos
-        if not (
-            LINES[i].lstrip().startswith('/') or
-            LINES[i].lstrip().startswith('*') or
-            LINES[i].lstrip().startswith('//')
-        )
-    ]
-
-    if lines:
-        info(f"{PATTERN} found in [yellow]{f.name}[/yellow]:")
-        # lines = [s.lstrip() for s in lines]
-        for s in lines:
-            print(s)</pre> 
+<pre class="fragment">    Find `pattern` in the project source directory, presumed to be in `CWD`.
+</pre> 
 </div>
 </div>
 <a id="a787367b9119c992b8cb31995f6c68eac" name="a787367b9119c992b8cb31995f6c68eac"></a>
@@ -571,6 +546,25 @@ if line_nos:
 </div><div class="memdoc">
 <pre class="fragment"> List the given directory.
     @todo This needs to have a recursive option.
+</pre> 
+</div>
+</div>
+<a id="a2a2522c90beb0bfe3b4c99ba7160da48" name="a2a2522c90beb0bfe3b4c99ba7160da48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a2522c90beb0bfe3b4c99ba7160da48">&#9670;&#160;</a></span>now()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">tools.nbtools.now </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>as_str</em> = <code>False</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">    Return the current date and time.
 </pre> 
 </div>
 </div>

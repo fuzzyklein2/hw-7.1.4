@@ -27,6 +27,7 @@ player::player(const song_list& sl) : songs(sl),
 
 void player::fill(float* output, ma_uint32 frames)
 {
+    cout << "FILL: " << frames << " frames\n";
     
     if (!playing || !running)
     {
@@ -40,8 +41,10 @@ void player::fill(float* output, ma_uint32 frames)
         output[i * 2]     = 0.25f;
         output[i * 2 + 1] = 0.25f;
 
+        std::cout << "FILL: about to get next clip\n";
         audio_clip& clip = current_song.next_clip();
-
+        std::cout << "FILL: got next clip\n";
+        
         if (pos == 0)
         {
             cout << "Starting " << current_song << endl;
