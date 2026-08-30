@@ -14,7 +14,8 @@ pattern::pattern(const JSON& pat, song& owner) : repeat_count(1),
                                                  j(pat),
                                                  i(0),
                                                  N(j.size()),
-                                                 parent(owner)
+                                                 parent(owner),
+                                                 current_repeat(0)
 {
 }
 
@@ -36,12 +37,32 @@ ErrCode pattern::load()
 
 ErrCode pattern::next_clip()
 {
+    if (i >= N) // Pattern processing is complete.
+    {
+        if (repeat_count == 0 and !pedal)
+        {
+            i = 0;
+        }
+        else if (current_repeat < repeat_count)
+        {
+            i = 0;
+            current_repeat++;
+        }
+        else
+        {
+            parent.patterns.pop(); // Shouldn't need to call next_clip on the top pattern here.
+                                   // There may not even be a pattern left on the stack.
+            return EXIT_SUCCESS;
+        }
+    }
     const auto value = j[i];
     if (value.is_number_integer())
     {
         // Should be the number of times to repeat the pattern.
         // Should also be the first value if present.
         repeat_count = value.get<int>();
+        i++;
+        next_clip();
     }
     else if (value.is_string())
     {
@@ -52,7 +73,7 @@ ErrCode pattern::next_clip()
         {
             parent.clips.push(value);
             i++;
-            return EXIT_SUCCESS;
+            // return EXIT_SUCCESS;
         }
         else
         {
@@ -60,12 +81,13 @@ ErrCode pattern::next_clip()
             {
                 parent.pat_map.emplace(value, pattern(j, parent));
                 i++;
+                next_clip();
             }
             else
             {
                 i++;
                 parent.load(parent.pat_map.at(value));
-                return EXIT_SUCCESS; // ?
+                // return EXIT_SUCCESS; // ?
             }
         }
     }
@@ -76,9 +98,9 @@ ErrCode pattern::next_clip()
         pattern pat(value, parent);
         parent.load(pat);
         i++;
-        return EXIT_SUCCESS;
+        // return EXIT_SUCCESS;
     }
-    else stop("Error loading pattern!");
+    // else stop("Error loading pattern!");
     return 1;
     
     return EXIT_SUCCESS;

@@ -46,6 +46,7 @@ audio_clip& song::next_clip()
     while (clips.empty() && n < 1000)
     {
         patterns.top().next_clip();
+        n++;
     }
     if (clips.empty()) throw runtime_error("Pattern failed to supply a clip!");
     const auto name = clips.front();

@@ -5,7 +5,7 @@
  * Class that defines the data structure for a pattern.
  */
 #include "hw7.hpp"
-#include "types.hpp"
+#include "globals.hpp"
 
 
 namespace h2o2
@@ -31,7 +31,8 @@ namespace h2o2
             j(p.j),
             i(0),
             N(p.N),
-            parent(p.parent)
+            parent(p.parent),
+            current_repeat(0)
         {}
 
 
@@ -51,6 +52,7 @@ namespace h2o2
         Index i;
         Index N;
         song& parent;
+        Index current_repeat;
     };
 
 } //h2o2
