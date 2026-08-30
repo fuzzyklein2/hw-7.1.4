@@ -17,6 +17,8 @@ void keyboard_listener()
     termios old_settings;
     termios new_settings;
 
+    ostringstream oss;
+
     tcgetattr(STDIN_FILENO, &old_settings);
     new_settings = old_settings;
 
@@ -30,12 +32,22 @@ void keyboard_listener()
 
         if (read(STDIN_FILENO, &c, 1) == 1)
         {
-            debug("Keyboard event received: " + c);
+            oss << "Keyboard event received: 0x"
+                << std::hex
+                << std::uppercase
+                << static_cast<unsigned int>(static_cast<unsigned char>(c)) << endl;
+            debug(oss);
             if (c == ' ')
                 pedal = true;
+            else if (c == '\x1B')
+            {
+                running = false; 
+                exit(EXIT_SUCCESS);
+            }
         }
     }
-
+    debug("Exiting the program");
     tcsetattr(STDIN_FILENO, TCSANOW, &old_settings);
+    // exit(EXIT_SUCCESS);
 }
 

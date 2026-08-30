@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['next_5fclip_0',['next_clip',['../classh2o2_1_1song.html#ae1861f736787bbcd3d0ec07586a4c2c5',1,'h2o2::song']]],
-  ['now_5fstring_1',['now_string',['../hw7_8hpp.html#a7235d375889750badea7719e65aded5e',1,'hw7.hpp']]]
+  ['magic_5ftype_0',['magic_type',['../hw7_8hpp.html#a26aa7acca79797ebd216b994c5079672',1,'hw7.hpp']]],
+  ['main_1',['main',['../main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main.cpp']]],
+  ['midi_5flistener_2',['midi_listener',['../midi_8cpp.html#ab5ea131607b19fb2fd904c569d3191c2',1,'midi_listener():&#160;midi.cpp'],['../midi_8hpp.html#ab5ea131607b19fb2fd904c569d3191c2',1,'midi_listener():&#160;midi.cpp']]]
 ];

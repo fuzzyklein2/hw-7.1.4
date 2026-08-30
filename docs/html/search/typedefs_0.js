@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['boolean_0',['Boolean',['../peroxide_8cpp.html#a9c4be63f6972ad03ed996c1fb27754b9',1,'peroxide.cpp']]]
+  ['boolean_0',['Boolean',['../types_8hpp.html#a61c6561e787bf7f71985d60a96b349f6',1,'types.hpp']]]
 ];

@@ -7,16 +7,16 @@
 
 // # System headers
 
-#include <map>
-#include "spdlog/sinks/stdout_color_sinks.h" // Screen output
+#include <nlohmann/json.hpp> // JSON -> struct conversion
 #include <vector>
 #include <cstdlib>
 #include <iostream>   // cin & cout
-#include <filesystem>
-#include <string>
 #include "spdlog/sinks/basic_file_sink.h" // Log file(s)
-#include <nlohmann/json.hpp> // JSON -> struct conversion
 #include "spdlog/spdlog.h"   // Logging module
+#include "spdlog/sinks/stdout_color_sinks.h" // Screen output
+#include <string>
+#include <filesystem>
+#include <map>
 
 
 #define CONST inline const
@@ -70,6 +70,7 @@ namespace hw7
     CONST String COLON = ":";
     CONST String QUOTE = "\'";
     CONST String DBL_QUOTE = "\"";
+    CONST String NEWLINE = "\n";
     
     /// Unicode emojis just to be cute.
     CONST String LOG_PICT = "📜";
@@ -397,7 +398,7 @@ public:
     hw7::str input;
 
     /**
-     * @brief Initialize global variables.
+     * Initialize global variables.
      *
      * @param argc Number of command line arguments passed to `main()`.
      * @param argv Array of args as `C` strings.

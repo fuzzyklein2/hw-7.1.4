@@ -1,6 +1,6 @@
 #pragma once
 /**
- * @file song.hpp
+ * @file player.hpp
  *
  * Find and parse the pattern script.
  */
@@ -17,12 +17,13 @@ namespace h2o2
         void fill(float* output, ma_uint32 frames);
         void play() {playing = true;}
         /// Return the current clip.
-        Clip clip() { return current_song.current_clip(); }
+        // h2o2::audio_clip clip() { return current_song.current_clip(); }
+
+        song_list songs;
+        song& current_song;
     protected:
         bool playing = false;
         bool step = false;
         size_t pos = 0;
-        song_list songs;
-        song current_song;
     }; // player
 } // h2o2

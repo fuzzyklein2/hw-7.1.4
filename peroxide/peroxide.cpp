@@ -9,6 +9,7 @@
 #include "keyboard.hpp"
 #include "midi.hpp"
 #include "peroxide.hpp"
+
 using namespace std;
 using namespace hw7;
 using namespace h2o2;
@@ -19,8 +20,7 @@ void data_callback(
     const void* /*input*/,
     ma_uint32 frameCount)
 {
-    auto* p =
-        static_cast<player*>(device->pUserData);
+    auto* p = static_cast<player*>(device->pUserData);
 
     p->fill(
         static_cast<float*>(output),
@@ -37,21 +37,29 @@ void Peroxide::play_audio()
 {
     try
     {
+        debug("Audio thread entered.");
+        ostringstream oss;
+        
         player p(songs);
+
+        debug("Player constructed");
     
-        // TODO: load intro and breakClip here
-    
-        ma_device_config config =
-            ma_device_config_init(ma_device_type_playback);
-    
+        ma_device_config config = ma_device_config_init(ma_device_type_playback);
+
+        debug("Device config initialized");
+        
         config.playback.format = ma_format_f32;
         config.playback.channels = 2;
-        config.sampleRate = p.clip().sampleRate; /// @marker Clip needs to be defined.
+        config.sampleRate = song::get_clip_sampleRate(); /// @marker Clip needs to be defined.
+        
+        debug("Sample rate obtained");
     
         config.dataCallback = data_callback;
         config.pUserData = &p;
     
         ma_device device;
+
+        debug("Initializing device");
     
         if (ma_device_init(nullptr, &config, &device) != MA_SUCCESS)
         {
@@ -65,6 +73,8 @@ void Peroxide::play_audio()
             ma_device_uninit(&device);
             return;
         }
+
+        debug("Device initialized");
     
         cout << "Press sustain pedal to start...\n";
         
@@ -75,12 +85,17 @@ void Peroxide::play_audio()
         
         cout << "Starting playback.\n";
         p.play();
+        debug("p.play() returned");
         cout << "Playing forever... Ctrl-C to quit.\n";
     
         while (running)
         {
+            oss << "audio waiting: running = " << running.load() << endl;
+            debug(oss);
             this_thread::sleep_for(chrono::milliseconds(100));
         }
+
+        debug("Audio thread terminating");
     
         ma_device_uninit(&device);
     }
@@ -90,8 +105,6 @@ void Peroxide::play_audio()
         running = false;
     }
 }
-
-
 
 ErrCode Peroxide::run()
 {
@@ -136,7 +149,9 @@ ErrCode Peroxide::run()
 
     
     // str s = read_file(Path(config["session folder"]) / "lists" / SONG_LIST_FILE);
-
+    auto lines = text.split(NEWLINE);
+    erase(lines, EMPTY);
+    text = str(NEWLINE).join(lines);
     info(text);
 
     /// @warn `text` must be valid before calling `play_audio`.
@@ -151,8 +166,6 @@ ErrCode Peroxide::run()
     midiThread.join();
     audioThread.join();
 
-        
-    
     return EXIT_SUCCESS;
 }
 

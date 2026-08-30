@@ -49,6 +49,7 @@ peroxide_src_files = [
   'peroxide/keyboard.cpp',
   'peroxide/main.cpp',
   'peroxide/midi.cpp',
+  'peroxide/pattern.cpp',
   'peroxide/peroxide.cpp',
   'peroxide/player.cpp',
   'peroxide/song.cpp',

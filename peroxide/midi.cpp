@@ -59,5 +59,6 @@ void midi_listener()
 
         this_thread::sleep_for(chrono::milliseconds(10));
     }
+    debug("Midi thread terminating.");
 } // midi_listener
 

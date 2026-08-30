@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['list_0',['list',['../bug.html',1,'Bug List'],['../todo.html',1,'Todo List']]]
+  ['hello_20🌎_0',['Hello, 🌎!',['../index.html',1,'']]]
 ];

@@ -1,9 +1,11 @@
 var searchData=
 [
-  ['nbtools_2epy_0',['nbtools.py',['../nbtools_8py.html',1,'']]],
-  ['newline_1',['newline',['../namespacetools_1_1constants.html#acbc9cd1db5db43f73420f77c84c2bd1b',1,'tools.constants.NEWLINE'],['../namespacetools_1_1picts.html#af1f7c10a329df4bd1813412d964af970',1,'tools.picts.NEWLINE']]],
-  ['next_5fclip_2',['next_clip',['../classh2o2_1_1song.html#ae1861f736787bbcd3d0ec07586a4c2c5',1,'h2o2::song']]],
-  ['now_3',['now',['../namespacetools_1_1picts.html#a093a9c2716a90cbe866fc70162d2274a',1,'tools::picts']]],
-  ['now_5fstring_4',['now_string',['../hw7_8hpp.html#a7235d375889750badea7719e65aded5e',1,'hw7.hpp']]],
-  ['number_5',['Number',['../hw7_8hpp.html#a2fb6f8dc356111788443f0fd9eda05f3',1,'hw7.hpp']]]
+  ['n_0',['N',['../classh2o2_1_1pattern.html#ae7f3e5d9f7a2cc8784a8a95cef84e017',1,'h2o2::pattern']]],
+  ['name_1',['name',['../classh2o2_1_1pattern.html#a66cbe3c6279e8a8853a18a1afeb99ec2',1,'h2o2::pattern']]],
+  ['nbtools_2epy_2',['nbtools.py',['../nbtools_8py.html',1,'']]],
+  ['newline_3',['newline',['../namespacehw7.html#a7b5d5db052e29e9bf38883c02c24bff6',1,'hw7::NEWLINE'],['../namespacetools_1_1constants.html#acbc9cd1db5db43f73420f77c84c2bd1b',1,'tools.constants.NEWLINE'],['../namespacetools_1_1picts.html#af1f7c10a329df4bd1813412d964af970',1,'tools.picts.NEWLINE']]],
+  ['next_5fclip_4',['next_clip',['../classh2o2_1_1pattern.html#abfa9aa5470beb4f33d85c3c8fb0a0551',1,'h2o2::pattern::next_clip()'],['../classh2o2_1_1song.html#a1c58666cf41af6bf6c4ded5e94b7922f',1,'h2o2::song::next_clip()']]],
+  ['now_5',['now',['../namespacetools_1_1picts.html#a093a9c2716a90cbe866fc70162d2274a',1,'tools::picts']]],
+  ['now_5fstring_6',['now_string',['../hw7_8hpp.html#a7235d375889750badea7719e65aded5e',1,'hw7.hpp']]],
+  ['number_7',['Number',['../hw7_8hpp.html#a2fb6f8dc356111788443f0fd9eda05f3',1,'hw7.hpp']]]
 ];

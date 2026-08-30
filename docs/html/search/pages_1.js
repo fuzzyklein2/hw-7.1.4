@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hello_20🌎_0',['Hello, 🌎!',['../index.html',1,'']]]
+  ['deprecated_20list_0',['Deprecated List',['../deprecated.html',1,'']]]
 ];

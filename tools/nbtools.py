@@ -5,12 +5,14 @@ from pathlib import Path
 from pprint import pprint as pp
 import sys
 
+from grep import grep
 from IPython.display import display, Markdown
 import pyperclip
 from rich import print as rp
 from rich.columns import Columns
 from rich.console import Console
 
+from .constants import *
 from .picts import *
 
 def error(s:str):
@@ -46,9 +48,20 @@ def display_doc(func):
     display(Markdown(cleaned_doc))
 
 @singledispatch
+def empty(arg)->bool:
+    """Print an error message and depart."""
+    error(f': empty : bad argument : {arg} : Argument must be str or Path')
+
+@empty.register
+def _(L:list)->bool:
+    """ @return `True` if the `list` is empty, `False` otherwise.
+    """
+    return len(L) == 0
+
+@singledispatch
 def display_source(arg)->None:
     """Print an error message and depart."""
-    error(f': {name} : bad argument : {arg} : Argument must be str or Path')
+    error(f': display_source : bad argument : {arg} : Argument must be str or Path')
 
 @display_source.register
 def _(s:str, lang:str='python')->None:
@@ -85,6 +98,9 @@ def hidden(p: Path | str | None) -> bool:
     return any(map(lambda s: s.startswith('.'), p.parts))
 
 def lsd(p: Path | str | None = None, output = True) -> list[Path]:
+    """ List the given directory.
+        @todo This needs to have a recursive option.
+    """
     if not p: p = Path.cwd()
     p = Path(p)
     paths = [path for path in p.glob('*') if not hidden(path)]
@@ -108,4 +124,72 @@ def doxify(text, print_result=True):
     pyperclip.copy(result + NEWLINE)
     print("Docstring copied to clipboard")
     return result
+
+def grepy(
+    pattern,
+    project_name
+):
+    """
+DEBUG = True
+PATTERN = r"Starting "
+REGEX = grep(PATTERN, words_only=True)
+FILES = lsd("peroxide", output=False)
+for f in FILES:
+    t = f.read_text()
+    m = t | REGEX
+    LINES = t.split(NEWLINE)
+    line_nos = list(m.matches.matching_lines())
+    # print(f"`lines` is a {type(m.matches.matching_lines)}.")
+    # lines = list(m.matches.matching_lines())
+
+    if line_nos:
+        n = max(map(lambda i: len(str(i)), line_nos))
+        lines = [
+            f"{str(i).rjust(n)}: {LINES[i].lstrip()}"
+            for i in line_nos
+            if not (
+                LINES[i].lstrip().startswith('/') or
+                LINES[i].lstrip().startswith('*') or
+                LINES[i].lstrip().startswith('//')
+            )
+        ]
     
+        if lines:
+            info(f"{PATTERN} found in [yellow]{f.name}[/yellow]:")
+            # lines = [s.lstrip() for s in lines]
+            for s in lines:
+                print(s)
+
+    
+    """
+    DEBUG = True
+
+    REGEX = grep(pattern, words_only=True)
+    FILES = lsd(project_name, output=False)
+    for f in FILES:
+        if f.suffix.lstrip(PERIOD) in SRC_FILE_EXTS:
+            t = f.read_text()
+            m = t | REGEX
+        
+            LINES = t.split(NEWLINE)
+            line_nos = list(m.matches.matching_lines())
+            # print(f"`lines` is a {type(m.matches.matching_lines)}.")
+            # lines = list(m.matches.matching_lines())
+        
+            if line_nos:
+                n = max(map(lambda i: len(str(i)), line_nos))
+                lines = [
+                    f"{str(i).rjust(n)}: {LINES[i].lstrip()}"
+                    for i in line_nos
+                    if not (
+                        LINES[i].lstrip().startswith('/') or
+                        LINES[i].lstrip().startswith('*') or
+                        LINES[i].lstrip().startswith('//')
+                    )
+                ]
+            
+                if lines:
+                    rp(f"{pattern} found in [yellow]{f.name}[/yellow]:")
+                    # lines = [s.lstrip() for s in lines]
+                    for s in lines:
+                        print(s)

@@ -7,5 +7,5 @@
 #include "globals.hpp"
 
 Boolean pedal = false;
-Boolean running = true;
+Boolean running{true};
 Boolean repeat = false;

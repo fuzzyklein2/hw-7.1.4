@@ -15,50 +15,76 @@ song::song (const hw7::str& s, JSON config) :
             title(s),
             base(config["session folder"].get<std::string>())
 {
-    info("Loading song: " + title);
-    const auto SONG_DIR = base / "songs" / string(title);
 
+    info("Loading song: " + title);
+    /// @bug `title` is an empty string at some point.
+    /// @todo Find the place where a `song` is being constructed with `EMPTY_STR`.;l.
+    const auto SONG_DIR = base / "songs" / string(title);
+    folder = SONG_DIR;
+    cout << "Song folder: " << string(folder) << endl;
     // Load all sound clips to the registry in advance.
 
     // List the clips directory and add everything with the stem of each file
     // being its name in the registry.
+
+    for (const auto& p : listdir(folder / "clips"))
+    {
+        clip_map.insert( {hw7::str(p.stem()), audio_clip(p)} );
+    }
     
     script = load_data(SONG_DIR / "song.json");
 
     // Loop through the pattern defined by song.json.
-    load_pattern(script);
+    pattern pat(script, *this);
+    load(pat);
 
 }
 
-Clip& song::next_clip()
+audio_clip& song::next_clip()
 {
+    Number n = 0;
+    while (clips.empty() && n < 1000)
+    {
+        patterns.top().next_clip();
+    }
+    if (clips.empty()) throw runtime_error("Pattern failed to supply a clip!");
     const auto name = clips.front();
     if (!repeat) clips.pop();
-    Clip& result = clip_map[name];
+    audio_clip& result = clip_map[name];
+
+    cout << "NEXT CLIP: " << name << endl;
+    
     return result; // It won't really be this simple.
 }
 
-ErrCode song::load_pattern(JSON& pat)
+ErrCode song::load(pattern& p)
 {
-    for (auto item = pat.begin(); item != pat.end(); ++item)
+    return p.load();
+}
+
+bool song::is_clip_name(const str& s)
+{
+    const Path CONFIG = Path(getenv("HOME")) / CONF_DIR_NAME / PROGRAM / CONF_FILE_NAME;
+    const auto cfg = load_data(CONFIG);
+    const auto SONGS = Path(cfg["session folder"].get<string>()) / "songs";
+    for ( const auto& f : listdir(SONGS / string(title) / "clips") )
     {
-        JSON value = *item;
-        if (value.is_number_integer())
-        {
-            // Should be the number of times to repeat the pattern.
-        }
-        if (value.is_string())
-        {
-            // Should be the name by which the pattern can be referenced in the
-            // rest of the script, OR the filename of a clip, not necessarily in
-            // that order.
-        }
-        if (value.is_array())
-        {
-            // Should be another pattern. If it's not that's an error.
-            /// @todo Exactly when and where does a pattern get pushed on to the stack?
-            load_pattern(value);
-        }
-        else stop("Error loading pattern!");
+        if (str(f) == s) { return true; }
     }
+    return false;
+}
+
+ma_uint32 song::get_clip_sampleRate()
+{
+    Clip c;
+    const auto CLIP_FILE = str(listdir(song::get_clips_dir())[0]);
+    loadClip(CLIP_FILE, c);
+    return c.sampleRate;
+}
+
+Path song::get_clips_dir()
+{
+    const Path CONFIG = Path(getenv("HOME")) / CONF_DIR_NAME / PROGRAM / CONF_FILE_NAME;
+    const auto cfg = load_data(CONFIG);
+    return Path(cfg["session folder"].get<string>()) / "songs" / "Jack the Ripper" / "clips";
 }

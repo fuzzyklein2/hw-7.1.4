@@ -31,7 +31,7 @@ public:
     hw7::str input;
 
     /**
-     * @brief Initialize global variables.
+     * Initialize global variables.
      *
      * @param argc Number of command line arguments passed to `main()`.
      * @param argv Array of args as `C` strings.

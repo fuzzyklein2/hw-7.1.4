@@ -14,14 +14,21 @@ using namespace hw7;
 using namespace h2o2;
 
 
-player::player(const song_list& sl) : songs(sl)
+/**
+ * @warn There must be a valid `audio_clip` in the queue at exit.
+ *       (`player::play_audio` wants to know its sample rate.)
+ * @return Error code.
+ */
+player::player(const song_list& sl) : songs(sl),
+                                      current_song(songs[0])
 {
     // Load all the audio clips of every song in the song_list.
 };
 
 void player::fill(float* output, ma_uint32 frames)
 {
-    if (!playing)
+    
+    if (!playing || !running)
     {
         std::fill(output, output + frames * 2, 0.0f);
         return;
@@ -29,7 +36,11 @@ void player::fill(float* output, ma_uint32 frames)
     
     for (ma_uint32 i = 0; i < frames; i++)
     {
-        Clip& clip = current_song.next_clip();
+        // Debugging test I haven't tried it yet. Should make a noise.
+        output[i * 2]     = 0.25f;
+        output[i * 2 + 1] = 0.25f;
+
+        audio_clip& clip = current_song.next_clip();
 
         if (pos == 0)
         {
@@ -46,7 +57,15 @@ void player::fill(float* output, ma_uint32 frames)
             continue;
         }
         
-
+        if (pos * 2 + 1 >= clip.samples.size())
+        {
+            cerr << "BAD CLIP: pos=" << pos
+                 << " frames=" << clip.frames
+                 << " samples=" << clip.samples.size()
+                 << endl;
+            abort();
+        }
+        
         // Assuming stereo float samples:
         output[i * 2]     = clip.samples[pos * 2];     // left
         output[i * 2 + 1] = clip.samples[pos * 2 + 1]; // right

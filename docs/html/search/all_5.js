@@ -1,7 +1,7 @@
 var searchData=
 [
   ['elements_0',['elements',['../classFilter.html#a4618bfab4fc86318d3579dd619784d97',1,'Filter']]],
-  ['empty_1',['EMPTY',['../namespacehw7.html#ac24affc2400da6b130d0aba7dd29d3c6',1,'hw7']]],
+  ['empty_1',['empty',['../namespacehw7.html#ac24affc2400da6b130d0aba7dd29d3c6',1,'hw7::EMPTY'],['../namespacetools_1_1nbtools.html#a5ffee368e9a48aa7c84e39ffe53bd658',1,'tools.nbtools.empty()']]],
   ['empty_5fstr_2',['EMPTY_STR',['../namespacetools_1_1constants.html#af26bfc02f6681312e6462e8ac231ad91',1,'tools::constants']]],
   ['ensure_5ffile_3',['ensure_file',['../hw7_8hpp.html#a42fdae37c6c566795931adf399c2d416',1,'hw7.hpp']]],
   ['equal_4',['EQUAL',['../namespacehw7.html#a58d4345feea823360f42034b37d51022',1,'hw7']]],

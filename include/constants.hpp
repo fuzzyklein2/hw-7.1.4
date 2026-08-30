@@ -39,6 +39,7 @@ namespace hw7
     CONST String COLON = ":";
     CONST String QUOTE = "\'";
     CONST String DBL_QUOTE = "\"";
+    CONST String NEWLINE = "\n";
     
     /// Unicode emojis just to be cute.
     CONST String LOG_PICT = "📜";

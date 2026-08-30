@@ -1,12 +1,14 @@
 var searchData=
 [
-  ['data_5fcallback_0',['data_callback',['../peroxide_8cpp.html#a52243767b435064af37bc02e9dd61f46',1,'peroxide.cpp']]],
-  ['debug_1',['debug',['../hw7_8hpp.html#ac69b0c9a687b796675328a8ac78dc156',1,'debug(const String &amp;s):&#160;hw7.hpp'],['../hw7_8hpp.html#a51067e2b46bf21364e943d3b723baa1f',1,'debug(std::ostringstream &amp;ss):&#160;hw7.hpp'],['../namespacetools_1_1nbtools.html#a8057f75cbdb5bf97839ea68c79e8ecf3',1,'tools.nbtools.debug()']]],
-  ['defaultlogfile_2',['defaultLogFile',['../hw7_8hpp.html#afdd6d415ccd420f2c1efc5a0d3cb4484',1,'hw7.hpp']]],
-  ['detect_5flicense_5ftype_3',['detect_license_type',['../namespacetools_1_1__git__tools.html#a256b381bc2017c6b2269c42f509b2272',1,'tools::_git_tools']]],
-  ['display_5fdoc_4',['display_doc',['../namespacetools_1_1nbtools.html#a49a50acf4281eb3d4ae4c04ba2097431',1,'tools::nbtools']]],
-  ['display_5fsource_5',['display_source',['../namespacetools_1_1nbtools.html#ada52a52cd5928ca13b2aafd69d0c440a',1,'tools::nbtools']]],
-  ['docs_6',['docs',['../namespacetools_1_1build.html#aa455fb110eacd67d07b8246bdb6089f5',1,'tools::build']]],
-  ['doxify_7',['doxify',['../namespacetools_1_1nbtools.html#a1b17bf984cd521999601ec2285e01b5b',1,'tools::nbtools']]],
-  ['dump_8',['dump',['../structFileSystem.html#ad1d3628ddd3468ec688316d7f1266a63',1,'FileSystem::dump()'],['../structGlobals.html#afe3b7e6ecf3775109e836df963364e08',1,'Globals::dump()']]]
+  ['cd_0',['cd',['../namespacetools_1_1nbtools.html#a7b74f2191e84a42b10b6f9c9137e3c02',1,'tools::nbtools']]],
+  ['check_5fenv_1',['check_env',['../hw7_8hpp.html#a07df3fe81a2dd5dbcd63391ac7838f10',1,'hw7.hpp']]],
+  ['clear_2',['clear',['../namespacetools_1_1build.html#a93beb6da1d4ea194dcec0fdc6ce26644',1,'tools::build']]],
+  ['columnize_3',['columnize',['../namespacetools_1_1nbtools.html#a7ffe8676234114eef4e36416e550c91e',1,'tools::nbtools']]],
+  ['combine_5fheaders_4',['combine_headers',['../namespacetools_1_1build.html#a3894ff72de4f8ee9518650073ac6b85a',1,'tools::build']]],
+  ['commit_5',['commit',['../namespacetools_1_1build.html#a78daa46e9cebdc71d82aa3fae5ecae7c',1,'tools::build']]],
+  ['compile_6',['compile',['../namespacetools_1_1build.html#a0bca703cdeacd489490d6fde548dde25',1,'tools::build']]],
+  ['configure_7',['configure',['../hw7_8hpp.html#a368e00d798ca9d2b3c12c07303b43ce3',1,'hw7.hpp']]],
+  ['critical_8',['critical',['../namespacetools_1_1nbtools.html#a1e872a82e887ee77fc5a2760c68ced98',1,'tools::nbtools']]],
+  ['current_5fclock_5fpict_9',['current_clock_pict',['../namespacetools_1_1picts.html#a04a03038ab982f5a9e3674f7e143bbca',1,'tools::picts']]],
+  ['cwd_10',['cwd',['../hw7_8hpp.html#a2d55afd4e83145d63358782eac428f57',1,'cwd():&#160;hw7.hpp'],['../namespacetools_1_1nbtools.html#a30a7a554e6bc99ebc974eceef78cb5ad',1,'tools.nbtools.cwd()']]]
 ];
