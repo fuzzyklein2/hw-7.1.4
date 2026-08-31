@@ -20,7 +20,7 @@ namespace h2o2
         // h2o2::audio_clip clip() { return current_song.current_clip(); }
 
         song_list songs;
-        song& current_song;
+        Index current_song_index;
     protected:
         bool playing = false;
         bool step = false;

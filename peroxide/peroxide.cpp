@@ -39,7 +39,9 @@ void Peroxide::play_audio()
     {
         debug("Audio thread entered.");
         ostringstream oss;
-        
+
+        // Should the player be a member of `Peroxide` instead?
+        // This thread should focus on miniaudio support.
         player p(songs);
 
         debug("Player constructed");
@@ -75,14 +77,16 @@ void Peroxide::play_audio()
         }
 
         debug("Device initialized");
-    
+
+        // I kinda feel like none of the above should be bothered with until the pedal is pushed.
         cout << "Press sustain pedal to start...\n";
         
         while (running && !pedal)
         {
             this_thread::sleep_for(std::chrono::milliseconds(10));
         }
-        
+
+        pedal = false;
         cout << "Starting playback.\n";
         p.play();
         debug("p.play() returned");

@@ -53,6 +53,18 @@ namespace h2o2
          * and avoid extra copies.
          */
         ErrCode load(h2o2::pattern);
+        bool is_clip_name(const hw7::str&);
+        static ma_uint32 get_clip_sampleRate();
+        static Path get_clips_dir();
+
+        /**
+         * Output operator
+         */
+        friend std::ostream& operator<<(std::ostream& os, const song& s)
+        {
+            return os << s.title;
+        }
+
 
     // protected:
         hw7::str title;

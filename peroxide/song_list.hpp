@@ -18,7 +18,7 @@ namespace h2o2
             for (const hw7::str s2 : s.split("\n"))
             push_back(song(s2, config));
         }
-        
+        bool is_clip_name(const hw7::str&);
     protected:
         
     }; // song_list
