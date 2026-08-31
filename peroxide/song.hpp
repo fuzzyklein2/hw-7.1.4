@@ -48,9 +48,14 @@ namespace h2o2
          * `pattern` may actually pop itself and handle lookup table registration.
          * @param pat The pattern to load.
          * @return `EXIT_SUCCESS` or some relevant code.
+         *
+         * NOTE: changed to accept pattern by value so we can move it into the stack
+         * and avoid extra copies.
          */
-        ErrCode load(h2o2::pattern&);
-
+        ErrCode load(h2o2::pattern);
+        bool is_clip_name(const hw7::str&);
+        static ma_uint32 get_clip_sampleRate();
+        static Path get_clips_dir();
 
         /**
          * Output operator
@@ -60,9 +65,6 @@ namespace h2o2
             return os << s.title;
         }
 
-        bool is_clip_name(const hw7::str&);
-        static ma_uint32 get_clip_sampleRate();
-        static Path get_clips_dir();
 
     // protected:
         hw7::str title;

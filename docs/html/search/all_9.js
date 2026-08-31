@@ -6,5 +6,5 @@ var searchData=
   ['info_5fpict_3',['info_pict',['../namespacehw7.html#a2329a088add901dddf3a0dfe8e83ecc1',1,'hw7::INFO_PICT'],['../namespacetools_1_1picts.html#a62b0b88e89bf84cfbd733791433dae5d',1,'tools.picts.INFO_PICT']]],
   ['info_5fpict_5f2_4',['INFO_PICT_2',['../namespacetools_1_1picts.html#ace3cb3388363312b8709966fe3e892c8',1,'tools::picts']]],
   ['input_5',['input',['../structGlobals.html#a799a7fbf079888c2cc8481e302952745',1,'Globals']]],
-  ['is_5fclip_5fname_6',['is_clip_name',['../classh2o2_1_1song.html#a00d624c51fb06aa575bfdfab55dc2765',1,'h2o2::song']]]
+  ['is_5fclip_5fname_6',['is_clip_name',['../classh2o2_1_1song.html#a00d624c51fb06aa575bfdfab55dc2765',1,'h2o2::song::is_clip_name()'],['../classh2o2_1_1song__list.html#ac09437603b9a243173497f86dca744bd',1,'h2o2::song_list::is_clip_name()']]]
 ];

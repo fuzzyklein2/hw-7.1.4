@@ -20,7 +20,7 @@ using namespace h2o2;
  * @return Error code.
  */
 player::player(const song_list& sl) : songs(sl),
-                                      current_song(songs[0])
+                                      current_song_index(0)
 {
     // Load all the audio clips of every song in the song_list.
 };
@@ -42,12 +42,12 @@ void player::fill(float* output, ma_uint32 frames)
         output[i * 2 + 1] = 0.25f;
 
         std::cout << "FILL: about to get next clip\n";
-        audio_clip& clip = current_song.next_clip();
+        audio_clip& clip = songs[current_song_index].next_clip();
         std::cout << "FILL: got next clip\n";
         
         if (pos == 0)
         {
-            cout << "Starting " << current_song << endl;
+            cout << "Starting " << songs[current_song_index] << endl;
             //  << (playingBreak ? "Break" : "Intro")
             //  << "\n";
             

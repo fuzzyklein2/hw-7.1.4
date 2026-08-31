@@ -6,6 +6,7 @@
 
 #include "pattern.hpp"
 #include "song.hpp"
+#include <utility> // std::move
 using namespace std;
 using namespace hw7;
 using namespace h2o2;
@@ -21,87 +22,93 @@ pattern::pattern(const JSON& pat, song& owner) : repeat_count(1),
 
 ErrCode pattern::load()
 {
-    // /// If the only elements are a valid clip name and a repeat count of 0,
-    // /// just go ahead and push the clip name to the queue and be done with all this.
-    // if (j.is_array && j.size() == 2 && j[0].is_number_integer() && audio_clip::is_clip_name(j[1]))
-    // {
-    //     parent.clips.push(j[1]);
-    //     i++;
-    //     return EXIT_SUCCESS; /// Obviously there should be some error checking here.
-    // }
-    parent.patterns.push(*this);
-    // next_clip();
+    // Move this pattern into the parent's pattern stack so the stack owns the instance
+    // that will be advanced during playback. Do not call next_clip() here — playback
+    // should advance the pattern that's actually on the stack.
+    parent.load(std::move(*this));
     return EXIT_SUCCESS;
-
 }
 
 ErrCode pattern::next_clip()
 {
-    if (i >= N) // Pattern processing is complete.
+    // Iteratively process the JSON sequence until we either enqueue a clip or
+    // decide the pattern has finished and should pop itself.
+    while (true)
     {
-        if (repeat_count == 0 and !pedal)
+        if (i >= N) // Pattern processing is complete for one pass.
         {
-            i = 0;
-        }
-        else if (current_repeat < repeat_count)
-        {
-            i = 0;
-            current_repeat++;
-        }
-        else
-        {
-            parent.patterns.pop(); // Shouldn't need to call next_clip on the top pattern here.
-                                   // There may not even be a pattern left on the stack.
-            return EXIT_SUCCESS;
-        }
-    }
-    const auto value = j[i];
-    if (value.is_number_integer())
-    {
-        // Should be the number of times to repeat the pattern.
-        // Should also be the first value if present.
-        repeat_count = value.get<int>();
-        i++;
-        next_clip();
-    }
-    else if (value.is_string())
-    {
-        // Should be the name by which the pattern can be referenced in the
-        // rest of the script, OR the filename of a clip, not necessarily in
-        // that order.
-        if (parent.is_clip_name(value))
-        {
-            parent.clips.push(value);
-            i++;
-            // return EXIT_SUCCESS;
-        }
-        else
-        {
-            if (!parent.pat_map.contains(value))
+            if (repeat_count == 0 && !pedal)
             {
-                parent.pat_map.emplace(value, pattern(j, parent));
-                i++;
-                next_clip();
+                // repeat forever (or until some external condition)
+                i = 0;
             }
             else
             {
-                i++;
-                parent.load(parent.pat_map.at(value));
-                // return EXIT_SUCCESS; // ?
+                // Completed one run; increment and compare to requested repeat_count
+                current_repeat++;
+                if (repeat_count != 0 && current_repeat >= repeat_count)
+                {
+                    // We're done with this pattern's repeats — remove it from the stack.
+                    parent.patterns.pop();
+                    return EXIT_SUCCESS;
+                }
+                // Otherwise reset to start the next repetition.
+                i = 0;
             }
         }
+
+        const auto value = j[i];
+
+        if (value.is_number_integer())
+        {
+            // The first (or current) element can be a repeat count.
+            repeat_count = value.get<int>();
+            i++;
+            continue;
+        }
+        else if (value.is_string())
+        {
+            // Either a clip name or a named pattern reference.
+            if (parent.is_clip_name(value))
+            {
+                parent.clips.push(value);
+                i++;
+                return EXIT_SUCCESS; // We found a clip to play.
+            }
+            else
+            {
+                // Named pattern: register or load it.
+                if (!parent.pat_map.contains(value))
+                {
+                    // Register the current JSON (or appropriate pattern JSON) under this name.
+                    parent.pat_map.emplace(value, pattern(j, parent));
+                    i++;
+                    continue; // Continue scanning the current pattern after registration.
+                }
+                else
+                {
+                    // Load the named pattern (push it onto the stack) and let playback use it.
+                    i++;
+                    parent.load(parent.pat_map.at(value));
+                    return EXIT_SUCCESS;
+                }
+            }
+        }
+        else if (value.is_array())
+        {
+            // Anonymous subpattern — push it onto the stack for handling.
+            pattern pat(value, parent);
+            parent.load(pat);
+            i++;
+            return EXIT_SUCCESS;
+        }
+        else
+        {
+            // Malformed entry — treat as an error for now.
+            return EXIT_FAILURE;
+        }
     }
-    else if (value.is_array())
-    {
-        // Should be another pattern. If it's not that's an error.
-        /// @todo Exactly when and where does a pattern get pushed on to the stack?
-        pattern pat(value, parent);
-        parent.load(pat);
-        i++;
-        // return EXIT_SUCCESS;
-    }
-    // else stop("Error loading pattern!");
-    return 1;
-    
+
+    // unreachable
     return EXIT_SUCCESS;
 }

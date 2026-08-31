@@ -18,7 +18,7 @@ song::song (const hw7::str& s, JSON config) :
 
     info("Loading song: " + title);
     /// @bug `title` is an empty string at some point.
-    /// @todo Find the place where a `song` is being constructed with `EMPTY_STR`.;l.
+    /// @todo Find the place where a `song` is being constructed with `EMPTY_STR`;l.
     const auto SONG_DIR = base / "songs" / string(title);
     folder = SONG_DIR;
     cout << "Song folder: " << string(folder) << endl;
@@ -58,9 +58,12 @@ audio_clip& song::next_clip()
     return result; // It won't really be this simple.
 }
 
-ErrCode song::load(pattern& p)
+ErrCode song::load(pattern p)
 {
-    return p.load();
+    // Move the incoming pattern into the stack so the version on the stack
+    // is the one used by playback code.
+    patterns.push(std::move(p));
+    return EXIT_SUCCESS;
 }
 
 bool song::is_clip_name(const str& s)

@@ -1,13 +1,7 @@
 <map id="h2o2::player" name="h2o2::player">
-<area shape="rect" id="Node000001" title=" " alt="" coords="88,256,181,281"/>
-<area shape="rect" id="Node000002" href="$classh2o2_1_1song__list.html" title=" " alt="" coords="19,168,130,193"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,203,128,254,124,257,89,206"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="5,80,141,105"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="76,119,77,167,72,168,71,119"/>
-<area shape="rect" id="Node000004" href="$classh2o2_1_1song.html" title=" " alt="" coords="155,168,242,193"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="184,206,146,257,141,254,180,203"/>
-<area shape="rect" id="Node000005" href="$classhw7_1_1str.html" title=" " alt="" coords="165,80,235,105"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="202,119,202,168,196,167,197,119"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="172,5,228,31"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="203,45,203,80,197,80,197,45"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="27,168,120,193"/>
+<area shape="rect" id="Node000002" href="$classh2o2_1_1song__list.html" title=" " alt="" coords="18,80,129,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="76,119,76,167,71,167,71,119"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,5,141,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="76,45,76,80,71,80,71,45"/>
 </map>
