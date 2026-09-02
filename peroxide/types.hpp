@@ -8,4 +8,4 @@
 using Boolean = std::atomic<bool>;
 using Index = Number;
 using Vector = std::vector<float>;
-using ProgPtr = std::unique_ptr<Peroxide>;
+using ProgPtr = std::unique_ptr<Program>;
