@@ -1,10 +1,7 @@
 <map id="h2o2::pattern" name="h2o2::pattern">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,256,104,281"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,168,104,193"/>
 <area shape="rect" id="Node000002" href="$classhw7_1_1str.html" title=" " alt="" coords="20,80,89,105"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="53,119,49,154,48,193,55,256,50,256,43,193,43,154,47,119"/>
-<area shape="rect" id="Node000004" href="$classh2o2_1_1song.html" title=" " alt="" coords="95,168,182,193"/>
-<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="78,113,129,166,125,169,74,117"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="57,119,57,167,52,167,52,119"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="27,5,83,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="57,45,57,80,52,80,52,45"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="120,205,68,257,64,254,116,201"/>
 </map>

@@ -19,17 +19,18 @@ using namespace h2o2;
  *       (`player::play_audio` wants to know its sample rate.)
  * @return Error code.
  */
-player::player(const song_list& sl) : songs(sl),
+audio_player::audio_player(song_list& sl) : songs(sl),
                                       current_song_index(0)
 {
     // Load all the audio clips of every song in the song_list.
 };
 
-void player::fill(float* output, ma_uint32 frames)
+void audio_player::fill(float* output, ma_uint32 frames)
 {
+    if (running) {
     cout << "FILL: " << frames << " frames\n";
     
-    if (!playing || !running)
+    if (!playing)
     {
         std::fill(output, output + frames * 2, 0.0f);
         return;
@@ -48,6 +49,9 @@ void player::fill(float* output, ma_uint32 frames)
         if (pos == 0)
         {
             cout << "Starting " << songs[current_song_index] << endl;
+            //  << (playingBreak ? "Break" : "Intro")
+            //  << "\n";
+            
         }
         
         if (clip.samples.empty())
@@ -83,6 +87,9 @@ void player::fill(float* output, ma_uint32 frames)
                 cout << "Signal received from sustain pedal" << endl;
             }
         }
+    }
+    } else { // if (running)
+        error("`player::fill` called after `running == false`!");
     }
 }
 

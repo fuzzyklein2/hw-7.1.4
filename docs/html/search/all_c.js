@@ -6,7 +6,7 @@ var searchData=
   ['link_5fpict_3',['LINK_PICT',['../namespacetools_1_1picts.html#adc584e008045c1665dcbbacca5423a2a',1,'tools::picts']]],
   ['list_4',['list',['../bug.html',1,'Bug List'],['../deprecated.html',1,'Deprecated List'],['../todo.html',1,'Todo List']]],
   ['listdir_5',['listdir',['../hw7_8hpp.html#a874dffd87acf53a3f5229a7f26d4f70b',1,'hw7.hpp']]],
-  ['load_6',['load',['../classh2o2_1_1pattern.html#af7d59f77f8925d78685f401120650176',1,'h2o2::pattern::load()'],['../classh2o2_1_1song.html#a18b654aa41e5dcba4f2c6b390fac60ad',1,'h2o2::song::load()'],['../classh2o2_1_1audio__clip.html#ad97a82ae5165dab7706806f5a6d8d37d',1,'h2o2::audio_clip::load()']]],
+  ['load_6',['load',['../classh2o2_1_1pattern.html#af7d59f77f8925d78685f401120650176',1,'h2o2::pattern::load()'],['../classh2o2_1_1song.html#a1a05b0a601442b7bb45e958aaac41fec',1,'h2o2::song::load(const hw7::str &amp;)'],['../classh2o2_1_1song.html#a1ac6ef96e5abf1779d9ac90465dd6c36',1,'h2o2::song::load(JSON)'],['../classh2o2_1_1audio__clip.html#ad97a82ae5165dab7706806f5a6d8d37d',1,'h2o2::audio_clip::load()']]],
   ['load_5fdata_7',['load_data',['../hw7_8hpp.html#a153dcb90cc5fc5d94dd25910c14bfcb1',1,'hw7.hpp']]],
   ['loadclip_8',['loadclip',['../clip_8cpp.html#a343ff0a92c3d9dded8bbdac0217b8dae',1,'loadClip(string filename, Clip &amp;clip):&#160;clip.cpp'],['../clip_8hpp.html#ad6df44a406b24d629364397636de393b',1,'loadClip(std::string filename, Clip &amp;clip):&#160;clip.hpp']]],
   ['log_5fdir_5fname_9',['LOG_DIR_NAME',['../namespacehw7.html#a9a054fce9854552afc5d9789e6d9f092',1,'hw7']]],

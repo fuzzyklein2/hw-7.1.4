@@ -1,21 +1,33 @@
 <map id="peroxide/song.hpp" name="peroxide/song.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="170,5,298,31"/>
-<area shape="rect" id="Node000002" href="$pattern_8cpp.html" title=" " alt="" coords="5,79,145,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="197,39,102,81,100,76,195,34"/>
-<area shape="rect" id="Node000003" href="$song_8cpp.html" title=" " alt="" coords="170,79,298,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="237,44,237,79,231,79,231,44"/>
-<area shape="rect" id="Node000004" href="$song__list_8hpp.html" title=" " alt="" coords="322,79,474,104"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="274,34,372,76,370,81,272,39"/>
-<area shape="rect" id="Node000005" href="$player_8hpp.html" title=" " alt="" coords="331,152,465,177"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="401,118,401,152,395,152,395,118"/>
-<area shape="rect" id="Node000006" href="$keyboard_8cpp.html" title=" " alt="" coords="145,225,299,251"/>
-<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="358,185,252,228,250,223,356,180"/>
-<area shape="rect" id="Node000007" href="$peroxide_8hpp.html" title=" " alt="" coords="323,225,473,251"/>
-<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="401,191,401,225,395,225,395,191"/>
-<area shape="rect" id="Node000010" href="$player_8cpp.html" title=" " alt="" coords="497,225,632,251"/>
-<area shape="poly" id="edge9_Node000005_Node000010" title=" " alt="" coords="438,180,538,223,536,228,436,185"/>
-<area shape="rect" id="Node000008" href="$main_8cpp.html" title=" " alt="" coords="253,299,381,324"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="376,262,332,300,328,296,373,258"/>
-<area shape="rect" id="Node000009" href="$peroxide_8cpp.html" title=" " alt="" coords="405,299,554,324"/>
-<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="423,258,468,296,464,300,420,262"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="212,5,340,31"/>
+<area shape="rect" id="Node000002" href="$song_8cpp.html" title=" " alt="" coords="5,299,133,324"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="262,44,80,300,75,297,258,40"/>
+<area shape="rect" id="Node000003" href="$song__list_8hpp.html" title=" " alt="" coords="327,79,479,104"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="310,35,383,76,381,81,307,40"/>
+<area shape="rect" id="Node000004" href="$player_8hpp.html" title=" " alt="" coords="485,152,619,177"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="440,107,529,149,526,154,438,112"/>
+<area shape="rect" id="Node000005" href="$globals_8cpp.html" title=" " alt="" coords="639,299,780,324"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="584,183,636,223,674,263,702,297,698,300,670,266,633,227,581,187"/>
+<area shape="rect" id="Node000006" href="$globals_8hpp.html" title=" " alt="" coords="481,225,623,251"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="555,191,555,225,549,225,549,191"/>
+<area shape="rect" id="Node000007" href="$keyboard_8cpp.html" title=" " alt="" coords="805,299,958,324"/>
+<area shape="poly" id="edge15_Node000004_Node000007" title=" " alt="" coords="592,181,856,296,854,301,590,186"/>
+<area shape="rect" id="Node000009" href="$pattern_8cpp.html" title=" " alt="" coords="982,299,1122,324"/>
+<area shape="poly" id="edge16_Node000004_Node000009" title=" " alt="" coords="606,179,1013,296,1012,301,604,184"/>
+<area shape="rect" id="Node000010" href="$peroxide_8hpp.html" title=" " alt="" coords="157,299,307,324"/>
+<area shape="poly" id="edge17_Node000004_Node000010" title=" " alt="" coords="515,185,258,301,256,296,513,181"/>
+<area shape="rect" id="Node000013" href="$player_8cpp.html" title=" " alt="" coords="331,299,466,324"/>
+<area shape="poly" id="edge18_Node000004_Node000013" title=" " alt="" coords="523,187,471,227,435,266,409,300,405,297,431,262,468,223,520,183"/>
+<area shape="poly" id="edge14_Node000006_Node000002" title=" " alt="" coords="468,254,146,301,134,303,133,298,145,296,467,249"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="591,254,685,296,683,301,589,259"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="619,251,829,296,827,301,617,256"/>
+<area shape="rect" id="Node000008" href="$midi_8cpp.html" title=" " alt="" coords="490,299,614,324"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="555,264,555,299,549,299,549,264"/>
+<area shape="poly" id="edge9_Node000006_Node000009" title=" " alt="" coords="637,249,982,297,982,303,636,254"/>
+<area shape="poly" id="edge10_Node000006_Node000010" title=" " alt="" coords="488,256,284,301,283,296,487,251"/>
+<area shape="poly" id="edge13_Node000006_Node000013" title=" " alt="" coords="516,259,425,301,423,296,514,254"/>
+<area shape="rect" id="Node000011" href="$main_8cpp.html" title=" " alt="" coords="87,372,215,397"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="210,335,166,374,162,370,207,331"/>
+<area shape="rect" id="Node000012" href="$peroxide_8cpp.html" title=" " alt="" coords="239,372,388,397"/>
+<area shape="poly" id="edge12_Node000010_Node000012" title=" " alt="" coords="257,331,302,370,298,374,254,335"/>
 </map>

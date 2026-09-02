@@ -20,9 +20,18 @@ namespace h2o2
     class song
     {
     public:
+    //     song(const song&) = delete;
+    // song& operator=(const song&) = delete;
+
+    // song(song&&) = default;
+    // song& operator=(song&&) = default;
 
         /// This is just a test.
+        song(const song&) = delete;
         song& operator=(const song&) = delete;
+    
+        song(song&&) = default;
+        song& operator=(song&) = default;
         /**
          * Default constructor.
          * @param title Title of the song and the name of its directory inside `songs`.
@@ -53,7 +62,8 @@ namespace h2o2
          * NOTE: changed to accept pattern by value so we can move it into the stack
          * and avoid extra copies.
          */
-        ErrCode load(h2o2::pattern);
+        ErrCode load(JSON);
+        ErrCode load(const hw7::str&);
 
         /**
          * Determine whether a string represents a clip.
@@ -62,7 +72,7 @@ namespace h2o2
          * @return `true` if an existing clip file corresponds to the name.
          * False otherwise.
          */
-        bool is_clip_name(const hw7::str&);
+        static bool is_clip_name(const hw7::str&);
 
         /**
          * Get the sample rate of a random audio file from the clips directory.
@@ -85,17 +95,20 @@ namespace h2o2
         Path base;
         JSON script;
         Path clips_dir;
+        // pattern* current_pat;
 
         // Data structures
-        std::stack<h2o2::pattern> patterns;
+        std::stack<std::unique_ptr<pattern>> patterns;
         std::queue<hw7::str> clips; // Enqueue the clip's name, not the clip itself.
         
         // Lookup tables for named clips and patterns.
         /// Just enqueue the name of the clip & store the clip itself in the registry.
         std::map<hw7::str, audio_clip> clip_map;
-        std::map<hw7::str, pattern> pat_map;
+        std::map<hw7::str, JSON> pat_map;
 
         Path folder;
     };
+
+    using SongPtr = std::unique_ptr<song>;
 
 } //h2o2

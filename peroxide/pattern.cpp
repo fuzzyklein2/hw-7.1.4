@@ -4,7 +4,9 @@
  * Pattern operations.
  */
 
+#include "globals.hpp"
 #include "pattern.hpp"
+#include "player.hpp"
 // #include "song.hpp"
 // #include <utility> // std::move
 using namespace std;
@@ -28,36 +30,40 @@ ErrCode pattern::load()
 
 ErrCode pattern::next_clip()
 {
+    auto& current_song = player->songs[player->current_song_index];
     std::cerr << "NEXT_CLIP: ENTERED\n";
     std::cerr << "NEXT_CLIP: this = " << this << "\n";
-    std::cerr << "NEXT_CLIP: parent = " << &parent << "\n";
+    std::cerr << "NEXT_CLIP: parent = " << current_song.title << "\n";
     std::cerr << "NEXT_CLIP: i = " << i << "\n";
     std::cerr << "NEXT_CLIP: N = " << N << "\n";
     std::cerr << "NEXT_CLIP: j.size = " << j.size() << "\n";
     // Iteratively process the JSON sequence until we either enqueue a clip or
     // decide the pattern has finished and should pop itself.
+    /// @todo: Give player a simple get_current_song.
     while (true)
     {
         if (i >= N) // Pattern processing is complete for one pass.
         {
-            if (repeat_count == 0 && !pedal)
+            // if (repeat_count == 0 && !pedal)
+            // {
+            //     // repeat forever (or until some external condition)
+            //     i = 0;
+            //     current_song.patterns.push(this);
+            // }
+            // else
+            // {
+            // Completed one run; increment and compare to requested repeat_count
+            current_repeat++;
+            if (repeat_count != 0 && current_repeat >= repeat_count)
             {
-                // repeat forever (or until some external condition)
-                i = 0;
+                // We're done with this pattern's repeats — remove it from the stack.
+                if (!(repeat_count == 0 && !pedal)) { current_song.patterns.pop(); }
+                else { i = 0; }
+                return EXIT_SUCCESS;
             }
-            else
-            {
-                // Completed one run; increment and compare to requested repeat_count
-                current_repeat++;
-                if (repeat_count != 0 && current_repeat >= repeat_count)
-                {
-                    // We're done with this pattern's repeats — remove it from the stack.
-                    parent.patterns.pop();
-                    return EXIT_SUCCESS;
-                }
-                // Otherwise reset to start the next repetition.
-                i = 0;
-            }
+            // Otherwise reset to start the next repetition.
+            // i = 0;
+            // }
         }
 
         std::cerr << "NEXT_CLIP: about to access j[" << i << "]\n";
@@ -76,19 +82,19 @@ ErrCode pattern::next_clip()
         else if (value.is_string())
         {
             // Either a clip name or a named pattern reference.
-            if (parent.is_clip_name(value))
+            if (song::is_clip_name(value))
             {
-                parent.clips.push(value);
+                current_song.clips.push(value);
                 i++;
                 return EXIT_SUCCESS; // We found a clip to play.
             }
             else
             {
                 // Named pattern: register or load it.
-                if (!parent.pat_map.contains(value))
+                if (!current_song.pat_map.contains(value))
                 {
                     // Register the current JSON (or appropriate pattern JSON) under this name.
-                    parent.pat_map.emplace(value, j);
+                    current_song.pat_map.emplace(value, j);
                     i++;
                     continue; // Continue scanning the current pattern after registration.
                 }
@@ -96,7 +102,7 @@ ErrCode pattern::next_clip()
                 {
                     // Load the named pattern (push it onto the stack) and let playback use it.
                     i++;
-                    parent.load(parent.pat_map.at(value));
+                    current_song.load(current_song.pat_map.at(value));
                     return EXIT_SUCCESS;
                 }
             }
@@ -104,11 +110,11 @@ ErrCode pattern::next_clip()
         else if (value.is_array())
         {
             // Anonymous subpattern — push it onto the stack for handling.
-            std::cerr << "NEXT_CLIP: constructing subpattern\n";
-            pattern pat(value, parent);
-            std::cerr << "NEXT_CLIP: subpattern constructed\n";
+            // std::cerr << "NEXT_CLIP: constructing subpattern\n";
+            // pattern pat(value);
+            // std::cerr << "NEXT_CLIP: subpattern constructed\n";
             
-            parent.load(pat);
+            current_song.load(value);
             std::cerr << "NEXT_CLIP: subpattern loaded\n";
             i++;
             return EXIT_SUCCESS;

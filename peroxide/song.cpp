@@ -5,6 +5,7 @@
  */
 #include "clip.hpp"
 #include "globals.hpp"
+#include "pattern.hpp"
 #include "song.hpp"
 
 using namespace std;
@@ -34,9 +35,7 @@ song::song (const hw7::str& s, JSON config) :
     
     script = load_data(SONG_DIR / "song.json");
 
-    // Loop through the pattern defined by song.json.
-    pattern pat(script, *this);
-    load(pat);
+    load(script);
 
 }
 
@@ -49,7 +48,7 @@ audio_clip& song::next_clip()
     {
         std::cerr << "SONG NEXT_CLIP: stack size = "
                   << patterns.size() << '\n';
-        patterns.top().next_clip();
+        patterns.top()->next_clip();
         std::cerr << "SONG NEXT_CLIP: returned, stack size = "
                   << patterns.size() << '\n';
         n++;
@@ -72,23 +71,41 @@ audio_clip& song::next_clip()
 //     return EXIT_SUCCESS;
 // }
 
-ErrCode song::load(pattern p)
+// ErrCode song::load(JSON j)
+// {
+//     std::cerr << "LOAD: entered\n";
+
+//     current_pat = make_unique<pattern>(j);
+
+//     patterns.push(current_pat.get());
+
+//     std::cerr << "LOAD: pushed\n";
+
+//     return EXIT_SUCCESS;
+// }
+
+// ErrCode song::load(const str& s)
+// {
+//     patterns.push(current_pat = make_unique<pattern>(pat_map.at(s)).get());
+// }
+
+ErrCode song::load(JSON j)
 {
-    std::cerr << "LOAD: entered\n";
+    patterns.push(std::make_unique<pattern>(j));
+    return EXIT_SUCCESS;
+}
 
-    patterns.push(p);
-
-    std::cerr << "LOAD: pushed\n";
-
+ErrCode song::load(const str& s)
+{
+    patterns.push(std::make_unique<pattern>(pat_map.at(s)));
     return EXIT_SUCCESS;
 }
 
 bool song::is_clip_name(const str& s)
 {
-    const Path CONFIG = Path(getenv("HOME")) / CONF_DIR_NAME / PROGRAM / CONF_FILE_NAME;
-    const auto cfg = load_data(CONFIG);
-    const auto SONGS = Path(cfg["session folder"].get<string>()) / "songs";
-    for ( const auto& f : listdir(SONGS / string(title) / "clips") )
+    const auto SONGS = Path(program->config["session folder"].get<string>()) / "songs";
+    /// @todo Make `str` compatible with `path / str`.
+    for ( const auto& f : listdir(SONGS / string(player->songs[player->current_song_index].title) / "clips") )
     {
         if (str(f) == s) { return true; }
     }

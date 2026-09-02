@@ -10,6 +10,8 @@
 
 #include "peroxide.hpp"
 
+using namespace std;
+
 /**
  * main
  *
@@ -27,6 +29,6 @@ int main(
     int argc, // Argument count
     char **argv // Cannot be `const` or CLI11 won't work.
 ) {
-    program = std::make_unique<Peroxide>();
-    return program.run();
+    program = make_unique<Peroxide>(argc, argv);
+    return program->run();
 }

@@ -5,8 +5,7 @@
  * Class that defines the data structure for a pattern.
  */
 #include "hw7.hpp"
-#include "globals.hpp"
-
+#include "types.hpp"
 
 namespace h2o2
 {
@@ -35,18 +34,6 @@ namespace h2o2
          * @param N Number of elements in the JSON (j.size())
          */
         pattern(const pattern& p)
-<<<<<<< HEAD
-          : name(p.name),
-            repeat_count(p.repeat_count),
-            j(p.j),
-            i(0),
-            N(p.N),
-            parent(p.parent),
-            current_repeat(0)
-        {
-            std::cerr << "PATTERN COPY: constructed\n";
-        }
-=======
           : name(p.name), // Optional. May not exist.
             repeat_count(p.repeat_count), // Number of times to repeat.
             j(p.j), // JSON object representation.
@@ -54,9 +41,9 @@ namespace h2o2
             N(p.N), // Number of elements.
             // @deprecated parent(p.parent),
             current_repeat(0) /// index of the current repetition.
-        {}
-
->>>>>>> 8a4032fd23ac30e7fa12e2030ee6dddcec1995ce
+        {
+            std::cerr << "PATTERN COPY: constructed\n";
+        }
 
         ErrCode load();
 
@@ -73,8 +60,9 @@ namespace h2o2
         JSON j;
         Index i;
         Index N;
-        song& parent;
         Index current_repeat;
     };
+
+    using PatPtr = std::unique_ptr<pattern>;
 
 } //h2o2

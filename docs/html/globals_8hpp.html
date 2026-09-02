@@ -80,36 +80,61 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="types_8hpp_source.html">types.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="player_8hpp_source.html">player.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for globals.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="globals_8hpp__incl.png" border="0" usemap="#aperoxide_2globals_8hpp" alt=""/></div>
 <map name="aperoxide_2globals_8hpp" id="aperoxide_2globals_8hpp">
-<area shape="rect" title=" " alt="" coords="483,5,624,31"/>
-<area shape="rect" href="types_8hpp.html" title=" " alt="" coords="514,79,593,104"/>
-<area shape="poly" title=" " alt="" coords="556,31,556,65,551,65,551,31"/>
-<area shape="rect" href="hw7_8hpp.html" title=" " alt="" coords="518,152,589,177"/>
-<area shape="poly" title=" " alt="" coords="556,104,556,138,551,138,551,104"/>
-<area shape="rect" title=" " alt="" coords="5,233,64,258"/>
-<area shape="poly" title=" " alt="" coords="518,169,438,173,327,183,202,200,77,228,70,230,68,225,75,223,201,195,327,177,437,168,518,164"/>
-<area shape="rect" title=" " alt="" coords="89,225,223,265"/>
-<area shape="poly" title=" " alt="" coords="518,175,238,228,237,222,517,169"/>
-<area shape="rect" title=" " alt="" coords="247,233,302,258"/>
-<area shape="poly" title=" " alt="" coords="519,175,426,196,316,228,311,230,309,225,314,223,424,190,517,170"/>
-<area shape="rect" title=" " alt="" coords="327,233,399,258"/>
-<area shape="poly" title=" " alt="" coords="527,180,404,230,402,225,525,175"/>
-<area shape="rect" title=" " alt="" coords="423,233,537,258"/>
-<area shape="poly" title=" " alt="" coords="544,179,502,224,498,220,541,176"/>
-<area shape="rect" title=" " alt="" coords="561,233,692,258"/>
-<area shape="poly" title=" " alt="" coords="566,176,608,220,604,224,562,179"/>
-<area shape="rect" title=" " alt="" coords="716,233,799,258"/>
-<area shape="poly" title=" " alt="" coords="584,175,716,225,714,230,582,180"/>
-<area shape="rect" title=" " alt="" coords="823,233,870,258"/>
-<area shape="poly" title=" " alt="" coords="589,169,690,188,751,204,812,223,816,224,814,229,810,228,750,209,689,193,588,174"/>
-<area shape="rect" title=" " alt="" coords="894,233,954,258"/>
-<area shape="poly" title=" " alt="" coords="589,167,720,185,802,201,883,223,889,225,888,230,882,228,801,207,719,190,589,172"/>
-<area shape="rect" title=" " alt="" coords="979,225,1109,265"/>
-<area shape="poly" title=" " alt="" coords="589,167,748,188,965,223,965,228,748,193,589,173"/>
+<area shape="rect" title=" " alt="" coords="395,5,536,31"/>
+<area shape="rect" href="types_8hpp.html" title=" " alt="" coords="418,372,497,397"/>
+<area shape="poly" title=" " alt="" coords="462,32,442,88,433,125,429,163,429,239,437,304,451,358,446,360,432,305,424,239,424,163,428,124,437,86,457,30"/>
+<area shape="rect" href="player_8hpp.html" title=" " alt="" coords="506,79,587,104"/>
+<area shape="poly" title=" " alt="" coords="480,29,525,68,521,72,477,33"/>
+<area shape="rect" href="hw7_8hpp.html" title=" " alt="" coords="527,445,598,471"/>
+<area shape="poly" title=" " alt="" coords="476,395,536,435,533,440,473,400"/>
+<area shape="rect" title=" " alt="" coords="5,526,136,551"/>
+<area shape="poly" title=" " alt="" coords="527,466,363,487,148,521,129,525,128,520,148,516,362,481,527,461"/>
+<area shape="rect" title=" " alt="" coords="160,526,219,551"/>
+<area shape="poly" title=" " alt="" coords="527,465,396,484,313,500,231,521,226,523,224,518,230,516,312,495,395,478,527,460"/>
+<area shape="rect" title=" " alt="" coords="243,526,303,551"/>
+<area shape="poly" title=" " alt="" coords="528,468,432,489,317,521,311,523,309,518,315,516,430,484,526,463"/>
+<area shape="rect" title=" " alt="" coords="328,526,400,551"/>
+<area shape="poly" title=" " alt="" coords="535,473,407,523,405,518,533,468"/>
+<area shape="rect" title=" " alt="" coords="424,519,555,559"/>
+<area shape="poly" title=" " alt="" coords="554,473,518,510,514,507,550,469"/>
+<area shape="rect" title=" " alt="" coords="579,526,693,551"/>
+<area shape="poly" title=" " alt="" coords="575,469,618,514,614,517,572,473"/>
+<area shape="rect" title=" " alt="" coords="717,519,851,559"/>
+<area shape="poly" title=" " alt="" coords="596,468,719,512,717,517,594,473"/>
+<area shape="rect" title=" " alt="" coords="875,526,930,551"/>
+<area shape="poly" title=" " alt="" coords="599,461,718,479,792,495,865,516,870,518,868,523,863,521,790,500,717,485,598,466"/>
+<area shape="rect" title=" " alt="" coords="955,526,1037,551"/>
+<area shape="poly" title=" " alt="" coords="599,460,749,479,846,495,943,516,954,519,953,524,942,521,845,500,749,484,598,465"/>
+<area shape="rect" title=" " alt="" coords="1062,526,1109,551"/>
+<area shape="poly" title=" " alt="" coords="598,457,681,459,794,468,922,486,987,499,1050,516,1055,518,1053,523,1049,521,986,504,921,491,793,473,680,465,598,462"/>
+<area shape="poly" title=" " alt="" coords="588,91,665,99,709,108,752,121,792,140,824,164,846,196,853,216,855,237,855,313,848,350,828,380,799,404,764,423,725,437,685,446,612,457,611,451,684,441,723,431,762,418,796,400,824,377,843,348,849,312,849,237,847,217,842,199,821,168,789,144,750,126,707,113,664,104,588,96"/>
+<area shape="rect" title=" " alt="" coords="243,372,331,397"/>
+<area shape="poly" title=" " alt="" coords="529,106,484,135,426,179,365,235,337,267,313,300,300,330,292,359,287,358,295,328,308,297,333,263,361,231,422,175,481,131,526,102"/>
+<area shape="rect" href="song__list_8hpp.html" title=" " alt="" coords="540,152,639,177"/>
+<area shape="poly" title=" " alt="" coords="556,103,578,139,573,142,551,106"/>
+<area shape="poly" title=" " alt="" coords="627,175,683,197,741,230,764,250,779,273,785,298,777,325,762,348,743,368,700,402,654,427,612,444,610,440,652,422,698,397,740,364,758,345,772,323,780,298,775,275,760,254,738,235,680,202,625,180"/>
+<area shape="rect" href="song_8hpp.html" title=" " alt="" coords="552,225,627,251"/>
+<area shape="poly" title=" " alt="" coords="592,178,592,212,587,212,587,178"/>
+<area shape="poly" title=" " alt="" coords="591,251,568,431,563,431,585,251"/>
+<area shape="rect" title=" " alt="" coords="627,299,685,324"/>
+<area shape="poly" title=" " alt="" coords="602,249,638,287,634,290,598,253"/>
+<area shape="rect" title=" " alt="" coords="709,299,763,324"/>
+<area shape="poly" title=" " alt="" coords="614,248,701,290,699,295,612,253"/>
+<area shape="rect" href="clip_8hpp.html" title=" " alt="" coords="323,299,389,324"/>
+<area shape="poly" title=" " alt="" coords="553,253,403,298,402,293,551,248"/>
+<area shape="rect" href="pattern_8hpp.html" title=" " alt="" coords="465,299,551,324"/>
+<area shape="poly" title=" " alt="" coords="578,253,533,292,530,288,575,249"/>
+<area shape="poly" title=" " alt="" coords="374,322,431,362,428,366,371,326"/>
+<area shape="poly" title=" " alt="" coords="362,323,378,359,391,378,407,395,432,413,460,427,515,445,513,450,458,432,429,417,404,399,387,382,374,361,357,325"/>
+<area shape="poly" title=" " alt="" coords="346,326,309,364,305,360,343,322"/>
+<area shape="poly" title=" " alt="" coords="502,326,476,362,471,359,497,323"/>
+<area shape="poly" title=" " alt="" coords="515,324,556,432,551,433,510,325"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
@@ -117,38 +142,25 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="globals_8hpp__dep__incl.png" border="0" usemap="#aperoxide_2globals_8hppdep" alt=""/></div>
 <map name="aperoxide_2globals_8hppdep" id="aperoxide_2globals_8hppdep">
-<area shape="rect" title=" " alt="" coords="556,5,697,31"/>
+<area shape="rect" title=" " alt="" coords="496,5,637,31"/>
 <area shape="rect" href="globals_8cpp.html" title=" " alt="" coords="5,79,147,104"/>
-<area shape="poly" title=" " alt="" coords="543,33,147,84,147,78,542,28"/>
-<area shape="rect" href="keyboard_8cpp.html" title=" " alt="" coords="139,372,293,397"/>
-<area shape="poly" title=" " alt="" coords="543,32,433,50,316,78,265,95,223,116,196,139,189,151,187,164,187,239,190,278,197,315,214,371,209,373,192,316,184,278,181,239,181,163,184,149,192,135,220,111,262,90,314,72,432,45,542,27"/>
-<area shape="rect" href="midi_8cpp.html" title=" " alt="" coords="817,79,941,104"/>
-<area shape="poly" title=" " alt="" coords="681,32,839,76,837,81,680,37"/>
-<area shape="rect" href="pattern_8hpp.html" title=" " alt="" coords="393,79,533,104"/>
-<area shape="poly" title=" " alt="" coords="589,39,491,81,488,76,587,34"/>
-<area shape="rect" href="song_8cpp.html" title=" " alt="" coords="563,225,691,251"/>
-<area shape="poly" title=" " alt="" coords="629,45,629,225,624,225,624,45"/>
-<area shape="rect" href="peroxide_8hpp.html" title=" " alt="" coords="443,372,592,397"/>
-<area shape="poly" title=" " alt="" coords="655,38,679,60,704,90,723,125,731,163,731,240,726,267,714,291,696,312,674,330,622,357,570,374,569,369,619,352,671,326,692,309,710,288,721,266,725,239,725,164,718,126,700,93,676,64,651,41"/>
-<area shape="rect" href="player_8cpp.html" title=" " alt="" coords="679,372,814,397"/>
-<area shape="poly" title=" " alt="" coords="669,34,705,55,742,83,770,119,778,141,781,163,781,239,778,278,771,316,754,373,748,371,766,315,773,278,776,239,776,164,773,142,765,122,738,87,702,59,666,39"/>
-<area shape="rect" href="pattern_8cpp.html" title=" " alt="" coords="222,225,362,251"/>
-<area shape="poly" title=" " alt="" coords="438,115,388,154,306,227,303,223,385,150,435,110"/>
-<area shape="rect" href="song_8hpp.html" title=" " alt="" coords="399,152,527,177"/>
-<area shape="poly" title=" " alt="" coords="465,118,465,152,460,152,460,118"/>
-<area shape="poly" title=" " alt="" coords="424,185,321,228,319,223,421,180"/>
-<area shape="poly" title=" " alt="" coords="503,180,601,223,599,228,501,185"/>
-<area shape="rect" href="song__list_8hpp.html" title=" " alt="" coords="387,225,539,251"/>
-<area shape="poly" title=" " alt="" coords="465,191,465,225,460,225,460,191"/>
-<area shape="rect" href="player_8hpp.html" title=" " alt="" coords="422,299,557,324"/>
-<area shape="poly" title=" " alt="" coords="474,263,488,298,483,299,469,265"/>
-<area shape="poly" title=" " alt="" coords="433,330,261,374,260,369,432,325"/>
-<area shape="poly" title=" " alt="" coords="501,336,515,371,510,373,497,338"/>
-<area shape="poly" title=" " alt="" coords="544,325,706,369,704,374,543,330"/>
-<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="372,445,500,471"/>
-<area shape="poly" title=" " alt="" coords="496,408,451,447,448,443,492,404"/>
-<area shape="rect" href="peroxide_8cpp.html" title=" " alt="" coords="524,445,673,471"/>
-<area shape="poly" title=" " alt="" coords="542,404,587,443,584,447,539,408"/>
+<area shape="poly" title=" " alt="" coords="483,34,147,82,146,77,482,29"/>
+<area shape="rect" href="keyboard_8cpp.html" title=" " alt="" coords="171,79,325,104"/>
+<area shape="poly" title=" " alt="" coords="503,36,300,81,299,76,502,31"/>
+<area shape="rect" href="midi_8cpp.html" title=" " alt="" coords="349,79,473,104"/>
+<area shape="poly" title=" " alt="" coords="530,39,437,81,435,76,528,34"/>
+<area shape="rect" href="pattern_8cpp.html" title=" " alt="" coords="497,79,637,104"/>
+<area shape="poly" title=" " alt="" coords="569,44,569,79,564,79,564,44"/>
+<area shape="rect" href="peroxide_8hpp.html" title=" " alt="" coords="661,79,811,104"/>
+<area shape="poly" title=" " alt="" coords="608,34,709,76,707,81,605,38"/>
+<area shape="rect" href="player_8cpp.html" title=" " alt="" coords="835,79,970,104"/>
+<area shape="poly" title=" " alt="" coords="635,31,849,76,848,81,633,36"/>
+<area shape="rect" href="song_8cpp.html" title=" " alt="" coords="995,79,1123,104"/>
+<area shape="poly" title=" " alt="" coords="651,29,983,76,995,78,994,83,982,81,651,34"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="591,152,719,177"/>
+<area shape="poly" title=" " alt="" coords="714,115,670,154,666,150,711,111"/>
+<area shape="rect" href="peroxide_8cpp.html" title=" " alt="" coords="743,152,892,177"/>
+<area shape="poly" title=" " alt="" coords="761,111,806,150,802,154,758,115"/>
 </map>
 </div>
 </div>
@@ -163,6 +175,10 @@ Variables</h2></td></tr>
 <tr class="memitem:ac5cb6c64305ac6cadcc019b0d94e373f" id="r_ac5cb6c64305ac6cadcc019b0d94e373f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8hpp.html#a61c6561e787bf7f71985d60a96b349f6">Boolean</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8hpp.html#ac5cb6c64305ac6cadcc019b0d94e373f">repeat</a></td></tr>
 <tr class="memdesc:ac5cb6c64305ac6cadcc019b0d94e373f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Applies only to the current clip, not patterns.  <br /></td></tr>
 <tr class="separator:ac5cb6c64305ac6cadcc019b0d94e373f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1876a1d29ea4ec99a8ed7650b549d1a3" id="r_a1876a1d29ea4ec99a8ed7650b549d1a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8hpp.html#a80d81d7a2554934f2261183d6d9403d4">ProgPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8hpp.html#a1876a1d29ea4ec99a8ed7650b549d1a3">program</a></td></tr>
+<tr class="separator:a1876a1d29ea4ec99a8ed7650b549d1a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa688fd0b08ebe3ea5e6fa31239d99ab0" id="r_aa688fd0b08ebe3ea5e6fa31239d99ab0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceh2o2.html#a6675b12ea4413aea064567457caa620c">h2o2::PlayerPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="globals_8hpp.html#aa688fd0b08ebe3ea5e6fa31239d99ab0">player</a></td></tr>
+<tr class="separator:aa688fd0b08ebe3ea5e6fa31239d99ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Global boolean switches to signal threads with. </p>
@@ -178,6 +194,50 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="types_8hpp.html#a61c6561e787bf7f71985d60a96b349f6">Boolean</a> pedal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa688fd0b08ebe3ea5e6fa31239d99ab0" name="aa688fd0b08ebe3ea5e6fa31239d99ab0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa688fd0b08ebe3ea5e6fa31239d99ab0">&#9670;&#160;</a></span>player</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="namespaceh2o2.html#a6675b12ea4413aea064567457caa620c">h2o2::PlayerPtr</a> player</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1876a1d29ea4ec99a8ed7650b549d1a3" name="a1876a1d29ea4ec99a8ed7650b549d1a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1876a1d29ea4ec99a8ed7650b549d1a3">&#9670;&#160;</a></span>program</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8hpp.html#a80d81d7a2554934f2261183d6d9403d4">ProgPtr</a> program</td>
         </tr>
       </table>
   </td>

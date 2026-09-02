@@ -20,7 +20,7 @@ void data_callback(
     const void* /*input*/,
     ma_uint32 frameCount)
 {
-    auto* p = static_cast<player*>(device->pUserData);
+    auto* p = static_cast<audio_player*>(device->pUserData);
 
     p->fill(
         static_cast<float*>(output),
@@ -42,7 +42,7 @@ void Peroxide::play_audio()
 
         // Should the player be a member of `Peroxide` instead?
         // This thread should focus on miniaudio support.
-        player p(songs);
+        player = make_unique<audio_player>(songs);
 
         debug("Player constructed");
     
@@ -57,7 +57,7 @@ void Peroxide::play_audio()
         debug("Sample rate obtained");
     
         config.dataCallback = data_callback;
-        config.pUserData = &p;
+        config.pUserData = player.get();
     
         ma_device device;
 
@@ -88,8 +88,8 @@ void Peroxide::play_audio()
 
         pedal = false;
         cout << "Starting playback.\n";
-        p.play();
-        debug("p.play() returned");
+        player->play();
+        debug("p->play() returned");
         cout << "Playing forever... Ctrl-C to quit.\n";
     
         while (running)

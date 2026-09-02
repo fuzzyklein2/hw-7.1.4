@@ -5,9 +5,9 @@ var searchData=
   ['saturn_5fpict_2',['SATURN_PICT',['../namespacetools_1_1picts.html#a170d41740597ca468f92818931b0cf2e',1,'tools::picts']]],
   ['script_3',['script',['../classh2o2_1_1song.html#ac0031a68a6f6bd6f8f3184103f5c6c1e',1,'h2o2::song']]],
   ['script_5fpict_4',['SCRIPT_PICT',['../namespacetools_1_1picts.html#af67b98361bdc44c06a14cceb32dfc99c',1,'tools::picts']]],
-  ['songs_5',['songs',['../classPeroxide.html#aca8364f86379bf254aba5c45da7664ec',1,'Peroxide::songs'],['../classh2o2_1_1player.html#aa319275f9cde0b2606bf1b3b5f669ad4',1,'h2o2::player::songs']]],
+  ['songs_5',['songs',['../classPeroxide.html#aca8364f86379bf254aba5c45da7664ec',1,'Peroxide::songs'],['../classh2o2_1_1audio__player.html#a7fe704727ca2b71691d4fd70ee5426b0',1,'h2o2::audio_player::songs']]],
   ['space_6',['space',['../namespacehw7.html#ac343dfe1f8e1e4281cc538f54b8299c2',1,'hw7::SPACE'],['../namespacetools_1_1constants.html#a31ba0b38484a1178409cfdcd5ea2ead2',1,'tools.constants.SPACE']]],
   ['src_5ffile_5fexts_7',['SRC_FILE_EXTS',['../namespacetools_1_1constants.html#a6a13a5289083e6fc70f0b60cadaf0cfe',1,'tools::constants']]],
-  ['step_8',['step',['../classh2o2_1_1player.html#ad5f6be60f00bc294dc873593dffeb5fa',1,'h2o2::player']]],
+  ['step_8',['step',['../classh2o2_1_1audio__player.html#a3b1f77269f3710606fdaba5dc440e37d',1,'h2o2::audio_player']]],
   ['stop_5fpict_9',['STOP_PICT',['../namespacetools_1_1picts.html#ac3b1e725ac00281f4698adb3532b5c34',1,'tools::picts']]]
 ];
