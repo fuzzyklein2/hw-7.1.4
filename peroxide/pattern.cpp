@@ -81,7 +81,7 @@ ErrCode pattern::next_clip()
                 if (!parent.pat_map.contains(value))
                 {
                     // Register the current JSON (or appropriate pattern JSON) under this name.
-                    parent.pat_map.emplace(value, pattern(j, parent));
+                    parent.pat_map.emplace(value, j);
                     i++;
                     continue; // Continue scanning the current pattern after registration.
                 }
