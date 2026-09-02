@@ -27,6 +27,6 @@ int main(
     int argc, // Argument count
     char **argv // Cannot be `const` or CLI11 won't work.
 ) {
-    auto p = Peroxide(argc, argv);
-    return p.run();
+    program = std::make_unique<Peroxide>();
+    return program.run();
 }

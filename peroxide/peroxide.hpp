@@ -17,7 +17,7 @@ void signal_handler(int);
 /**
  * Subclass `Program`.
  */
-class Peroxide : Program
+class Peroxide : public Program
 {
 public:
     Peroxide(int argc, char **argv) : Program (argc, argv)
@@ -26,7 +26,7 @@ public:
     }
 
     void play_audio();
-    ErrCode run();
+    ErrCode run() override;
 protected:
     Path base;
     h2o2::song_list songs;

@@ -48,9 +48,6 @@ void player::fill(float* output, ma_uint32 frames)
         if (pos == 0)
         {
             cout << "Starting " << songs[current_song_index] << endl;
-            //  << (playingBreak ? "Break" : "Intro")
-            //  << "\n";
-            
         }
         
         if (clip.samples.empty())
