@@ -9,4 +9,4 @@
 Boolean pedal = false;
 Boolean running{true};
 Boolean repeat = false;
-peroxide* program = nullptr;
+std::unique_ptr<peroxide> program;
