@@ -10,7 +10,7 @@
 
 namespace h2o2
 {
-    class song;
+    // class song;
 
     class pattern
     {
