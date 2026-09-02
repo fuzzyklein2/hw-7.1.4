@@ -5,18 +5,14 @@
  */
 
 #include "pattern.hpp"
-#include "song.hpp"
-#include <utility> // std::move
+// #include "song.hpp"
+// #include <utility> // std::move
 using namespace std;
 using namespace hw7;
 using namespace h2o2;
 
-pattern::pattern(const JSON& pat, song& owner) : repeat_count(1),
-                                                 j(pat),
-                                                 i(0),
-                                                 N(j.size()),
-                                                 parent(owner),
-                                                 current_repeat(0)
+pattern::pattern(const JSON& j) : repeat_count(1), j(j), i(0), N(j.size()),
+                                  current_repeat(0)
 {
 }
 
@@ -25,7 +21,8 @@ ErrCode pattern::load()
     // Move this pattern into the parent's pattern stack so the stack owns the instance
     // that will be advanced during playback. Do not call next_clip() here — playback
     // should advance the pattern that's actually on the stack.
-    parent.load(std::move(*this));
+    
+    // parent.load(*this);
     return EXIT_SUCCESS;
 }
 
@@ -81,7 +78,7 @@ ErrCode pattern::next_clip()
                 if (!parent.pat_map.contains(value))
                 {
                     // Register the current JSON (or appropriate pattern JSON) under this name.
-                    parent.pat_map.emplace(value, pattern(j, parent));
+                    parent.pat_map.emplace(value, j);
                     i++;
                     continue; // Continue scanning the current pattern after registration.
                 }

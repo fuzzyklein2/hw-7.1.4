@@ -25,6 +25,7 @@ namespace h2o2
         song& operator=(const song&) = delete;
         /**
          * Default constructor.
+         * @param title Title of the song and the name of its directory inside `songs`.
          */
         song() : title(hw7::EMPTY) {}
 
@@ -53,7 +54,20 @@ namespace h2o2
          * and avoid extra copies.
          */
         ErrCode load(h2o2::pattern);
+
+        /**
+         * Determine whether a string represents a clip.
+         * If it does there is a file with the string as its name in the clips directory.
+         * @param s String to check.
+         * @return `true` if an existing clip file corresponds to the name.
+         * False otherwise.
+         */
         bool is_clip_name(const hw7::str&);
+
+        /**
+         * Get the sample rate of a random audio file from the clips directory.
+         * @return Sample rate.
+         */
         static ma_uint32 get_clip_sampleRate();
         static Path get_clips_dir();
 
