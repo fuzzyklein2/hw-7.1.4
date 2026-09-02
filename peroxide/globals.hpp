@@ -9,3 +9,4 @@ extern Boolean pedal;
 extern Boolean running;
 /// Applies only to the current clip, not patterns.
 extern Boolean repeat;
+extern peroxide* program;
