@@ -31,6 +31,12 @@ ErrCode pattern::load()
 
 ErrCode pattern::next_clip()
 {
+    std::cerr << "NEXT_CLIP: ENTERED\n";
+    std::cerr << "NEXT_CLIP: this = " << this << "\n";
+    std::cerr << "NEXT_CLIP: parent = " << &parent << "\n";
+    std::cerr << "NEXT_CLIP: i = " << i << "\n";
+    std::cerr << "NEXT_CLIP: N = " << N << "\n";
+    std::cerr << "NEXT_CLIP: j.size = " << j.size() << "\n";
     // Iteratively process the JSON sequence until we either enqueue a clip or
     // decide the pattern has finished and should pop itself.
     while (true)
@@ -57,8 +63,12 @@ ErrCode pattern::next_clip()
             }
         }
 
+        std::cerr << "NEXT_CLIP: about to access j[" << i << "]\n";
         const auto value = j[i];
-
+        std::cerr << "NEXT_CLIP: processing element " << i
+                  << ", type = " << value.type_name() << "\n";
+        std::cerr << "NEXT_CLIP: got value\n";
+        
         if (value.is_number_integer())
         {
             // The first (or current) element can be a repeat count.
@@ -97,8 +107,12 @@ ErrCode pattern::next_clip()
         else if (value.is_array())
         {
             // Anonymous subpattern — push it onto the stack for handling.
+            std::cerr << "NEXT_CLIP: constructing subpattern\n";
             pattern pat(value, parent);
+            std::cerr << "NEXT_CLIP: subpattern constructed\n";
+            
             parent.load(pat);
+            std::cerr << "NEXT_CLIP: subpattern loaded\n";
             i++;
             return EXIT_SUCCESS;
         }

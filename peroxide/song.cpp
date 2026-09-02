@@ -43,9 +43,15 @@ song::song (const hw7::str& s, JSON config) :
 audio_clip& song::next_clip()
 {
     Number n = 0;
+    std::cerr << "SONG NEXT_CLIP this = " << this << "\n";
+    std::cerr << "NEXT_CLIP: ENTERED\n";
     while (clips.empty() && n < 1000)
     {
+        std::cerr << "SONG NEXT_CLIP: stack size = "
+                  << patterns.size() << '\n';
         patterns.top().next_clip();
+        std::cerr << "SONG NEXT_CLIP: returned, stack size = "
+                  << patterns.size() << '\n';
         n++;
     }
     if (clips.empty()) throw runtime_error("Pattern failed to supply a clip!");
@@ -58,11 +64,22 @@ audio_clip& song::next_clip()
     return result; // It won't really be this simple.
 }
 
+// ErrCode song::load(pattern p)
+// {
+//     // Move the incoming pattern into the stack so the version on the stack
+//     // is the one used by playback code.
+//     patterns.push(std::move(p));
+//     return EXIT_SUCCESS;
+// }
+
 ErrCode song::load(pattern p)
 {
-    // Move the incoming pattern into the stack so the version on the stack
-    // is the one used by playback code.
-    patterns.push(std::move(p));
+    std::cerr << "LOAD: entered\n";
+
+    patterns.push(p);
+
+    std::cerr << "LOAD: pushed\n";
+
     return EXIT_SUCCESS;
 }
 

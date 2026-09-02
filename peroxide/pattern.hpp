@@ -33,8 +33,9 @@ namespace h2o2
             N(p.N),
             parent(p.parent),
             current_repeat(0)
-        {}
-
+        {
+            std::cerr << "PATTERN COPY: constructed\n";
+        }
 
         ErrCode load();
 
