@@ -22,17 +22,26 @@ namespace h2o2
          * If there is a Number that's the repeat count. If there's not
          * then `repeat_count` is 1.
          * @return Error code.
+         * @todo Find
          */
-        pattern(const JSON& seq, h2o2::song&);
+        pattern(const JSON& seq);
 
+        /**
+         * Copy a pattern object.
+         * @param name Unused, but may very well be needed anyway.
+         * @param repeat_count Number of times this pattern should be repeated. 0 means forever.
+         * @param j JSON object (not text) representation of the program.
+         * @param i Index of the element currently being processed.
+         * @param N Number of elements in the JSON (j.size())
+         */
         pattern(const pattern& p)
-          : name(p.name),
-            repeat_count(p.repeat_count),
-            j(p.j),
-            i(0),
-            N(p.N),
-            parent(p.parent),
-            current_repeat(0)
+          : name(p.name), // Optional. May not exist.
+            repeat_count(p.repeat_count), // Number of times to repeat.
+            j(p.j), // JSON object representation.
+            i(0), // Index of the next element to process.
+            N(p.N), // Number of elements.
+            // @deprecated parent(p.parent),
+            current_repeat(0) /// index of the current repetition.
         {}
 
 
