@@ -39,7 +39,7 @@ song::song (const hw7::str& s, JSON config) :
 
 }
 
-audio_clip& song::next_clip()
+audio_clip* song::next_clip()
 {
     Number n = 0;
     std::cerr << "SONG NEXT_CLIP this = " << this << "\n";
@@ -48,19 +48,31 @@ audio_clip& song::next_clip()
     {
         std::cerr << "SONG NEXT_CLIP: stack size = "
                   << patterns.size() << '\n';
-        patterns.top()->next_clip();
-        std::cerr << "SONG NEXT_CLIP: returned, stack size = "
-                  << patterns.size() << '\n';
-        n++;
+        if (!patterns.top())
+        {
+            player->playing = false;
+            return nullptr;
+        }
+        else
+        {
+            patterns.top()->next_clip();
+            std::cerr << "SONG NEXT_CLIP: returned, stack size = "
+                      << patterns.size() << '\n';
+            n++;
+        }
     }
-    if (clips.empty()) throw runtime_error("Pattern failed to supply a clip!");
-    const auto name = clips.front();
-    if (!repeat) clips.pop();
-    audio_clip& result = clip_map[name];
-
-    cout << "NEXT CLIP: " << name << endl;
+    if (clips.empty()) { // throw runtime_error("Pattern failed to supply a clip!");
+        player->playing = false;
+        return nullptr;
+    }
+    else
+    {
+        const auto name = clips.front();
+        if (!repeat) clips.pop();
     
-    return result; // It won't really be this simple.
+        cout << "NEXT CLIP: " << name << endl;
+        return &(clip_map[name]); // It won't really be this simple.
+    }
 }
 
 // ErrCode song::load(pattern p)

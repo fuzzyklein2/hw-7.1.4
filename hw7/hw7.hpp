@@ -8,15 +8,15 @@
 // # System headers
 
 #include <nlohmann/json.hpp> // JSON -> struct conversion
-#include <vector>
-#include <cstdlib>
 #include <iostream>   // cin & cout
-#include "spdlog/sinks/basic_file_sink.h" // Log file(s)
-#include "spdlog/spdlog.h"   // Logging module
+#include <filesystem>
 #include "spdlog/sinks/stdout_color_sinks.h" // Screen output
 #include <string>
-#include <filesystem>
+#include <vector>
+#include "spdlog/spdlog.h"   // Logging module
 #include <map>
+#include <cstdlib>
+#include "spdlog/sinks/basic_file_sink.h" // Log file(s)
 
 
 #define CONST inline const

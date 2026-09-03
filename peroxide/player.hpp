@@ -20,10 +20,13 @@ namespace h2o2
         /// Return the current clip.
         // h2o2::audio_clip clip() { return current_song.current_clip(); }
 
+        h2o2::audio_clip* next_clip(){ return songs[current_song_index].next_clip(); }
+
+        h2o2::audio_clip* current_clip;
         song_list& songs;
         Index current_song_index;
-    protected:
         bool playing = false;
+    protected:
         bool step = false;
         size_t pos = 0;
     }; // player

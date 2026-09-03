@@ -110,10 +110,11 @@ def compile(target:str)->int:
 
     if process.returncode:
         outfile = Path(f"logs/{target}_build.log") # Receives stdout from meson.
-        outfile.write_text(process.stdout)
+        outfile.write_text(process.stderr)
         print(f"{ERROR_PICT}Build error!")
         OUTPUT = read_lines(outfile)
         # This seems to work for meson output. It may work for g++ too.
+        if len(OUTPUT) > 30: OUTPUT = OUTPUT[3:33]
         print(NEWLINE.join([s for s in OUTPUT[3:] if not (s.startswith('c') or s.startswith('INFO')) and s.find(PARENT)]))
         return process.returncode
     else:

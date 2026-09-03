@@ -48,7 +48,7 @@ namespace h2o2
          * @return The next audio clip to be played, or an empty clip if
          * `pause` is `true`.
          */
-        h2o2::audio_clip& next_clip();
+        h2o2::audio_clip* next_clip();
 
         /**
          * Push `pat` to the pattern stack, wait until it pops itself and,

@@ -15,6 +15,7 @@ var searchData=
   ['config_12',['config',['../structGlobals.html#a0d31dd71f0020a51740934aeb940afdc',1,'Globals::config'],['../structFileSystem.html#a12e531fd5c299e2a8acd2b9c0779c487',1,'FileSystem::config']]],
   ['construction_5fpict_13',['CONSTRUCTION_PICT',['../namespacetools_1_1picts.html#a335f0549b557a8fa58e59de03a311ba5',1,'tools::picts']]],
   ['critical_5fpict_14',['critical_pict',['../namespacehw7.html#ae56c0ef954b600df07837454f1be9f13',1,'hw7::CRITICAL_PICT'],['../namespacetools_1_1picts.html#a52e4ee5ddd0c49b4b244a2d1a802c5e4',1,'tools.picts.CRITICAL_PICT']]],
-  ['current_5frepeat_15',['current_repeat',['../classh2o2_1_1pattern.html#ae92622093fdf6bad8d9b71cf1662d262',1,'h2o2::pattern']]],
-  ['current_5fsong_5findex_16',['current_song_index',['../classh2o2_1_1audio__player.html#a3008ab142b41c3b77219182b668e3b88',1,'h2o2::audio_player']]]
+  ['current_5fclip_15',['current_clip',['../classh2o2_1_1audio__player.html#a7e331fe678414d853fb7adc448f7b780',1,'h2o2::audio_player']]],
+  ['current_5frepeat_16',['current_repeat',['../classh2o2_1_1pattern.html#ae92622093fdf6bad8d9b71cf1662d262',1,'h2o2::pattern']]],
+  ['current_5fsong_5findex_17',['current_song_index',['../classh2o2_1_1audio__player.html#a3008ab142b41c3b77219182b668e3b88',1,'h2o2::audio_player']]]
 ];
