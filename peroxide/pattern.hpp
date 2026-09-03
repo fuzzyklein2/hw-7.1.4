@@ -53,6 +53,8 @@ namespace h2o2
          * @todo Check for errors. :D
          */
         ErrCode next_clip();
+
+        ErrCode dump(const ErrCode);
     
     protected:
         hw7::str name;

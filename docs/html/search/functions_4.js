@@ -8,5 +8,5 @@ var searchData=
   ['display_5fsource_5',['display_source',['../namespacetools_1_1nbtools.html#ada52a52cd5928ca13b2aafd69d0c440a',1,'tools::nbtools']]],
   ['docs_6',['docs',['../namespacetools_1_1build.html#aa455fb110eacd67d07b8246bdb6089f5',1,'tools::build']]],
   ['doxify_7',['doxify',['../namespacetools_1_1nbtools.html#a1b17bf984cd521999601ec2285e01b5b',1,'tools::nbtools']]],
-  ['dump_8',['dump',['../structFileSystem.html#ad1d3628ddd3468ec688316d7f1266a63',1,'FileSystem::dump()'],['../structGlobals.html#afe3b7e6ecf3775109e836df963364e08',1,'Globals::dump()']]]
+  ['dump_8',['dump',['../structFileSystem.html#ad1d3628ddd3468ec688316d7f1266a63',1,'FileSystem::dump()'],['../structGlobals.html#afe3b7e6ecf3775109e836df963364e08',1,'Globals::dump()'],['../classh2o2_1_1pattern.html#a856798409922421c8d4c97cdfc8cf8cb',1,'h2o2::pattern::dump()']]]
 ];

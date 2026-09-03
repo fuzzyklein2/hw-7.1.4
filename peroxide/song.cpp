@@ -44,7 +44,11 @@ audio_clip* song::next_clip()
     Number n = 0;
     std::cerr << "SONG NEXT_CLIP this = " << this << "\n";
     std::cerr << "NEXT_CLIP: ENTERED\n";
-    while (clips.empty() && n < 1000)
+    std::cout << "SONG NEXT_CLIP: top = "
+          << patterns.top()
+          << " stack size = "
+          << patterns.size()
+          << '\n';    while (clips.empty() && n < 1000)
     {
         std::cerr << "SONG NEXT_CLIP: stack size = "
                   << patterns.size() << '\n';

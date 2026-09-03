@@ -129,3 +129,13 @@ ErrCode pattern::next_clip()
     // unreachable
     return EXIT_SUCCESS;
 }
+
+ErrCode pattern::dump(const ErrCode e)
+{
+    std::cout << "PATTERN STATUS:\n"
+          << " this=" << this
+          << " i=" << i
+          << " N=" << N
+          << " j.size=" << j.size()
+          << '\n';
+}
