@@ -38,7 +38,7 @@ namespace h2o2
             repeat_count(p.repeat_count), // Number of times to repeat.
             j(p.j), // JSON object representation.
             i(0), // Index of the next element to process.
-            N(p.N), // Number of elements.
+            // N(p.N), // Number of elements.
             // @deprecated parent(p.parent),
             current_repeat(0) /// index of the current repetition.
         {
@@ -61,7 +61,7 @@ namespace h2o2
         Number repeat_count;
         JSON j;
         Index i;
-        Index N;
+        // Index N;
         Index current_repeat;
     };
 

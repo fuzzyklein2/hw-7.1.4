@@ -13,7 +13,7 @@ using namespace std;
 using namespace hw7;
 using namespace h2o2;
 
-pattern::pattern(const JSON& j) : repeat_count(1), j(j), i(0), N(j.size()),
+pattern::pattern(const JSON& j) : repeat_count(1), j(j), i(0), // N(j.size()),
                                   current_repeat(0)
 {
 }
@@ -35,14 +35,14 @@ ErrCode pattern::next_clip()
     std::cerr << "NEXT_CLIP: this = " << this << "\n";
     std::cerr << "NEXT_CLIP: parent = " << current_song.title << "\n";
     std::cerr << "NEXT_CLIP: i = " << i << "\n";
-    std::cerr << "NEXT_CLIP: N = " << N << "\n";
+    // std::cerr << "NEXT_CLIP: N = " << N << "\n";
     std::cerr << "NEXT_CLIP: j.size = " << j.size() << "\n";
     // Iteratively process the JSON sequence until we either enqueue a clip or
     // decide the pattern has finished and should pop itself.
     /// @todo: Give player a simple get_current_song.
-    while (true)
+    while (running && player->playing)
     {
-        if (i >= N) // Pattern processing is complete for one pass.
+        if (i >= j.size()) // Pattern processing is complete for one pass.
         {
             // if (repeat_count == 0 && !pedal)
             // {
@@ -57,10 +57,9 @@ ErrCode pattern::next_clip()
             if (repeat_count != 0 && current_repeat >= repeat_count)
             {
                 // We're done with this pattern's repeats — remove it from the stack.
-                if (!(repeat_count == 0 && !pedal)) { current_song.patterns.pop(); }
-                else { i = 0; }
-                return EXIT_SUCCESS;
-            }
+                current_song.patterns.pop();
+            } else { i = 0; }
+            return EXIT_SUCCESS;
             // Otherwise reset to start the next repetition.
             // i = 0;
             // }
@@ -135,7 +134,8 @@ ErrCode pattern::dump(const ErrCode e)
     std::cout << "PATTERN STATUS:\n"
           << " this=" << this
           << " i=" << i
-          << " N=" << N
+          // << " N=" << N
           << " j.size=" << j.size()
           << '\n';
+    return e;
 }
