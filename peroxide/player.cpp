@@ -29,6 +29,7 @@ audio_player::audio_player(song_list& sl) : songs(sl),
 void audio_player::fill(float* output, ma_uint32 frames)
 {
     if (!running) {
+        std::fill(output, output + frames * 2, 0.0f);
         return;
     }
 
@@ -38,19 +39,36 @@ void audio_player::fill(float* output, ma_uint32 frames)
         std::fill(output, output + frames * 2, 0.0f);
         return;
     }
+    // else if (!current_clip)
+    // {
+    //     current_clip = next_clip();
+    // }
+    // if (current_clip == nullptr)
+    // {
+    //     playing = false;
+    //     return;
+    // }
 
     for (ma_uint32 i = 0; i < frames; i++)
     {
-        // Get the first clip, or get the next one after
-        // the previous clip has been exhausted.
-        if (current_clip == nullptr)
+        if (!current_clip)
         {
             current_clip = next_clip();
-            if (current_clip == nullptr)
-            {
-                continue;
-            }
             pos = 0;
+
+            if (!current_clip)
+            {
+                playing = false;
+
+                // Silence anything remaining in this callback.
+                std::fill(
+                    output + i * 2,
+                    output + frames * 2,
+                    0.0f
+                );
+
+                return;
+            }
         }
 
         output[i * 2]     = current_clip->samples[pos * 2];
@@ -60,7 +78,8 @@ void audio_player::fill(float* output, ma_uint32 frames)
 
         if (pos >= current_clip->frames)
         {
-            current_clip = nullptr;
+            current_clip = next_clip();
+            pos = 0;
         }
     }
 }

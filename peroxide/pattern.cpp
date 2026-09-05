@@ -42,6 +42,10 @@ ErrCode pattern::next_clip()
     /// @todo: Give player a simple get_current_song.
     while (running && player->playing)
     {
+        std::cerr << "CHECK: i=" << i
+                  << " j.size()=" << j.size()
+                  << " i >= j.size()=" << (i >= j.size())
+                  << "\n";
         if (i >= j.size()) // Pattern processing is complete for one pass.
         {
             // if (repeat_count == 0 && !pedal)

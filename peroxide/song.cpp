@@ -14,7 +14,7 @@ using namespace h2o2;
 
 song::song (const hw7::str& s, JSON config) : 
             title(s),
-            base(config["session folder"].get<std::string>())
+            base(config["session folder"].get<string>())
 {
 
     info("Loading song: " + title);
