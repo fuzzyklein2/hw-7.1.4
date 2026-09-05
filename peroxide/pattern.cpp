@@ -48,25 +48,26 @@ ErrCode pattern::next_clip()
                   << "\n";
         if (i >= j.size()) // Pattern processing is complete for one pass.
         {
-            // if (repeat_count == 0 && !pedal)
-            // {
-            //     // repeat forever (or until some external condition)
-            //     i = 0;
-            //     current_song.patterns.push(this);
-            // }
-            // else
-            // {
-            // Completed one run; increment and compare to requested repeat_count
-            current_repeat++;
-            if (repeat_count != 0 && current_repeat >= repeat_count)
+            if (repeat_count == 0 && !pedal)
             {
-                // We're done with this pattern's repeats — remove it from the stack.
-                current_song.patterns.pop();
-            } else { i = 0; }
-            return EXIT_SUCCESS;
-            // Otherwise reset to start the next repetition.
-            // i = 0;
-            // }
+                // repeat forever (or until some external condition)
+                i = 0;
+                // current_song.patterns.push(this);
+                return EXIT_SUCCESS;
+            }
+            else
+            {
+                // Completed one run; increment and compare to requested repeat_count
+                current_repeat++;
+                if (repeat_count != 0 && current_repeat >= repeat_count)
+                {
+                    // We're done with this pattern's repeats — remove it from the stack.
+                    current_song.patterns.pop();
+                } else { i = 0; }
+                return EXIT_SUCCESS;
+                // Otherwise reset to start the next repetition.
+                // i = 0;
+            }
         }
 
         std::cerr << "NEXT_CLIP: about to access j[" << i << "]\n";
@@ -130,7 +131,7 @@ ErrCode pattern::next_clip()
     }
 
     // unreachable
-    return EXIT_SUCCESS;
+    return EXIT_FAILURE;
 }
 
 ErrCode pattern::dump(const ErrCode e)
