@@ -36,3 +36,6 @@ __pycache__/
 *.egg-info
 
 
+# GDB
+.gdb_history
+
