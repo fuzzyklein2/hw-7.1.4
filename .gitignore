@@ -23,6 +23,9 @@ build/
 contrib/
 contrib
 logs/
+notes/
+rust/
+
 # *.txt
 output.txt
 untitled.txt
@@ -39,3 +42,8 @@ __pycache__/
 # GDB
 .gdb_history
 
+
+
+# Added by cargo
+
+/target
