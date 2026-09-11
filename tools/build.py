@@ -110,7 +110,7 @@ def compile(target:str)->int:
 
     if process.returncode:
         outfile = Path(f"logs/{target}_build.log") # Receives stdout from meson.
-        outfile.write_text(process.stderr)
+        outfile.write_text(process.stdout)
         print(f"{ERROR_PICT}Build error!")
         OUTPUT = read_lines(outfile)
         # This seems to work for meson output. It may work for g++ too.

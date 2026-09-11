@@ -12,7 +12,7 @@ def glob4meson():
     src_files = sorted(f.as_posix() for f in src_dir.iterdir() if f.suffix in exts)
     
     if not src_files:
-        print("No source files found in src/.")
+        print("No source files found in source/.")
     else:
         print(f"Found {len(src_files)} source files:")
         for f in src_files:
@@ -64,7 +64,7 @@ def glob_srcs(src_dir, var_name, start, end):
     src_files = sorted(f.as_posix() for f in src_dir.iterdir() if f.suffix in exts)
     
     if not src_files:
-        print("No source files found in src/.")
+        print("No source files found in sources/.")
     else:
         print(f"Found {len(src_files)} source files:")
         for f in src_files:

@@ -18,29 +18,28 @@ apps_inc = include_directories('hw7', 'contrib')
 peroxide_inc = include_directories('hw7', 'contrib', 'peroxide')
 
 # --- AUTOGEN_SRC_START ---
-src_files = [
+lib_sources = [
   'source/config.cpp',
   'source/datetime.cpp',
   'source/environment.cpp',
-#  'source/filter.cpp',
   'source/fs.cpp',
   'source/globals.cpp',
   'source/logging.cpp',
-  'source/main.cpp',
   'source/str.cpp',
+  'source/utilities.cpp',
 ]
 # --- AUTOGEN_SRC_END ---
 
-lib_sources = files(
-  'source/config.cpp',
-  'source/datetime.cpp',
-  'source/environment.cpp',
-  'source/filter.cpp',
-  'source/fs.cpp',
-  'source/globals.cpp',
-  'source/logging.cpp',
-  'source/str.cpp',
-)
+# lib_sources = files(
+#   'source/config.cpp',
+#   'source/datetime.cpp',
+#   'source/environment.cpp',
+#   'source/filter.cpp',
+#   'source/fs.cpp',
+#   'source/globals.cpp',
+#   'source/logging.cpp',
+#   'source/str.cpp',
+# )
 
 # --- PEROXIDE SOURCE FILES START ---
 peroxide_src_files = [
