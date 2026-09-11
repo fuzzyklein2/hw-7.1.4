@@ -1,5 +1,10 @@
+//! Define helper functions for Rust programs.
+
 
 unsafe extern "C" {
+    /// # Returns
+    /// 
+    /// Pointer to the `const String::c_str()` from the h27 module.
     fn get_program_name() -> *const std::ffi::c_char;
 }
 

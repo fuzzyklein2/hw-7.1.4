@@ -1,5 +1,3 @@
-// use std::ffi::CStr;
-
 mod utilities;
 use utilities::program_name;
 
