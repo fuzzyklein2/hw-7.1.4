@@ -16,7 +16,6 @@ mod tests {
     use super::*;
     #[test]
     fn test_program_name() {
-        // assert_eq!("peroxide", program_name());
         assert!(program_name().starts_with("peroxide"));
     }
     

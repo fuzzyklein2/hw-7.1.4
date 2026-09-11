@@ -73,6 +73,7 @@ BASE = Path.cwd()
 
 from .build import *
 from .constants import *
+from .devel import *
 from .nbtools import *
 from .picts import *
 # from .read_lines import *

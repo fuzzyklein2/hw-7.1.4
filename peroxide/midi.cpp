@@ -22,9 +22,18 @@ void midi_listener()
         cout << i << ": " << midi.getPortName(i) << endl;
     }
 
-    // Open the Alesis port, not Midi Through
-    midi.openPort(1);
-
+    try
+    {
+        // Open the Alesis port, not Midi Through
+        midi.openPort(1);
+    }
+    catch (RtMidiError &e)
+    {
+        str s;
+        e.printMessage();
+        error("Piano not found! Is it turned on?");
+        cin >> s;
+    }
     // Listen for MIDI messages...
     
     cout << "Listening..." << endl;
