@@ -171,3 +171,8 @@ def now(as_str=False):
     """
     if as_str: return str(dt.now())
     return dt.now()
+
+def rdocify(s: str, file_doc=False) -> str:
+    s = NEWLINE.join(map(lambda s: CPP_COMMENT + (EXCLAMATION if file_doc else SLASH) + SPACE + s, s.rstrip().split(NEWLINE)[1:]))
+    pyperclip.copy(s + NEWLINE)
+    return s

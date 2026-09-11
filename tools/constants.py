@@ -4,6 +4,8 @@ SPACE = ' '
 EMPTY_STR = ''
 PERIOD = '.'
 PARENT = '../'
+EXCLAMATION = '!'
+SLASH = '/'
 
 SRC_FILE_EXTS = [
     'c',
@@ -22,3 +24,5 @@ SRC_FILE_EXTS = [
     'phtml',
     'md'
 ]
+
+CPP_COMMENT = '//'
