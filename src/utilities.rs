@@ -1,6 +1,5 @@
 //! Define helper functions for Rust programs.
 
-
 unsafe extern "C" {
     /// # Returns
     /// 
