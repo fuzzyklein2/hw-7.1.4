@@ -1,4 +1,5 @@
 use clap::Parser;
+use dirs;
 use env_logger;
 use log::LevelFilter;
 
@@ -46,4 +47,49 @@ fn main() {
     let home = home().unwrap();
     debug(&format!("User home directory: {}", home.display()));
     debug(&format!("Arguments: {:#?}", args.args));
+
+// `xdg` directories
+trace(&format!(r#"
+XDG Directories:
+----------------
+Audio:                 {}
+Cache:                 {}
+Configuration:         {}
+Local Configuration:   {}
+Data:                  {}
+Local Data:            {}
+Desktop:               {}
+Documents:             {}
+Downloads:             {}
+Executables:           {}
+Fonts:                 {}
+Home:                  {}
+Pictures:              {}
+Preferences:           {}
+Public:                {}
+Runtime:               {}
+State:                 {}
+Templates:             {}
+Videos:                {}
+"#, dirs::audio_dir().unwrap().display(),
+dirs::cache_dir().unwrap().display(),
+dirs::config_dir().unwrap().display(),
+dirs::config_local_dir().unwrap().display(),
+dirs::data_dir().unwrap().display(),
+dirs::data_local_dir().unwrap().display(),
+dirs::desktop_dir().unwrap().display(),
+dirs::document_dir().unwrap().display(),
+dirs::download_dir().unwrap().display(),
+dirs::executable_dir().unwrap().display(),
+dirs::font_dir().unwrap().display(),
+dirs::home_dir().unwrap().display(),
+dirs::picture_dir().unwrap().display(),
+dirs::preference_dir().unwrap().display(),
+dirs::public_dir().unwrap().display(),
+dirs::runtime_dir().unwrap().display(),
+dirs::state_dir().unwrap().display(),
+dirs::template_dir().unwrap().display(),
+dirs::video_dir().unwrap().display(),
+
+));
 }

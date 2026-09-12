@@ -33,6 +33,13 @@ pub fn home() -> Option<PathBuf> {
     }
 }
 
+// pub struct FileSystem {
+//     CONFIG_FILE: &str,
+//     DATA_FILE: &str,
+//     LOGS_DIR: &str,
+    
+// }
+
 /*
 match std::env::current_dir() {
     Ok(path) => println!("Current directory: {}", path.display()),
