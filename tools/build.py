@@ -1,4 +1,4 @@
-"""Build utilities.
+RU"""Build utilities.
 
 @file build.py
 @brief Define tools for building the project.

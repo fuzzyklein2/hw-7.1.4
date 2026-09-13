@@ -2,7 +2,8 @@ use clap::Parser;
 use dirs;
 use env_logger;
 use log::LevelFilter;
-use std::io::Write;
+use std::io::{ Error, Write };
+use std::sync::OnceLock;
 
 mod constants;
 mod getargs;
@@ -13,12 +14,15 @@ mod utilities;
 use constants::{ BASE_DIR, FOLDER_PICT };
 use files::{ cwd, FileSystem, home, pwd };
 use getargs::Args;
-use logging::{ error, warn, info, debug, trace };
+use logging::{ error, warn, info, debug, trace, init_log };
 use utilities::program_name;
 
-fn main() {
+static FILE_SYSTEM: OnceLock<FileSystem> = OnceLock::new();
+
+fn main() -> Result<(), Error> {
     let prog_name = program_name();
     let args = Args::parse();
+    FILE_SYSTEM.set(FileSystem::new()).unwrap();
 
     let level = if args.trace {
         LevelFilter::Trace
@@ -37,11 +41,13 @@ fn main() {
         writeln!(buf, "{} {}", record.level(), record.args())
     }).init();
     
+    init_log()?;
+
     info(&format!("Running {prog_name}"));
     warn("This program is under construction!");
     debug(&format!("Debugging {prog_name}"));
     trace(&format!("Debugging {prog_name} even more"));
-    // error("Danger, Will Robinson!");
+    error("Danger, Will Robinson!");
     // pwd();
     let s = cwd().unwrap();
     debug(&format!("Current working directory: {}", s.display()));
@@ -95,14 +101,14 @@ dirs::template_dir().unwrap().display(),
 dirs::video_dir().unwrap().display(),
 ));
 
-    let file_system = FileSystem::new();    
-
     debug(&format!(r#"File System:
 Configuration file: {}
 Data file:          {}
 Log file:           {}
-"#, file_system.config_file.display(),
-    file_system.data_file.display(),
-    file_system.log_file.display()
+"#, FILE_SYSTEM.get().unwrap().config_file.display(),
+    FILE_SYSTEM.get().unwrap().data_file.display(),
+    FILE_SYSTEM.get().unwrap().log_file.display()
 ));
+
+    Ok(())
 }

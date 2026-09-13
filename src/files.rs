@@ -34,6 +34,7 @@ pub fn home() -> Option<PathBuf> {
     }
 }
 
+#[derive(Debug)]
 pub struct FileSystem {
     pub config_file: PathBuf,
     pub data_file: PathBuf,
@@ -50,7 +51,7 @@ impl FileSystem {
         Self {
             config_file: config_dir.join("config.json"),
             data_file: BASE_DIR.join(format!("data/{}.json", program_name())),
-            log_file: home().unwrap().join(format!(".logs/{}/{}",program_name(), log_file_name())),
+            log_file: home().unwrap().join(format!(".log/{}/{}",program_name(), log_file_name())),
         }
     }
 }
