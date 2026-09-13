@@ -2,6 +2,7 @@ use clap::Parser;
 use dirs;
 use env_logger;
 use log::LevelFilter;
+use std::io::Write;
 
 mod constants;
 mod getargs;
@@ -10,7 +11,7 @@ mod logging;
 mod utilities;
 
 use constants::{ BASE_DIR, FOLDER_PICT };
-use files::{ cwd, home, pwd };
+use files::{ cwd, FileSystem, home, pwd };
 use getargs::Args;
 use logging::{ error, warn, info, debug, trace };
 use utilities::program_name;
@@ -32,7 +33,9 @@ fn main() {
     };
     
     // env_logger::init();
-    env_logger::Builder::new().filter_level(level).init();
+    env_logger::Builder::new().filter_level(level).format(|buf, record| {
+        writeln!(buf, "{} {}", record.level(), record.args())
+    }).init();
     
     info(&format!("Running {prog_name}"));
     warn("This program is under construction!");
@@ -90,6 +93,16 @@ dirs::runtime_dir().unwrap().display(),
 dirs::state_dir().unwrap().display(),
 dirs::template_dir().unwrap().display(),
 dirs::video_dir().unwrap().display(),
+));
 
+    let file_system = FileSystem::new();    
+
+    debug(&format!(r#"File System:
+Configuration file: {}
+Data file:          {}
+Log file:           {}
+"#, file_system.config_file.display(),
+    file_system.data_file.display(),
+    file_system.log_file.display()
 ));
 }
