@@ -2,6 +2,7 @@ use chrono::Local;
 use std::io::{ Error, Write };
 use std::fs::{ File, write };
 
+use crate::utilities::rotate_log_files;
 use crate::FILE_SYSTEM;
 
 use crate::constants::{ ERROR_PICT, WARN_PICT, INFO_PICT, DEBUG_PICT, TRACE_PICT, CHECK_PICT, FAILURE_PICT };
@@ -18,7 +19,7 @@ pub fn error(s: &str) -> std::io::Result<()> {
 
 pub fn warn(s: &str) -> std::io::Result<()>  {
     let message = format!("{WARN_PICT}{s}");
-    log::error!("{}", message);
+    log::warn!("{}", message);
     // write(&FILE_SYSTEM.get().unwrap().log_file, &message);
     let mut f = File::options().create(true).append(true)
         .open(&FILE_SYSTEM.get().unwrap().log_file)?;
@@ -28,7 +29,7 @@ pub fn warn(s: &str) -> std::io::Result<()>  {
 
 pub fn info(s: &str) -> std::io::Result<()>  {
     let message = format!("{INFO_PICT}{s}");
-    log::error!("{}", message);
+    log::info!("{}", message);
     // write(&FILE_SYSTEM.get().unwrap().log_file, &message);
     let mut f = File::options().create(true).append(true)
         .open(&FILE_SYSTEM.get().unwrap().log_file)?;
@@ -38,7 +39,7 @@ pub fn info(s: &str) -> std::io::Result<()>  {
 
 pub fn debug(s: &str) -> std::io::Result<()>  {
     let message = format!("{DEBUG_PICT}{s}");
-    log::error!("{}", message);
+    log::debug!("{}", message);
     // write(&FILE_SYSTEM.get().unwrap().log_file, &message);
     let mut f = File::options().create(true).append(true)
         .open(&FILE_SYSTEM.get().unwrap().log_file)?;
@@ -48,7 +49,7 @@ pub fn debug(s: &str) -> std::io::Result<()>  {
 
 pub fn trace(s: &str) -> std::io::Result<()> {
     let message = format!("{TRACE_PICT}{s}");
-    log::error!("{}", message);
+    log::trace!("{}", message);
     // write(&FILE_SYSTEM.get().unwrap().log_file, &message);
     let mut f = File::options().create(true).append(true)
         .open(&FILE_SYSTEM.get().unwrap().log_file)?;
@@ -62,5 +63,6 @@ pub fn log_file_name() -> String {
 
 pub fn init_log() -> Result<(), Error> {
     File::create_new(FILE_SYSTEM.get().unwrap().log_file.clone())?;
+        rotate_log_files();
     Ok(())
 }

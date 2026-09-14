@@ -7,16 +7,16 @@
 
 // # System headers
 
-#include <cstdlib>
-#include <nlohmann/json.hpp> // JSON -> struct conversion
-#include "spdlog/spdlog.h"   // Logging module
 #include "spdlog/sinks/stdout_color_sinks.h" // Screen output
 #include <iostream>   // cin & cout
-#include <vector>
-#include <filesystem>
+#include <cstdlib>
 #include <map>
-#include "spdlog/sinks/basic_file_sink.h" // Log file(s)
+#include "spdlog/spdlog.h"   // Logging module
+#include <nlohmann/json.hpp> // JSON -> struct conversion
 #include <string>
+#include <filesystem>
+#include <vector>
+#include "spdlog/sinks/basic_file_sink.h" // Log file(s)
 
 
 #define CONST inline const

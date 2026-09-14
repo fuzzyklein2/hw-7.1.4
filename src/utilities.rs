@@ -7,11 +7,21 @@ unsafe extern "C" {
     fn get_program_name() -> *const std::ffi::c_char;
 }
 
+unsafe extern "C" {
+    fn cleanup_log_files();
+}
+
 pub fn program_name() -> &'static str {
     unsafe {
         std::ffi::CStr::from_ptr(get_program_name())
             .to_str()
             .unwrap()
+    }
+}
+
+pub fn rotate_log_files() {
+    unsafe {
+        cleanup_log_files();
     }
 }
 
