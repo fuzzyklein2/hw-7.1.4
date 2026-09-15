@@ -1,10 +1,19 @@
+use std::io::{ self, Error, Write, stdout };
+use std::sync::{ mpsc, OnceLock };
+use std::thread;
+use std::time::Duration;
+
 use clap::Parser;
+use crossterm::{ execute, ExecutableCommand, QueueableCommand,
+    terminal::{ Clear, ClearType, disable_raw_mode, enable_raw_mode },
+    cursor::{ MoveTo },
+    style::{ Color, Print, PrintStyledContent, self, Stylize },
+    event::{ self, Event, KeyCode }
+};
 use dirs;
 use env_logger;
 use json::JsonValue;
 use log::LevelFilter;
-use std::io::{ Error, Write };
-use std::sync::OnceLock;
 
 mod config;
 mod constants;
@@ -138,6 +147,63 @@ Log file:           {}
 "#, input
 ));
     }
+
+    let status_label = "Status".with(Color::Cyan);
+
+    execute!( stdout(),
+              Clear(ClearType::All),
+              MoveTo(1, 1),
+              Print("🌿  PEROXIDE"),
+              MoveTo(1, 3),
+              PrintStyledContent(status_label),
+              Print(": Stopped"),
+            )?;
+
+    println!("\n");
+
+    enable_raw_mode()?;
+    let (tx, rx) = mpsc::channel();
+
+    thread::spawn(move || {
+        loop {
+            if event::poll(Duration::from_millis(50)).unwrap() {
+                if let Ok(Event::Key(key)) = event::read() {
+                    if tx.send(key).is_err() {
+                        break;
+                    }
+                }
+            }
+        }
+    });
+
+    let mut running = true;
+    let mut playing = false;
+    let mut status = "Stopped";
     
+    while running {
+        if let Ok(key) = rx.try_recv() {
+            match key.code {
+                KeyCode::Char(' ') => {
+                    playing = !playing;
+                    if (playing) { status = "Playing"; }
+                    else { status = "Stopped"; }
+                    execute!(stdout(),
+                        MoveTo(9, 3),
+                        Print(&status)
+                    )?;
+                }
+    
+                KeyCode::Esc => {
+                    running = false;
+                }
+    
+                _ => {}
+            }
+        }
+    
+        // Do whatever else the main thread needs to do...
+    }
+    disable_raw_mode()?;
+    println!("\n");
     Ok(())
 }
